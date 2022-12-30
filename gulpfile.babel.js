@@ -39,7 +39,7 @@ const ROUTES = {
 		CSS: DIR.SRC + 'assets/scss/**/*.{scss,css}',
 		LIB: DIR.SRC + 'assets/lib/**/*.*',
 		FONTS: DIR.SRC + 'assets/fonts/*.*',
-		IMAGE: DIR.SRC + 'assets/images/**/*.{gif,jpg,png}',
+		IMAGE: DIR.SRC + 'assets/imgs/**/*.{gif,jpg,png}',
 		MEDIA: DIR.SRC + 'assets/media/**/*.*',
 	},
 	DEV: {
@@ -48,7 +48,7 @@ const ROUTES = {
 		CSS: DIR.DEV + 'css/',
 		LIB: DIR.DEV + 'lib/',
 		FONTS: DIR.DEV + 'fonts/',
-		IMAGE: DIR.DEV + 'images/',
+		IMAGE: DIR.DEV + 'imgs/',
 		MEDIA: DIR.DEV + 'media/',
 	},
 	BUILD: {
@@ -57,7 +57,7 @@ const ROUTES = {
 		CSS: DIR.BUILD + 'css/',
 		LIB: DIR.BUILD + 'lib/',
 		FONTS: DIR.BUILD + 'fonts/',
-		IMAGE: DIR.BUILD + 'images/',
+		IMAGE: DIR.BUILD + 'imgs/',
 		MEDIA: DIR.BUILD + 'media/',
 	},
 };

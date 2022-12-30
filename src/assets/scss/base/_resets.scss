@@ -1,0 +1,22 @@
+html,body,header,footer,nav,article,section,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,big,cite,code,del,dfn,em,font,img,ins,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,input,select,textarea,label,button,legend,table,caption,tbody,tfoot,thead,tr,th,td {margin:0;padding:0;border:0 none;box-sizing:border-box;}
+fieldset,img {border:0 none;}
+dl,ul,ol,menu,li {list-style:none;}
+blockquote,q {quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after {content:'';content:none;}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+ipnut,textarea,img {max-width:100%;}
+input,select,textarea,button {font-size:100%;}
+input,select,option,textarea,button {border:0 none;-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:none;box-shadow:none;}
+button,input[type=checkbox],input[type=radio]{background:transparent;cursor:pointer}
+button::-moz-focus-inner, button:focus, button:active {border:0;padding:0;outline:none;}
+select::-ms-expand,input[type=checkbox]::-ms-check,input[type=radio]::-ms-check {display:none;}
+label {vertical-align:top;}
+table {width:100%;table-layout:fixed;border-collapse:collapse;border-spacing:0}
+td,th {word-break:break-all;}
+form legend,table caption{width:0;height:0;font-size:0;text-indent:-9999px;line-height:0}
+h1,h2,h3,h4,h5,h6 {font-weight:400}
+a {text-decoration:none;color:#242424}
+a:hover,a:active,a:visited {text-decoration:none;}
+
+body{-webkit-text-size-adjust:none;}
+body,input,select,textarea,button {color:#242424;font-family:'Noto Sans KR',sans-serif;font-size:14px;font-weight:400;line-height:1.285;letter-spacing:-0.04em;}
