@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "공동구매"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html')
+
+		<main id="container">
+			<div class="page_promotion">
+				<h2 class="page_title type1">공동구매</h2>
+				<div class="noticebox type1">
+					<dl>
+						<dt class="blind">이용안내</dt>
+						<dd>
+							<ul>
+								<li>공동구매는 간편결제로만 결제가 가능합니다.</li>
+								<li>사전에 간편결제는 미리 등록해주세요.</li>
+								<li>공동구매 기간이 완료되면 자동 결제가 진행됩니다.</li>
+								<li>공동구매 모든 상품은 주문취소 및 반품이 불가합니다.</li>
+								<li>공동구매 신청 취소는 마이페이지 공동구매 신청내역에서 가능합니다.</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<div class="blank_space"></div>
+
+				<div class="menu_tab cols3">
+					<ul class="list">
+						<li class="menu1 active"><a href="?stat=ongoing" class="btn">진행중</a></li>
+						<li class="menu2"><a href="?stat=done" class="btn">완료</a></li>
+						<li class="menu3"><a href="?stat=fail" class="btn">종료</a></li>
+					</ul>
+				</div>
+				<div class="no_result_box bold">
+					<i class="ico"></i>
+					<div class="text">진행중인 공동구매 상품이 없습니다.</div>
+				</div>
+				<div class="groupbuying_list">
+					<div class="result_count type1">
+						<div class="total">전체상품 <strong class="number fcpoint fw500">2</strong>개</div>
+					</div>
+					<ul>
+						<li data-idx="9298" data-state="done" data-minea="0" data-maxea="0" data-amountunit="1">
+							<div class="count number">Day + 19</div>
+							<div class="inner">
+								<div class="product_box">
+									<div class="thumb_box">
+										<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+									</div>
+									<div class="info_box">
+										<div class="name">광동아토르바스타틴정(무수아토르바스타틴칼슘) 10mg x 10box (무료배송)</div>
+										<div class="summary">
+											<span class="box">광동제약</span>
+											<span class="box">50ml</span>
+											<span class="box">10병</span>
+										</div>
+									</div>
+								</div>
+								
+								<div class="step_box">
+									<ol class="step">
+										<li class="attain">
+											<span class="unit"><strong class="number fw500">50</strong>개</span>
+											<span class="each">개당 <span class="block"><strong class="number fw500">49,000</strong>원</span></span>
+										</li>
+										<li class="">
+											<span class="unit"><strong class="number fw500">100</strong>개</span>
+											<span class="each">개당 <span class="block"><strong class="number fw500">47,000</strong>원</span></span>
+										</li>
+										<li class="">
+											<span class="unit"><strong class="number fw500">200</strong>개</span>
+											<span class="each">개당 <span class="block"><strong class="number fw500">45,000</strong>원</span></span>
+										</li>
+									</ol>
+									<div class="bar"><span style="width:33.333%"></span></div>
+								</div>
+								<div class="state">현재 <strong class="number fcpoint">60</strong>개 신청 중</div>
+								<div class="check">
+									<div class="ea_box_wrap">
+										<label for="cea" class="blind">수량</label>
+										<div class="ea_box">
+											<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+											<input type="number" name="cea" class="number txt ea" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this);">
+											<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+										</div>
+									</div>
+									<div class="price">
+										<p class="current">현재가</p>
+										<span><strong class="number fw500">1,860</strong>원</span>
+									</div>
+								</div>
+								<div class="button_box" id="btnOrder">
+									<button type="button" class="buttons medium point" onclick="groupbuying(this)">공동구매 신청하기</button>
+								</div>
+							</div>
+							<!-- <div class="state_layerbox"><strong>공동구매 완료</strong></div> -->
+						</li>
+						<li data-idx="9298" data-state="done" data-minea="0" data-maxea="0" data-amountunit="1">
+							<div class="count number">Day + 19</div>
+							<div class="inner">
+								<div class="product_box">
+									<div class="thumb_box">
+										<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+									</div>
+									<div class="info_box">
+										<div class="name">광동아토르바스타틴정(무수아토르바스타틴칼슘) 10mg x 10box (무료배송)</div>
+										<div class="summary">
+											<span class="box">광동제약</span>
+											<span class="box">50ml</span>
+											<span class="box">10병</span>
+										</div>
+									</div>
+								</div>
+								
+								<div class="step_box">
+									<ol class="step">
+										<li class="attain">
+											<span class="unit"><strong class="number fw500">50</strong>개</span>
+											<span class="each">개당 <span class="block"><strong class="number fw500">49,000</strong>원</span></span>
+										</li>
+										<li class="attain">
+											<span class="unit"><strong class="number fw500">100</strong>개</span>
+											<span class="each">개당 <span class="block"><strong class="number fw500">47,000</strong>원</span></span>
+										</li>
+										<li class="">
+											<span class="unit"><strong class="number fw500">200</strong>개</span>
+											<span class="each">개당 <span class="block"><strong class="number fw500">45,000</strong>원</span></span>
+										</li>
+									</ol>
+									<div class="bar"><span style="width:66.6666%"></span></div>
+								</div>
+								<div class="state">현재 <span class="fcpoint"><strong class="number">60</strong>개</span> 신청 중</div>
+								<div class="check">
+									<div class="ea_box_wrap">
+										<label for="cea" class="blind">수량</label>
+										<div class="ea_box">
+											<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+											<input type="number" name="cea" class="number txt ea" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this);">
+											<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+										</div>
+									</div>
+									<div class="price">
+										<p class="current">현재가</p>
+										<span><strong class="number fw500">451,860</strong>원</span>
+									</div>
+								</div>
+								<div class="button_box" id="btnOrder">
+									<button type="button" class="buttons medium point disabled" onclick="groupbuying(this)">공동구매 신청완료</button>
+								</div>
+							</div>
+							<!-- <div class="state_layerbox"><strong>공동구매 완료</strong></div> -->
+						</li>
+						<li data-idx="9298" data-state="done" data-minea="0" data-maxea="0" data-amountunit="1">
+							<div class="count number">Day + 19</div>
+							<div class="inner">
+								<div class="product_box">
+									<div class="thumb_box">
+										<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+									</div>
+									<div class="info_box">
+										<div class="name">광동아토르바스타틴정(무수아토르바스타틴칼슘) 10mg x 10box (무료배송)</div>
+										<div class="summary">
+											<span class="box">광동제약</span>
+											<span class="box">50ml</span>
+											<span class="box">10병</span>
+										</div>
+									</div>
+								</div>
+								
+								<div class="step_box">
+									<ol class="step">
+										<li class="">
+											<span class="unit"><strong class="number fw500">50</strong>개</span>
+											<span class="each">개당 <span class="block"><strong class="number fw500">49,000</strong>원</span></span>
+										</li>
+										<li class="">
+											<span class="unit"><strong class="number fw500">100</strong>개</span>
+											<span class="each">개당 <span class="block"><strong class="number fw500">47,000</strong>원</span></span>
+										</li>
+										<li class="">
+											<span class="unit"><strong class="number fw500">200</strong>개</span>
+											<span class="each">개당 <span class="block"><strong class="number fw500">45,000</strong>원</span></span>
+										</li>
+									</ol>
+									<div class="bar"><span style="width:0"></span></div>
+								</div>
+								<div class="state">현재 <span class="fcpoint"><strong class="number">0</strong>개</span> 신청 중</div>
+								<div class="check">
+									<div class="ea_box_wrap">
+										<label for="cea" class="blind">수량</label>
+										<div class="ea_box">
+											<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+											<input type="number" name="cea" class="number txt ea" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this);">
+											<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+										</div>
+									</div>
+									<div class="price">
+										<p class="current">현재가</p>
+										<span><strong class="number fw500">1,231,860</strong>원</span>
+									</div>
+								</div>
+								<div class="button_box" id="btnOrder">
+									<button type="button" class="buttons medium point disabled" onclick="groupbuying(this)">공동구매 신청완료</button>
+								</div>
+							</div>
+							<div class="state_layerbox"><strong>공동구매 완료</strong></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+
+		@@include('@@webRoot/_include/foot.html')
+
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>

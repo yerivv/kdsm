@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('@@webRoot/_include/head.html',{
+        "title": "묶음상품"
+    })
+    @@include('@@webRoot/_include/library.html')
+    <script src="@@webRoot/js/ui.js"></script>
+    <script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+    <div id="app">
+        @@include('@@webRoot/_include/header.html',{
+            "gnb-5": "active"
+        })
+
+        <main id="container">
+            <div class="page_promotion">
+                <h2 class="page_title type1">묶음상품</h2>
+                <div class="">분류슬라이드</div>
+                <div class="blank_space"></div>
+                <div class="wide_title_banner">
+                    <div class="banner"><img src="@@webRoot/imgs/title/bundle_banner.png" alt="" /></div>
+                </div>
+            </div>
+        </main>
+
+        @@include('@@webRoot/_include/footer.html')
+
+        @@include('@@webRoot/_include/foot.html')
+
+        @@include('@@webRoot/_include/modal.html')
+    </div>
+    
+    <script>
+    </script>
+</body>
+</html>
