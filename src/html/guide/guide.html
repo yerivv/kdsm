@@ -1,29 +1,1124 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    @@include('@@webRoot/_include/head.html',{
-        "title": "가이드"
-    })
-    @@include('@@webRoot/_include/library.html')
-    <script src="@@webRoot/js/ui.js"></script>
-    <script src="@@webRoot/js/develop.js"></script>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "가이드"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
 </head>
 <body>
-    <div id="wrap" class="wrap">
-        @@include('@@webRoot/_include/header.html')
+	<div id="wrap" class="wrap">
+		<h1 class="guide_header">KDSM - components</h1>
+		<div class="guide_container">
+			<div class="section">
+				<h2>Typography</h2>
+				<h3>노토산스</h3>
+				<ul class="font_list" style="margin-top:8px;">
+					<li style="font-weight:100">노토산스 Thin</li>
+					<li style="font-weight:300">노토산스 Light</li>
+					<li style="font-weight:400">노토산스 Regular</li>
+					<li style="font-weight:500">노토산스 Medium</li>
+					<li style="font-weight:700">노토산스 Bold</li>
+				</ul>
+				<h3>Roboto</h3>
+				<ul class="font_list" style="font-family:'Roboto';margin-top:8px;">
+					<li style="font-weight:400">Roboto Regular</li>
+					<li style="font-weight:500">Roboto Medium</li>
+					<li style="font-weight:700">Roboto Bold</li>
+				</ul>
+			</div>
+			<div class="section">
+				<h2>Color</h2>
+				<h3>Point</h3>
+				<ul class="color_chip">
+					<li>
+						<div class="chip" style="background-color:#e8340c"></div>
+						<div class="color_point1">#e8340c</div>
+					</li>
+					<li>
+						<div class="chip" style="background-color:#ff7556"></div>
+						<div>#ff7556</div>
+					</li>
+					<li>
+						<div class="chip" style="background-color:#c5a86f"></div>
+						<div>#c5a86f</div>
+					</li>
+					<li>
+						<div class="chip" style="background-color:#726562"></div>
+						<div>#726562</div>
+					</li>
+				</ul>
+				<h3>color</h3>
+				<ul class="color_chip">
+					<li>
+						<div class="chip" style="background-color:#242424"></div>
+						<div>#242424</div>
+					</li>
+					<li>
+						<div class="chip" style="background-color:#666"></div>
+						<div>#666666</div>
+					</li>
+					<li>
+						<div class="chip" style="background-color:#8f8f8f"></div>
+						<div>#8f8f8f</div>
+					</li>
+					<li>
+						<div class="chip" style="background-color:#b0b0b0"></div>
+						<div>#b0b0b0</div>
+					</li>
+					<li>
+						<div class="chip" style="background-color:#e3e3e3"></div>
+						<div>#e3e3e3</div>
+					</li>
+				</ul>
+				<h3>color</h3>
+				<ul class="color_chip">
+					<li>
+						<div class="chip" style="background-color:#5b5e6a"></div>
+						<div>#5b5e6a</div>
+					</li>
+					<li>
+						<div class="chip" style="background-color:#797d8d"></div>
+						<div>#797d8d</div>
+					</li>
+					<li>
+						<div class="chip" style="background-color:#dee0e4"></div>
+						<div>#dee0e4</div>
+					</li>
+					<li>
+						<div class="chip" style="background-color:#edf0f2"></div>
+						<div>#edf0f2</div>
+					</li>
+					<li>
+						<div class="chip" style="background-color:#f4f7f9"></div>
+						<div>#f4f7f9</div>
+					</li>
+				</ul>
+			</div>
+			<div class="section">
+				<h2>Tab</h2>
+				<h3>카테고리 탭<small>(3개 이상일 때 열기/닫기 버튼 노출)</small></h3>
+				<div class="category_menu init">
+					<ul class="list">
+						<li><a href="#" class="btn">탕류/쌍화탕류</a></li>
+						<li><a href="#" class="btn">청심원</a></li>
+						<li><a href="#" class="btn">비타500/드링크류</a></li>
+						<li><a href="#" class="btn">자양강장제말줄임테스트</a></li>
+						<li class="active"><a href="#" class="btn">비타민/철분제</a></li>
+						<li><a href="#" class="btn">감기해열진통</a></li>
+						<li><a href="#" class="btn">소화제/변비약</a></li>
+						<li><a href="#" class="btn">피부질환</a></li>
+						<li><a href="#" class="btn">안과용제</a></li>
+						<li><a href="#" class="btn">화장품</a></li>
+						<li><a href="#" class="btn">파스류</a></li>
+						<li><a href="#" class="btn">건강기능식품</a></li>
+						<li><a href="#" class="btn">기타</a></li>
+					</ul>
+					<div class="control" onclick="controlCate()">카테고리 <span class="text">열기</span></div>
+				</div>
+				<h3>메뉴 탭</h3>
+				<div id="tabbox2">
+					<div class="menu_tab cols2">
+						<ul class="list">
+							<li class="menu1 active" data-tab-target="tab1"><span class="btn">카테고리별 보기</span></li>
+							<li class="menu2" data-tab-target="tab2"><span class="btn">입점업체별 보기</span></li>
+						</ul>
+					</div>
+					<div class="contents contents_tab">
+						<div id="tab1" class="content active">탭컨텐츠1</div>
+						<div id="tab2" class="content">탭컨텐츠2</div>
+					</div>
+				</div>
+				<script>
+					tabInit('#tabbox2');
+				</script>
+				<div id="tabbox3">
+					<div class="menu_tab cols3">
+						<ul class="list">
+							<li class="menu1 active" data-tab-target="tab1"><span class="btn">KD-Shop</span></li>
+							<li class="menu2" data-tab-target="tab2"><span class="btn">입점업체</span></li>
+							<li class="menu3" data-tab-target="tab3"><span class="btn">약가인하</span></li>
+						</ul>
+					</div>
+					<div class="contents contents_tab">
+						<div id="tab1" class="content active">탭컨텐츠1</div>
+						<div id="tab2" class="content">탭컨텐츠2</div>
+						<div id="tab3" class="content">탭컨텐츠3</div>
+					</div>
+				</div>
+				<script>
+					tabInit('#tabbox3');
+				</script>
+				<div id="tabbox4">
+					<div class="menu_tab cols4">
+						<ul class="list">
+							<li class="menu1 active" data-tab-target="tab1"><span class="btn">상세정보</span></li>
+							<li class="menu2" data-tab-target="tab2"><span class="btn">약학정보</span></li>
+							<li class="menu3" data-tab-target="tab3"><span class="btn">상품확대</span></li>
+							<li class="menu4" data-tab-target="tab4"><span class="btn">판매지도</span></li>
+						</ul>
+					</div>
+					<div class="contents contents_tab">
+						<div id="tab1" class="content active">탭컨텐츠1</div>
+						<div id="tab2" class="content">탭컨텐츠2</div>
+						<div id="tab3" class="content">탭컨텐츠3</div>
+						<div id="tab4" class="content">탭컨텐츠4</div>
+					</div>
+				</div>
+				<script>
+					tabInit('#tabbox4');
+				</script>
+			</div>
+			<div class="section">
+				<h2>Form</h2>
+				<h3>input text</h3>
+				<div class="data_list_row">
+					<dl>
+						<dt>Default</dt> 
+						<dd>
+							<div><input type="text" name="input-1" placeholder="업체메시지 전달 입력" /></div>
+							<div style="margin-top:4px;"><input type="text" name="input-1" placeholder="업체메시지 전달 입력" value="입력내용" /></div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>Disabled</dt>
+						<dd>
+							<input type="text" name="input-2" disabled="disabled" placeholder="입력하세요." />
+						</dd>
+					</dl>
+					<dl>
+						<dt>Readonly</dt>
+						<dd>
+							<input type="text" name="input-3" readonly="readonly" value="readonly" />
+						</dd>
+					</dl>
+				</div>
+				<!-- <h3>input file</h3>
+				<div class="data_list_row">
+					<dl>
+						<dt>Default</dt>
+						<dd>
+							<input type="file" name="input-4" />
+						</dd>
+					</dl>
+				</div> -->
+				<h3>checkbox</h3>
+				<div class="data_list_row">
+					<dl>
+						<dt>Default</dt>
+						<dd>
+							<div><input type="checkbox" name="checkbox-1" /></div>
+							<div style="margin-top:4px;">
+								<input type="checkbox" name="checkbox-2" id="checkbox-2" checked /><label for="checkbox-2">체크박스</label>
+								<input type="checkbox" name="checkbox-2-1" id="checkbox-2-1" /><label for="checkbox-2-1">체크박스</label>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>Disabled</dt>
+						<dd>
+							<div><input type="checkbox" name="checkbox-3" disabled="disabled" /></div>
+							<div style="margin-top:4px;">
+								<input type="checkbox" name="checkbox-3-1" disabled="disabled" id="checkbox-3-1" /><label for="">체크박스</label>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<h3>radio</h3>
+				<div class="data_list_row">
+					<dl>
+						<dt>Default</dt>
+						<dd>
+							<div><input type="radio" name="radio-1" /></div>
+							<div style="margin-top:4px;">
+								<input type="radio" name="radio-2" id="radio-2" checked /><label for="radio-2">라디오버튼</label>
+								<input type="radio" name="radio-2-1" id="radio-2-1" /><label for="radio-2-1">라디오버튼</label>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>Disabled</dt>
+						<dd>
+							<div><input type="radio" name="radio-3" disabled="disabled" /></div>
+							<div style="margin-top:4px;">
+								<input type="radio" name="radio-3-1" disabled="disabled" id="radio-3-1" /><label for="radio-3-1">라디오버튼</label>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<h3>selectbox</h3>
+				<div class="data_list_row">
+					<dl>
+						<dt>Default</dt>
+						<dd>
+							<select name="">
+								<option>선택</option>
+								<option>카카오뱅크</option>
+							</select>
+						</dd>
+					</dl>
+					<dl>
+						<dt>Disabled</dt>
+						<dd>
+							<select name="" disabled="disabled">
+								<option>선택</option>
+								<option>카카오뱅크</option>
+							</select>
+						</dd>
+					</dl>
+				</div>
+				<h3>textarea</h3>
+				<div class="data_list_row">
+					<dl>
+						<dt>Default</dt>
+						<dd>
+							<textarea name="" rows="5" placeholder="입력하세요"></textarea>
+						</dd>
+					</dl>
+					<dl>
+						<dt>Disabled</dt>
+						<dd>
+							<textarea name="" rows="5" placeholder="입력하세요" disabled="disabled"></textarea>
+						</dd>
+					</dl>
+				</div>
+				<h3>상품 수량 체크</h3>
+				<div class="data_list_row">
+					<dl>
+						<dt>Default</dt>
+						<dd>
+							<div class="ea_box">
+								<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+								<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+								<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>Disabled</dt>
+						<dd>
+							<div class="ea_box">
+								<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-" disabled="disabled">상품 수량 1 감소</button>
+								<input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)" disabled="disabled">
+								<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+" disabled="disabled">상품 수량 1 증가</button>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<h3>공통 검색 폼</h3>
+				<div class="search_form">
+					<input type="search" class="input_search" name="" placeholder="검색어를 입력하세요." />
+					<button type="button" class="btn_search">검색</button>
+				</div>
+			</div>
+			<div class="section">
+				<h2>Table</h2>
+				<h3>데이터형 테이블<small>(.tbl_row)</small></h3>
+				<table class="common_tbl tbl_row">
+					<caption>상품 정보 표</caption>
+					<colgroup>
+						<col width="40%" /><col width="60%" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>용도 및 제형</th>
+							<td>표백제의 경우 계열을 함께 표시해야 함</td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>목록형 테이블<small>(.tbl_col)</small></h3>
+				<table class="common_tbl tbl_col">
+					<caption>상품 정보 고시 표</caption>
+					<colgroup>
+						<col width="40%" /><col width="60%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>항목</th>
+							<th>내용</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>용도 및 제형</th>
+							<td>표백제의 경우 계열을 함께 표시해야 함</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- <h3>목록형 테이블<small>(.tbl_col2)</small></h3>
+				<table class="tbl_col2">
+					<caption>상품 정보 고시 표</caption>
+					<colgroup>
+						<col width="40%" /><col width="60%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>항목</th>
+							<th>내용</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>용도 및 제형</th>
+							<td>표백제의 경우 계열을 함께 표시해야 함</td>
+						</tr>
+					</tbody>
+				</table> -->
+			</div>
+			<div class="section">
+				<h2>Label</h2>
+				<h3>count</h3>
+				<div><span class="label_count">240</span> <span class="label_count etc">7</span></div>
+				<h3>product</h3>
+				<div class="iconlabel_box">
+					<a href="#" class="label sale">특가</a>
+					<a href="#" class="label time"><i></i>타임세일</a>
+					<a href="#" class="label regular">정기배송</a>
+					<a href="#" class="label bundle">묶음배송</a>
+				</div>
+				<div class="iconlabel_box etc" style="margin-top:4px;">
+					<a href="#" class="label sale">특가</a>
+					<a href="#" class="label time">타임세일</a>
+					<a href="#" class="label regular">정기배송</a>
+					<a href="#" class="label bundle">묶음배송</a>
+				</div>
+				<h3>재고</h3>
+				<dl class="label_stock">
+					<dt>재고</dt>
+					<dd><strong class="number">100</strong>개</dd>
+				</dl>
+			</div>
+			<div class="section">
+				<h2>Button</h2>
+				<h3>default (height:44px)</h3>
+				<div class="button_box">
+					<a href="#" class="buttons fill">장바구니 담기</a>
+				</div>
+				<div class="button_box" style="margin-top:8px;">
+					<a href="#" class="buttons fcdefault">장바구니 보기</a>
+					<a href="#" class="buttons fill fw700">장바구니 담기</a>
+				</div>
+				<div class="button_box" style="margin-top:8px;">
+					<a href="#" class="buttons fcdefault">장바구니 보기</a>
+					<button type="button" class="buttons fill fw700">장바구니 담기</button>
+					<button type="button" disabled="disabled" class="buttons fill fw700">장바구니 담기</button>
+				</div>
+				<h3>other single icon (height:40px)</h3>
+				<a href="#" class="buttons other">상세정보<i class="arrow"></i></a>
+				<div class="button_box single" style="margin-top:8px;">
+					<a href="#" class="buttons other">상세정보<i class="arrow"></i></a>
+				</div>
+				<h3>medium (height:36px)</h3>
+				<div class="button_box single">
+					<a href="#" class="buttons medium wide">간편결제 카드등록</a>
+					<a href="#" class="buttons medium point">주문하기</a>
+					<a href="#" class="buttons medium white">전액사용</a>
+					<a href="#" class="buttons medium fill">변경</a>
+				</div>
+				<h3>small (height:32px)</h3>
+				<div class="button_box single">
+					<a href="#" class="buttons small wide">주문하기</a>
+					<a href="#" class="buttons small point wide">주문하기</a>
+					<a href="#" class="buttons small white">변경</a>
+					<a href="#" class="buttons small fill">변경</a>
+					<button type="button" disabled="disabled" class="buttons small white">변경</button>
+				</div>
+				<h3>xsmall (height:18px)</h3>
+				<div class="button_box single">
+					<a href="#" class="buttons xsmall black fw500">특가상품 보기</a>
+					<a href="#" class="buttons xsmall gray round0">업체변경</a>
+					<a href="#" class="buttons xsmall white round0">삭제</a>
+				</div>
+				<h3>기타 - 즉시할인(btn_direct)</h3>
+				<div>
+					<a href="#" class="btn_direct type1"><i class="ico"></i>즉시할인</a>
+					<a href="#" class="btn_direct type2"><i class="ico"></i>즉시할인</a>
+					<a href="#" class="btn_direct type3"><i class="ico"></i>즉시할인</a>
+				</div>
+			</div>
+		</div>
+		
+	<script>
+	//swiper best
+	slideAct();
+	</script>
+	
+		<div class="guide_container">
+			<div class="section">
+				<h2>스와이퍼 슬라이드</h2>
+				<h3>progressbar</h3>
+				<div id="guideSwiper2" class="slider-wrap slider">
+					<div class="inner swiper-container">
+						<div class="common_product swiper-wrapper">
+							<div class="item">
+								<div class="thumb_box">
+									<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+									<div class="iconlabel_box">
+										<a href="#" class="label sale">특가</a>
+									</div>
+									<div class="stock">
+										<dl class="label_stock">
+											<dt>재고</dt>
+											<dd><strong class="number">100</strong>개</dd>
+										</dl>
+									</div>
+									<div class="btn_box">
+										<button type="button" class="btn_cartin">장바구니 담기</button>
+									</div>
+								</div>
+								<div class="info_box">
+									<div class="info">
+										<a href="javascript:;" class="name" onclick="detailpop(9741);">광동 원방 </a>
+										<div class="summary">
+											<span class="box">광동제약</span>
+											<span class="box">50ml</span>
+											<span class="box">10병</span>
+										</div>
+									</div>
+									<div class="price">
+										<dl>
+											<dt>정상가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+										<dl class="sale">
+											<dt>최대할인가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+									</div>
+									<div class="check">
+										<span class="check_box"><input type="checkbox" name="cbList" id="cbList9741" value="9741"><label for="cbList9741" class="blind">해당상품선택</label></span>
+										<div class="ea_box_wrap">
+											<label for="cea" class="blind">수량</label>
+											<div class="ea_box">
+												<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+												<input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+												<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="thumb_box">
+									<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+									<div class="iconlabel_box">
+										<a href="#" class="label sale">특가</a>
+										<a href="#" class="label time"><i></i>타임세일</a>
+									</div>
+									<div class="stock">
+										<dl class="label_stock">
+											<dt>재고</dt>
+											<dd><strong class="number">100</strong>개</dd>
+										</dl>
+									</div>
+									<div class="btn_box">
+										<button type="button" class="btn_cartin">장바구니 담기</button>
+									</div>
+								</div>
+								<div class="info_box">
+									<div class="info">
+										<a href="javascript:;" class="name" onclick="detailpop(9741);">광동 원방 우황청심원 현탄액 영묘향 함유</a>
+										<div class="summary">
+											<span class="box">광동제약</span>
+											<span class="box">50ml</span>
+											<span class="box">10병</span>
+										</div>
+									</div>
+									<div class="price">
+										<dl>
+											<dt>정상가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+										<dl class="sale">
+											<dt>최대할인가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+									</div>
+									<div class="check">
+										<span class="check_box"><input type="checkbox" name="cbList" id="cbList9741" value="9741"><label for="cbList9741" class="blind">해당상품선택</label></span>
+										<div class="ea_box_wrap">
+											<label for="cea" class="blind">수량</label>
+											<div class="ea_box">
+												<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+												<input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+												<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item soldout">
+								<div class="thumb_box">
+									<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+									<div class="stock">
+										<dl class="label_stock">
+											<dt>재고</dt>
+											<dd><strong class="number">100</strong>개</dd>
+										</dl>
+									</div>
+									<div class="btn_box">
+										<button type="button" class="btn_cartin">장바구니 담기</button>
+									</div>
+								</div>
+								<div class="info_box">
+									<div class="info">
+										<a href="javascript:;" class="name" onclick="detailpop(9741);">광동 원방 우황청심원 현탄액 영묘향 함유  우황청심원 현탄액 영묘향 함유</a>
+										<div class="summary">
+											<span class="box">광동제약</span>
+											<span class="box">50ml</span>
+											<span class="box">10병</span>
+										</div>
+									</div>
+									<div class="price">
+										<dl>
+											<dt>정상가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+										<dl class="sale">
+											<dt>최대할인가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+									</div>
+									<div class="check">
+										<span class="check_box"><input type="checkbox" name="cbList" id="cbList9741" value="9741" disabled="disabled"><label for="cbList9741" class="blind">해당상품선택</label></span>
+										<div class="ea_box_wrap">
+											<label for="cea" class="blind">수량</label>
+											<div class="ea_box">
+												<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-" disabled="disabled">상품 수량 1 감소</button>
+												<input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)" disabled="disabled">
+												<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+" disabled="disabled">상품 수량 1 증가</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- //item -->
+							<div class="item">
+								<div class="thumb_box">
+									<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+									<div class="iconlabel_box">
+										<a href="#" class="label sale">특가</a>
+									</div>
+									<div class="stock">
+										<dl class="label_stock">
+											<dt>재고</dt>
+											<dd><strong class="number">100</strong>개</dd>
+										</dl>
+									</div>
+									<div class="btn_box">
+										<button type="button" class="btn_cartin">장바구니 담기</button>
+									</div>
+								</div>
+								<div class="info_box">
+									<div class="info">
+										<a href="javascript:;" class="name" onclick="detailpop(9741);">광동 원방 </a>
+										<div class="summary">
+											<span class="box">광동제약</span>
+											<span class="box">50ml</span>
+											<span class="box">10병</span>
+										</div>
+									</div>
+									<div class="price">
+										<dl>
+											<dt>정상가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+										<dl class="sale">
+											<dt>최대할인가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+									</div>
+									<div class="check">
+										<span class="check_box"><input type="checkbox" name="cbList" id="cbList9741" value="9741"><label for="cbList9741" class="blind">해당상품선택</label></span>
+										<div class="ea_box_wrap">
+											<label for="cea" class="blind">수량</label>
+											<div class="ea_box">
+												<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+												<input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+												<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="thumb_box">
+									<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+									<div class="iconlabel_box">
+										<a href="#" class="label sale">특가</a>
+										<a href="#" class="label time"><i></i>타임세일</a>
+									</div>
+									<div class="stock">
+										<dl class="label_stock">
+											<dt>재고</dt>
+											<dd><strong class="number">100</strong>개</dd>
+										</dl>
+									</div>
+									<div class="btn_box">
+										<button type="button" class="btn_cartin">장바구니 담기</button>
+									</div>
+								</div>
+								<div class="info_box">
+									<div class="info">
+										<a href="javascript:;" class="name" onclick="detailpop(9741);">광동 원방 우황청심원 현탄액 영묘향 함유</a>
+										<div class="summary">
+											<span class="box">광동제약</span>
+											<span class="box">50ml</span>
+											<span class="box">10병</span>
+										</div>
+									</div>
+									<div class="price">
+										<dl>
+											<dt>정상가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+										<dl class="sale">
+											<dt>최대할인가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+									</div>
+									<div class="check">
+										<span class="check_box"><input type="checkbox" name="cbList" id="cbList9741" value="9741"><label for="cbList9741" class="blind">해당상품선택</label></span>
+										<div class="ea_box_wrap">
+											<label for="cea" class="blind">수량</label>
+											<div class="ea_box">
+												<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+												<input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+												<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item soldout">
+								<div class="thumb_box">
+									<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+									<div class="stock">
+										<dl class="label_stock">
+											<dt>재고</dt>
+											<dd><strong class="number">100</strong>개</dd>
+										</dl>
+									</div>
+									<div class="btn_box">
+										<button type="button" class="btn_cartin">장바구니 담기</button>
+									</div>
+								</div>
+								<div class="info_box">
+									<div class="info">
+										<a href="javascript:;" class="name" onclick="detailpop(9741);">광동 원방 우황청심원 현탄액 영묘향 함유  우황청심원 현탄액 영묘향 함유</a>
+										<div class="summary">
+											<span class="box">광동제약</span>
+											<span class="box">50ml</span>
+											<span class="box">10병</span>
+										</div>
+									</div>
+									<div class="price">
+										<dl>
+											<dt>정상가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+										<dl class="sale">
+											<dt>최대할인가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+									</div>
+									<div class="check">
+										<span class="check_box"><input type="checkbox" name="cbList" id="cbList9741" value="9741" disabled="disabled"><label for="cbList9741" class="blind">해당상품선택</label></span>
+										<div class="ea_box_wrap">
+											<label for="cea" class="blind">수량</label>
+											<div class="ea_box">
+												<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-" disabled="disabled">상품 수량 1 감소</button>
+												<input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)" disabled="disabled">
+												<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+" disabled="disabled">상품 수량 1 증가</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- //item -->
+						</div>
+						<!-- <div class="swiper-progress-bar"></div> -->
+						<div class="swiper-progress-bar"></div>
+					</div>
+				</div>
+				
+				<div id="guideSwiper2" class="slider-wrap slider">
+					<div class="inner swiper-container">
+						<div class="common_product swiper-wrapper">
+							<div class="item">
+								<div class="thumb_box">
+									<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+									<div class="iconlabel_box">
+										<a href="#" class="label sale">특가</a>
+									</div>
+									<div class="stock">
+										<dl class="label_stock">
+											<dt>재고</dt>
+											<dd><strong class="number">100</strong>개</dd>
+										</dl>
+									</div>
+									<div class="btn_box">
+										<button type="button" class="btn_cartin">장바구니 담기</button>
+									</div>
+								</div>
+								<div class="info_box">
+									<div class="info">
+										<a href="javascript:;" class="name" onclick="detailpop(9741);">광동 원방 </a>
+										<div class="summary">
+											<span class="box">광동제약</span>
+											<span class="box">50ml</span>
+											<span class="box">10병</span>
+										</div>
+									</div>
+									<div class="price">
+										<dl>
+											<dt>정상가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+										<dl class="sale">
+											<dt>최대할인가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+									</div>
+									<div class="check">
+										<span class="check_box"><input type="checkbox" name="cbList" id="cbList9741" value="9741"><label for="cbList9741" class="blind">해당상품선택</label></span>
+										<div class="ea_box_wrap">
+											<label for="cea" class="blind">수량</label>
+											<div class="ea_box">
+												<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+												<input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+												<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item soldout">
+								<div class="thumb_box">
+									<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+									<div class="stock">
+										<dl class="label_stock">
+											<dt>재고</dt>
+											<dd><strong class="number">100</strong>개</dd>
+										</dl>
+									</div>
+									<div class="btn_box">
+										<button type="button" class="btn_cartin">장바구니 담기</button>
+									</div>
+								</div>
+								<div class="info_box">
+									<div class="info">
+										<a href="javascript:;" class="name" onclick="detailpop(9741);">광동 원방 우황청심원 현탄액 영묘향 함유  우황청심원 현탄액 영묘향 함유</a>
+										<div class="summary">
+											<span class="box">광동제약</span>
+											<span class="box">50ml</span>
+											<span class="box">10병</span>
+										</div>
+									</div>
+									<div class="price">
+										<dl>
+											<dt>정상가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+										<dl class="sale">
+											<dt>최대할인가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+									</div>
+									<div class="check">
+										<span class="check_box"><input type="checkbox" name="cbList" id="cbList9741" value="9741" disabled="disabled"><label for="cbList9741" class="blind">해당상품선택</label></span>
+										<div class="ea_box_wrap">
+											<label for="cea" class="blind">수량</label>
+											<div class="ea_box">
+												<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-" disabled="disabled">상품 수량 1 감소</button>
+												<input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)" disabled="disabled">
+												<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+" disabled="disabled">상품 수량 1 증가</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- //item -->
+							<div class="item">
+								<div class="thumb_box">
+									<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+									<div class="iconlabel_box">
+										<a href="#" class="label sale">특가</a>
+										<a href="#" class="label time"><i></i>타임세일</a>
+									</div>
+									<div class="stock">
+										<dl class="label_stock">
+											<dt>재고</dt>
+											<dd><strong class="number">100</strong>개</dd>
+										</dl>
+									</div>
+									<div class="btn_box">
+										<button type="button" class="btn_cartin">장바구니 담기</button>
+									</div>
+								</div>
+								<div class="info_box">
+									<div class="info">
+										<a href="javascript:;" class="name" onclick="detailpop(9741);">광동 원방 우황청심원 현탄액 영묘향 함유</a>
+										<div class="summary">
+											<span class="box">광동제약</span>
+											<span class="box">50ml</span>
+											<span class="box">10병</span>
+										</div>
+									</div>
+									<div class="price">
+										<dl>
+											<dt>정상가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+										<dl class="sale">
+											<dt>최대할인가</dt>
+											<dd><strong class="number">4,548,000</strong>원</dd>
+										</dl>
+									</div>
+									<div class="check">
+										<span class="check_box"><input type="checkbox" name="cbList" id="cbList9741" value="9741"><label for="cbList9741" class="blind">해당상품선택</label></span>
+										<div class="ea_box_wrap">
+											<label for="cea" class="blind">수량</label>
+											<div class="ea_box">
+												<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+												<input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+												<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="swiper-progress-bar"></div> -->
+						<div class="swiper-progress-bar"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="guide_container">
+			<div class="section">
+				<h2>Space</h2>
+				<h3>default</h3>
+				<div class="blank_space"></div>
+			</div>
+		</div>
+	<script type="text/javascript">
+	//<![CDATA[
+	function detailInfo(gno){
+		modalUrlOpen('../goods/detail_info.do?gno='+gno);
+	}
+	
+	function detailSelect(gno){
+		modalUrlOpen('../goods/detail_pop.do?gno='+gno, 'full');
+	}
+	function historyPop(gno){
+		//var f = document.dFrm;
+		modalUrlOpen('../goods/history_goods_pop.do?gno='+gno);
+		return false;
+	}
+	//제3자 제공동의
+	function termsView(code){
+		modalUrlOpen('../etc/terms_of_use_pop.do?code='+code);
+	}
+	//쿠폰
+	function openCoupon(){
+		//modalUrlOpen('../order/order_coupon_pop.do?kind='+kind);
+		modalOpen('modal_orderCoupon')
+	}
+	//예약주문
+	function preOrder(){
+		modalUrlOpen('../goods/preorder_pop.do')
+	}
+	//]]>
+	</script>
+		<div class="guide_container">
+			<div class="section">
+				<h2>Modal</h2>
+				<h3>Default</h3>
+				<div class="button_box single">
+					<a href="javascript:void(0)" onclick="detailInfo('483205')" class="buttons small">상세정보</a>
+					
+					<a href="javascript:void(0)" onclick="historyPop('483205')" class="buttons small">구매이력</a>
+					
+					<a href="javascript:void(0)" onclick="termsView(103)" class="buttons small">약관</a>
+					
+					<a href="javascript:void(0)" onclick="openCoupon()" class="buttons small">쿠폰 조회 및 적용</a>
+					
+					<a href="javascript:void(0)" onclick="preOrder()" class="buttons small">예약주문</a>
+				</div>
+				
+				<h3>Full</h3>
+				<div class="button_box single">
+					<a href="javascript:void(0)" onclick="detailSelect('483205', 'full')" class="buttons small">상품 상세</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="guide_container">
+			<div class="section">
+				<h2>Tooltip</h2>
+				<h3>Left</h3>
+				<div class="guide_flex_box">
+					<div class="tooltip_wrap">
+						<a href="javascript:void(0);" onclick="tooltip(this);" class="btn_direct type2 click"><i class="ico"></i>즉시할인</a>
+						<div class="message_box">
+							<p class="text"><span class="fcpoint">우리/롯데</span> 즉시할인 프로모션이 진행 중입니다.</p>
+							<p class="subtext">주문/결제 화면에서 신용카드 선택 후 우리/롯데로 결제</p>
+							<span class="close">툴팁닫기</span>
+						</div>
+					</div>
+				</div>
+				
+				<h3>Center</h3>
+				<div class="guide_flex_box" style="justify-content:center;">
+					<div class="tooltip_wrap">
+						<a href="javascript:void(0);" onclick="tooltip(this);" class="btn_direct type2 click"><i class="ico"></i>즉시할인</a>
+						<div class="message_box">
+							<p class="text"><span class="fcpoint">우리/롯데</span> 즉시할인 프로모션이 진행 중입니다.</p>
+							<p class="subtext">주문/결제 화면에서 신용카드 선택 후 우리/롯데로 결제</p>
+							<span class="close">툴팁닫기</span>
+						</div>
+					</div>
+				</div>
+				
+				<h3>Right</h3>
+				<div class="guide_flex_box" style="justify-content:flex-end;">
+					<div class="tooltip_wrap">
+						<a href="javascript:void(0);" onclick="tooltip(this);" class="btn_direct type2 click"><i class="ico"></i>즉시할인</a>
+						<div class="message_box">
+							<p class="text"><span class="fcpoint">우리/롯데</span> 즉시할인 프로모션이 진행 중입니다.</p>
+							<p class="subtext">주문/결제 화면에서 신용카드 선택 후 우리/롯데로 결제</p>
+							<span class="close">툴팁닫기</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="guide_container">
+			<div class="section">
+				<h2>No Result</h2>
+				<h3>Default</h3>
+				<div class="no_result_box">
+					<i class="ico"></i>
+					<div class="text">구매이력이 없습니다.</div>
+				</div>
+				
+				<h3>Border</h3>
+				<div class="no_result_box border">
+					<i class="ico"></i>
+					<div class="text">구매이력이 없습니다.</div>
+				</div>
+				
+				<h3>bold(강조)</h3>
+				<div class="no_result_box bold">
+					<i class="ico"></i>
+					<div class="text">상품 정보가 존재하지 않습니다.</div>
+				</div>
+			</div>
+		</div>
+		<div class="guide_container">
+			<div class="section">
+				<h2>Confirm</h2>
+				<h3>Default</h3>
+				<div class="confirm_box">
+					<i class="ico"></i>
+					<h3 class="title">주문이 정상적으로 완료되었습니다.</h3>
+				</div>
+				<div class="confirm_detail_box">
+					주문이 완료되었습니다.<br />주문하신 내역은 <span class="fcdefault">마이페이지에서 확인</span>하실 수 있습니다.
+				</div>
+			</div>
+		</div>
+	
+		<div class="guide_container">
+			<div class="section">
+				<h2>Floating</h2>
+				<h3>상품상세</h3>
+				<div class="floating_btn" style="position:relative;z-index:1;">
+					<div class="info_text">
+						<div>업체명 : 광동제약</div>
+						<div>재고 : 140,000개</div>
+					</div>
+					<div class="total_price">
+						<div class="ea_box">
+							<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+							<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+							<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+						</div>
+						<div class="price fcpoint"><strong class="number">4,544,000</strong>원</div>
+					</div>
+					<div class="button_box">
+						<a href="#" class="buttons">관심상품 등록</a>
+						<a href="#" class="buttons fill">장바구니 담기</a>
+					</div>
+				</div>
+				<h3>기획전 등</h3>
+				<div class="floating_btn" style="position:relative;z-index:1;">
+					<div class="more" onclick="floatingMore(this)">자세히 보기</div>
+					<div class="calculation_list">
+						<dl>
+							<dt>선택상품금액</dt>
+							<dd><strong class="number">4,554,400</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>할인</dt>
+							<dd><i class="minus"></i><strong class="number">10,400</strong>원</dd>
+						</dl>
+					</div>
+					<div class="total_price">
+						<div class="total fcblack">합계금액(<span class="fcpoint fw500">4</span>개)</div>
+						<div class="price fcpoint"><strong class="number">4,544,000</strong>원</div>
+					</div>
+					<div class="button_box">
+						<a href="#" class="buttons">장바구니 보기</a>
+						<a href="#" class="buttons fill">장바구니 담기</a>
+					</div>
+				</div>
+				<h3>장바구니</h3>
+				<div class="floating_btn" style="position:relative;z-index:1;">
+					<div class="more" onclick="floatingMore(this)">자세히 보기</div>
+					<div class="calculation_list">
+						<dl>
+							<dt>총 상품금액(주문가능)</dt>
+							<dd><strong class="number">4,554,400</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>예상 비용할인</dt>
+							<dd><i class="minus"></i><strong class="number">10,400</strong>원</dd>
+						</dl>
+					</div>
+					<div class="total_price">
+						<div class="total fcblack">총 예상주문금액</div>
+						<div class="price fcpoint"><strong class="number">4,544,000</strong>원</div>
+					</div>
+					<div class="button_box">
+						<a href="#" class="buttons fill">주문하기</a>
+					</div>
+				</div>
+				<h3>주문결제</h3>
+				<div class="floating_btn" style="position:relative;z-index:1;">
+					<div class="info_text pay">
+						<div>결제수단</div>
+						<div>KD간편결제</div>
+					</div>
+					<div class="total_price">
+						<div class="total fcblack">합계금액(<span class="fcpoint fw500">4</span>개)</div>
+						<div class="price fcpoint"><strong class="number">4,544,000</strong>원</div>
+					</div>
+					<div class="button_box">
+						<a href="#" class="buttons">장바구니 보기</a>
+						<a href="#" class="buttons fill">결제하기</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="fixedBtn"></div>
+	</div>
 
-        <main id="container">
-            가이드
-        </main>
+	<div id="footer"></div>
 
-        @@include('@@webRoot/_include/footer.html')
-
-        @@include('@@webRoot/_include/foot.html')
-
-        @@include('@@webRoot/_include/modal.html')
-    </div>
-    
-    <script>
-    </script>
+	<script>
+	</script>
 </body>
 </html>

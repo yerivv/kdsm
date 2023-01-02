@@ -104,14 +104,15 @@ function isModal(){
 
 function modalOpen(a){
 	let target = document.querySelector('.'+a);
-	target.closest('body').classList.add('ismodal');
+	console.log(a)
+	document.querySelector('body').classList.add('ismodal');
 	target.classList.add('open');
-	target.closest('body').addEventListener('scroll touchmove mousewheel', function(e){e.preventDefault();}, false);
+	document.querySelector('body').addEventListener('scroll touchmove mousewheel', function(e){e.preventDefault();}, false);
 }
 
 function modalClose(a){
 	let target = document.querySelector('.'+a);
-	target.classList.remove('open');
+	document.querySelector('body').classList.remove('open');
 	isModal();
 }
 
@@ -428,4 +429,85 @@ function tabInit(a){
 			}
 		})
 	})
+}
+
+//공동구매 attain
+function attain(){
+	const box = document.querySelector('.groupbuying_list');
+	let lists = box.querySelectorAll('ul>li');
+
+	lists.forEach((list) => {
+		let step = list.querySelector('.step');
+		let total = step.querySelectorAll('li').length;
+		let attain = list.querySelectorAll('.attain').length;
+		let bar = list.querySelector('.step_box .bar>span');
+		let fill = (100/total)*attain;
+
+		list.querySelector('.step').classList.add('cols'+step.dataset.step);
+		bar.style.width = fill+'%';
+	});
+}
+
+//브랜드관
+function youtubeSlide(){
+	const box = document.querySelectorAll('.youtubeslide');
+
+	if(box.length>0){
+		let wrap = document.querySelector('.youtubeslide');
+		let slide = wrap.querySelector('.swiper-container');
+		let len = wrap.querySelectorAll('.swiper-slide').length;
+
+		if(len>1){
+			document.querySelector('.youtubeslide .swiper-pagination').style.display = 'inline-block';
+			const youtubeSwiper = new Swiper(slide, {
+				slidesPerView: 1,
+				pagination: {
+					el: wrap.querySelector('.swiper-pagination'),
+					type:'fraction',
+				},
+				loop: true
+			})
+		} else {
+			document.querySelector('.youtubeslide .swiper-pagination').style.display = 'none';
+		}
+	}
+	
+};
+
+function videoLayer(idx, url){
+	const layer = document.querySelector('.youtubelayer');
+	const iframe = layer.querySelector('.video_box iframe');
+	let btn = layer.querySelectorAll('.video_list li');
+	let num = idx.closest('.swiper-slide').dataset.swiperSlideIndex;
+
+	layer.classList.add('open');
+	iframe.setAttribute('src', url);
+
+	for(let i=0;i<btn.length;++i){
+		btn[i].classList.remove('active');
+		if(num===undefined){
+			btn[0].classList.add('active');
+		}else{
+			btn[num].classList.add('active');
+		}
+	}
+	layer.querySelector('.btn_close').addEventListener('click', () => {
+		layer.classList.remove('open');
+		iframe.setAttribute('src', '');
+	});
+}
+
+function videotab(a,b){
+	let url = b;
+	let btn = a.closest('.video_list').querySelectorAll('li');
+
+	btn.forEach((item) => {
+		item.addEventListener('click', () => {
+			btn.forEach((item) => {
+				item.classList.remove('active');
+			});
+			item.classList.add('active');
+		})
+	})
+	a.closest('.youtubelayer').querySelector('iframe').setAttribute('src', url);
 }

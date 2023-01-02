@@ -12,3 +12,8 @@
 .guide_container .data_list_row dt {display:table-cell;vertical-align:middle;width:100px;background-color:#EDF0F2;padding:8px;}
 .guide_container .data_list_row dd {display:table-cell;width:calc(100% - 100px);padding:8px;}
 .guide_container .guide_flex_box {display:flex;}
+
+.site__map_box {margin:20px 16px;}
+.site__map_box dt {font-size:16px;font-weight:500;margin-bottom:10px}
+.site__map {display:block;padding:15px;margin:8px 0;border:1px solid #ddd;border-radius:4px;background-color:#f4f7f9;}
+.site__map_sub {display:block;margin-left:16px;margin-top:2px;padding:15px;border:1px solid #ddd;border-radius:4px;background-color:#f4f7f9;}

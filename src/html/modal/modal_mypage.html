@@ -1,0 +1,155 @@
+<div id="modal" class="modalFull modal_mypage">
+	<div class="wrap">
+		<div class="head">
+			<h2>마이페이지</h2>
+			<div class="close" onclick="modalClose('modal_mypage');">닫기</div>
+		</div>
+		<div class="contents">
+			<div class="mypage_index">
+				<ol class="order">
+					<li>
+						<a href="../mypage/order_delivery.do?sordstep=200" class="step">
+							<i class="ico step1"></i>
+							<span class="count fcpoint"><strong class="number">0</strong>건</span>
+							<span class="text">결제완료</span>
+						</a>
+					</li>
+					<li>
+						<a href="../mypage/order_delivery.do?sordstep=300" class="step">
+							<i class="ico step2"></i>
+							<span class="count fcpoint"><strong class="number">8</strong>건</span>
+							<span class="text">상품준비중</span>
+						</a>
+					</li>
+					<li>
+						<a href="../mypage/order_delivery.do?sordstep=510" class="step">
+							<i class="ico step3"></i>
+							<span class="count fcpoint"><strong class="number">1</strong>건</span>
+							<span class="text">배송중</span>
+						</a>
+					</li>
+					<li>
+						<a href="../mypage/order_delivery.do?sordstep=590" class="step">
+							<i class="ico step4"></i>
+							<span class="count fcpoint"><strong class="number">0</strong>건</span>
+							<span class="text">배송완료</span>
+						</a>
+					</li>
+				</ol>
+				<div class="product">
+					<div class="wish">
+						<a href="../mypage/wish.do" class="title">
+							<span>관심상품</span>
+							<span class="count fcdefault"><strong class="number">1</strong>건</span>
+						</a>
+						<!-- <div class="none">내역이 없습니다.</div> -->
+						<div class="thumb_list">
+							<ul>
+								<li>
+									<a href="/goods/category.do?gno=399315" class="thumb_box">
+										<img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="하일렌점안액(1회용)(0.5mL)" class="thumb">
+									</a>
+								</li>
+								<li>
+									<a href="/goods/category.do?gno=399315" class="thumb_box">
+										<img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="하일렌점안액(1회용)(0.5mL)" class="thumb">
+									</a>
+								</li>
+								<li>
+									<a href="/goods/category.do?gno=399315" class="thumb_box">
+										<img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="하일렌점안액(1회용)(0.5mL)" class="thumb">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="restock">
+						<a href="../mypage/restock.do" class="title">
+							<span>재입고 알림 내역</span>
+							<span class="count fcdefault"><strong class="number">1</strong>건</span>
+						</a>
+						<!-- <div class="none">내역이 없습니다.</div> -->
+						<div class="thumb_list">
+							<ul>
+								<li>
+									<a href="/goods/category.do?gno=171324" class="thumb_box">
+										<img src="https://kdshop.co.kr/data/base/goods/small/20220221/86f467bbd6c3432188b64313d83aca57.jpg" alt="카멕스립밤클래식스틱"  onerror="this.src='@@webRoot/imgs/test/no.gif'" class="thumb">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="menu_list accordions_wrap">
+					<dl>
+						<dt onclick="accordions(this);">MY 쇼핑</dt>
+						<dd class="toggle">
+							<ul>
+								<li><a href="">주문/배송 조회</a></li>
+								<li><a href="">주문취소내역</a></li>
+								<li><a href="">주문상품 재구매</a></li>
+								<li><a href="">반품내역/신청</a></li>
+								<li><a href="">거래원장</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<div class="menu_list accordions_wrap">
+					<dl>
+						<dt onclick="accordions(this);">MY 혜택/결제</dt>
+						<dd class="toggle">
+							<ul>
+								<li><a href="">쿠폰내역</a></li>
+								<li><a href="">마일리지 내역</a></li>
+								<li><a href="">예치금 내역 및 충전</a></li>
+								<li><a href="">마이너스잔고 내역</a></li>
+								<li><a href="">약가인하</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<div class="menu_list accordions_wrap">
+					<dl>
+						<dt onclick="accordions(this);">MY 상품</dt>
+						<dd class="toggle">
+							<ul>
+								<li><a href="">정기배송관리</a></li>
+								<li><a href="">공동구매관리</a></li>
+								<li><a href="">재입고알림 내역</a></li>
+								<li><a href="">관심상품</a></li>
+								<li><a href="">추천상품</a></li>
+								<li><a href="">예약주문관리</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<div class="menu_list accordions_wrap">
+					<dl>
+						<dt onclick="accordions(this);">MY 간편결제</dt>
+						<dd class="toggle">
+							<ul>
+								<li><a href="">KD 간편결제관리</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<div class="menu_list accordions_wrap">
+					<dl>
+						<dt onclick="accordions(this);">MY 정보</dt>
+						<dd class="toggle">
+							<ul>
+								<li><a href="">회원등급안내</a></li>
+								<li><a href="">회원정보확인/수정</a></li>
+								<li><a href="">탈퇴신청</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="button_box">
+				<a href="../cscenter" class="buttons white fcdefault">고객센터</a>
+				<a href="../logout" class="buttons white fcdefault">로그아웃</a>
+			</div>
+		</div>
+	</div>
+</div>

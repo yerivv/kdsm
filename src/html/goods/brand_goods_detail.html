@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "브랜드관"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"gnb-3": "active",
+			"toolbarNo" :"style='display:none'"
+		})
+
+		<main id="container">
+			<div class="page_promotion">
+				<h2 class="page_title type1">먼디파마</h2>
+				<div class="common_product">
+					<div class="list alone vTop">
+						<div class="item">
+							<div class="thumb_box">
+								<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+							</div>
+							<div class="info_box">
+								<div class="info">
+									<div class="name">광동 원방 우황청심원</div>
+									<div class="summary">
+										<span class="box">광동제약</span>
+										<span class="box">50ml</span>
+										<span class="box">10병</span>
+									</div>
+								</div>
+								<div class="price alone">
+									<dl>
+										<dt>가격</dt>
+										<dd><strong class="number">1,230,900</strong>원</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="button_box">
+						<a href="#" class="buttons other">상세정보<i class="arrow"></i></a>
+					</div>
+				</div><!-- //common_prodcut -->
+				<div class="choice_info_box detail_info_box">
+					<h3 class="title">배송 안내</h3>
+					<div class="info_inner delivery_info_box">
+						<dl>
+							<dt>주문마감시간</dt>
+							<dd class="fcpoint"><span class="number">2022-10-27 14:00</span> 이전까지</dd>
+						</dl>
+						<dl>
+							<dt>발송예정일</dt>
+							<dd><span class="number fcpoint">2022-10-27</span></dd>
+						</dl>
+						<p class="note">도서산간 및 제주도 지역의 경우 배송예정일보다 2~3일 배송지연 될 수 있습니다.</p>
+						<p id="addDeliveryInfo" class="noti">
+							*해당 제품은 발송예정일과 상이하며, <span class="fcpoint">최대 10~15일</span> 소요됩니다.
+						</p>
+					</div>
+					<h3 class="title">비용 할인 안내(금융할인)</h3>
+					<div class="info_inner" id="cmsRateContainer">
+						<dl>
+							<dt>비용 할인</dt>
+							<dd><span class="number fcpoint" id="cmsRateText">1.8%</span></dd>
+						</dl>
+					</div>
+					<h3 class="title" id="discountTitle">구매수량별 할인 안내</h3>
+					<div class="info_inner discount_info_box" id="discountContainer">
+						<div>
+							<dl id="purchase_quantity_container">
+								<dt>구매 수량별 할인(개당)</dt>
+								<dd>
+									<ul id="purchase_quantity_list">
+										<li>
+											100개 이상 구매 시 <span class="fcpoint">440원(44원 할인)</span>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+						<p class="note">비용할인을 제외한 할인은 할인률이 가장 높은 할인으로 자동 적용됩니다.</p> 
+					</div>
+				</div><!-- //detail_info_box -->
+				<div class="detail_contents_editor">
+					상세 내용 노출
+				</div>
+			</div><!--// page_promotion -->
+			<div class="floating_btn">
+				<div class="info_text">
+					<div>업체명 : 광동제약</div>
+					<div>재고 : 140,000개</div>
+				</div>
+				<div class="total_price">
+					<div class="ea_box">
+						<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+						<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+						<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+					</div>
+					<div class="price fcpoint"><strong class="number">4,544,000</strong>원</div>
+				</div>
+				<div class="button_box">
+					<a href="#" class="buttons">관심상품 등록</a>
+					<a href="#" class="buttons fill">장바구니 담기</a>
+				</div>
+			</div>
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+
+		@@include('@@webRoot/_include/foot.html')
+
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+		cateReady();
+	</script>
+</body>
+</html>

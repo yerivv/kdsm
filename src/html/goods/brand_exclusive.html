@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "브랜드관"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"gnb-3": "active"
+		})
+
+		<main id="container">
+			<div class="page_promotion page_brand">
+				<div class="wide_title_banner">
+					<h2 class="blind">독점상품관</h2>
+					<div class="banner"><img src="../imgs/title/brand_banner.png" alt="브랜드 상품을 저렴한 가격에 만나보세요. 구매수량별로 금액이 할인됩니다." /></div>
+				</div>
+				<div class="blank_space"></div>
+
+				<div class="menu_tab cols2">
+					<ul class="list">
+						<li class="menu1"><a href="../goods/brand.html" class="btn">브랜드관</a></li>
+						<li class="menu2 active"><a href="../goods/brand_exclusive.html" class="btn">독점상품관</a></li>
+					</ul>
+				</div>
+
+				<div class="no_result_box bold">
+					<i class="ico"></i>
+					<div class="text">등록된 독점상품관이 없습니다.</div>
+				</div>
+				
+				<ul class="brand_list">
+					<li><a href="brand_goods_detail.html" class="roundbox"><img src="../imgs/brand_exclusive_list1.png" alt="" /></a></li>
+					<li><a href="brand_goods_detail.html" class="roundbox"><img src="../imgs/brand_exclusive_list2.png" alt="" /></a></li>
+					<li><a href="brand_goods_detail.html" class="roundbox"><img src="../imgs/brand_exclusive_list3.png" alt="" /></a></li>
+				</ul>
+			</div>
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+
+		@@include('@@webRoot/_include/foot.html')
+
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>
