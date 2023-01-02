@@ -112,7 +112,7 @@ function modalOpen(a){
 
 function modalClose(a){
 	let target = document.querySelector('.'+a);
-	document.querySelector('body').classList.remove('open');
+	target.classList.remove('open');
 	isModal();
 }
 

@@ -63,6 +63,13 @@ input[type=radio] + label + input[type=radio] {margin-left:12px;}
 input[type=radio]:checked::after {background-color:#E8340C;}
 input[type=radio]:disabled::after {background-color:#E3E3E3;}
 
+/* check,radio Text */
+.textType {display:flex;flex-wrap:nowrap;gap:8px;width:100%;}
+.textType li {width:100%;text-align:center;}
+.textType li input[type=radio] {display:none;}
+.textType li input[type=radio] + label {display:block;padding:10px 0 7px;margin:0;border-radius:4px;border:1px solid #dee0e4;background-color:#fff;font-size:13px;font-weight:500;line-height:1;}
+.textType li input[type=radio]:checked + label {border-color:#E8340C;background-color:#E8340C;color:#fff;}
+
 /* textarea */
 textarea {height:auto;padding:15px;}
 
@@ -300,8 +307,9 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .common_product .list.vTop .info {padding-top:4px;}
 .common_product .list.vTop .price {margin-top:auto;padding-bottom:8px;}
 .common_product .list .item.start {align-items:flex-start;}
-.common_product .list .item.start .info_box {display:flex;flex-direction:column;height:100%;}
+.common_product .list .item.start .info_box {display:flex;flex-direction:column;}
 .common_product .list .item.start .info_box .name {padding-top:4px;}
+.common_product .list .item.start .info_box.h100 {height:100%;}
 .common_product .list .item_buttons {width:100%;padding:0 12px;text-align:right;}
 .common_product .list .item_buttons.type1 {padding:0;margin-top:auto;}
 .common_product .item .buttons {height:28px;background-color:#fff;font-size:12px;font-weight:400;}
@@ -323,8 +331,8 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 	.common_product .list.alone .price {margin-top:16px;}
 	.common_product .list.vTop .info_box {height:auto;}
 	.common_product .list.vTop .price {padding:0;margin-top:16px;}
-	.common_product .list .item.start {flex-direction:initial;}
-	.common_product .list .item.start .info_box {height:auto;}
+	.common_product .list .item.start .info_box.h100 {height:auto;}
+	.common_product .list .item.start .info_box.h100 .item_buttons.type1 {margin-top:8px;}
 }
 
 /* swiper */
@@ -595,3 +603,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .ui-state-disabled a {color:#b0b0b0;}
 .ui-datepicker-current-day span,
 .ui-datepicker-current-day a {background-color:#e8340c;color:#fff;font-weight:700;}
+
+/* 정기배송 신청하기 */
+.modal_regular .regular_signUp {padding-bottom:170px;}
+.modal_regular .common_product .list .item {padding:0 0 16px;border-bottom-width:0;}
