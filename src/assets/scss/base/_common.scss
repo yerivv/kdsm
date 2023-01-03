@@ -166,6 +166,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .category_menu_slide .list li:not(:first-child) {border-left:1px solid #dee0e4;}
 .category_menu_slide .list .btn {display:block;padding:12px 36px 10px;color:#666;line-height:16px;text-align:center;white-space:nowrap;}
 .category_menu_slide .list .active .btn {background-color:#E8340C;color:#fff;font-weight:500;}
+
 /* tab */
 .menu_tab {margin:0 -16px;}
 .menu_tab .list {display:flex;flex-wrap:nowrap;overflow:hidden;border-top:2px solid #e8340c;border-bottom:1px solid #edf0f2;background-color:#fff;}
@@ -196,6 +197,12 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .menu_tab .subList ul li {padding:0 6px;line-height:22px;}
 .menu_tab .subList .btn {color:#8f8f8f;}
 .menu_tab .subList .active .btn {color:#e8340c;font-weight:500;}
+@media (max-width: 320px) {
+	.menu_tab .list .btn {flex-direction: column;font-size:12px;line-height:14px;}
+	.menu_tab .subList ul li {line-height:18px;}
+	.menu_tab .subList {padding:18px 18px 17px;}
+	.menu_tab .subList .btn {font-size:12px;}
+}
 
 /* label */
 .iconlabel_box {display:flex;flex-wrap:wrap;gap:4px;}
@@ -649,6 +656,6 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 
 /* 정기배송 신청하기 */
 .modal_regular .regular_signUp {padding-bottom:160px;}
-.modal_regular .common_product .list .item {padding:0 0 16px;border-bottom-width:0;}
+.modal_regular .common_product .list .item {padding:0;border-bottom-width:0;}
 .modal_regular .title {font-size:16px;}
 .modal_regular .noticebox {margin:0;margin-top:16px;}
