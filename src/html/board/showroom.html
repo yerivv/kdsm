@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "온라인쇼룸"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html')
+
+		<main id="container">
+			<div class="page_showroom">
+				<div class="wide_title_banner">
+					<div class="title_layer">
+						<h2 class="title">온라인 쇼룸</h2>
+						<p class="subtext">광동제약 KD-Shop에서 제공하는 POP 콘텐츠로 <br />약국의 분위기를 바꿔보세요</p>
+					</div>
+					<div class="banner"><img src="../imgs/title/showroom_banner.png" alt="" /></div>
+				</div>
+				<!-- 오늘의 쇼룸 -->
+				<div class="today_box">
+					<h3 class="title number">TODAY‘S SHOWROOM</h3>
+					<p class="subtext">자랑하고 싶은 - 오늘의 쇼룸</p>
+					<div class="wideslide swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a href="#"><img src="https://kdshop.co.kr/data/base/banner/3b80cca51ac641c3b7767cb2ddd997b7.jpg" alt="" /></a></div>
+							<div class="swiper-slide"><a href="#"><img src="https://kdshop.co.kr/data/base/banner/e3bae723c46946dbba86cbfdd3b98e75.jpg" alt="" /></a></div>
+						</div>
+					</div>
+				</div><!-- //today_box -->
+				<div class="blank_space"></div>
+				<div class="menu_tab cols3">
+					<ul class="list">
+						<li class="menu1 active"><a href="javascript:;" class="btn">광동제약 상품 POP</a></li>
+						<li class="menu2"><a href="javascript:;" class="btn">시즌컨셉 POP</a></li>
+						<li class="menu3"><a href="javascript:;" class="btn">(우수약국)<br />오늘의 쇼룸 POP</a></li>
+					</ul>
+					<div class="subList">
+						<ul>
+							<li class="active"><a href="javascript:;" class="btn">#한방제제</a></li>
+							<li><a href="javascript:;" class="btn">#건강기능식품</a></li>
+							<li><a href="javascript:;" class="btn">#피부관리</a></li>
+							<li><a href="javascript:;" class="btn">#비타민제제</a></li>
+							<li><a href="javascript:;" class="btn">#소화기관</a></li>
+							<li><a href="javascript:;" class="btn">#홍삼류</a></li>
+							<li><a href="javascript:;" class="btn">#기타</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="title_box">
+					<h3 class="title">한방제제</h3>
+				</div>
+				<div class="board_list_wrap">
+					<div class="search_form_wrap">
+						<div class="select_sort"><select name="skey"><option value="subject">제목</option><option value="content">내용</option></select></div>
+						<div class="search_form">
+							<input type="search" class="input_search" name="sword" placeholder="검색어를 입력하세요." />
+							<button type="button" class="btn_search">검색</button>
+						</div>
+					</div>
+					<div class="pop_list">
+						<ul>
+							<li>
+								<div class="thumb_box">
+									<a href="showroom_detail.html" class="thumb"><img src="https://kdshop.co.kr/data/base/showroom/09647f06b3fd4a8796f0f8fea3c533ee.png" alt="" /></a>
+								</div>
+								<a href="showroom_detail.html" class="info_box">
+									<span class="title">POP 게시글 제목</span>
+									<span class="summary">게시글 설명 문구</span>
+								</a>
+							</li>
+							<li>
+								<div class="thumb_box">
+									<a href="showroom_detail.html" class="thumb"><img src="https://kdshop.co.kr/data/base/showroom/09647f06b3fd4a8796f0f8fea3c533ee.png" alt="" /></a>
+								</div>
+								<a href="showroom_detail.html" class="info_box">
+									<span class="title">POP 게시글 제목POP 게시글 제목POP 게시글 제목POP 게시글 제목</span>
+									<span class="summary">게시글 설명 문구</span>
+								</a>
+							</li>
+							<li>
+								<div class="thumb_box">
+									<a href="showroom_detail.html" class="thumb"><img src="https://kdshop.co.kr/data/base/showroom/09647f06b3fd4a8796f0f8fea3c533ee.png" alt="" /></a>
+								</div>
+								<a href="showroom_detail.html" class="info_box">
+									<span class="title">POP 게시글 제목</span>
+									<span class="summary">게시글 설명 문구게시글 설명 문구게시글 설명 문구게시글 설명 문구게시글 설명 문구</span>
+								</a>
+							</li>
+							<li>
+								<div class="thumb_box">
+									<a href="showroom_detail.html" class="thumb"><img src="https://kdshop.co.kr/data/base/showroom/09647f06b3fd4a8796f0f8fea3c533ee.png" alt="" /></a>
+								</div>
+								<a href="showroom_detail.html" class="info_box">
+									<span class="title">POP 게시글 제목</span>
+									<span class="summary">게시글 설명 문구</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="no_result_box">
+						<i class="ico"></i>
+						<div class="text">등록된 게시물이 없습니다.</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+
+		@@include('@@webRoot/_include/foot.html')
+	</div>
+	
+	<script>
+		wideBannerSlide('wideslide');
+	</script>
+</body>
+</html>

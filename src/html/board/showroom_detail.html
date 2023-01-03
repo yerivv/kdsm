@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "온라인쇼룸"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html')
+
+		<main id="container">
+			<div class="page_showroom">
+				<div class="board_detail_wrap">
+					<div class="bard_detail">
+						<div class="head_box">
+							<h3>POP 게시글 제목</h3>
+							<div class="info_box">
+								<span class="date">2022-11-15 00:00:00</span>
+								<span class="view">조회수 : 20</span>
+							</div>
+						</div>
+						<div class="content_box">
+							<img src="../imgs/showrrom_detail.png" alt="">
+
+							<div class="button_box">
+								<a href="showroom.html" class="buttons fcdefault">제품 POSM 신청</a>
+								<a href="showroom.html" class="buttons fill">상품 장바구니 담기</a>
+							</div>
+						</div>
+						<div class="list_box">
+							<dl>
+								<dt>이전글 :</dt>
+								<dd><span class="fw400 fcgray8f">이전 이벤트가 있습니다.</span></dd>
+							</dl>
+							<dl>
+								<dt>다음글 :</dt>
+								<dd><a href="#" class="fcgray8f">다음 이벤트가 있습니다.</a></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="button_box single list">
+						<a href="showroom.html" class="buttons medium">목록보기</a>
+					</div>
+				</div><!-- //board_detail_wrap -->
+			</div><!-- //page_event -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+
+		@@include('@@webRoot/_include/foot.html')
+
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>

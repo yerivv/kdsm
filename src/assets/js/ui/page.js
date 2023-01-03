@@ -407,7 +407,6 @@ function slideBannerSlide(a,b){
 		});
 	}
 }
-
 //탭구현
 function tabInit(a){
 	let tabWrap = document.querySelector(a);
@@ -512,4 +511,23 @@ function videotab(a,b){
 		})
 	})
 	a.closest('.youtubelayer').querySelector('iframe').setAttribute('src', url);
+}
+
+//배너 스와이프 wide
+function wideBannerSlide(a){
+	let slide = document.querySelector('.'+a);
+	let len = slide.querySelectorAll('.swiper-slide').length;
+	if(len > 1){
+		let wideBannerSwiper = new Swiper(slide, {
+			slidesPerView: 1,
+			spaceBetween: 15,
+			loop: true,
+			loopAdditionalSlides: 1,
+			autoplay: {
+				delay: 3000
+			}
+		});
+	} else {
+		slide.classList.add('none-swiper')
+	}
 }
