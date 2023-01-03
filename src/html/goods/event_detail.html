@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "이벤트"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html')
+
+		<main id="container">
+			<div class="page_event">
+				<div class="wide_title_banner line">
+					<h2 class="page_title">이벤트</h2>
+				</div>
+				<div class="board_detail_wrap">
+					<div class="bard_detail">
+						<div class="head_box">
+							<h3>이벤트 제목이 노출</h3>
+							<div class="info_box">
+								<span class="date">2022-11-15 00:00:00</span>
+								<span class="view">조회수 : 20</span>
+							</div>
+						</div>
+						<div class="content_box">
+							등록된 이벤트 내용이 노출됩니다.
+						</div>
+						<div class="list_box">
+							<dl>
+								<dt>이전글 :</dt>
+								<dd><span class="fw400 fcgray8f">이전 이벤트가 있습니다.</span></dd>
+							</dl>
+							<dl>
+								<dt>다음글 :</dt>
+								<dd><a href="#" class="fcgray8f">다음 이벤트가 있습니다.</a></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="button_box single list">
+						<a href="event_list.html" class="buttons medium">목록보기</a>
+					</div>
+				</div><!-- //board_detail_wrap -->
+			</div><!-- //page_event -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+
+		@@include('@@webRoot/_include/foot.html')
+
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>

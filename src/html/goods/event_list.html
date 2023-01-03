@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "이벤트"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html')
+
+		<main id="container">
+			<div class="page_event">
+				<div class="wide_title_banner">
+					<h2 class="page_title">이벤트</h2>
+					<div class="banner"><img src="../imgs/title/event_banner.png" alt="풍성한 KD-Shop의 이벤트를 만나보세요!" /></div>
+				</div>
+				<div class="blank_space"></div>
+
+				<div class="menu_tab cols3">
+					<ul class="list">
+						<li class="menu1 active"><a href="?stat=ongoing" class="btn">진행중 이벤트</a></li>
+						<li class="menu2"><a href="?stat=closed" class="btn">종료된 이벤트</a></li>
+						<li class="menu3"><a href="../goods/event_winners_list.html" class="btn">당첨자 발표</a></li>
+					</ul>
+				</div>
+				<div class="event_list">
+					<ul>
+						<li>
+							<div class="box">
+								<a href="event_detail.html" class="img_box">
+									<img src="../imgs/event_list1.png" alt="" />
+								</a>
+								<a href="event_detail.html" class="info_box">
+									<strong class="title">회원가입 출석이벤트</strong>
+									<span class="date number">2022-11-03 ~ 2022-11-30</span>
+									<span class="dday number">D-10</span>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="box">
+								<a href="event_detail.html" class="img_box">
+									<img src="../imgs/event_list2.png" alt="" />
+								</a>
+								<a href="event_detail.html" class="info_box">
+									<strong class="title">회원가입 출석이벤트</strong>
+									<span class="date number">2022-11-03 ~ 2022-11-30</span>
+									<span class="dday number">D-10</span>
+								</a>
+							</div>
+						</li>
+						<li class="closed">
+							<div class="box">
+								<a href="event_detail.html" class="img_box">
+									<img src="../imgs/event_list1.png" alt="" />
+									<span class="state_layerbox"><strong>이벤트가 종료되었습니다.</strong></span>
+								</a>
+								<a href="event_detail.html" class="info_box">
+									<strong class="title">회원가입 출석이벤트</strong>
+									<span class="date number">2022-11-03 ~ 2022-11-30</span>
+									<span class="dday number">D-10</span>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="no_result_box">
+					<i class="ico gift"></i>
+					<div class="text">진행중인 공동구매 상품이 없습니다.</div>
+				</div>
+			</div>
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+
+		@@include('@@webRoot/_include/foot.html')
+
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>

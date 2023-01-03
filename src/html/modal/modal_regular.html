@@ -20,8 +20,8 @@
 									<span class="box">10병</span>
 								</div>
 							</div>
-							<div class="price other" data-price="${list.PRICE}" data-special-price="${list.SPECIALPRICE}" data-discount-price="${list.DISCOUNTPRICE}">
-								<span class="">
+							<div class="price other">
+								<span>
 									<strong class="number">35,000</strong>원
 								</span>
 							</div>
@@ -35,7 +35,7 @@
 			<div class="regular_signUp">
 				<div class="select_info_box">
 					<dl>
-						<dt>정기배송기간</dt>
+						<dt class="title">정기배송기간</dt>
 						<dd>
 							<select name="month">
 								<option value="1">1개월</option>
@@ -43,7 +43,7 @@
 						</dd>
 					</dl>
 					<dl>
-						<dt>정기배송주기</dt>
+						<dt class="title">정기배송주기</dt>
 						<dd>
 							<ul class="textType">
 								<li><input type="radio" name="cycle" id="cycle1" checked /><label for="cycle1">1주</label></li>
@@ -54,7 +54,7 @@
 						</dd>
 					</dl>
 					<dl>
-						<dt>정기배송요일</dt>
+						<dt class="title">정기배송요일</dt>
 						<dd>
 							<ul class="textType">
 								<li><input type="radio" name="day" id="day1" checked /><label for="day1">월</label></li>
@@ -101,11 +101,11 @@
 				</div><!-- //choice_info_box -->
 				<div class="select_card_box">
 					<dl>
-						<dt>간편결제 카드선택</dt>
+						<dt class="title">간편결제 카드선택</dt>
 						<dd>
-							<div class="button_box">
+							<!-- <div class="button_box">
 								<a href="javascript:checkCert(document.Frm)" class="buttons medium"><i class="icoCard"></i>간편결제 카드등록를 등록해주세요.</a>
-							</div>
+							</div> -->
 							<div class="pay_select">
 								<select name="pay">
 									<option>비씨카드 1234-****-****-5678</option>
@@ -113,7 +113,7 @@
 							</div>
 						</dd>
 					</dl>
-					<div class="noticebox">
+					<div class="noticebox type2">
 						<dl>
 							<dt>정기배송 안내</dt>
 							<dd>

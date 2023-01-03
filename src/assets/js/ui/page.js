@@ -31,6 +31,8 @@ function getScrollDirection() {
 	const toolbar = document.querySelectorAll('#toolbar');
 	const floating = document.querySelectorAll('.floating_btn');
 
+	console.log(floating.length)
+
 	if(toolbar.length>0){
 		if (scrollTop >= lastScroll) {
 			body.classList.add('sDown');

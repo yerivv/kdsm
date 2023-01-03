@@ -365,6 +365,8 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .noticebox .on dt::after {transform:rotate(180deg);}
 .noticebox.type1 dd {padding-top:0;margin-top:0;border-top-width:0;}
 .noticebox.type1 dd li:first-child {margin-top:0;}
+.noticebox.type2 dt::after {display:none;}
+.noticebox.type2 dt + dd {padding-top:0;margin-top:0;border-top-width:0;}
 
 /* accordion */
 .accordions_wrap .toggle {display:none !important;}
@@ -605,5 +607,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .ui-datepicker-current-day a {background-color:#e8340c;color:#fff;font-weight:700;}
 
 /* 정기배송 신청하기 */
-.modal_regular .regular_signUp {padding-bottom:170px;}
+.modal_regular .regular_signUp {padding-bottom:160px;}
 .modal_regular .common_product .list .item {padding:0 0 16px;border-bottom-width:0;}
+.modal_regular .title {font-size:16px;}
+.modal_regular .noticebox {margin:0;margin-top:16px;}

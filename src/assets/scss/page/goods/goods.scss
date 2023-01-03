@@ -151,29 +151,35 @@
 @media (max-width: 320px) {
 	.page_event .event_list .closed .state_layerbox strong {font-size:14px;}
 }
-.page_event .baord_detail_wrap {margin:0 -16px;}
-.baord_detail_wrap .head_box {padding:18px 16px 24px;border-bottom:1px solid #797d8d;}
-.baord_detail_wrap .head_box .title {font-size:17px;font-weight:500;line-height:24px;}
-.baord_detail_wrap .head_box .info_box {display:flex;flex-wrap:wrap;margin-top:16px;color:#b0b0b0;font-size:12px;line-height:16px;}
-.baord_detail_wrap .info_box span + span {position:relative;margin-left:9px;}
-.baord_detail_wrap .info_box span + span::before {content:'';position:absolute;left:-5px;top:3px;width:1px;height:8px;background-color:#e3e3e3;}
-.baord_detail_wrap .content_box {min-height:336px;padding:24px 16px;border-bottom:1px solid #797d8d;}
-.baord_detail_wrap .list_box dl {display:flex;flex-wrap:wrap;padding:13px 16px 14px;border-bottom:1px solid #edf0f2;font-size:12px;line-height:16px;}
-.baord_detail_wrap .list_box dt {width:40px;}
-.baord_detail_wrap .list_box dd {width:calc(100% - 40px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.baord_detail_wrap .button_box {margin:12px;}
-.baord_detail_wrap .button_box.list {justify-content:flex-end;}
-.baord_detail_wrap .button_box.list .buttons {width:128px;}
+.page_event .board_detail_wrap {margin:0 -16px;}
+.board_detail_wrap .head_box {padding:18px 16px 24px;border-bottom:1px solid #797d8d;}
+.board_detail_wrap .head_box .title {font-size:17px;font-weight:500;line-height:24px;}
+.board_detail_wrap .head_box .info_box {display:flex;flex-wrap:wrap;margin-top:16px;color:#b0b0b0;font-size:12px;line-height:16px;}
+.board_detail_wrap .info_box span + span {position:relative;margin-left:9px;}
+.board_detail_wrap .info_box span + span::before {content:'';position:absolute;left:-5px;top:3px;width:1px;height:8px;background-color:#e3e3e3;}
+.board_detail_wrap .content_box {min-height:336px;padding:24px 16px;border-bottom:1px solid #797d8d;}
+.board_detail_wrap .list_box dl {display:flex;flex-wrap:wrap;padding:13px 16px 14px;border-bottom:1px solid #edf0f2;font-size:12px;line-height:16px;}
+.board_detail_wrap .list_box dt {width:40px;}
+.board_detail_wrap .list_box dd {width:calc(100% - 40px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.board_detail_wrap .button_box {margin:12px;}
+.board_detail_wrap .button_box.list {justify-content:flex-end;}
+.board_detail_wrap .button_box.list .buttons {width:128px;}
 
-.baord_list_wrap .board_list {margin:0 -16px;}
-.baord_list_wrap .board_list li {position:relative;border-bottom:1px solid #edf0f2;}
-.baord_list_wrap .board_list li::after {content:'';position:absolute;right:20px;top:50%;width:18px;height:18px;margin-top:-9px;background:url(../imgs/global/icon_arrow_right1.png) center center no-repeat;background-size:contain;}
-.baord_list_wrap .board_list a {display:block;padding:14px 50px 14px 24px;}
-.baord_list_wrap .board_list .date,
-.baord_list_wrap .board_list .title,
-.baord_list_wrap .board_list .notice {display:block;}
-.baord_list_wrap .board_list .date {color:#b0b0b0;font-size:12px;line-height:18px;}
-.baord_list_wrap .board_list .title {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:18px;}
+.board_list_wrap .board_list {margin:0 -16px;}
+.board_list_wrap .board_list li {position:relative;border-bottom:1px solid #edf0f2;}
+.board_list_wrap .board_list li::after {content:'';position:absolute;right:20px;top:50%;width:18px;height:18px;margin-top:-9px;background:url(../imgs/global/icon_arrow_right1.png) center center no-repeat;background-size:contain;}
+.board_list_wrap .board_list a {display:block;padding:14px 50px 14px 24px;}
+.board_list_wrap .board_list .date,
+.board_list_wrap .board_list .title,
+.board_list_wrap .board_list .notice {display:block;}
+.board_list_wrap .board_list .date {color:#b0b0b0;font-size:12px;line-height:18px;}
+.board_list_wrap .board_list .title {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:18px;}
+
+/* 출석체크 */
+.event_stamp {margin:0 -16px;}
+.event_stamp .button_box {margin:12px;}
+.event_stamp .button_box.list {justify-content:flex-end;}
+.event_stamp .button_box.list .buttons {width:128px;}
 
 /* 특가세일, 타임세일 */
 .page_sale .wide_title_banner {position:relative;}

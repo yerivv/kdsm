@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "이벤트"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html')
+
+		<main id="container">
+			<div class="page_event">
+				<div class="wide_title_banner">
+					<h2 class="page_title">이벤트</h2>
+					<div class="banner"><img src="../imgs/title/event_banner.png" alt="풍성한 KD-Shop의 이벤트를 만나보세요!" /></div>
+				</div>
+				<div class="blank_space"></div>
+
+				<div class="menu_tab cols3">
+					<ul class="list">
+						<li class="menu1"><a href="?stat=ongoing" class="btn">진행중 이벤트</a></li>
+						<li class="menu2"><a href="?stat=closed" class="btn">종료된 이벤트</a></li>
+						<li class="menu3 active"><a href="../goods/event_winners_list.html" class="btn">당첨자 발표</a></li>
+					</ul>
+				</div>
+				<div class="board_list_wrap">
+					<div class="board_list">
+						<ul>
+							<li>
+								<a href="event_winners_detail.html">
+									<span class="date">2022-11-15</span>
+									<span class="title">이벤트 당첨자 발표 제목</span>
+								</a>
+							</li>
+							<li>
+								<a href="event_winners_detail.html">
+									<span class="date">2022-11-15</span>
+									<span class="title">이벤트 당첨자 발표 제목</span>
+								</a>
+							</li>
+							<li>
+								<a href="event_winners_detail.html">
+									<span class="date">2022-11-15</span>
+									<span class="title">이벤트 당첨자 발표 제목</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="no_result_box">
+						<i class="ico"></i>
+						<div class="text">해당 게시판의 글이 존재하지 않습니다.</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+
+		@@include('@@webRoot/_include/foot.html')
+
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>
