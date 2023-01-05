@@ -1,0 +1,79 @@
+<!-- 간편장부 -->
+<div id="layer" class="layer_ledger">
+	<div class="dimd"></div>
+	<div class="wrap">
+		<div class="head">
+			<h2>
+				<span class="imgs"><img src="@@webRoot/imgs/global/ex_membership.png" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="등급명" /></span>
+				<div class="name"><strong class="fw500">홍길덩</strong> 약사님</div>
+			</h2>
+		</div>
+		<div class="contents">
+			<ul class="menu_icon_list">
+				<li><a href="../mypage/recommend.do"><i class="ico recommend"></i><span>추천상품<span class="label_count">32</span></span></a></li>
+				<li><a href="#"><i class="ico reorder"></i><span>재구매</span></a></li>
+				<li><a href="../mypage/order_delivery.do"><i class="ico order"></i><span>주문/배송</span></a></li>
+			</ul>
+			<div class="order_info">
+				<dl class="ordercnt">
+					<dt>이번달 주문건</dt>
+					<dd><strong class="number">20</strong>건</dd>
+				</dl>
+				<dl class="orderamt">
+					<dt>이번달 주문금액</dt>
+					<dd><strong class="number">500,000</strong>원</dd>
+				</dl>
+			</div>
+			<div class="common_tbl tbl_round benefit_info">
+				<table>
+					<caption>나의 혜택 내역</caption>
+					<colgroup>
+						<col width="120" /><col width="*" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">쿠폰</th>
+							<td><strong class="number">7</strong>개</td>
+						</tr>
+						<tr>
+							<th scope="row">마이너스 잔고</th>
+							<td><strong class="number">5,000,000</strong>개</td>
+						</tr>
+						<tr>
+							<th scope="row">마일리지</th>
+							<td><strong class="number">5,000,000</strong>P</td>
+						</tr>
+						<tr>
+							<th scope="row">예치금</th>
+							<td>
+								<span class="fcpoint"><strong class="number">10,000,000</strong>원</span>
+								<a href="../mypage/deposit_charge_pop.do" target="_blank" onClick="return charge(this)" class="buttons xsmall fill">충전</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- //common_tbl -->
+			<!-- 담당자 안내 -->
+			<div class="person_info">
+				<ul>
+					<li>
+						<div class="name"><strong class="fw500 fcdefault">영업담당자</strong> 홍길동</div>
+						<div class="number fw500">010-1234-4567</div>
+						<div class="btns">
+							<a href="../cscenter/sms.do" class="btn_circle"><i class="ico sms"></i>문자보내기</a>
+							<a href="tel:${GLOBAL.authmemberpernrtel}" class="btn_circle"><i class="ico tel"></i>전화하기</a>
+						</div>
+					</li>
+					<li>
+						<div class="name"><strong class="fw500 fcdefault">배송담당자</strong> 홍길동</div>
+						<div class="number fw500">010-1234-4567</div>
+						<div class="btns">
+							<a href="../cscenter/sms.do" class="btn_circle"><i class="ico sms"></i>문자보내기</a>
+							<a href="tel:${GLOBAL.authdtcmemberpernrtel}" class="btn_circle"><i class="ico tel"></i>전화하기</a>
+						</div>
+					</li>
+				</ul>
+			</div><!-- //person_info -->
+		</div>
+	</div>
+</div><!-- //modal_ledger -->

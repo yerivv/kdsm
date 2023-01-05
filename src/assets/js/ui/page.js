@@ -10,9 +10,9 @@ window.addEventListener('resize', setScreenSize);
 getDirection();
 document.addEventListener('DOMContentLoaded', getDirection);
 function getDirection(){
-	const floating = document.querySelectorAll('.floating_btn');
+	const floating = document.querySelectorAll('#container .floating_btn');
 	if(floating.length>0) {
-		let floatingH = document.querySelector('.floating_btn').clientHeight;
+		let floatingH = document.querySelector('#container .floating_btn').clientHeight;
 		document.querySelector('#footer').style.cssText = 'padding-bottom:'+floatingH+'px';
 		document.querySelector('#fixedBtn').classList.add('hFloating');
 		document.querySelector('#fixedBtn').style.cssText = 'bottom:'+(floatingH+14)+'px';
@@ -29,9 +29,7 @@ function getScrollDirection() {
 	let scrollHeight = document.querySelector('body').scrollHeight;
 	const body = document.querySelector('body');
 	const toolbar = document.querySelectorAll('#toolbar');
-	const floating = document.querySelectorAll('.floating_btn');
-
-	console.log(floating.length)
+	const floating = document.querySelector('#container').querySelectorAll('.floating_btn');
 
 	if(toolbar.length>0){
 		if (scrollTop >= lastScroll) {
@@ -44,7 +42,6 @@ function getScrollDirection() {
 			//console.log('up')
 		}
 		lastScroll = scrollTop;
-
 		if(scrollTop == 0){
 			body.classList.remove('end');
 			body.classList.remove('sDown');
@@ -54,7 +51,7 @@ function getScrollDirection() {
 		}
 	} else if(floating.length>0) {
 		//console.log('플로팅바 yes');
-		let floatingH = document.querySelector('.floating_btn').clientHeight;
+		let floatingH = document.querySelector('#container .floating_btn').clientHeight;
 		if(scrollTop > 0){
 			body.classList.add('scroll');
 			document.querySelector('#fixedBtn').style.cssText = 'bottom:'+(floatingH+16)+'px';
@@ -63,9 +60,7 @@ function getScrollDirection() {
 			document.querySelector('#fixedBtn').style.cssText = 'bottom:'+(floatingH-44)+'px';
 		}
 	}
-
 	window.clearTimeout( isScrolling );
-
 	isScrolling = setTimeout(function() {
 		//console.log( '스크롤 멈춤' );
 	}, 66);
@@ -182,9 +177,6 @@ function ledger(a){
 	const toolbar = document.querySelector('#toolbar');
 	const menus = toolbar.querySelectorAll('li');
 	let stay = Array.from(document.querySelectorAll('#toolbar li')).indexOf(document.querySelector('#toolbar .stay'));
-	
-	//console.log(stay)
-	
 	menus.forEach((menu) => {
 		menu.classList.remove('active');
 	})
@@ -326,10 +318,19 @@ function slideAct(){
 		
 		//보이는 슬라이드 개수 설정
 		$('.slider').each(function(index){
-			if (window.innerWidth > 320){ //320이상
-				view = 4;
-			}else{ //280대응
-				view = 2;
+			var slider = $(this);
+			if(slider.hasClass('type1')){
+				if (window.innerWidth > 320){ //320이상
+					view = 2;
+				}else{ //280대응
+					view = 2;
+				}
+			}else {
+				if (window.innerWidth > 320){ //320이상
+					view = 4;
+				}else{ //280대응
+					view = 2;
+				}
 			}
 
 			//리스트 그룹 생성 (swiper-slide element 추가)
@@ -393,15 +394,17 @@ function slideAct(){
 }
 //배너 스와이프
 function slideBannerSlide(a,b){
-	var slide = $('.'+a).find('.swiper-container');
-	var len = slide.find('.swiper-slide').length;
+	let slide = document.querySelector('.'+a).querySelector('.swiper-container');
+	let len = slide.querySelectorAll('.swiper-slide').length;
 	if(len > 1){
-		slide.append('<div class="swiper-pagination"></div>');
-		var visualSwiper = new Swiper(slide, {
+		const pagination = document.createElement('div');
+		pagination.className = 'swiper-pagination';
+		slide.append(pagination);
+		let slideSwiper = new Swiper(slide, {
 			slidesPerView: 1,
 			loop: true,
 			pagination: {
-				el: slide.find('.swiper-pagination'),
+				el: slide.querySelector('.swiper-pagination'),
 				type: b,
 			},
 		});
@@ -530,4 +533,19 @@ function wideBannerSlide(a){
 	} else {
 		slide.classList.add('none-swiper')
 	}
+}
+
+function mainPopOpen(){
+	const popup = document.querySelector('.main_popup');
+	popup.classList.add('open');
+	document.querySelector('body').classList.add('ismodal');
+	document.querySelector('body').addEventListener('scroll touchmove mousewheel', function(e){e.preventDefault();}, false);
+	slideBannerSlide('main_popup','bullets');
+}
+
+function mainPopClose(){
+	const popup = document.querySelector('.main_popup');
+	popup.classList.remove('open');
+	document.querySelector('body').classList.remove('ismodal');
+	document.querySelector('body').removeEventListener('scroll touchmove mousewheel', null, false);
 }

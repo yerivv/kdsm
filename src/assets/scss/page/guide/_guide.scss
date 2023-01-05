@@ -3,6 +3,7 @@
 .guide_container .section {padding:16px;border-bottom:1px solid #EDF0F2}
 .guide_container .section > h2 {font-size:24px;font-weight:300;}
 .guide_container .section > h3 {font-size:14px;font-weight:700;margin:16px 0 8px;}
+.guide_container .section h4 {padding:12px 16px;margin:24px 0 8px;border-radius:4px;background-color:#f4f7f9;}
 .guide_container .font_list {display:flex;flex-wrap: wrap;flex-direction:column;gap:4px;}
 .guide_container .color_chip {display:flex;flex-wrap:wrap;gap:16px;}
 .guide_container .color_chip li {display:flex;flex-wrap: wrap;flex-direction:column;gap:8px;width:calc((100% - 64px) / 5);text-align:center;font-size:12px;}

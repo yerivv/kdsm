@@ -5,21 +5,467 @@
         "title": "메인"
     })
     @@include('@@webRoot/_include/library.html')
+	<script type="text/javascript" src="//kdshop.co.kr/jscript/jquery/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="//kdshop.co.kr/jscript/jquery/jquery-migrate-1.2.1.min.js"></script>
     <script src="@@webRoot/js/ui.js"></script>
     <script src="@@webRoot/js/develop.js"></script>
 </head>
 <body>
     <div id="app">
-        @@include('@@webRoot/_include/header.html')
+        @@include('@@webRoot/_include/header.html',{
+            "toolbar-1": "active"
+        })
 
-        @@include('@@webRoot/_include/aside.html')
-
-        <main id="container">
-            <button type="button" onclick="modal.in('sample');">모달</button>
-            <br>
-            <br>
-            <button type="button" onclick="popup('../popup/sample.html', 'sample', '500', '700');">팝업</button>
+        <main id="container" style="padding:0">
+			<div class="page_main">
+				<!-- visual -->
+				<div class="section_visual">
+					<div class="swiper-container">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide"><a href="#"><img src="../imgs/main_visual1.png" alt="" /></a></li>
+							<li class="swiper-slide"><a href="#"><img src="../imgs/main_visual2.png" alt="" /></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="blank_space"></div>
+				<!-- banner1 -->
+				<div class="section_banner1">
+					<div class="swiper-container">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide"><a href="#"><img src="../imgs/main_banner1.png" alt="" /></a></li>
+							<li class="swiper-slide"><a href="#"><img src="../imgs/main_banner2.png" alt="" /></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="blank_space"></div>
+				<!-- tab product -->
+				<div id="tabbox_product" class="section_tabProduct">
+					<div class="menu_tab cols2">
+						<ul class="list">
+							<li class="menu1 active" data-tab-target="tab1"><span class="btn">광동전용관</span></li>
+							<li class="menu2" data-tab-target="tab2"><span class="btn">브랜드관</span></li>
+						</ul>
+					</div>
+					<div class="contents contents_tab">
+						<div id="tab1" class="content active">
+							<div class="product_inner">
+								<div class="slider-wrap slider">
+									<div class="inner swiper-container">
+										<div class="common_product swiper-wrapper">
+											<div class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+												</div>
+												<div class="info_box">
+													<div class="info">
+														<div class="name">광동 원방 우황청심원 현탄액 영묘향 함유</div>
+														<div class="summary">
+															<span class="box">광동제약</span>
+															<span class="box">50ml</span>
+															<span class="box">10병</span>
+														</div>
+													</div>
+													<div class="price other">
+														<span class="sale fcdefault">
+															<strong class="number">1,230,900</strong>원
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+												</div>
+												<div class="info_box">
+													<div class="info">
+														<div class="name">광동제약 마시는 비타민-C 비타500</div>
+														<div class="summary">
+															<span class="box">광동제약</span>
+															<span class="box">50ml</span>
+															<span class="box">10병</span>
+														</div>
+													</div>
+													<div class="price other">
+														<span class="sale fcdefault">
+															<strong class="number">1,230,900</strong>원
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+												</div>
+												<div class="info_box">
+													<div class="info">
+														<div class="name">광동 원방 우황청심원 현탄액 영묘향 함유</div>
+														<div class="summary">
+															<span class="box">광동제약</span>
+															<span class="box">50ml</span>
+															<span class="box">10병</span>
+														</div>
+													</div>
+													<div class="price other">
+														<span class="sale fcdefault">
+															<strong class="number">1,230,900</strong>원
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+												</div>
+												<div class="info_box">
+													<div class="info">
+														<div class="name">광동제약 마시는 비타민-C 비타500</div>
+														<div class="summary">
+															<span class="box">광동제약</span>
+															<span class="box">50ml</span>
+															<span class="box">10병</span>
+														</div>
+													</div>
+													<div class="price other">
+														<span class="sale fcdefault">
+															<strong class="number">1,230,900</strong>원
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+												</div>
+												<div class="info_box">
+													<div class="info">
+														<div class="name">광동 원방 우황청심원 현탄액 영묘향 함유</div>
+														<div class="summary">
+															<span class="box">광동제약</span>
+															<span class="box">50ml</span>
+															<span class="box">10병</span>
+														</div>
+													</div>
+													<div class="price other">
+														<span class="sale fcdefault">
+															<strong class="number">1,230,900</strong>원
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+												</div>
+												<div class="info_box">
+													<div class="info">
+														<div class="name">광동제약 마시는 비타민-C 비타500</div>
+														<div class="summary">
+															<span class="box">광동제약</span>
+															<span class="box">50ml</span>
+															<span class="box">10병</span>
+														</div>
+													</div>
+													<div class="price other">
+														<span class="sale fcdefault">
+															<strong class="number">1,230,900</strong>원
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-progress-bar"></div>
+									</div>
+									<a href="#" class="buttons text more">더보기<i class="arrow"></i></a>
+								</div>
+							</div>
+						</div>
+						<div id="tab2" class="content">
+							<div class="product_inner">
+								<div class="slider-wrap slider">
+									<div class="inner swiper-container">
+										<div class="common_product swiper-wrapper">
+											<div class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+												</div>
+												<div class="info_box">
+													<div class="info">
+														<div class="name">광동 원방 우황청심원 현탄액 영묘향 함유</div>
+														<div class="summary">
+															<span class="box">광동제약</span>
+															<span class="box">50ml</span>
+															<span class="box">10병</span>
+														</div>
+													</div>
+													<div class="price other">
+														<span class="sale fcdefault">
+															<strong class="number">1,230,900</strong>원
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+												</div>
+												<div class="info_box">
+													<div class="info">
+														<div class="name">광동제약 마시는 비타민-C 비타500</div>
+														<div class="summary">
+															<span class="box">광동제약</span>
+															<span class="box">50ml</span>
+															<span class="box">10병</span>
+														</div>
+													</div>
+													<div class="price other">
+														<span class="sale fcdefault">
+															<strong class="number">1,230,900</strong>원
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+												</div>
+												<div class="info_box">
+													<div class="info">
+														<div class="name">광동 원방 우황청심원 현탄액 영묘향 함유</div>
+														<div class="summary">
+															<span class="box">광동제약</span>
+															<span class="box">50ml</span>
+															<span class="box">10병</span>
+														</div>
+													</div>
+													<div class="price other">
+														<span class="sale fcdefault">
+															<strong class="number">1,230,900</strong>원
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+												</div>
+												<div class="info_box">
+													<div class="info">
+														<div class="name">광동제약 마시는 비타민-C 비타500</div>
+														<div class="summary">
+															<span class="box">광동제약</span>
+															<span class="box">50ml</span>
+															<span class="box">10병</span>
+														</div>
+													</div>
+													<div class="price other">
+														<span class="sale fcdefault">
+															<strong class="number">1,230,900</strong>원
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+												</div>
+												<div class="info_box">
+													<div class="info">
+														<div class="name">광동 원방 우황청심원 현탄액 영묘향 함유</div>
+														<div class="summary">
+															<span class="box">광동제약</span>
+															<span class="box">50ml</span>
+															<span class="box">10병</span>
+														</div>
+													</div>
+													<div class="price other">
+														<span class="sale fcdefault">
+															<strong class="number">1,230,900</strong>원
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-progress-bar"></div>
+									</div>
+									<a href="#" class="buttons text more">더보기<i class="arrow"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="blank_space"></div>
+				<!-- sale -->
+				<div class="section_sale">
+					<div class="title_box">
+						<h2 class="title">특가세일</h2>
+						<span class="linetext">핫딜! 놓치면 후회되는 특가상품</span>
+					</div>
+					<div class="product_inner">
+						<div class="remaining_time">
+							<dl>
+								<dt>남은 시간</dt>
+								<dd><strong class="number fcpoint">6일 02:32:50</strong></dd>
+							</dl>
+						</div>
+						<div class="slider-wrap slider type1">
+							<div class="inner swiper-container">
+								<div class="common_product swiper-wrapper">
+									<div class="item">
+										<div class="thumb_box">
+											<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+											<div class="iconlabel_box">
+												<a href="#" class="label sale">특가</a>
+											</div>
+										</div>
+										<div class="info_box">
+											<div class="info">
+												<div class="name">광동 원방 우황청심원 현탄액 영묘향 함유</div>
+												<div class="summary">
+													<span class="box">광동제약</span>
+													<span class="box">50ml</span>
+													<span class="box">10병</span>
+												</div>
+											</div>
+											<div class="price other">
+												<span class="sale">
+													<strong class="number">30,900</strong>원
+												</span>
+												<span class="market">
+													<strong class="number">45,000</strong>원
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="thumb_box">
+											<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+											<div class="iconlabel_box">
+												<a href="#" class="label sale">특가</a>
+											</div>
+										</div>
+										<div class="info_box">
+											<div class="info">
+												<div class="name">광동제약 마시는 비타민-C 비타500</div>
+												<div class="summary">
+													<span class="box">광동제약</span>
+													<span class="box">50ml</span>
+													<span class="box">10병</span>
+												</div>
+											</div>
+											<div class="price other">
+												<span class="sale">
+													<strong class="number">30,900</strong>원
+												</span>
+												<span class="market">
+													<strong class="number">45,000</strong>원
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="thumb_box">
+											<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+											<div class="iconlabel_box">
+												<a href="#" class="label sale">특가</a>
+											</div>
+										</div>
+										<div class="info_box">
+											<div class="info">
+												<div class="name">마시는 비타민-C 비타500</div>
+												<div class="summary">
+													<span class="box">광동제약</span>
+													<span class="box">50ml</span>
+													<span class="box">10병</span>
+												</div>
+											</div>
+											<div class="price other">
+												<span class="sale">
+													<strong class="number">30,900</strong>원
+												</span>
+												<span class="market">
+													<strong class="number">45,000</strong>원
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-progress-bar"></div>
+							</div>
+							
+							<div class="button_box single">
+								<a href="#" class="buttons other">특가세일 전체보기<i class="arrow"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="blank_space"></div>
+				<!-- banner2 -->
+				<div class="section_banner2">
+					<div class="swiper-container">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide"><a href="#"><img src="../imgs/main_banner2.png" alt="" /></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="blank_space"></div>
+				<!-- board -->
+				<div id="tab_board" class="section_board">
+					<div class="title_box">
+						<h2 class="title">공지사항</h2>
+					</div>
+					<div class="menu_tab cols3">
+						<ul class="list">
+							<li class="menu1 active" data-tab-target="tab1"><span class="btn">KD-Shop</span></li>
+							<li class="menu2" data-tab-target="tab2"><span class="btn">입점업체</span></li>
+							<li class="menu3" data-tab-target="tab3"><span class="btn">약가인하</span></li>
+						</ul>
+					</div>
+					<div class="contents contents_tab">
+						<div id="tab1" class="content active">
+							<ul>
+								<li><a href="#">[공지] KD샵 시스템 점검 안내<span class="date">2022-09-16</span></a></li>
+								<li><a href="#">2022년 11월 신용카드 프로모션 진행 안내<span class="date">2022-09-16</span></a></li>
+								<li><a href="#">11월 약가변동 품목 안내<span class="date">2022-09-16</span></a></li>
+							</ul>
+							<a href="#" class="buttons text more">더보기<i class="arrow"></i></a>
+						</div>
+						<div id="tab2" class="content">
+							<ul>
+								<li><a href="#">2[공지] KD샵 시스템 점검 안내<span class="date">2022-09-16</span></a></li>
+								<li><a href="#">2022년 11월 신용카드 프로모션 진행 안내<span class="date">2022-09-16</span></a></li>
+								<li><a href="#">11월 약가변동 품목 안내<span class="date">2022-09-16</span></a></li>
+							</ul>
+							<a href="#" class="buttons text more">더보기<i class="arrow"></i></a>
+						</div>
+						<div id="tab3" class="content">
+							<ul>
+								<li><a href="#">3[공지] KD샵 시스템 점검 안내<span class="date">2022-09-16</span></a></li>
+								<li><a href="#">2022년 11월 신용카드 프로모션 진행 안내<span class="date">2022-09-16</span></a></li>
+								<li><a href="#">11월 약가변동 품목 안내<span class="date">2022-09-16</span></a></li>
+							</ul>
+							<a href="#" class="buttons text more">더보기<i class="arrow"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="blank_space"></div>
+			</div>
         </main>
+
+		<div class="main_popup">
+			<div class="dim"></div>
+			<div class="wrap">
+				<div class="swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide"><a href="#"><img src="../imgs/main_popup.png" alt="" /></a></li>
+						<li class="swiper-slide"><a href="#"><img src="../imgs/main_popup2.png" alt="" /></a></li>
+					</ul>
+				</div>
+				<div class="button_box">
+					<a href="" class="buttons fcdefault">오늘 그만보기</a>
+					<a href="javascript:void(0)" onclick="mainPopClose();" class="buttons fill">닫기</a>
+				</div>
+			</div>
+		</div>
 
         @@include('@@webRoot/_include/footer.html')
 
@@ -29,6 +475,13 @@
     </div>
     
     <script>
+		//mainPopOpen();
+		slideBannerSlide('section_visual','bullets');
+		slideBannerSlide('section_banner1','fraction');
+		slideAct();
+		tabInit('#tabbox_product');
+		slideBannerSlide('section_banner2','fraction');
+		tabInit('#tab_board');
     </script>
 </body>
 </html>
