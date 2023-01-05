@@ -1,0 +1,41 @@
+<div id="modal" class="modalCenter modal_member_find">
+	<div class="wrap">
+		<div class="head">
+			<h2>아이디·비밀번호 찾기</h2>
+			<div class="close" onclick="modalUrlClose();">닫기</div>
+		</div>
+		<div class="contents">
+			<div id="tab_find">
+				<div class="menu_tab cols2">
+					<ul class="list">
+						<li class="menu1 active"><span onclick="pageMove(this, 'id')" class="btn">아이디 찾기</span></li>
+						<li class="menu2"><span onclick="pageMove(this, 'pw')" class="btn">비밀번호 찾기</span></li>
+					</ul>
+				</div>
+				<div class="contents_tab">
+					<div id="tab1" class="content active">아이디찾기 page</div>
+					<div id="tab2" class="content">비밀번호 page</div>
+				</div>
+			</div>
+			<div class="button_box">
+				<a href="#" class="buttons medium">취소</a>
+				<a href="#" class="buttons medium point">확인</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+function pageMove(a, b){
+	$('.menu_tab li, .contents_tab .content').removeClass('active');
+	$(a).parent().addClass('active');
+	if(b == 'id'){
+		$(a).closest('#tab_find').find('#tab1').load('find_id.html', function(){
+			$(this).addClass('active');
+		});
+	} else if(b == 'pw') {
+		$(a).closest('#tab_find').find('#tab2').load('find_pw.html', function(){
+			$(this).addClass('active');
+		});
+	}
+}
+</script>

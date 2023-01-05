@@ -10,20 +10,199 @@
 </head>
 <body>
 	<div id="app">
-		<header id="header">
-			<h1><img src="" alt="" /></h1>
+		<header id="header_member">
+			<h1><img src="@@webRoot/imgs/global/logo_KDShop.png" alt="KD-shop 광동약국몰" /></h1>
 		</header>
 		<main id="container">
 			<div class="page_login">
-				111
+				<h2 class="page_title">로그인</h2>
+				
+				<div class="form_login">
+			<form name="">
+				<fieldset>
+					<legend>로그인</legend>
+					<span class="input_box">
+						<label for="member_id" class="blind">아이디</label>
+						<input type="text" id="member_id" name="id" placeholder="아이디" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+					</span>
+					<span class="input_box">
+						<label for="member_pw" class="blind">비밀번호</label>
+						<input type="password" id="member_pw" name="pw" placeholder="비밀번호" />
+					</span>
+					<div class="form_line">
+						<input type="checkbox" id="save_id" name="isSaveId" value="T"><label for="save_id">아이디 저장</label>
+						<input type="checkbox" id="remember_me" name="isRememberMe"><label for="remember_me">자동 로그인</label>
+					</div>
+					<div class="button_box">
+						<button type="submit" class="buttons fill">로그인</button>
+					</div>
+					<ul class="menu">
+						<li><a href="javascript:void(0);" onclick="find('id');">아이디 찾기</a></li>
+						<li><a href="javascript:void(0);" onclick="find('pw');">비밀번호 찾기</a></li>
+					</ul>
+				</fieldset>
+			</form>
+				</div>
+
+				<div class="join_text">
+					<div class="text"><span class="block">KD-Shop </span>회원가입하시고 다양한 혜택을 누려보세요.</div>
+					<div class="button_box">
+						<a href="javascript:void(0);" onclick="modalOpen('modal_member_state1');" class="buttons medium point">회원가입</a>
+					</div>
+				</div>
+
+				<!-- 회원상태 체크 필요 -->
+				<div class="button_box single">
+					<a href="javascript:void(0);" onclick="modalOpen('modal_member_state1');" class="buttons xsmall">회원가입 승인대기</a>
+					<a href="javascript:void(0);" onclick="modalOpen('modal_member_state2');" class="buttons xsmall">탈퇴신청중</a>
+					<a href="javascript:void(0);" onclick="modalOpen('modal_member_state3');" class="buttons xsmall">정보수정요청승인대기</a>
+					<a href="javascript:void(0);" onclick="modalOpen('modal_member_state4');" class="buttons xsmall">권한통제</a>
+				</div>
+
+				<div class="benefitSlide">
+					<div class="title_box">
+						<h3 class="title">KD-Shop 회원혜택</h3>
+					</div>
+					<div class="swiper-container">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide"><a href="#"><img src="../imgs/banner/login_banner1.png" alt="" /></a></li>
+							<li class="swiper-slide"><a href="#"><img src="../imgs/banner/login_banner2.png" alt="" /></a></li>
+							<li class="swiper-slide"><a href="#"><img src="../imgs/banner/login_banner3.png" alt="" /></a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</main>
-		<footer id="footer">
-			111
+		<footer id="footer_member">
+			<ul class="menu">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#"><strong>개인정보처리방침</strong></a></li>
+			</ul>
+			<p class="copy">COPYRIGHT&copy; KWANGDONG PHARMACEUTICAL CO,. LTD.<br />ALL RIGHT RESERVED</p>
 		</footer>
+
+		<div id="modal" class="modalCenter modal_member_state1">
+			<div class="wrap">
+				<div class="head">
+					<h2>회원안내</h2>
+					<div class="close" onclick="modalClose('modal_member_state1');">닫기</div>
+				</div>
+				<div class="contents member_state">
+					<div class="no_result_box">
+						<i class="ico note"></i>
+						<div class="text">회원가입 승인대기 중입니다.</div>
+					</div>
+					<div class="noticebox type3">
+						<dl>
+							<dt>KD-Shop 이용안내</dt>
+							<dd>
+								현재 회원님이 신청하신 계정은 승인 대기 상태입니다.<br />
+								관련 담장자의 승인을 기다리시기 바랍니다.
+							</dd>
+							<dd>관련문의 : <a href="tel:080-024-0030" class="fcpoint fw500">080-024-0030</a></dd>
+						</dl>
+					</div>
+					<div class="button_box">
+						<a href="javascript:void(0)" onclick="modalClose('modal_member_state1');" class="buttons medium point size1">확인</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal" class="modalCenter modal_member_state2">
+			<div class="wrap">
+				<div class="head">
+					<h2>회원안내</h2>
+					<div class="close" onclick="modalClose('modal_member_state2');">닫기</div>
+				</div>
+				<div class="contents member_state">
+					<div class="no_result_box">
+						<i class="ico note"></i>
+						<div class="text">회원님은 현재 <span class="block">탈퇴신청 중이십니다.</span></div>
+					</div>
+					<div class="noticebox type3">
+						<dl>
+							<dt>KD-Shop 이용안내</dt>
+							<dd>현재 회원님은 탈퇴신청 관리자승인 대기 중이므로 주문 및 반품 등의 서비스 이용이 제한된 상태입니다.</dd>
+							<dd>원활한 서비스 운영을 위해 자세한 문의는 고객센터에 문의 바랍니다.</dd>
+							<dd>관련문의 : <a href="tel:080-024-0030" class="fcpoint fw500">080-024-0030</a></dd>
+						</dl>
+					</div>
+					<div class="button_box">
+						<a href="#" class="buttons medium point size1">마이페이지로 이동</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal" class="modalCenter modal_member_state3">
+			<div class="wrap">
+				<div class="head">
+					<h2>회원안내</h2>
+					<div class="close" onclick="modalClose('modal_member_state3');">닫기</div>
+				</div>
+				<div class="contents member_state">
+					<div class="no_result_box">
+						<i class="ico note"></i>
+						<div class="text">회원님은 현재 <span class="block">거래처 정보수정요청 </span><div>승인대기 중이십니다.</div></div>
+					</div>
+					<div class="noticebox type3">
+						<dl>
+							<dt>KD-Shop 이용안내</dt>
+							<dd>현재 회원님은 거래처 정보 수정요청 관리자 승인 대기 중이므로 주문 및 반품 등의 서비스 이용이 제한된 상태입니다.</dd>
+							<dd>마이페이지의 거래내역 등의 조회는 가능하오며, 원활한 서비스 운영을 위해 자세한 문의는 고객센터에 문의 바랍니다.</dd>
+							<dd>관련문의 : <a href="tel:080-024-0030" class="fcpoint fw500">080-024-0030</a></dd>
+						</dl>
+					</div>
+					<div class="button_box">
+						<a href="#" class="buttons medium point size1">마이페이지로 이동</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal" class="modalCenter modal_member_state4">
+			<div class="wrap">
+				<div class="head">
+					<h2>회원안내</h2>
+					<div class="close" onclick="modalClose('modal_member_state4');">닫기</div>
+				</div>
+				<div class="contents member_state">
+					<div class="no_result_box">
+						<i class="ico note"></i>
+						<div class="text">회원님은 현재 <span class="block">서비스 이용제한 중이십니다.</span></div>
+					</div>
+					<div class="noticebox type3">
+						<dl>
+							<dt>KD-Shop 이용안내</dt>
+							<dd>현재 회원님은 아래와 같은 사유로 주문 및 반품 등의 서비스 이용이 제한된 상태입니다.<br />(사유 : #사유노출)</dd>
+							<dd>원활한 서비스 운영을 위해 자세한 문의는  고객센터에 문의 바랍니다.</dd>
+							<dd>관련문의 : <a href="tel:080-024-0030" class="fcpoint fw500">080-024-0030</a></dd>
+						</dl>
+					</div>
+					<div class="button_box">
+						<a href="#" class="buttons medium point size1">마이페이지로 이동</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modalwrap"></div>
+		<div id="modalFullwrap"></div>
 	</div>
 	<script>
-		slideBannerSlide('wideslide', 'bullet');
+		slideBannerSlide('benefitSlide', 'bullets');
+		function find(a){
+			$('#modalwrap').load('find.html', function(){
+				$(this).find('#modal').addClass('open');
+				$('body').addClass('ismodal');
+				$(this).find('.menu_tab li').removeClass('active');
+				$(this).find('.contents_tab .content').removeClass('active');
+				if(a == 'id'){
+					$(this).find('.menu_tab .menu1').addClass('active');
+					$(this).find('#tab1').load('find_id.html').addClass('active');
+				} else if(a == 'pw') {
+					$(this).find('.menu_tab .menu2').addClass('active');
+					$(this).find('#tab2').load('find_pw.html').addClass('active');
+				}
+			});
+		}
 	</script>
 </body>
 </html>
