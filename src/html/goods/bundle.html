@@ -24,13 +24,16 @@
 				</div> -->
 				<div class="category_menu_slide">
 					<ul class="list">
-						<li><a href="#" class="btn">분류제목</a></li>
-						<li class="active"><a href="#" class="btn">분류제목</a></li>
-						<li><a href="#" class="btn">분류제목</a></li>
-						<li><a href="#" class="btn">분류제목</a></li>
-						<li><a href="#" class="btn">분류제목</a></li>
+						<li><a href="#" class="btn">묶음상품 분류 제목1 분류 제목1</a></li>
+						<li class="active"><a href="#" class="btn">분류 제목2</a></li>
+						<li><a href="#" class="btn">묶음상품 제목3</a></li>
+						<li><a href="#" class="btn">묶음상품 분류 제목4</a></li>
+						<li><a href="#" class="btn">분류 제목5</a></li>
 					</ul>
+					<button type="button" class="btn_prev">이전</button>
+					<button type="button" class="btn_next">다음</button>
 				</div>
+				<div class="blank_space"></div>
 				<div class="wide_title_banner type1">
 					<div class="title_layer">
 						<h3 class="title">묶음상품 기획전 내용</h3>
@@ -239,6 +242,46 @@
 	</div>
 	
 	<script>
+		function menuSlide(){
+			const wrap = document.querySelector('.category_menu_slide');
+			const list = wrap.querySelector('.list');
+			let menus = list.querySelectorAll('li');
+			const btnNext = wrap.querySelector('.btn_next');
+			const btnPrev = wrap.querySelector('.btn_prev');
+			let sum = 0;
+			let current = 0;
+			if(list.scrollLeft < 50){
+				btnPrev.style.display = 'none';
+			} else {
+				btnPrev.style.display = 'block';
+			}
+
+			if(list.scrollWidth - list.scrollLeft < window.innerWidth + 52){
+				btnNext.style.display = 'none';
+			} else {
+				btnNext.style.display = 'block';
+			}
+
+			for(let i=0; i<menus.length; i++){
+				//console.log(menus[1].clientWidth)
+				current = menus[i].clientWidth;
+				btnNext.addEventListener('click', function(){
+					console.log(current++)
+					list.scrollLeft = current++;
+				})
+				btnPrev.addEventListener('click', function(){
+					console.log(-current)
+					list.scrollLeft = -current;
+				})
+			}
+
+			// menus.forEach((item) => {
+			// 	sum += item.clientWidth;
+			// })
+			list.addEventListener('scroll', menuSlide);
+		}
+		
+		menuSlide();
 	</script>
 </body>
 </html>
