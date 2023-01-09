@@ -535,17 +535,20 @@ function wideBannerSlide(a){
 	}
 }
 
-function mainPopOpen(){
+function mainPopup(a){
+	const popupWrap = document.querySelectorAll('.main_popup');
 	const popup = document.querySelector('.main_popup');
-	popup.classList.add('open');
-	document.querySelector('body').classList.add('ismodal');
-	document.querySelector('body').addEventListener('scroll touchmove mousewheel', function(e){e.preventDefault();}, false);
-	slideBannerSlide('main_popup','bullets');
-}
+	const body = document.querySelector('body');
+	if(popupWrap.length){
+		popup.classList.add('open');
+		body.classList.add('ismodal');
+		body.addEventListener('scroll touchmove mousewheel', function(e){e.preventDefault();}, false);
+		slideBannerSlide('main_popup','bullets');
 
-function mainPopClose(){
-	const popup = document.querySelector('.main_popup');
-	popup.classList.remove('open');
-	document.querySelector('body').classList.remove('ismodal');
-	document.querySelector('body').removeEventListener('scroll touchmove mousewheel', null, false);
+		if(a == 'close'){
+			popup.classList.remove('open');
+			body.classList.remove('ismodal');
+			body.removeEventListener('scroll touchmove mousewheel', null, false);
+		}
+	}
 }

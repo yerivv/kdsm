@@ -447,23 +447,22 @@
 				</div>
 				<div class="blank_space"></div>
 			</div>
-        </main>
-		
-		<div class="main_popup">
-			<div class="dim"></div>
-			<div class="wrap">
-				<div class="swiper-container">
-					<ul class="swiper-wrapper">
-						<li class="swiper-slide"><a href="#"><img src="../imgs/main_popup.png" alt="" /></a></li>
-						<li class="swiper-slide"><a href="#"><img src="../imgs/main_popup2.png" alt="" /></a></li>
-					</ul>
-				</div>
-				<div class="button_box">
-					<a href="" class="buttons fcdefault">오늘 그만보기</a>
-					<a href="javascript:void(0)" onclick="mainPopClose();" class="buttons fill">닫기</a>
+			<div class="main_popup">
+				<div class="dim"></div>
+				<div class="wrap">
+					<div class="swiper-container">
+						<ul class="swiper-wrapper">
+							<li id="popup_base1" class="swiper-slide"><a href="#"><img src="../imgs/main_popup.png" alt="" /></a></li>
+							<li id="popup_base2" class="swiper-slide"><a href="#"><img src="../imgs/main_popup2.png" alt="" /></a></li>
+						</ul>
+					</div>
+					<div class="button_box">
+						<a href="" class="buttons fcdefault">오늘 그만보기</a>
+						<a href="javascript:void(0)" onclick="mainPopup('close');" class="buttons fill">닫기</a>
+					</div>
 				</div>
 			</div>
-		</div>
+        </main>
 
         @@include('@@webRoot/_include/footer.html')
 
@@ -473,7 +472,7 @@
     </div>
     
     <script>
-		mainPopOpen();
+		mainPopup();
 		slideBannerSlide('section_visual','bullets');
 		slideBannerSlide('section_banner1','fraction');
 		slideAct();

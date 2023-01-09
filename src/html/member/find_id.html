@@ -7,8 +7,8 @@
 		<dt>인증방법</dt>
 		<dd>
 			<div class="form_line">
-				<input type="radio" name="type" id="type_hp"><label for="type_hp">휴대폰</label>
-				<input type="radio" name="type" id="type_email"><label for="type_email">이메일</label>
+				<input type="radio" name="certify" id="certify_mobile" value="mobile" onclick="checkCertify(this)" checked="checked"><label for="certify_mobile">휴대폰</label>
+				<input type="radio" name="certify" id="certify_email" value="email" onclick="checkCertify(this)"><label for="certify_email">이메일</label>
 			</div>
 		</dd>
 	</dl>
@@ -16,23 +16,23 @@
 		<dt>사업자등록번호</dt>
 		<dd>
 			<div class="form_line cols3">
-				<input type="text" />
+				<input type="text" name="bizNo1" maxlength="3" />
 				<span class="hyphen">-</span>
-				<input type="text" />
+				<input type="text" name="bizNo2" maxlength="2" />
 				<span class="hyphen">-</span>
-				<input type="text" />
+				<input type="text" name="bizNo3" maxlength="5" />
 			</div>
 		</dd>
 	</dl>
-	<dl id="type1">
+	<dl id="mobile">
 		<dt>휴대폰</dt>
 		<dd>
 			<div class="form_line cols3btn">
-				<input type="text" />
+				<input type="text" name="mobile1" maxlength="3" />
 				<span class="hyphen">-</span>
-				<input type="text" />
+				<input type="text" name="mobile2" maxlength="4" />
 				<span class="hyphen">-</span>
-				<input type="text" />
+				<input type="text" name="mobile3" maxlength="4" />
 				<button type="button" class="buttons medium white">인증</button>
 			</div>
 			<div class="form_line">
@@ -40,20 +40,35 @@
 			</div>
 		</dd>
 	</dl>
-	<dl id="type2">
+	<dl id="email" style="display:none">
 		<dt>이메일</dt>
 		<dd>
 			<div class="form_line">
-				<input type="text" />
-				<span class="hyphen">@</span>
+				<input type="text" name="emailId" maxlength="20" />
+				<span class="at">@</span>
+				<input type="text" name="emailDomain" maxlength="100" />
 				<select name="">
-					<option>ㅍㅍㅍ</option>
+					<option value="input">직접입력</option>
 				</select>
 				<button type="button" class="buttons medium white">인증</button>
 			</div>
 			<div class="form_line">
-				<input type="text" placeholder="인증번호" disabled="disabled" />
+				<input type="text" name="certifyNum" id="certifyNum" placeholder="인증번호" disabled="disabled" />
 			</div>
 		</dd>
 	</dl>
 </div>
+
+<script>
+function checkCertify(a){
+	let value = a.value;
+	if(value=='mobile'){
+		document.querySelector('#mobile').style.display = 'block';
+		document.querySelector('#email').style.display = 'none';
+	}
+	if(value=='email'){
+		document.querySelector('#mobile').style.display = 'none';
+		document.querySelector('#email').style.display = 'block';
+	}
+}
+</script>

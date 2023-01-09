@@ -248,8 +248,8 @@
 			let menus = list.querySelectorAll('li');
 			const btnNext = wrap.querySelector('.btn_next');
 			const btnPrev = wrap.querySelector('.btn_prev');
-			let sum = 0;
 			let current = 0;
+
 			if(list.scrollLeft < 50){
 				btnPrev.style.display = 'none';
 			} else {
@@ -262,25 +262,27 @@
 				btnNext.style.display = 'block';
 			}
 
-			for(let i=0; i<menus.length; i++){
-				//console.log(menus[1].clientWidth)
-				current = menus[i].clientWidth;
-				btnNext.addEventListener('click', function(){
-					console.log(current++)
-					list.scrollLeft = current++;
-				})
-				btnPrev.addEventListener('click', function(){
-					console.log(-current)
-					list.scrollLeft = -current;
-				})
-			}
+			let data = new Array();
+			
+			menus.forEach((item, index) => {
+				//console.log(item, item.clientWidth)
+				data.push(item.clientWidth)
+				//console.log(data);
+				for (let i of data){
+					console.log(i)
+				}
+				
+				// btnNext.addEventListener('click', function(){
 
-			// menus.forEach((item) => {
-			// 	sum += item.clientWidth;
-			// })
+				// 	console.log(index)
+				// 	for(let i=0;i<index;i++){
+				// 		console.log(data[i])
+				// 		list.scrollLeft += data[index];
+				// 	}
+				// })
+			});
 			list.addEventListener('scroll', menuSlide);
 		}
-		
 		menuSlide();
 	</script>
 </body>
