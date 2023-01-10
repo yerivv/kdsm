@@ -15,56 +15,31 @@ function getDirection(){
 		let floatingH = document.querySelector('#container .floating_btn').clientHeight;
 		document.querySelector('#footer').style.cssText = 'padding-bottom:'+floatingH+'px';
 		document.querySelector('#fixedBtn').classList.add('hFloating');
-		document.querySelector('#fixedBtn').style.cssText = 'bottom:'+(floatingH+14)+'px';
+		document.querySelector('#fixedBtn').style.cssText = 'transform: translate3d(0,'+(-(floatingH+8))+'px,0)';
 	}
 }
 
-//scroll
-let lastScroll = document.documentElement.scrollTop || 0;
-let isScrolling;
 document.addEventListener('scroll', getScrollDirection, false);
-function getScrollDirection() {
+function getScrollDirection(){
 	let scrollTop = document.documentElement.scrollTop;
-	let height = window.innerHeight;
-	let scrollHeight = document.querySelector('body').scrollHeight;
 	const body = document.querySelector('body');
-	const toolbar = document.querySelectorAll('#toolbar');
-	const floating = document.querySelector('#container').querySelectorAll('.floating_btn');
+	const toolbar = body.querySelector('#toolbar');
+	const fixBtn = body.querySelector('#fixedBtn');
 
-	if(toolbar.length>0){
-		if (scrollTop >= lastScroll) {
-			body.classList.add('sDown');
-			//console.log('down')
-		}
-		else {
-			body.classList.remove('sDown');
-			body.classList.add('end');
-			//console.log('up')
-		}
-		lastScroll = scrollTop;
-		if(scrollTop == 0){
-			body.classList.remove('end');
-			body.classList.remove('sDown');
-		}
-		if(scrollTop + height >= scrollHeight){
-			body.classList.add('end');
-		}
-	} else if(floating.length>0) {
-		//console.log('플로팅바 yes');
-		let floatingH = document.querySelector('#container .floating_btn').clientHeight;
-		if(scrollTop > 0){
-			body.classList.add('scroll');
-			document.querySelector('#fixedBtn').style.cssText = 'bottom:'+(floatingH+16)+'px';
+	if(scrollTop >= 50){
+		fixBtn.classList.add('scroll');
+	} else {
+		fixBtn.classList.remove('scroll');
+	}
+	if(body.querySelectorAll('#toolbar').length){
+		if(scrollTop >= 50){
+			toolbar.classList.add('scroll');
 		} else {
-			body.classList.remove('scroll');
-			document.querySelector('#fixedBtn').style.cssText = 'bottom:'+(floatingH-44)+'px';
+			toolbar.classList.remove('scroll');
 		}
 	}
-	window.clearTimeout( isScrolling );
-	isScrolling = setTimeout(function() {
-		//console.log( '스크롤 멈춤' );
-	}, 66);
 }
+
 
 //floating button detail
 function floatingMore(a){
@@ -403,6 +378,7 @@ function slideBannerSlide(a,b){
 		let slideSwiper = new Swiper(slide, {
 			slidesPerView: 1,
 			loop: true,
+			autoHeight : true,
 			pagination: {
 				el: slide.querySelector('.swiper-pagination'),
 				type: b,

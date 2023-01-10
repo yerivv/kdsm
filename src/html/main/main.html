@@ -450,10 +450,13 @@
 			<div class="main_popup">
 				<div class="dim"></div>
 				<div class="wrap">
-					<div class="swiper-container">
+					<div class="popup_cont swiper-container">
 						<ul class="swiper-wrapper">
 							<li id="popup_base1" class="swiper-slide"><a href="#"><img src="../imgs/main_popup.png" alt="" /></a></li>
 							<li id="popup_base2" class="swiper-slide"><a href="#"><img src="../imgs/main_popup2.png" alt="" /></a></li>
+							<li id="popup_base2" class="swiper-slide">
+								<div style="height:800px;background-color:#eee;">111</div>
+							</li>
 						</ul>
 					</div>
 					<div class="button_box">
@@ -472,7 +475,10 @@
     </div>
     
     <script>
-		mainPopup();
+		window.onload = function(){
+			mainPopup()
+		};
+		//setTimeout(() => {mainPopup(), 600});
 		slideBannerSlide('section_visual','bullets');
 		slideBannerSlide('section_banner1','fraction');
 		slideAct();

@@ -47,3 +47,7 @@
 .page_showroom .today_box .wideslide img {display:block;}
 .page_showroom .today_box .wideslide.none-swiper {padding-right:0;}
 .page_showroom .board_detail_wrap .content_box {padding:0;}
+
+@media (max-width: 320px) {
+	.page_showroom .menu_tab .list .btn {flex-direction: column;font-size:12px;line-height:14px;}
+}
