@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "고객센터"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"type": "type3",
+			"gnbNo": "style='display:none'",
+			"toolbarNo" :"style='display:none'",
+			"title": "고객센터"
+		})
+
+		<main id="container">
+			<div class="page_areaBest">
+				<h3 class="page_title">자주하는 질문 TOP 10</h3>
+				
+				<h3 class="page_title">공지사항</h3>
+			</div>
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>

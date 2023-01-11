@@ -40,6 +40,9 @@ function getScrollDirection(){
 	}
 }
 
+function goTop(){
+	window.scrollTo({top:0});
+}
 
 //floating button detail
 function floatingMore(a){

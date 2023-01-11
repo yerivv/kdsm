@@ -29,6 +29,9 @@
 						<li><a href="#" class="btn">묶음상품 제목3</a></li>
 						<li><a href="#" class="btn">묶음상품 분류 제목4</a></li>
 						<li><a href="#" class="btn">분류 제목5</a></li>
+						<li><a href="#" class="btn">묶음상품 제목3</a></li>
+						<li><a href="#" class="btn">묶음상품 분류 제목4</a></li>
+						<li><a href="#" class="btn">분류 제목5</a></li>
 					</ul>
 					<button type="button" class="btn_prev">이전</button>
 					<button type="button" class="btn_next">다음</button>
@@ -245,41 +248,24 @@
 		function menuSlide(){
 			const wrap = document.querySelector('.category_menu_slide');
 			const list = wrap.querySelector('.list');
-			let menus = list.querySelectorAll('li');
 			const btnNext = wrap.querySelector('.btn_next');
 			const btnPrev = wrap.querySelector('.btn_prev');
 			let current = 0;
-
-			if(list.scrollLeft < 50){
+			if(list.scrollLeft == 0){
 				btnPrev.style.display = 'none';
-			} else {
-				btnPrev.style.display = 'block';
-			}
-
-			if(list.scrollWidth - list.scrollLeft < window.innerWidth + 52){
+			} else if(list.scrollWidth - list.scrollLeft < window.innerWidth) {
 				btnNext.style.display = 'none';
 			} else {
+				btnPrev.style.display = 'block';
 				btnNext.style.display = 'block';
 			}
-
-			let data = new Array();
-			
-			menus.forEach((item, index) => {
-				//console.log(item, item.clientWidth)
-				data.push(item.clientWidth)
-				//console.log(data);
-				for (let i of data){
-					console.log(i)
-				}
-				
-				// btnNext.addEventListener('click', function(){
-
-				// 	console.log(index)
-				// 	for(let i=0;i<index;i++){
-				// 		console.log(data[i])
-				// 		list.scrollLeft += data[index];
-				// 	}
-				// })
+			btnNext.addEventListener('click', function(){
+				current += 100;
+				list.scrollLeft += current;
+			});
+			btnPrev.addEventListener('click', function(){
+				current = 100;
+				list.scrollLeft -= current;
 			});
 			list.addEventListener('scroll', menuSlide);
 		}
