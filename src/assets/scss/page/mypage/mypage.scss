@@ -1,0 +1,46 @@
+.result_box {margin:24px 0 8px;}
+.result_box .result {color:#8f8f8f;font-size:13px;line-height:1;}
+
+.common_orderList .group {overflow:hidden;border:1px solid #dee0e4;border-radius:4px;}
+.common_orderList .group:not(:first-child) {margin-top:12px;}
+.common_orderList .group dt {padding:12px 16px;background-color:#ffe7e1;font-size:15px;line-height:1;}
+.common_orderList .group dd {border-top:1px solid #dee0e4;}
+.common_orderList .group .accordions_wrap {border-color:#edf0f2;}
+.common_orderList .group .accordions_wrap .accordion {position:relative;padding:12px 15px;color:#797d8d;font-size:13px;}
+.common_orderList .group .accordions_wrap .accordion::after {content:'';position:absolute;right:15px;top:50%;width:12px;height:12px;margin-top:-6px;background:url(../imgs/global/arrow_category.png) center center no-repeat;background-size:contain;transition:0.2s;}
+.common_orderList .group .accordions_wrap.on .accordion::after {transform:rotate(180deg);}
+.common_orderList .group .accordions_wrap .toggle {border-top:1px solid #dee0e4;background-color:#f4f7f9;}
+.common_orderList .info {position:relative;padding:10px 15px 8px;color:#8f8f8f;font-size:12px;line-height:20px;}
+.common_orderList .info .btn_detail {position:absolute;right:15px;top:50%;transform:translateY(-50%);}
+.common_orderList .product .item:not(:first-child) {border-top:1px solid #dee0e4;}
+.common_orderList .product .item {display:flex;flex-wrap:wrap;padding:15px 15px 0;}
+.common_orderList .product .item .thumb_box {overflow:hidden;position:relative;width:56px;height:56px;margin-right:8px;border-radius:4px;}
+.common_orderList .product .item .thumb_box .thumb {overflow:hidden;position:relative;padding-top:calc(100% - 2px);border:1px solid #edf0f2;border-radius:4px;}
+.common_orderList .product .item .thumb_box .thumb img {display:block;position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;}
+.common_orderList .product .item .thumb_box .soldout,
+.common_orderList .product .item .thumb_box .stock {display:flex;justify-content:center;align-items:center;position:absolute;top:0;left:0;width:100%;height:100%;border-radius:4px;font-weight:500;text-align:center;}
+.common_orderList .product .item .thumb_box .stock strong {font-size:16px;font-weight:500;}
+.common_orderList .product .item .thumb_box .soldout {background-color:rgba(0, 0, 0, 0.5);color:#fff;font-size:15px;line-height:18px;}
+.common_orderList .product .item .thumb_box .stock {border:1px solid #e8340c;background-color:rgba(255, 255, 255, 0.5);color:#e8340c;line-height:20px;}
+.common_orderList .product .item .info_box {width:calc(100% - 64px);}
+.common_orderList .product .item .name {display:block;overflow:hidden;max-height:36px;line-height:18px;text-overflow:ellipsis;word-wrap:break-word;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.common_orderList .product .item .summary {margin-top:3px;color:#b0b0b0;font-size:12px;line-height:14px;}
+.common_orderList .product .item .price_box {display:flex;align-items:center;justify-content:flex-end;width:100%;padding:8px 0 12px;font-size:13px;line-height:1;text-align:right;}
+.common_orderList .product .item .price_box strong {display:inline-block;margin-left:4px;}
+.common_orderList .product .item .price_box .price {color:#666;}
+.common_orderList .product .item .price_box .pay strong {font-size:14px;}
+.common_orderList .product .item .price_box .box:not(:first-child) {position:relative;padding-left:17px;}
+.common_orderList .product .item .price_box .box:not(:first-child)::before {content:'';position:absolute;left:8px;top:0;width:1px;height:14px;background-color:#e3e3e3;}
+.common_orderList .product .item .state {display:flex;align-items:center;justify-content:flex-end;width:100%;height:40px;border-top:1px solid #dee0e4;line-height:1;text-align:right;}
+.common_orderList .product .item .state .buttons {margin-right:8px;}
+.common_orderList .product .item .other {display:flex;justify-content:space-between;align-items:center;width:100%;padding:12px 0;border-top:1px solid #dee0e4;}
+.common_orderList .product .item .other .ea_box_wrap {display:inline-flex;}
+.common_orderList .product .item .other .ea_box_wrap .ea_box {margin-right:8px;}
+.common_orderList .product .item .other .total {text-align:right;}
+.common_orderList .product .item .other .total .price {font-size:12px;line-height:18px;}
+.common_orderList .product .item .other .total .price strong {font-size:16px;}
+
+.page_mypage .period_check {margin:0 -16px;}
+.page_mypage .period_check .period {padding:0 16px 16px;border-bottom:1px solid #edf0f2;}
+.page_mypage .period_check .detail {background-color:#f4f7f9;padding:8px 16px 24px;}
+.page_mypage .period_check .detail dt {margin:16px 0 8px;font-size:15px;line-height:1;}

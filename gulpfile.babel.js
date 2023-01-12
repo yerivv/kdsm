@@ -109,6 +109,11 @@ const compile = {
 				include({
 					prefix: '@@',
 					basepath: '@file',
+					context:{
+						header: '',
+						gnb: '',
+						toolbar: ''
+					}
 				})
 			)
 			.pipe(debug({ title: 'HTML Compile:' }))

@@ -1,4 +1,5 @@
-<header id="header" class="@@type">
+<header id="header">
+@@if (header === 'type1') {
 	<div class="type1">
 		<h1><a href="../main/main.html"><img src="@@webRoot/imgs/global/logo.png" alt="광동제약"></a></h1>
 		<div class="search_form">
@@ -10,6 +11,8 @@
 			<a href="javascript:void(0);" onclick="modalOpen('modal_category')" class="btn btn_category">카테고리보기</a>
 		</div>
 	</div>
+}
+@@if (header === 'type2') {
 	<div class="type2">
 		<h1 class="blind">광동제약</h1>
 		<div class="page_name_box">
@@ -17,6 +20,8 @@
 			<a href="javascript:history.back()" class="btn_history">이전 페이지 이동</a>
 		</div>
 	</div>
+}
+@@if (header === 'type3') {
 	<div class="type3">
 		<h1 class="blind">광동제약</h1>
 		<div class="page_name_box">
@@ -24,27 +29,13 @@
 			<a href="javascript:history.back()" class="btn_history">이전 페이지 이동</a>
 		</div>
 	</div>
+}
 </header>
 
-<div id="gnb" @@gnbNo>
-	<div class="wrap">
-		<ul>
-			<li class="@@gnb-1"><a href="#">추천상품<span class="label_count etc">32</span></a></li>
-			<li class="@@gnb-2"><a href="../goods/kdspace.html">광동전용관</a></li>
-			<li class="@@gnb-3"><a href="../goods/brand.html">브랜드관</a></li>
-			<li class="@@gnb-4"><a href="#">주문/배송</a></li>
-			<li class="@@gnb-5"><a href="../goods/bundle.html">묶음상품</a></li>
-			<li class="@@gnb-6"><a href="../goods/regular.html">정기배송</a></li>
-		</ul>
-	</div>
-</div>
+@@if (gnb !== 'hidden') {
+	@@include('@@webRoot/_include/gnb.html')
+}
 
-<div id="toolbar" @@toolbarNo>
-	<ul>
-		<li class="home @@toolbar-1"><a href="#">홈</a></li>
-		<li class="repurchase  @@toolbar-2"><a href="#">재구매</a></li>
-		<li class="ledger  @@toolbar-3"><a href="javascript:void(0)" onclick="ledger(this)">간편장부</a></li>
-		<li class="mypage  @@toolbar-4"><a href="javascript:void(0)" onclick="modalOpen('modal_mypage');">마이페이지</a></li>
-		<li class="allmenu  @@toolbar-5"><a href="javascript:void(0)" onclick="modalOpen('modal_allmenu');">전체메뉴</a></li>
-	</ul>
-</div>
+@@if (toolbar !== 'hidden') {
+	@@include('@@webRoot/_include/toolbar.html')
+}

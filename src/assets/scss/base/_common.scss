@@ -72,6 +72,7 @@ input[type=radio]:disabled::after {background-color:#E3E3E3;}
 
 /* check,radio Text */
 .textType {display:flex;flex-wrap:nowrap;gap:8px;width:100%;}
+.textType.gap4 {gap:4px;}
 .textType li {width:100%;text-align:center;}
 .textType li input[type=radio] {display:none;}
 .textType li input[type=radio] + label {display:block;padding:10px 0 7px;margin:0;border-radius:4px;border:1px solid #dee0e4;background-color:#fff;font-size:13px;font-weight:500;line-height:1;}
@@ -437,7 +438,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 
 /* accordion */
 .accordions_wrap .toggle {display:none !important;}
-.accordions_wrap .on .toggle {display:block !important;}
+.accordions_wrap.on .toggle {display:block !important;}
 
 /* tool tip */
 .tooltip_wrap {position:relative;}

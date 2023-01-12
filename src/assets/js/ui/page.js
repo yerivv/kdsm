@@ -61,7 +61,7 @@ function floatingMore(a){
 //accordion 
 function accordions(a){
 	const wrap = a.closest('.accordions_wrap');
-	wrap.childNodes[1].classList.toggle('on');
+	wrap.classList.toggle('on');
 }
 
 //modal
