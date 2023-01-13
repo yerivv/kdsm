@@ -11,8 +11,10 @@
 <body>
 	<div id="app">
 		@@include('@@webRoot/_include/header.html',{
+			"header" : "type1",
+			"gnb" : "",
 			"gnb-5": "active",
-			"toolbarNo" :"style='display:none'"
+			"toolbar" : "hidden",
 		})
 
 		<main id="container">
@@ -26,23 +28,20 @@
 					<ul class="list">
 						<li><a href="#" class="btn">묶음상품 분류 제목1 분류 제목1</a></li>
 						<li class="active"><a href="#" class="btn">분류 제목2</a></li>
-						<li><a href="#" class="btn">묶음상품 제목3</a></li>
+						<!-- <li><a href="#" class="btn">묶음상품 제목3</a></li>
 						<li><a href="#" class="btn">묶음상품 분류 제목4</a></li>
 						<li><a href="#" class="btn">분류 제목5</a></li>
 						<li><a href="#" class="btn">묶음상품 제목3</a></li>
 						<li><a href="#" class="btn">묶음상품 분류 제목4</a></li>
-						<li><a href="#" class="btn">분류 제목5</a></li>
+						<li class="active"><a href="#" class="btn">분류 제목5</a></li> -->
 					</ul>
 					<button type="button" class="btn_prev">이전</button>
 					<button type="button" class="btn_next">다음</button>
 				</div>
 				<div class="blank_space"></div>
 				<div class="wide_title_banner type1">
-					<div class="title_layer">
-						<h3 class="title">묶음상품 기획전 내용</h3>
-						<p class="subtext">묶음상품 기획전 내용 표시<br />배송비 무료</p>
-					</div>
-					<div class="banner"><img src="../imgs/title/bundle_banner.png" alt="" /></div>
+					<!--에디터 내용-->
+					<div class="editor"><img src="../imgs/title/bundle_banner.png" alt="" /></div>
 				</div>
 				<!-- 상품 -->
 				<div class="common_product mgt8">
@@ -57,7 +56,7 @@
 									<div class="summary">
 										<span class="box">광동제약</span>
 										<span class="box">50ml</span>
-										<span class="box">10병</span> 
+										<span class="box">재고 : 11,100,000개</span> 
 									</div>
 								</div>
 								<div class="price">
@@ -250,24 +249,49 @@
 			const list = wrap.querySelector('.list');
 			const btnNext = wrap.querySelector('.btn_next');
 			const btnPrev = wrap.querySelector('.btn_prev');
+			let active = list.querySelector('.active');
+			let menus = list.querySelectorAll('li');
+			let screen = window.innerWidth;
 			let current = 0;
-			if(list.scrollLeft == 0){
+
+			function displayBtn(){
 				btnPrev.style.display = 'none';
-			} else if(list.scrollWidth - list.scrollLeft < window.innerWidth) {
 				btnNext.style.display = 'none';
-			} else {
-				btnPrev.style.display = 'block';
-				btnNext.style.display = 'block';
+				if(list.scrollLeft > 0){
+					btnPrev.style.display = 'block';
+				}
+				if(list.scrollWidth - list.scrollLeft > screen) {
+					btnNext.style.display = 'block';
+				}
 			}
-			btnNext.addEventListener('click', function(){
-				current += 100;
-				list.scrollLeft += current;
+
+			function controlBtn(){
+				btnNext.addEventListener('click', function(){
+					current = 100;
+					list.scrollLeft += current;
+				});
+				btnPrev.addEventListener('click', function(){
+					current = 100;
+					list.scrollLeft -= current;
+				});
+				displayBtn();
+			}
+
+			function loadActive(){
+				if(active!==null){
+					let activeLeft = active.offsetLeft;
+					
+					if(list.scrollWidth-screen>= 0){
+						list.scrollLeft = activeLeft-60;
+						//console.log(sum, screen, activeLeft)
+					}
+				}
+				displayBtn();
+			}
+			document.addEventListener('DOMContentLoaded', function(){
+				setTimeout(loadActive, 100);
 			});
-			btnPrev.addEventListener('click', function(){
-				current = 100;
-				list.scrollLeft -= current;
-			});
-			list.addEventListener('scroll', menuSlide);
+			list.addEventListener('scroll', controlBtn);
 		}
 		menuSlide();
 	</script>

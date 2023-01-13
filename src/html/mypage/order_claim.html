@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	@@include('@@webRoot/_include/head.html',{
-		"title": "주문/배송조회"
+		"title": "주문취소 내역"
 	})
 	@@include('@@webRoot/_include/library.html')
 	<script src="@@webRoot/js/ui.js"></script>
@@ -12,7 +12,7 @@
 	<div id="app">
 		@@include('@@webRoot/_include/header.html',{
 			"header" : "type2",
-			"title": "주문/배송조회",
+			"title": "주문취소 내역",
 			"gnb" : "hidden",
 			"toolbar" : "hidden",
 		})
@@ -73,7 +73,7 @@
 				<!-- 없을 시-->
 				<div class="no_result_box bold">
 					<i class="ico"></i>
-					<div class="text">주문 내역이 없습니다.</div>
+					<div class="text">주문취소 내역이 없습니다.</div>
 				</div><!-- //no_result_box -->
 				<!-- 내역 있을 시 -->
 				<div class="common_orderList">
@@ -83,7 +83,7 @@
 							<dd class="info">
 								<div>주문일자 : <span class="number">2022-11-23</span></div>
 								<div>주문유형 : 일반</div>
-								<a href="order_detail.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
+								<a href="order_detail_claim.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
 							</dd>
 							<dd class="product accordions_wrap">
 								<div class="accordion" onclick="accordions(this)">상품 상세 정보</div>
@@ -101,11 +101,12 @@
 												</div>
 											</div>
 											<div class="price_box">
-												<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
-												<div class="box pay">결제금액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+												<div class="box price">상품금액<strong class="number">1,045,000</strong>원</div>
+												<div class="box pay">결제금액<span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
 											</div>
 											<div class="state">
-												<strong class="fw500">상품준비중</strong>
+												<span class="number date">2022-11-21</span>
+												<strong class="fw500">취소완료</strong>
 											</div>
 										</li>
 										<li class="item">
@@ -120,12 +121,12 @@
 												</div>
 											</div>
 											<div class="price_box">
-												<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
-												<div class="box pay">결제금액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+												<div class="box price">상품금액<strong class="number">1,045,000</strong>원</div>
+												<div class="box pay">결제금액<span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
 											</div>
 											<div class="state">
-												<a href="#" class="buttons xsmall white round0">배송조회</a>
-												<strong class="fw500">발송완료</strong>
+												<span class="number date">2022-11-21</span>
+												<strong class="fw500">취소완료</strong>
 											</div>
 										</li>
 									</ul>
@@ -139,7 +140,7 @@
 							<dd class="info">
 								<div>주문일자 : <span class="number">2022-11-23</span></div>
 								<div>주문유형 : 일반</div>
-								<a href="order_detail.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
+								<a href="order_detail_claim.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
 							</dd>
 							<dd class="product accordions_wrap">
 								<div class="accordion" onclick="accordions(this)">상품 상세 정보</div>
@@ -157,11 +158,12 @@
 												</div>
 											</div>
 											<div class="price_box">
-												<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
-												<div class="box pay">결제금액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+												<div class="box price">상품금액<strong class="number">1,045,000</strong>원</div>
+												<div class="box pay">결제금액<span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
 											</div>
 											<div class="state">
-												<strong class="fw500">상품준비중</strong>
+												<span class="number date">2022-11-21</span>
+												<strong class="fw500">취소완료</strong>
 											</div>
 										</li>
 									</ul>

@@ -317,9 +317,28 @@
 					</dl>
 				</div>
 				<h3>공통 검색 폼</h3>
-				<div class="search_form">
+				<div class="search_form"> 
 					<input type="search" class="input_search" name="" placeholder="검색어를 입력하세요." />
 					<button type="button" class="btn_search">검색</button>
+				</div>
+				<h3>기간검색</h3>
+				<ul class="textType gap4">
+					<li><input type="radio" name="period" id="period_week" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'd', -7);"><label for="period_week">7일</label></li>
+					<li><input type="radio" name="period" id="period_month1" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -1);" checked="checked"><label for="period_month1">1개월</label></li>
+					<li><input type="radio" name="period" id="period_month3" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -3);"><label for="period_month3">3개월</label></li>
+					<li><input type="radio" name="period" id="period_month6" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -6);"><label for="period_month6">6개월</label></li>
+					<li><input type="radio" name="period" id="period_year1" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'y', -1);"><label for="period_year1">12개월</label></li>
+				</ul>
+				<div class="calendar_box" style="margin-top:8px;">
+					<span class="box">
+						<input type="text" id="sdts" name="sdts" value="2022-12-12" onclick="calendar.open(event, this, 'YYYY-MM-DD')" readonly="readOnly">
+						<button type="button" class="calendar" onclick="calendar.open(event, 'sdts', 'YYYY-MM-DD')">시작기간설정</button>
+					</span>
+					<span class="text">~</span>
+					<span class="box">
+						<input type="text" id="sdte" name="sdte" value="2023-01-12" onclick="calendar.open(event, this, 'YYYY-MM-DD')" readonly="readOnly">
+						<button type="button" class="calendar" onclick="calendar.open(event, 'sdte', 'YYYY-MM-DD')">종료기간설정</button>
+					</span>
 				</div>
 			</div>
 			<div class="section">
@@ -439,6 +458,10 @@
 					<a href="#" class="buttons xsmall black fw500">특가상품 보기</a>
 					<a href="#" class="buttons xsmall gray round0">업체변경</a>
 					<a href="#" class="buttons xsmall white round0">삭제</a>
+				</div>
+				<h3>iconBtn (height:28px)</h3>
+				<div class="button_box single">
+					<a href="#" class="buttons iconBtn white"><i class="icoDetail"></i>내역 상세보기</a>
 				</div>
 				<h3>기타 - 즉시할인(btn_direct)</h3>
 				<div>

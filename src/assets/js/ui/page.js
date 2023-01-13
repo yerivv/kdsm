@@ -143,7 +143,7 @@ function gnbPosition(){
 				gnbWrap.scrollLeft = activeLeft;
 				//console.log(sum, screen, activeLeft)
 			}
-		}	
+		}
 	}
 }
 

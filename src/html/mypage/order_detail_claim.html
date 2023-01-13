@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "주문취소 상세내역"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "주문취소 상세내역",
+			"gnb" : "hidden",
+			"toolbar" : "hidden",
+		})
+
+		<main id="container">
+			<div class="page_mypage">
+				<!-- 주문정보 -->
+				<div class="title_box mgt0">
+					<h3 class="title">주문정보</h3>
+				</div>
+				<div class="common_tbl tbl_round">
+					<table>
+						<caption>주문정보</caption>
+						<colgroup>
+							<col width="91"><col width="*">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">주문일자</th>
+								<td><span class="number">2022-11-17</span></td>
+							</tr>
+							<tr>
+								<th scope="row">주문번호</th>
+								<td><span class="number">A2231156316424</span></td>
+							</tr>
+							<tr>
+								<th scope="row">주문유형</th>
+								<td>일반</td>
+							</tr>
+							<tr>
+								<th scope="row">총 결제금액</th>
+								<td class="fcpoint"><strong class="number fw500">100,304</strong>원</td>
+							</tr>
+							<tr>
+								<th scope="row">할인금액</th>
+								<td>상품금액 : <strong class="number fw500">112,350</strong>원 - 비용할인 : <strong class="number fw500">2,016</strong>원 - 즉시할인 : <strong class="number fw500">10,000</strong>원</td>
+							</tr>
+							<tr>
+								<th scope="row">결제방식</th>
+								<td>
+									신용카드 + 비용할인 + 기타 + 예치금 + 마이너스잔고 + 마일리지 + 쿠폰
+									<div class="mgt8"><a href="#" class="buttons xsmall white round0">카드명세서 조회</a></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //주문정보 -->
+				
+				<!-- 상품정보 -->
+				<div class="title_box">
+					<h3 class="title">상품정보</h3>
+				</div>
+				<div class="common_orderList">
+					<div class="group">
+						<dl>
+							<dt>광동제약</dt>
+							<dd class="product">
+								<ul class="product_list">
+									<li class="item">
+										<div class="thumb_box">
+											<div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="" /></div>
+											<!-- <div class="soldout">일시<br />품절</div> -->
+										</div>
+										<div class="info_box">
+											<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+											<div class="summary">
+												<span class="box">100box</span>
+											</div>
+										</div>
+										<div class="price_box">
+											<div class="box priceEa"><strong class="number">12,000</strong>원 x <strong class="number">10</strong>개</div>
+											<div class="box pay"><span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+										</div>
+										<div class="state">
+											<span class="number date">2022-11-21</span>
+											<strong class="fw500">취소완료</strong>
+										</div>
+									</li>
+									<li class="item">
+										<div class="thumb_box">
+											<div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="" /></div>
+											<!-- <div class="soldout">일시<br />품절</div> -->
+										</div>
+										<div class="info_box">
+											<div class="name">광동제약 비타500</div>
+											<div class="summary">
+												<span class="box">50ml</span>
+											</div>
+										</div>
+										<div class="price_box">
+											<div class="box priceEa"><strong class="number">12,000</strong>원 x <strong class="number">10</strong>개</div>
+											<div class="box pay"><span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+										</div>
+										<div class="state">
+											<span class="number date">2022-11-21</span>
+											<strong class="fw500">취소완료</strong>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div><!-- //group -->
+					<div class="group">
+						<dl>
+							<dt>인천약품</dt>
+							<dd class="product">
+								<ul class="product_list">
+									<li class="item">
+										<div class="thumb_box">
+											<div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="" /></div>
+											<!-- <div class="soldout">일시<br />품절</div> -->
+										</div>
+										<div class="info_box">
+											<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+											<div class="summary">
+												<span class="box">100box</span>
+											</div>
+										</div>
+										<div class="price_box">
+											<div class="box priceEa"><strong class="number">12,000</strong>원 x <strong class="number">10</strong>개</div>
+											<div class="box pay"><span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+										</div>
+										<div class="state">
+											<span class="number date">2022-11-21</span>
+											<strong class="fw500">취소완료</strong>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div><!-- //group -->
+				</div><!-- //common_orderList -->
+				<!-- //상품정보 -->
+				<!-- 결제 내역 -->
+				<div class="title_box">
+					<h3 class="title">결제 및 할인내역</h3>
+				</div>
+				<div class="billing_info">
+					<div class="list">
+						<dl>
+							<dt>상품금액</dt>
+							<dd><strong class="number">580,000</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>비용할인</dt>
+							<dd><strong class="number">-4,000</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>쿠폰</dt>
+							<dd><strong class="number">-0</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>예치금</dt>
+							<dd><strong class="number">-0</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>마이너스 잔고</dt>
+							<dd><strong class="number">-0</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>마일리지</dt>
+							<dd><strong class="number">-0</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>즉시할인</dt>
+							<dd><strong class="number">-0</strong>원</dd>
+						</dl>
+					</div>
+					<div class="total">
+						<dl>
+							<dt>총 결제금액</dt>
+							<dd class="fcpoint"><strong class="number">359,086</strong>원</dd>
+						</dl>
+					</div>
+				</div>
+				<!-- //결제 내역 -->
+				<!-- 업체전달 메시지 -->
+				<div class="title_box">
+					<h3 class="title">업체전달 메시지</h3>
+				</div>
+				<div class="common_tbl tbl_round">
+					<table>
+						<caption>업체전달 메시지 내용</caption>
+						<colgroup>
+							<col width="91"><col width="*">
+						</colgroup>
+						<tbody> 
+							<tr>
+								<th scope="row">광동제약</th>
+								<td>-</td>
+							</tr>
+							<tr>
+								<th scope="row">입점업체명</th>
+								<td>-</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //업체전달 메시지 -->
+				<!-- 배송정보 -->
+				<div class="title_box">
+					<h3 class="title">배송정보</h3>
+				</div>
+				<div class="common_tbl tbl_round">
+					<table>
+						<caption>배송지 정보</caption>
+						<colgroup>
+							<col width="91"><col width="*">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">받으시는분</th>
+								<td>홍길동</td>
+							</tr>
+							<tr>
+								<th scope="row">연락처</th>
+								<td>010-1234-5678</td>
+							</tr>
+							<tr>
+								<th scope="row">주소</th>
+								<td>06650, 서울특별시 서초구 서초중앙로 85 가산빌딩</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //배송정보 -->
+				<div class="button_box">
+					<a href="order_claim.html" class="buttons fcdefault">주문목록</a>
+				</div>
+			</div>
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>
