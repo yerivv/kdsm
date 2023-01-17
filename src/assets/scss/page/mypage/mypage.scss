@@ -55,10 +55,11 @@
 .billing_info .total dl {padding:12px 0;border-top:1px solid #dee0e4;line-height:18px;}
 .billing_info .total dd {font-size:12px;}
 .billing_info .total dd strong {font-size:16px;font-weight:700;}
+.billing_info.type1 {padding-bottom:12px;}
 
+.page_mypage {margin-top:-24px;}
 .page_mypage .button_box {margin-top:24px;}
-
-.page_mypage .period_check {margin:0 -16px;}
+.page_mypage .period_check {margin:24px -16px 0;}
 .page_mypage .period_check .period {display:flex;flex-wrap:wrap;align-items:center;height:36px;padding:0 16px 8px;border-bottom:1px solid #edf0f2;}
 .page_mypage .period_check .period .box {line-height:1;}
 .page_mypage .period_check .period .box:not(:first-child) {position:relative;padding-left:17px;}
@@ -69,3 +70,22 @@
 .page_mypage .period_check .detail dt {margin:16px 0 8px;font-size:15px;line-height:1;}
 .page_mypage .period_check .detail .calendar_box {margin-top:8px;}
 .page_mypage .period_check .detail .button_box {padding:0 32px;}
+
+.modal_claim .button_box {margin-top:24px;}
+.modal_claim .refund_detail .blank_space {margin-top:32px;}
+// .modal_claim .confirm_box {padding-top:90px;}
+// .modal_claim .confirm_detail_box {padding-bottom:146px;}
+@media (max-width: 320px) {
+}
+
+.page_mypage .result_trading {margin:0 -16px;}
+.page_mypage .result_trading .list {width:100%;padding:0 16px;}
+.page_mypage .result_trading .list table {width:720px;}
+.page_mypage .result_trading .s1 {width:48px;}
+.page_mypage .result_trading .s2 {width:50px;}
+.page_mypage .result_trading .s3 {width:80px;}
+.page_mypage .result_trading th {width:70px;color:#000;}
+.page_mypage .result_trading th,
+.page_mypage .result_trading td {padding:4px 2px;text-align:center;}
+.page_mypage .result_trading thead th {font-size:13px;font-weight:500;}
+.page_mypage .result_trading tbody td {font-weight:400;}

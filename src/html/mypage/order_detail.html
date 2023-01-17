@@ -20,7 +20,7 @@
 		<main id="container">
 			<div class="page_mypage">
 				<!-- 주문정보 -->
-				<div class="title_box mgt0">
+				<div class="title_box">
 					<h3 class="title">주문정보</h3>
 				</div>
 				<div class="common_tbl tbl_round">
@@ -107,7 +107,7 @@
 											<div class="box pay"><span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
 										</div>
 										<div class="state">
-											<a href="#" class="buttons xsmall white round0">거래명세표 보기</a>
+											<a href="javascript:void(0)" onclick="modalUrlOpen('trading_view.html', 'full')" class="buttons xsmall white round0">거래명세표 보기</a>
 											<strong class="fw500">결제완료</strong>
 										</div>
 									</li>
@@ -206,6 +206,9 @@
 							<tr>
 								<th scope="row">입점업체명</th>
 								<td>-</td>
+							</tr>
+							<tr>
+								<td colspan="2" class="data_none">전달 메시지가 존재하지 않습니다.</td>
 							</tr>
 						</tbody>
 					</table>

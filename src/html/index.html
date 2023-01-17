@@ -38,12 +38,20 @@
 			<dd><a href="@@webRoot/goods/event_detail.html" class="site__map_sub">- 이벤트 상세</a></dd>
 			<dd><a href="@@webRoot/goods/event_winners_list.html" class="site__map_sub">- 당첨자리스트</a></dd>
 			<dd><a href="@@webRoot/goods/event_winners_detail.html" class="site__map_sub">- 당첨자상세</a></dd>
-			<dd><a href="@@webRoot/goods/stamp.html" class="site__map_sub">- 출석이벤트</a></dd>
 		</dl>
 
 		<dl class="site__map_box">
 			<dt>마이페이지(mypage)</dt>
 			<dd><a href="@@webRoot/mypage/order_delivery.html" class="site__map">주문/배송 조회</a></dd>
+			<dd><a href="@@webRoot/mypage/order_detail.html" class="site__map">주문/배송 조회_주문 상세내역</a></dd>
+			<dd><a href="@@webRoot/mypage/order_detail.html" class="site__map">주문/배송 조회_주문 상세내역</a></dd>
+			<dd><a href="javascript:void(0)" onclick="modalUrlOpen('@@webRoot/mypage/claim_request.html', 'full')" class="site__map">주문취소</a></dd>
+			<dd><a href="javascript:void(0)" onclick="modalUrlOpen('@@webRoot/mypage/claim_result.html', 'full')" class="site__map">주문완료</a></dd>
+			<dd><a href="javascript:void(0)" onclick="modalUrlOpen('@@webRoot/mypage/trading_view.html', 'full')" class="site__map">거래명세표 조회</a></dd>
+			<dd><a href="@@webRoot/mypage/order_claim.html" class="site__map">주문취소 내역</a></dd>
+			<dd><a href="@@webRoot/mypage/order_detail_claim.html" class="site__map">주문취소 내역_ 상세내역</a></dd>
+			<dd><a href="@@webRoot/mypage/trading_original.html" class="site__map">온라인거래원장</a></dd>
+			<dd><a href="@@webRoot/mypage/trading_original_pass.html" class="site__map">구 거래원장</a></dd>
 		</dl>
 
 		<dl class="site__map_box">
@@ -63,6 +71,9 @@
 			<dt>고객센터(cscenter, board)</dt>
 			<dd><a href="@@webRoot/cscenter/index.html" class="site__map">메인</a></dd>
 		</dl>
+
+		<div id="modalFullwrap"></div>
+		<div id="modalwrap"></div>
 	</div>
 	
 	<script>

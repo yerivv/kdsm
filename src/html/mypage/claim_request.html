@@ -161,10 +161,67 @@
 			<div class="button_box">
 				<a href="javascript:void(0)" onclick="" class="buttons fill">환불예정금액 확인하기</a>
 			</div>
-			<div class="blank_space"></div>
-			<div class="button_box">
-				<a href="javascript:void(0)" onclick="modalUrlCloseFull()" class="buttons fcdefault">닫기</a>
-				<a href="javascript:void(0)" onclick="modalUrlOpen('claim_request.html', 'full')" class="buttons fill">주문취소</a>
+
+			<div class="refund_detail">
+				<div class="blank_space"></div>
+				<!-- 쿠폰할인내역 -->
+				<div class="title_box">
+					<h3 class="title">쿠폰할인내역</h3>
+				</div>
+				<div class="billing_info type1">
+					<div class="list">
+						<dl>
+							<dt>적용상품</dt>
+							<dd><strong class="number">580,000</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>쿠폰명</dt>
+							<dd><strong class="number">-0</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>총 할인금액</dt>
+							<dd><strong class="number">-0</strong>원</dd>
+						</dl>
+					</div>
+				</div>
+				<!-- //쿠폰할인내역 -->
+				<!-- 취소환불금액정보 -->
+				<div class="title_box">
+					<h3 class="title">취소환불금액정보</h3>
+				</div>
+				<div class="billing_info type1">
+					<div class="list">
+						<dl>
+							<dt>취소주문금액</dt>
+							<dd><strong class="number">580,000</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>할인금액</dt>
+							<dd><strong class="number">-0</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>예치금 환불금액</dt>
+							<dd><strong class="number">-0</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>마이너스 잔고 환불금액</dt>
+							<dd><strong class="number">-0</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>마일리지 환불금액</dt>
+							<dd><strong class="number">-0</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>결제 환불금액</dt>
+							<dd>결제수단, <strong class="number">-0</strong>원</dd>
+						</dl>
+					</div>
+				</div>
+				<!-- //취소환불금액정보 -->
+				<div class="button_box">
+					<a href="javascript:void(0)" onclick="modalUrlCloseFull()" class="buttons fcdefault">닫기</a>
+					<a href="javascript:void(0)" onclick="modalUrlOpen('claim_result.html', 'full')" class="buttons fill">주문취소</a>
+				</div>
 			</div>
 		</div>
 	</div>
