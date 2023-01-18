@@ -70,12 +70,12 @@
 .form_col_box dl dt .required::before {content:'*';}
 .form_col_box dl dd {width:calc(100% - 72px);}
 
-.step_box {margin:-16px -16px 0;border-bottom:1px solid #edf0f2;}
-.step_box ol {display:flex;justify-content:center;align-items:center;height:48px;padding:12px 0;}
-.step_box ol li {position:relative;height:24px;padding-top:6px;color:#666;font-size:15px;line-height:1;}
-.step_box ol li:not(:last-child) {padding-right:24px;}
-.step_box ol li:not(:last-child)::after {content:'';position:absolute;right:0;top:0;width:24px;height:24px;background:url(../imgs/global/icon_arrow_right.png) center center no-repeat;background-size:contain;}
-.step_box ol li.stay {color:#e8340c;font-weight:500;}
+.page_member .step_box {margin:-16px -16px 0;border-bottom:1px solid #edf0f2;}
+.page_member .step_box ol {display:flex;justify-content:center;align-items:center;height:48px;padding:12px 0;}
+.page_member .step_box ol li {position:relative;height:24px;padding-top:6px;color:#666;font-size:15px;line-height:1;}
+.page_member .step_box ol li:not(:last-child) {padding-right:24px;}
+.page_member .step_box ol li:not(:last-child)::after {content:'';position:absolute;right:0;top:0;width:24px;height:24px;background:url(../imgs/global/icon_arrow_right.png) center center no-repeat;background-size:contain;}
+.page_member .step_box ol li.stay {color:#e8340c;font-weight:500;}
 
 .modal_sleepCertify .button_box {margin-top:24px;}
 .modal_sleepCertify .noticebox {margin-top:16px;margin-bottom:0;}

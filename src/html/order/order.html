@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "주문/결제"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "주문/결제",
+			"gnb" : "hidden",
+			"toolbar" : "hidden"
+		})
+
+		<main id="container">
+			<div class="page_order order_order">
+				<div class="noticebox accordions_wrap">
+					<dl>
+						<dt onclick="accordions(this);">꼭 알아두세요!</dt>
+						<dd class="toggle">
+							<div class="type">예치금</div>
+							<ul>
+								<li>전 입점업체 사용 가능합니다.</li>
+							</ul>
+						</dd>
+						<dd class="toggle">
+							<div class="type">마이너스 잔고</div>
+							<ul>
+								<li>KD-Shop에서 공급하는 품목에 한해 이용 가능합니다.</li>
+							</ul>
+						</dd>
+						<dd class="toggle">
+							<div class="type">쿠폰</div>
+							<ul>
+								<li>마일리지와 쿠폰 중복 사용이 가능합니다.</li>
+								<li>할인 상품 주문의 경우 쿠폰 중복 사용이 가능합니다.</li>
+								<li>전문의약품, 일반의약품 구매 시 쿠폰 사용은 불가합니다.</li>
+							</ul>
+						</dd>
+						<dd class="toggle">
+							<div class="type">비용(수금) 할인</div>
+							<ul>
+								<li><span class="fcpoint">의약품 구매 시</span>(광동제약)에만 1.8% 적용됩니다.</li>
+							</ul>
+						</dd>
+						<dd class="toggle">
+							<div class="type">마일리지</div>
+							<ul>
+								<li>전문의약품, 일반의약품 결제 시에는 마일리지 사용이 불가합니다.</li>
+								<li>주문 취소 후 환불 처리할 마일리지의 유효기간이 만료된 경우 소멸 처리됩니다.</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<div class="blank_space"></div>
+
+				<!-- 주문서 작성 -->
+				<div class="order_regist">
+					<div class="section">
+						<div class="title_box">
+							<h3>1. 주문하실 상품</h3>
+							<span class="count mlauto">총 <strong class="number fcpoint fw500">3</strong>건</span>
+						</div>
+						<div class="product_list_simple">
+							<ul>
+								<li>
+									<dl>
+										<dt class="seller">
+											<div class="name">광동제약(<strong class="number fcpoint fw500">1</strong>개)</div>
+											<div class="discount tooltip_wrap">
+												<a href="javascript:void(0);" onclick="tooltip(this)" class="click btn_direct"><i class="ico"></i>즉시할인</a>
+												<div class="message_box">
+													<p class="text"><span class="fcpoint">우리/롯데</span> 즉시할인 프로모션이 진행 중입니다.</p>
+													<p class="subtext">주문/결제 화면에서 신용카드 선택 후 우리, 롯데로 결제</p>
+													<span class="close">닫기</span>
+												</div>
+											</div>
+										</dt>
+										<dd class="infobox">
+											<div class="total">광동제약 원방 우황청심원 외 3건</div>
+											<div class="price"><strong class="number">80,000</strong>원</div>
+											<div class="memo"><input type="text" placeholder="업체메세지 전달 입력"></div>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt class="seller">
+											<div class="name">인천약품(<strong class="number fcpoint fw500">1</strong>개)</div>
+											<div class="discount tooltip_wrap">
+												<a href="javascript:void(0);" onclick="tooltip(this)" class="click btn_direct"><i class="ico"></i>즉시할인</a>
+												<div class="message_box">
+													<p class="text"><span class="fcpoint">우리/롯데</span> 즉시할인 프로모션이 진행 중입니다.</p>
+													<p class="subtext">주문/결제 화면에서 신용카드 선택 후 우리, 롯데로 결제</p>
+													<span class="close">닫기</span>
+												</div>
+											</div>
+										</dt>
+										<dd class="infobox">
+											<div class="total">광동제약 원방 우황청심원 외 3건</div>
+											<div class="price"><strong class="number">80,000</strong>원</div>
+											<div class="memo"><input type="text" placeholder="업체메세지 전달 입력"></div>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt class="seller">
+											<div class="name">지오팜(<strong class="number fcpoint fw500">1</strong>개)</div>
+										</dt>
+										<dd class="infobox">
+											<div class="total">광동제약 원방 우황청심원 외 3건</div>
+											<div class="price"><strong class="number">80,000</strong>원</div>
+											<div class="memo"><input type="text" placeholder="업체메세지 전달 입력"></div>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+							<div class="price_total">
+								<dl>
+									<dt>총 품목수</dt>
+									<dd class="fcpoint"><strong class="number">9</strong>개</dd>
+								</dl>
+								<dl>
+									<dt>총 주문금액</dt>
+									<dd class="fcpoint"><strong class="number">580,000</strong>개</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<!-- 배송지정보-->
+					<div class="section">
+						<div class="title_box">
+							<h3 class="title">2. 주문고객/배송지 정보</h3>
+							<div class="tooltip_wrap">
+								<a href="javascript:void(0);" onclick="tooltip(this)" class="click btn_i"><i class="ico"></i></a>
+								<div class="message_box">
+									<p class="text">회원/배송정보는 마이페이지에서 수정 가능합니다.</p>
+									<span class="close">닫기</span>
+								</div>
+							</div>
+						</div>
+						<div class="common_tbl tbl_round delivery_info">
+							<table>
+								<caption>배송지 정보</caption>
+								<colgroup>
+									<col width="87"><col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">받으시는분</th>
+										<td>홍길동</td>
+									</tr>
+									<tr>
+										<th scope="row">전화번호</th>
+										<td>02-123-4567</td>
+									</tr>
+									<tr>
+										<th scope="row">휴대폰</th>
+										<td>010-1234-5678</td>
+									</tr>
+									<tr>
+										<th scope="row">주소</th>
+										<td>06650, 서울특별시 서초구 서초중앙로 85 가산빌딩</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div><!--//section-->
+					<!-- 결제수단 선택-->
+					<div class="section">
+						<div class="title_box">
+							<h3 class="title">3. 결제수단 선택</h3>
+						</div>
+					<form name="Frm">
+						<div class="paymethod_list">
+							<ul class="method_choice">
+								<li class="kdpay">
+									<input type="radio" name="payway" id="payway_kdpay" value="PAYWAY_CARD_KDS" onClick="checkPayway();" />
+									<label for="payway_kdpay" class="fw500"><i class="ico"></i>KD간편결제</label>
+									<!-- <div class="tooltip_wrap discount">
+										<span class="ico_discount">즉시할인</span>
+										<div class="message_box">
+											<strong>즉시할인 프로모션</strong>
+											<p><span>${model.instantDiscountCardNm}</span> 즉시할인 프로모션이 진행 중입니다.</p>
+											※ 적용방법 : 주문/결제 화면에서 신용카드 선택 후 ${fn:substring(model.instantDiscountCardNm, 0, strLength-1)}로 결제
+										</div>
+									</div> -->
+								</li>
+								<li class="card">
+									<input type="radio" name="payway" id="payway_card" value="PAYWAY_CARD" onClick="checkPayway();" />
+									<label for="payway_card"><i class="ico"></i>신용카드</label>
+								</li>
+								<li class="bank">
+									<input type="radio" name="payway" id="payway_bank" value="PAYWAY_BANK" onClick="checkPayway();" />
+									<label for="payway_bank"><i class="ico"></i>실시간 계좌이체</label>
+								</li>
+							</ul>
+							
+							<div class="type_detail">
+								<div id="detail_kdpay" style="display:block;">
+									<ul class="kdpay">
+										<li>
+											<select id="billkey" name="billkey">
+												<option value="">선택하세요.</option>
+												<c:forEach var="row" items="${model.memberPayList}" varStatus="vstatus">
+												<option data-idx="${row.IDX}" data-pg="${row.PG}" data-financecode="${row.FINANCECODE}" data-instanttype="${row.INSTANT_TYPE}" data-iskd="${row.INSTANT_ISKD}" value="${row.BILLKEY}">
+													<c:if test="${row.INSTANT eq 'Y'}">즉시할인 | </c:if>${row.NICKNAME} ㅣ ${row.FINANCENAME}
+												</option>
+												</c:forEach>
+											</select>
+										</li>
+										<li class="period">
+											<select id="installPeriod" name="installPeriod">
+											<option data-noint="00" value="00">일시불</option>
+											</select>
+										</li>
+									</ul>
+									<div class="button_box">
+										<a href="javascript:checkCert(document.Frm)" class="buttons medium"><i class="icoCard"></i>간편결제 카드등록</a>
+									</div>
+									<div class="notice_text">간편결제 무이자 할부는 <span class="fcpoint">카드사 정책에 따라 적용</span>되며, 무이자 관련 상세 내용은 각 카드사에 문의바랍니다.</div>
+								</div>
+								<div id="detail_card">
+									<div class="notice_text"><span class="fcpoint">결제하기 버튼을 클릭</span>하면 ${model.var.cfgCurrentPg } 결제 창으로 연결되며 결제 창에서 결제정보를 입력하실 수 있습니다.</div>
+								</div>
+								<div id="detail_bank">
+									<div class="notice_text"><span class="fcpoint">결제하기 버튼을 클릭</span>하면 ${model.var.cfgCurrentPg } 결제 창으로 연결되며 결제 창에서 결제정보를 입력하실 수 있습니다.</div>
+								</div>
+							</div>
+						</div>
+					</form>
+					</div><!--//section-->
+					<!-- 할인 및 보조결제수단 선택-->
+					<div class="section">
+						<div class="title_box">
+							<h3>4. 할인 및 보조결제수단 선택</h3>
+						</div>
+						<div class="discount_select">
+							<dl>
+								<dt>
+									<div class="title">쿠폰 정보</div>
+									<div class="have">
+										<span class="box">사용가능 <span class="fcpoint"><strong class="number">0</strong>개</span></span>
+										<span class="box">보유 <span class="fcpoint"><strong class="number">0</strong>개</span></span>
+									</div>
+								</dt>
+								<dd class="coupon">
+									<div class="box">
+										<label for="coupon_goods" class="type">상품할인</label>
+										<input type="text" name="totalCouponGoods" readonly="readonly" id="coupon_goods" class="number input"/>
+										<button type="button" class="buttons medium white">조회 및 사용</button>
+									</div>
+									<div class="box">
+										<label for="coupon_order" class="type">주문할인</label>
+										<input type="text" name="totalCouponOrder" readonly="readonly" id="coupon_order" class="number input"/>
+										<button type="button" class="buttons medium white">조회 및 사용</button>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<div class="title">마이너스 잔고 정보</div>
+									<div class="tooltip_wrap">
+										<a href="javascript:void(0);" onclick="tooltip(this)" class="click btn_i"><i class="ico"></i></a>
+										<div class="message_box">
+											<p class="text">마이너스 잔고는 광동제약 상품만 가능합니다.</p>
+											<span class="close">닫기</span>
+										</div>
+									</div>
+									<div class="have">
+										<span>보유 <span class="fcpoint"><strong class="number">5,000,000</strong>원</span>
+									</div>
+								</dt>
+								<dd>
+									<div class="box">
+										<label for="use_kdcash" class="type">마이너스 잔고</label>
+										<input type="text" name="useBmoney" readonly="readonly" id="use_kdcash" class="number input"/>
+										<button type="button" class="buttons medium white">전액 사용</button>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<div class="title">예치금 정보</div>
+									<div class="tooltip_wrap">
+										<a href="javascript:void(0);" onclick="tooltip(this)" class="click btn_i"><i class="ico"></i></a>
+										<div class="message_box">
+											<p class="text">예치금은 KD-Shop 내 모든 상품에 사용 가능합니다.</p>
+											<span class="close">닫기</span>
+										</div>
+									</div>
+									<div class="have">
+										<span>보유 <span class="fcpoint"><strong class="number">5,000,000</strong>원</span>
+									</div>
+								</dt>
+								<dd>
+									<div class="box">
+										<label for="use_deposit" class="type">예치금</label>
+										<input type="text" name="useDmoney" readonly="readonly" id="use_deposit" class="number input"/>
+										<button type="button" class="buttons medium white">전액 사용</button>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<div class="title">마일리지 정보</div>
+									<div class="tooltip_wrap">
+										<a href="javascript:void(0);" onclick="tooltip(this)" class="click btn_i"><i class="ico"></i></a>
+										<div class="message_box">
+											<p class="text">마일리지는 의약품을 제외한 모든 상품에 사용 가능합니다.</p>
+											<span class="close">닫기</span>
+										</div>
+									</div>
+									<div class="have">
+										<span>보유 <span class="fcpoint"><strong class="number">5,000,000</strong>P</span>
+									</div>
+								</dt>
+								<dd>
+									<div class="box">
+										<label for="use_cmoney" class="type">마일리지</label>
+										<input type="text" name="useCmoney" readonly="readonly" id="use_cmoney" class="number input"/>
+										<button type="button" class="buttons medium white">전액 사용</button>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div><!--//section-->
+					<!-- 주문금액 확인 및 결제-->
+					<div class="section">
+						<div class="title_box">
+							<h3>5. 주문금액 확인 및 결제</h3>
+						</div>
+						<div class="paytotal_calc">
+							<ul class="calc">
+								<li class="discount_info">
+									<div class="title">즉시할인 결제정보
+										<div class="tooltip_wrap">
+											<a href="javascript:void(0);" onclick="tooltip(this)" class="click btn_i"><i class="ico"></i></a>
+											<div class="message_box">
+												<p class="text">마일리지는 의약품을 제외한 모든 상품에 사용 가능합니다.</p>
+												<span class="close">닫기</span>
+											</div>
+										</div>
+									</div>
+									<div class="list">
+										<dl>
+											<dt>주문금액</dt>
+											<dd><strong class="number">580,000</strong>원</dd>
+										</dl>
+										<dl>
+											<dt>비용할인</dt>
+											<dd><strong class="number">-4,000</strong>원</dd>
+										</dl>
+										<dl>
+											<dt>쿠폰</dt>
+											<dd><strong class="number">-0</strong>원</dd>
+										</dl>
+										<dl>
+											<dt>예치금</dt>
+											<dd><strong class="number">-0</strong>원</dd>
+										</dl>
+										<dl>
+											<dt>마이너스 잔고</dt>
+											<dd><strong class="number">-0</strong>원</dd>
+										</dl>
+										<dl>
+											<dt>마일리지</dt>
+											<dd><strong class="number">-0</strong>원</dd>
+										</dl>
+										<dl>
+											<dt>카드사할인</dt>
+											<dd><strong class="number">-40,000</strong>원</dd>
+										</dl>
+									</div>
+									<div class="total">
+										<dl>
+											<dt>결제금액</dt>
+											<dd class="fcpoint"><strong class="number">359,086</strong>원</dd>
+										</dl>
+									</div>
+								</li>
+								<li class="billing_info">
+									<div class="title">일반 결제정보</div>
+									<div class="list">
+										<dl>
+											<dt>주문금액</dt>
+											<dd><strong class="number">580,000</strong>원</dd>
+										</dl>
+										<dl>
+											<dt>비용할인</dt>
+											<dd><strong class="number">-4,000</strong>원</dd>
+										</dl>
+										<dl>
+											<dt>쿠폰</dt>
+											<dd><strong class="number">-0</strong>원</dd>
+										</dl>
+										<dl>
+											<dt>예치금</dt>
+											<dd><strong class="number">-0</strong>원</dd>
+										</dl>
+										<dl>
+											<dt>마이너스 잔고</dt>
+											<dd><strong class="number">-0</strong>원</dd>
+										</dl>
+										<dl>
+											<dt>마일리지</dt>
+											<dd><strong class="number">-0</strong>원</dd>
+										</dl>
+									</div>
+									<div class="total">
+										<dl>
+											<dt>결제금액</dt>
+											<dd class="fcpoint"><strong class="number">359,086</strong>원</dd>
+										</dl>
+									</div>
+								</li>
+							</ul>
+							<div>개인정보</div>
+						</div>
+					</div><!--//section-->
+				</div><!-- //order_regist -->
+
+				<!-- 주문하기 floating_btn -->
+				<div class="floating_btn">
+					<div class="info_text pay">
+						<div>결제수단</div>
+						<div>KD간편결제</div>
+					</div>
+					<div class="total_price">
+						<div class="total fcblack">합계금액(<span class="fcpoint fw500">4</span>개)</div>
+						<div class="price fcpoint"><strong class="number">4,544,000</strong>원</div>
+					</div>
+					<div class="button_box">
+						<a href="#" class="buttons">장바구니 보기</a>
+						<a href="#" class="buttons fill">결제하기</a>
+					</div>
+				</div><!-- //floating_btn -->
+			</div><!-- //page_order -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>

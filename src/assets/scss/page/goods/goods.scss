@@ -56,12 +56,6 @@
 	.common_product.other_type .item:nth-child(-n+2) .info_box .info {min-height:auto;}
 }
 
-.result_count {display:flex;flex-wrap:wrap;align-items:center;padding:10px 0;min-height:44px;}
-.result_count .total {font-size:15px;}
-.result_count .mlauto {margin-left:auto;}
-.result_count select {height:24px;padding-right:24px;border:none 0;background-position:right center;}
-.result_count.type1 {padding:0;margin:16px 0 8px;height:24px;}
-
 .detail_info_box {padding:0 16px 32px;margin:0 -16px;margin-top:32px;background-color:#EDF0F2;}
 .detail_info_box .title {padding:24px 0 8px;font-size:14px;font-weight:500;line-height:15px;}
 .detail_info_box .info_inner {padding:12px;border-radius:4px;background-color:#fff;font-size:13px;line-height:22px;}
@@ -192,7 +186,7 @@
 .groupbuying_list .info_box .summary .box:first-child::before {display:none;}
 .groupbuying_list .step_box {position:relative;margin-top:12px;}
 .groupbuying_list .step_box .bar {position:absolute;left:0;top:20px;width:100%;height:28px;border-radius:14px;background-color:#dee0e4;}
-.groupbuying_list .step_box .bar > span {position:absolute;width:0;height:28px;border-radius:14px;background-color:#e8340c;}
+.groupbuying_list .step_box .bar > span {position:absolute;width:0;height:28px;border-radius:14px;background-color:#e8340c;transition:width 0.3s;}
 .groupbuying_list .step_box ol {display:flex;flex-wrap:nowrap;}
 .groupbuying_list .step_box li {position:relative;width:calc(100%/3);text-align:right;}
 .groupbuying_list .step_box li .unit,

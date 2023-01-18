@@ -10,7 +10,9 @@
 </head>
 <body>
 	<div id="app">
-		@@include('@@webRoot/_include/header.html')
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type1",
+		})
 
 		<main id="container">
 			<div class="page_promotion">
@@ -38,10 +40,10 @@
 						<li class="menu3"><a href="?stat=fail" class="btn">종료</a></li>
 					</ul>
 				</div>
-				<div class="no_result_box bold">
+				<!-- <div class="no_result_box bold">
 					<i class="ico"></i>
 					<div class="text">진행중인 공동구매 상품이 없습니다.</div>
-				</div>
+				</div> -->
 				<div class="groupbuying_list">
 					<div class="result_count type1">
 						<div class="total">전체상품 <strong class="number fcpoint fw500">2</strong>개</div>
@@ -205,6 +207,41 @@
 								<div class="button_box" id="btnOrder">
 									<button type="button" class="buttons medium point disabled" onclick="groupbuying(this)">공동구매 신청완료</button>
 								</div>
+								<!-- 간편결제 카드가 있을시-->
+								<div id="modal" class="modalCenter modal_payCardInfo">
+									<div class="wrap">
+										<div class="head">
+											<h2>간편결제 카드 정보</h2>
+											<div class="close" onclick="modalClose('modal_payCardInfo');">닫기</div>
+										</div>
+										<div class="contents">
+											<div class="box">
+												<select name="">
+													<option>비씨카드 1234-****-****-5678</option>
+												</select>
+												<p>다른 카드로 결제를 원하실 경우<br />결제할 카드를 변경해주세요.</p>
+											</div>
+											<div class="button_box type1">
+												<a href="javascript:void(0)" onclick="modalClose('modal_payCardInfo');" class="buttons medium point size1">확인</a>
+											</div>
+										</div>
+									</div>
+								</div><!-- //modal_payCardInfo -->
+								<!-- 간편결제 카드가 없을시-->
+								<div id="modal" class="modalCenter modal_payCardInfo_no">
+									<div class="wrap noHead">
+										<div class="contents">
+											<div class="box">
+												<p><span class="block">간편결제 카드가 </span>등록되어 있지 않습니다.<br />간편결제 카드를 등록해주세요.</p>
+											</div>
+											<div class="button_box type1">
+												<a href="javascript:void(0)" onclick="modalClose('modal_payCardInfo_no');" class="buttons medium">취소</a>
+												<a href="javascript:void(0)" class="buttons medium point">간편결제등록</a>
+											</div>
+											<div class="close" onclick="modalClose('modal_payCardInfo_no');">닫기</div>
+										</div>
+									</div>
+								</div><!-- //modal_payCardInfo -->
 							</div>
 							<div class="state_layerbox"><strong>공동구매 완료</strong></div>
 						</li>
@@ -222,6 +259,14 @@
 	
 	<script>
 		attain();
+		function groupbuying(a){
+			let state = a;
+			if(a.classList.contains('disabled')){
+				modalOpen('modal_payCardInfo_no');
+			} else {
+				modalOpen('modal_payCardInfo');
+			}
+		}
 	</script>
 </body>
 </html>

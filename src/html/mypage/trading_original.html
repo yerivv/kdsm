@@ -13,8 +13,7 @@
 		@@include('@@webRoot/_include/header.html',{
 			"header" : "type2",
 			"title": "거래원장",
-			"gnb" : "hidden",
-			"toolbar" : "hidden",
+			"gnb" : "hidden"
 		})
 
 		<main id="container">
@@ -66,150 +65,151 @@
 				</div><!-- //no_result_box -->
 
 				<!-- 있을 시 -->
-				<div class="result_trading swiper-container">
-					<div class="swiper-wrapper">
-						<div class="list swiper-slide">
-							<table class="common_tbl tbl_col type1">
-								<caption>주문정보</caption>
-								<colgroup>
-									<col width=""><col width="">
-								</colgroup>
-								<thead>
-									<tr>
-										<th>주문일자</th>
-										<th class="s1">구분</th>
-										<th class="s2">상품명</th>
-										<th class="s1">수량</th>
-										<th class="s1">단가</th>
-										<th class="s3">결제금액</th>
-										<th>판매금액</th>
-										<th>금융할인</th>
-										<th>쿠폰할인</th>
-										<th class="s3">수금액</th>
-										<th>잔고</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="total">
-										<th></th>
-										<th>누계</th>
-										<th></th>
-										<th></th>
-										<th></th>
-										<th><span class="fcpoint">#매출액누계#</span></th>
-										<th></th>
-										<th></th>
-										<th></th>
-										<th><span class="fcpoint">#수금액누계#</span></th>
-										<th><span class="fcpoint">#잔고누계#</span></th>
-									</tr>
-									<tr class="month">
-										<th>202210</th>
-										<th>월계</th>
-										<th></th>
-										<th></th>
-										<th></th>
-										<th>#매출액누계#</th>
-										<th></th>
-										<th></th>
-										<th></th>
-										<th>#수금액누계#</th>
-										<th>#잔고누계#</th>
-									</tr>
-									<tr>
-										<td>20221001</td>
-										<td>카드</td>
-										<td>#상품명#</td>
-										<td>#수량#</td>
-										<td>#단가#</td>
-										<td>#매출액#</td>
-										<td>#판매금액#</td>
-										<td>#금융할인#</td>
-										<td>#쿠폰할인#</td>
-										<td>#수금액#</td>
-										<td>#잔고#</td>
-									</tr>
-									<tr>
-										<td>20221001</td>
-										<td>주문</td>
-										<td>#상품명#</td>
-										<td>#수량#</td>
-										<td>#단가#</td>
-										<td>#매출액#</td>
-										<td>#판매금액#</td>
-										<td>#금융할인#</td>
-										<td>#쿠폰할인#</td>
-										<td>#수금액#</td>
-										<td>#잔고#</td>
-									</tr>
-									<tr class="month">
-										<th>202210</th>
-										<th>월계</th>
-										<th></th>
-										<th></th>
-										<th></th>
-										<th>#매출액누계#</th>
-										<th></th>
-										<th></th>
-										<th></th>
-										<th>#수금액누계#</th>
-										<th>#잔고누계#</th>
-									</tr>
-									<tr>
-										<td>20221001</td>
-										<td>카드</td>
-										<td>#상품명#</td>
-										<td>#수량#</td>
-										<td>#단가#</td>
-										<td>#매출액#</td>
-										<td>#판매금액#</td>
-										<td>#금융할인#</td>
-										<td>#쿠폰할인#</td>
-										<td>#수금액#</td>
-										<td>#잔고#</td>
-									</tr>
-									<tr>
-										<td>20221001</td>
-										<td>주문</td>
-										<td>#상품명#</td>
-										<td>#수량#</td>
-										<td>#단가#</td>
-										<td>#매출액#</td>
-										<td>#판매금액#</td>
-										<td>#금융할인#</td>
-										<td>#쿠폰할인#</td>
-										<td>#수금액#</td>
-										<td>#잔고#</td>
-									</tr>
-									<tr>
-										<td>20221001</td>
-										<td>카드</td>
-										<td>#상품명#</td>
-										<td>#수량#</td>
-										<td>#단가#</td>
-										<td>#매출액#</td>
-										<td>#판매금액#</td>
-										<td>#금융할인#</td>
-										<td>#쿠폰할인#</td>
-										<td>#수금액#</td>
-										<td>#잔고#</td>
-									</tr>
-									<tr>
-										<td>20221001</td>
-										<td>주문</td>
-										<td>#상품명#</td>
-										<td>#수량#</td>
-										<td>#단가#</td>
-										<td>#매출액#</td>
-										<td>#판매금액#</td>
-										<td>#금융할인#</td>
-										<td>#쿠폰할인#</td>
-										<td>#수금액#</td>
-										<td>#잔고#</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
+				<div class="result_trading">
+					<div class="list scrollList">
+						<table class="common_tbl tbl_col type1">
+							<caption>주문정보</caption>
+							<colgroup>
+								<col width=""><col width="">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>주문일자</th>
+									<th class="s1">구분</th>
+									<th class="s2">상품명</th>
+									<th class="s1">수량</th>
+									<th class="s1">단가</th>
+									<th class="s3">결제금액</th>
+									<th>판매금액</th>
+									<th>금융할인</th>
+									<th>쿠폰할인</th>
+									<th class="s3">수금액</th>
+									<th>잔고</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="total">
+									<th></th>
+									<th>누계</th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th><span class="fcpoint">#매출액누계#</span></th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th><span class="fcpoint">#수금액누계#</span></th>
+									<th><span class="fcpoint">#잔고누계#</span></th>
+								</tr>
+								<tr class="month">
+									<th>202210</th>
+									<th>월계</th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th>#매출액누계#</th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th>#수금액누계#</th>
+									<th>#잔고누계#</th>
+								</tr>
+								<tr>
+									<td>20221001</td>
+									<td>카드</td>
+									<td>#상품명#</td>
+									<td>#수량#</td>
+									<td>#단가#</td>
+									<td>#매출액#</td>
+									<td>#판매금액#</td>
+									<td>#금융할인#</td>
+									<td>#쿠폰할인#</td>
+									<td>#수금액#</td>
+									<td>#잔고#</td>
+								</tr>
+								<tr>
+									<td>20221001</td>
+									<td>주문</td>
+									<td>#상품명#</td>
+									<td>#수량#</td>
+									<td>#단가#</td>
+									<td>#매출액#</td>
+									<td>#판매금액#</td>
+									<td>#금융할인#</td>
+									<td>#쿠폰할인#</td>
+									<td>#수금액#</td>
+									<td>#잔고#</td>
+								</tr>
+								<tr class="month">
+									<th>202210</th>
+									<th>월계</th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th>#매출액누계#</th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th>#수금액누계#</th>
+									<th>#잔고누계#</th>
+								</tr>
+								<tr>
+									<td>20221001</td>
+									<td>카드</td>
+									<td>#상품명#</td>
+									<td>#수량#</td>
+									<td>#단가#</td>
+									<td>#매출액#</td>
+									<td>#판매금액#</td>
+									<td>#금융할인#</td>
+									<td>#쿠폰할인#</td>
+									<td>#수금액#</td>
+									<td>#잔고#</td>
+								</tr>
+								<tr>
+									<td>20221001</td>
+									<td>주문</td>
+									<td>#상품명#</td>
+									<td>#수량#</td>
+									<td>#단가#</td>
+									<td>#매출액#</td>
+									<td>#판매금액#</td>
+									<td>#금융할인#</td>
+									<td>#쿠폰할인#</td>
+									<td>#수금액#</td>
+									<td>#잔고#</td>
+								</tr>
+								<tr>
+									<td>20221001</td>
+									<td>카드</td>
+									<td>#상품명#</td>
+									<td>#수량#</td>
+									<td>#단가#</td>
+									<td>#매출액#</td>
+									<td>#판매금액#</td>
+									<td>#금융할인#</td>
+									<td>#쿠폰할인#</td>
+									<td>#수금액#</td>
+									<td>#잔고#</td>
+								</tr>
+								<tr>
+									<td>20221001</td>
+									<td>주문</td>
+									<td>#상품명#</td>
+									<td>#수량#</td>
+									<td>#단가#</td>
+									<td>#매출액#</td>
+									<td>#판매금액#</td>
+									<td>#금융할인#</td>
+									<td>#쿠폰할인#</td>
+									<td>#수금액#</td>
+									<td>#잔고#</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="scrollBarCustom">
+						<span class="bar" id="progress"></span>
 					</div>
 				</div>
 			</div>
@@ -221,14 +221,18 @@
 	</div>
 	
 	<script>
-		var swiper = new Swiper('.swiper-container', {
-			direction: '',
-			slidesPerView: 'auto',
-			freeMode: true,
-			scrollbar: {
-				el: '.swiper-scrollbar',
-			},
-			mousewheel: true,
+		const scrollBox = document.querySelector('.scrollList')
+		const scrollCont = scrollBox.querySelector('.common_tbl')
+		const progressBox = document.querySelector('#progress')
+		scrollBox.addEventListener("scroll", () => {
+			let width = scrollCont.scrollWidth - window.innerWidth;
+			let position = scrollBox.scrollLeft // 스크롤 위치값
+			let height = scrollCont.clientHeight
+			//let bar = position / width * height
+			let bar = (position / width * height) * 50;
+			document.getElementById("progress").style.width = bar + "%"
+
+			console.log(bar)
 		});
 	</script>
 </body>
