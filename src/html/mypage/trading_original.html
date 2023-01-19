@@ -59,10 +59,10 @@
 					</div>
 				</div>
 				<!-- 없을 시-->
-				<div class="no_result_box bold">
+				<!-- <div class="no_result_box bold">
 					<i class="ico"></i>
 					<div class="text">거래 내역이 없습니다.</div>
-				</div><!-- //no_result_box -->
+				</div>//no_result_box -->
 
 				<!-- 있을 시 -->
 				<div class="result_trading">
@@ -74,17 +74,17 @@
 							</colgroup>
 							<thead>
 								<tr>
-									<th>주문일자</th>
-									<th class="s1">구분</th>
-									<th class="s2">상품명</th>
-									<th class="s1">수량</th>
-									<th class="s1">단가</th>
-									<th class="s3">결제금액</th>
-									<th>판매금액</th>
-									<th>금융할인</th>
-									<th>쿠폰할인</th>
-									<th class="s3">수금액</th>
-									<th>잔고</th>
+									<th class="s1">주문일자</th>
+									<th class="s2">구분</th>
+									<th class="s3">상품명</th>
+									<th class="s4">수량</th>
+									<th class="s5">단가</th>
+									<th class="s6">결제금액</th>
+									<th class="s7">판매금액</th>
+									<th class="s8">금융할인</th>
+									<th class="s9">쿠폰할인</th>
+									<th class="s10">수금액</th>
+									<th class="s11">잔고</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -208,10 +208,10 @@
 							</tbody>
 						</table>
 					</div>
-					<div class="scrollBarCustom">
-						<span class="bar" id="progress"></span>
+					<div class="scrollBarCustom" id="progress">
+						<span class="bar"></span>
 					</div>
-				</div>
+				</div><!-- //result_trading -->
 			</div>
 		</main>
 
@@ -221,19 +221,7 @@
 	</div>
 	
 	<script>
-		const scrollBox = document.querySelector('.scrollList')
-		const scrollCont = scrollBox.querySelector('.common_tbl')
-		const progressBox = document.querySelector('#progress')
-		scrollBox.addEventListener("scroll", () => {
-			let width = scrollCont.scrollWidth - window.innerWidth;
-			let position = scrollBox.scrollLeft // 스크롤 위치값
-			let height = scrollCont.clientHeight
-			//let bar = position / width * height
-			let bar = (position / width * height) * 50;
-			document.getElementById("progress").style.width = bar + "%"
-
-			console.log(bar)
-		});
+		scrollCustom();
 	</script>
 </body>
 </html>

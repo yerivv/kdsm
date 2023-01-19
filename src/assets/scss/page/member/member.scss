@@ -62,7 +62,7 @@
 .form_row_box dd .form_line + .form_line {margin-top:12px;}
 .form_row_box dd.type1 {padding-top:0;border-top-width:0;}
 
-.form_col_box {overflow:hid den;border:1px solid #dee0e4;border-radius:4px;}
+.form_col_box {overflow:hidden;border:1px solid #dee0e4;border-radius:4px;}
 .form_col_box dl:not(:first-child) {border-top:1px solid #dee0e4;}
 .form_col_box dl {display:flex;flex-wrap:wrap;align-items:center;gap:0 8px;padding:12px 15px;}
 .form_col_box dl dt {display:inline-flex;width:64px;font-size:15px;line-height:19px;}

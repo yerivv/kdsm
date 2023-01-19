@@ -531,3 +531,23 @@ function mainPopup(a){
 		}
 	}
 }
+
+//거래원장 스크롤
+function scrollCustom(){
+	const scrollBox = document.querySelector('.scrollList');
+	const scrollCont = scrollBox.querySelector('.common_tbl');
+	const progressBox = document.querySelector('#progress');
+	const setScrollDisplay = () => {
+		if(scrollCont.clientWidth<window.innerWidth){
+			progressBox.style.display = 'none';
+		} else {
+			progressBox.style.display = 'block';
+		}
+	}
+	const setTblScroll = () => {
+		let bar = (scrollBox.scrollLeft / (scrollBox.scrollWidth - scrollBox.clientWidth) ) * 100;
+		progressBox.querySelector('.bar').style.width = bar + "%";
+	}
+	scrollBox.addEventListener('scroll', setTblScroll);
+	window.addEventListener('resize', setScrollDisplay);
+}

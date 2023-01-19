@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "반품신청서"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "반품신청서(광동제약or입점업체)",
+			"gnb" : "hidden",
+		})
+
+		<main id="container">
+			<div class="page_mypage mypage_return">
+				<div class="common_orderList request">
+					<div class="check_select">
+						<input type="checkbox" name="" id="" /><label for="">전체선택</label>
+					</div>
+					<div class="group">
+						<dl>
+							<dt><input type="checkbox" name="groupCheckAll" id="group1" /><label for="group1">주문번호 <strong class="number fw500">A2231156316316</strong></label></dt>
+							<dd class="product">
+								<ul class="product_list">
+									<li class="item">
+										<div class="summary type1">
+											<span class="box">주문일자 : <span class="number">2022-11-23</span></span>
+											<span class="box">입점업체명 : 광동제약</span>
+										</div>
+										<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원 현탄액</div>
+										<div class="summary">
+											<span class="box">제조사</span>
+											<span class="box">50ml</span>
+										</div>
+									</li>
+								</ul>
+							</dd>
+							<dd class="form">
+								<ul class="box ea">
+									<li>주문수량5</li>
+									<li>주문수량5</li>
+								</ul>
+								<ul class="box input">
+									<li>완통<input type="text" class="number" value="10" />개</li>
+									<li>낱알<input type="text" class="number" value="10" readonly="readonly" />개</li>
+								</ul>
+							</dd>
+						</dl>
+					</div><!-- //group -->
+					<!-- 입점업체 -->
+					<div class="group">
+						<dl>
+							<dt><input type="checkbox" name="groupCheckAll" id="group1" /><label for="group1">인천약품</label></dt>
+							<dd class="product type2">
+								<ul class="product_list have_check">
+									<li class="item">
+										<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
+										<div class="info_box">
+											<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+											<div class="summary">
+												<span class="box">100box</span>
+											</div>
+											<div class="summary ea">
+												<span class="box">신청수량 : <span class="fw500 fcdefault">5</span></span>
+												<span class="box">확정수량 : <span class="fw500 fcdefault">5</span></span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</dd>
+							<dd class="form">
+								<dl>
+									<dt>반품신청 수량</dt>
+									<dd>
+										<div class="ea_box">
+											<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+											<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+											<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+										</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt>반품사유</dt>
+									<dd>
+										<select name="">
+											<option>반품사유 선택</option>
+											<option>유효기간임박/경과</option>
+											<option>재고정리</option>
+										</select>
+									</dd>
+								</dl>
+								<dl>
+									<dt>메모</dt>
+									<dd>
+										<input type="text" name="" />
+									</dd>
+								</dl>
+							</dd>
+						</dl>
+					</div><!-- //group -->
+				</div><!-- //common_orderList -->
+
+				<!-- 반품 신청 정보 -->
+				<div class="title_box">
+					<h3 class="title">반품 신청 정보</h3>
+				</div>
+				<div class="billing_info type1">
+					<div class="list">
+						<dl>
+							<dt>총 선택 품목</dt>
+							<dd><strong class="number">3</strong>개</dd>
+						</dl>
+						<dl>
+							<dt>총 신청 수량</dt>
+							<dd><strong class="number">30</strong>개</dd>
+						</dl>
+						<dl>
+							<dt>예상 회수 택배</dt>
+							<dd><strong class="number">3</strong>건</dd>
+						</dl>
+					</div>
+				</div>
+				<!-- 반품 신청 정보 -->
+
+				<!-- 반품 사유 -->
+				<div class="title_box">
+					<h3 class="title">반품 사유</h3>
+				</div>
+				<div class="reason_box">
+					<dl>
+						<dt>반품사유</dt>
+						<dd>
+							<select name="">
+								<option>반품사유 선택</option>
+								<option>유효기간임박/경과</option>
+								<option>재고정리</option>
+							</select>
+						</dd>
+					</dl>
+					<dl>
+						<dt>반품신청 상세사유</dt>
+						<dd>
+							<input type="text" name="" />
+						</dd>
+					</dl>
+				</div>
+				<!-- //반품 사유 -->
+
+				<!-- 광동상품 -->
+				<div class="noticebox mgt16 accordions_wrap">
+					<dl>
+						<dt onclick="accordions(this)">광동제약 반품 신청 참고사항</dt>
+						<!-- 광동상품 -->
+						<dd class="toggle">
+							<ul>
+								<li>반품 신청 시 담당 영업사원이 방문하여 확인 후 접수 진행됩니다.</li>
+								<li>반품 접수 완료 건에 한해 해당 월안에 마이너스 잔고로 반영되며 최종금액은 마이페이지 내 거래원장에서 확인가능합니다.</li>
+								<li>보여드리는 예상 반품금액에는 입력하신 낱알반품 예상금액도 반영되어 확인됩니다. 하지만 특정 상품일 경우 낱알 개수 산정이 안될 수 있으니 이점 참고부탁드립니다.</li>
+								<li>현재 판매되고 있지 않은 상품인 경우, 조회가 안될 수 있으니 담당영업사원에게 요청하시면 조치 가능하십니다.</li>
+								<li>반품신청 내역과 실물이 일치하도록 해주세요. 영업사원 방문 시 수량 / 제품 검수 진행하여 신청내역과 다를 시 수정될 수 있습니다.</li>
+								<li>낱알 수량 입력방법 : 예) ooo상품 10캡슐*12개 -> 낱알수량 119개까지 입력 가능</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<div class="button_box">
+					<a href="order_return.html" class="buttons fcdefault">반품취소</a>
+					<button type="button" class="buttons fill">반품신청</button>
+				</div>
+			</div><!-- //page_mypage -->
+
+			<div class="floating_btn">
+				<div class="more" onclick="floatingMore(this)">자세히 보기</div>
+				<div class="calculation_list">
+					<dl>
+						<dt>총 선택 품목</dt>
+						<dd><strong class="number">2</strong>개</dd>
+					</dl>
+					<dl>
+						<dt>총 선택 수량</dt>
+						<dd><strong class="number">10</strong>개</dd>
+					</dl>
+				</div>
+				<div class="button_box">
+					<a href="#" class="buttons fill">반품신청</a>
+				</div>
+			</div>
+			
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+</body>
+</html>

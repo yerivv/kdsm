@@ -1,8 +1,11 @@
+/*
+	mypage */
 .common_orderList .group {overflow:hidden;border:1px solid #dee0e4;border-radius:4px;}
 .common_orderList .group:not(:first-child) {margin-top:12px;}
-.common_orderList .group dt {display:flex;flex-wrap:wrap;align-items:center;padding:12px 16px;background-color:#ffe7e1;font-size:15px;line-height:1;}
+.common_orderList .group > dl > dt {display:flex;flex-wrap:wrap;align-items:center;padding:12px 16px;background-color:#ffe7e1;font-size:15px;line-height:1;}
 .common_orderList .group dt label {max-width:calc(100% - 32px);}
-.common_orderList .group dd {border-top:1px solid #dee0e4;}
+.common_orderList .group dt .state {margin-left:auto;font-size:14px;}
+.common_orderList .group > dl > dd {border-top:1px solid #dee0e4;}
 .common_orderList .group .accordions_wrap {border-color:#edf0f2;}
 .common_orderList .group .accordions_wrap .accordion {position:relative;padding:12px 15px;color:#797d8d;font-size:13px;}
 .common_orderList .group .accordions_wrap .accordion::after {content:'';position:absolute;right:15px;top:50%;width:12px;height:12px;margin-top:-6px;background:url(../imgs/global/arrow_category.png) center center no-repeat;background-size:contain;transition:0.2s;}
@@ -27,6 +30,10 @@
 .common_orderList .product .item .summary .box:not(:first-child) {position:relative;padding:0 4px;margin-left:1px;}
 .common_orderList .product .item .summary .box:not(:first-child)::before {content:'';position:absolute;left:-1px;top:50%;width:1px;height:8px;background-color:#e3e3e3;transform:translateY(-50%);}
 .common_orderList .product .item .summary .box:first-child {padding-right:4px;}
+.common_orderList .product .item .summary.type1 {margin:0 0 8px}
+.common_orderList .product .item .summary.type1 .box:not(:first-child) {padding:0 8px;}
+.common_orderList .product .item .summary.type1 .box:not(:first-child)::before {height:12px;}
+.common_orderList .product .item .summary.type1 .box:first-child {padding-right:8px;}
 .common_orderList .product .item .price_box {display:flex;align-items:center;justify-content:flex-end;width:100%;padding:8px 0 12px;font-size:13px;line-height:1;text-align:right;}
 .common_orderList .product .item .price_box .price {color:#666;}
 .common_orderList .product .item .price_box .pay strong {font-size:14px;}
@@ -65,10 +72,18 @@
 .billing_info .list dl,
 .billing_info .total dl {display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;line-height:16px;}
 .billing_info .list dl {margin-top:12px;}
-.billing_info .total dl {padding:12px 0;border-top:1px solid #dee0e4;line-height:18px;}
+.billing_info .total {padding-bottom:16px;}
+.billing_info .total dl:first-child {border-top:1px solid #dee0e4;}
+.billing_info .total dl {padding:12px 0 0;line-height:18px;}
 .billing_info .total dd {font-size:12px;}
 .billing_info .total dd strong {font-size:16px;font-weight:700;}
 .billing_info.type1 {padding-bottom:12px;}
+
+.noticebox .stepbox_row ol {counter-reset:row;padding:8px 16px;}
+.noticebox .stepbox_row li {position:relative;padding:8px 16px;margin:0;border-radius:4px;background-color:#fff;color:#242424;font-size:13px;line-height:1;text-align:center;}
+.noticebox .stepbox_row li:not(:first-child) {margin-top:24px;}
+.noticebox .stepbox_row li:before {counter-increment:row;content:'STEP 'counter(row, decimal-leading-zero);display:block;position:relative;left:auto;top:auto;width:100%;height:auto;margin-bottom:4px;background:none;color:#8f8f8f;font-size:12px;line-height:1;transform:none;}
+.noticebox .stepbox_row li:not(:last-child):after {content:'다음단계';position:absolute;left:0;bottom:-24px;width:100%;height:24px;background:url(../imgs/global/icon_arrow_down.png) center center no-repeat;background-size:24px 24px;text-indent:-999em;}
 
 .page_mypage {margin-top:-24px;}
 .page_mypage .button_box {margin-top:24px;}
@@ -83,6 +98,9 @@
 .page_mypage .period_check .detail dt {margin:16px 0 8px;font-size:15px;line-height:1;}
 .page_mypage .period_check .detail .calendar_box {margin-top:8px;}
 .page_mypage .period_check .detail .button_box {padding:0 32px;}
+.page_mypage .period_check .inputSelect {display:flex;gap:4px;}
+.page_mypage .period_check .inputSelect select {width:94px;}
+.page_mypage .period_check .inputSelect input {width:calc(100% - 98px);}
 .page_mypage .result_box {margin:24px 0 8px;}
 .page_mypage .result_box .result {color:#8f8f8f;font-size:13px;line-height:1;}
 .page_mypage .result_count {padding:0 12px;}
@@ -90,23 +108,67 @@
 .modal_claim .button_box {margin-top:24px;}
 .modal_claim .refund_detail .blank_space {margin-top:32px;}
 
-.page_mypage .result_trading {margin:0 -16px;}
-.page_mypage .result_trading .list {width:100%;padding:0 16px;overflow:hidden;overflow-x:auto;}
+.page_mypage .result_trading {margin:24px -16px 0;}
+.page_mypage .result_trading .list {width:100%;padding:0 0 0 16px;overflow:hidden;overflow-x:auto;}
 .page_mypage .result_trading .list::-webkit-scrollbar {display: none;}
-.page_mypage .result_trading .list table {width:720px;}
-.page_mypage .result_trading .s1 {width:48px;}
+.page_mypage .result_trading .list table {width:720px;margin:0 auto;}
+.page_mypage .result_trading .list table.pass {width:660px;margin:0 auto;}
+.page_mypage .result_trading .s1 {width:65px;}
 .page_mypage .result_trading .s2 {width:50px;}
-.page_mypage .result_trading .s3 {width:80px;}
+.page_mypage .result_trading .s3 {width:60px;}
+.page_mypage .result_trading .s4 {width:48px;}
+.page_mypage .result_trading .s5 {width:48px;}
+.page_mypage .result_trading .s6 {width:auto;}
+.page_mypage .result_trading .s7 {width:71px;}
+.page_mypage .result_trading .s8 {width:71px;}
+.page_mypage .result_trading .s9 {width:71px;}
+.page_mypage .result_trading .s10 {width:71px;}
+.page_mypage .result_trading .s11 {width:71px;}
+.page_mypage .result_trading .pass .s3 {width:auto;}
+.page_mypage .result_trading .pass .s6 {width:48px;}
+.page_mypage .result_trading .pass .s7 {width:80px;}
+.page_mypage .result_trading .pass .s8 {width:80px;}
+.page_mypage .result_trading .pass .s9 {width:80px;}
+.page_mypage .result_trading .pass .s10 {width:80px;}
 .page_mypage .result_trading th {width:70px;color:#000;}
 .page_mypage .result_trading th,
-.page_mypage .result_trading td {padding:4px 2px;text-align:center;}
+.page_mypage .result_trading td {padding:4px 1px;text-align:center;}
 .page_mypage .result_trading thead th {font-size:13px;font-weight:500;}
 .page_mypage .result_trading tbody td {font-weight:400;}
-
 .scrollBarCustom {display:block;position:relative;width:calc(100% - 32px);height:8px;margin:20px 16px 0;}
 .scrollBarCustom::before {content:'';position:absolute;left:0;top:50%;width:100%;height:4px;margin-top:-2px;background:#edf0f2;}
-.scrollBarCustom .bar {position:absolute;left:0;top:2px;min-width:120px;height:4px;background:#e8340c;transition:0.2s;}
+.scrollBarCustom .bar {position:absolute;left:0;top:2px;min-width:70px;height:4px;background:#e8340c;transition:0.1s;}
 .scrollBarCustom .bar::before,
 .scrollBarCustom .bar::after {content:'';position:absolute;top:50%;width:1px;height:8px;margin-top:-4px;background:#e8340c;}
 .scrollBarCustom .bar::before {left:0;}
 .scrollBarCustom .bar::after {right:0; }
+@media (max-width: 320px) {
+	.page_mypage .result_trading .list {padding-left:8px;}
+	.scrollBarCustom {width:calc(100% - 16px);margin-left:8px;margin-right:8px;}
+}
+
+/* 반품 */
+.check_select {margin:12px 16px}
+.mypage_return .request_intro {min-height:50vh;margin-top:16px;}
+.mypage_return .noticebox {margin-bottom:12px;}
+.common_orderList .product.type1 {border-top-width:0;}
+.common_orderList .product.type1 .item {padding-top:0;}
+.common_orderList .product.type1 .fullname {margin-bottom:12px;line-height:18px;}
+.common_orderList .product.type2 .info_box {width:100%;}
+.common_orderList .product.type2 .summary.ea {margin-top:10px;color:#8f8f8f;font-size:13px;}
+.common_orderList .product.type2 .price_box {width:100%;padding-top:10px;margin-top:12px;border-top:1px solid #dee0e4;}
+.common_orderList .billing_info {margin-top:12px;border-width:0;border-radius:0;background-color:#f4f7f9;}
+.common_orderList.request .product.type2 .info_box {width:calc(100% - 32px)}
+.common_orderList.request .product.type2 .summary.ea {padding-top:10px;border-top:1px solid #dee0e4;}
+.common_orderList.request .item {padding-bottom:16px}
+.common_orderList.request .form {display:flex;flex-wrap:nowrap;padding:12px 0 16px;background-color:#f4f7f9;}
+.common_orderList.request .form .box {display:flex;flex-wrap:nowrap;flex-direction:column;gap:8px;padding:0 15px;}
+.common_orderList.request .form .box.ea {width:158px;border-right:1px solid #dee0e4;}
+.common_orderList.request .form .box.input {width:calc(100% - 158px);}
+.common_orderList.request .form .box li {height:36px;}
+
+.reason_box {border:1px solid #dee0e4;border-radius:4px;background-color:#f4f7f9;}
+.reason_box dl {padding:12px 15px;}
+.reason_box dl:not(:first-child) {border-top:1px solid #dee0e4;}
+.reason_box dt {color:#666;line-height:24px;}
+.reason_box dd {margin-top:12px;}

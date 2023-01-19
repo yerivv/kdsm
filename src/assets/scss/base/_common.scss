@@ -31,6 +31,7 @@ strong.number {font-weight:700;}
 /* margin,padding */
 .mgt0 {margin-top:0 !important;}
 .mgt8 {margin-top:8px !important;}
+.mgt16 {margin-top:16px !important;}
 .mgb8 {margin-bottom:8px !important;}
 
 /* display */
@@ -450,10 +451,12 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .noticebox dt::after {content:'';position:absolute;right:0;top:0;width:12px;height:12px;background:url(../imgs/global/arrow_category.png) center center no-repeat;background-size:contain;transition:0.2s;}
 .noticebox dd li {position:relative;padding-left:6px;margin-top:4px;color:#8f8f8f;font-size:12px;line-height:16px;}
 .noticebox dd li::before {content:'';position:absolute;left:0;top:6px;width:2px;height:2px;border-radius:50%;background-color:#8f8f8f;}
+.noticebox dd li li {padding-left:9px;}
+.noticebox dd li li::before {content:'-';top:0;width:6px;height:auto;background:none;}
 .noticebox dt + dd {padding-top:8px;margin-top:8px;border-top:1px solid #DEE0E4;}
 .noticebox dt + dd::before {top:15px;}
-.noticebox dd .type {margin-top:8px;font-size:12px;line-height:12px;}
-.noticebox dd .type:first-child {margin-top:8px;}
+.noticebox dd .type {font-size:12px;line-height:16px;}
+.noticebox dd + dd .type {margin-top:8px;}
 .noticebox .on dt::after {transform:rotate(180deg);}
 .noticebox.type1 dd {padding-top:0;margin-top:0;border-top-width:0;}
 .noticebox.type1 dd li:first-child {margin-top:0;}
