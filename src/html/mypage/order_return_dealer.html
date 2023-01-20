@@ -12,7 +12,7 @@
 	<div id="app">
 		@@include('@@webRoot/_include/header.html',{
 			"header" : "type2",
-			"title": "광동제약 반품신청 및 내역",
+			"title": "입점업체 반품신청 및 내역",
 			"gnb" : "hidden",
 		})
 
@@ -20,8 +20,8 @@
 			<div class="page_mypage mypage_return">
 				<div class="menu_tab cols2">
 					<ul class="list">
-						<li class="menu1"><a href="order_return_request.html" class="btn">반품 신청</a></li>
-						<li class="menu2 active"><a href="order_return.html" class="btn">반품 내역</a></li>
+						<li class="menu1"><a href="order_return_request_dealer.html" class="btn">반품 신청</a></li>
+						<li class="menu2 active"><a href="order_return_dealer.html" class="btn">반품 내역</a></li>
 					</ul>
 				</div>
 				<div class="period_check accordions_wrap">
@@ -67,6 +67,14 @@
 							</dd>
 						</dl>
 						<dl>
+							<dt>입점업체</dt>
+							<dd>
+								<select name="">
+									<option>입점업체 전체</option>
+								</select>
+							</dd>
+						</dl>
+						<dl>
 							<dt>검색</dt>
 							<dd class="inputSelect">
 								<select name="">
@@ -98,58 +106,55 @@
 							<dd class="info">
 								<div>반품일자 : <span class="number">2022-11-23</span></div>
 								<div>입점업체명 : 광동제약</div>
-								<a href="order_return_detail.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
+								<a href="order_return_detail_dealer.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
 							</dd>
-							<dd class="product type1">
-								<ul class="product_list">
-									<li class="item">
-										<div class="fullname">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원 현탄액 외 <span class="number fw500">3</span>건</div>
-										<div class="state">
-											<strong class="fw500">반품완료</strong>
-										</div>
-									</li>
-								</ul>
-							</dd>
-						</dl>
-					</div><!-- //group -->
-					<div class="group">
-						<dl>
-							<dt>반품번호<strong class="number fw500">A2231156316316</strong></dt>
-							<dd class="info">
-								<div>반품일자 : <span class="number">2022-11-23</span></div>
-								<div>입점업체명 : 광동제약</div>
-								<a href="order_return_detail.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
-							</dd>
-							<dd class="product type1">
-								<ul class="product_list">
-									<li class="item">
-										<div class="fullname">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원 현탄액 외 3건</div>
-										<div class="state">
-											<a href="#" class="buttons xsmall white round0">신청취소</a>
-											<strong class="fw500">반품신청</strong>
-										</div>
-									</li>
-								</ul>
-							</dd>
-						</dl>
-					</div><!-- //group -->
-					<div class="group">
-						<dl>
-							<dt>반품번호<strong class="number fw500">A2231156316316</strong></dt>
-							<dd class="info">
-								<div>반품일자 : <span class="number">2022-11-23</span></div>
-								<div>입점업체명 : 광동제약</div>
-								<a href="order_return_detail.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
-							</dd>
-							<dd class="product type1">
-								<ul class="product_list">
-									<li class="item">
-										<div class="fullname">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원 현탄액 외 3건</div>
-										<div class="state">
-											<strong class="fw500">반품취소</strong>
-										</div>
-									</li>
-								</ul>
+							<dd class="product type2 accordions_wrap">
+								<div class="accordion" onclick="accordions(this)">상품 상세 정보</div>
+								<div class="toggle">
+									<ul class="product_list">
+										<li class="item">
+											<div class="info_box">
+												<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+												<div class="summary">
+													<span class="box">100box</span>
+													<span class="box">제조사</span>
+												</div>
+												<div class="summary ea">
+													<span class="box">신청수량 : <span class="fw500 fcdefault">5</span></span>
+													<span class="box">확정수량 : <span class="fw500 fcdefault">5</span></span>
+												</div>
+											</div>
+											<div class="price_box">
+												<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
+												<div class="box pay">반품(예정)액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+											</div>
+											<div class="state">
+												<a href="#" class="buttons xsmall white round0">신청취소</a>
+												<strong class="fw500">반품신청</strong>
+											</div>
+										</li>
+										<li class="item">
+											<div class="info_box">
+												<div class="name">광동제약 비타500</div>
+												<div class="summary">
+													<span class="box">100box</span>
+													<span class="box">제조사</span>
+												</div>
+												<div class="summary ea">
+													<span class="box">신청수량 : <span class="fw500 fcdefault">5</span></span>
+													<span class="box">확정수량 : <span class="fw500 fcdefault">5</span></span>
+												</div>
+											</div>
+											<div class="price_box">
+												<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
+												<div class="box pay">반품(예정)액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+											</div>
+											<div class="state">
+												<strong class="fw500">반품완료</strong>
+											</div>
+										</li>
+									</ul>
+								</div>
 							</dd>
 						</dl>
 					</div><!-- //group -->
@@ -159,17 +164,35 @@
 							<dd class="info">
 								<div>반품일자 : <span class="number">2022-11-23</span></div>
 								<div>입점업체명 : 광동제약</div>
-								<a href="order_return_detail.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
+								<a href="order_return_detail_dealer.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
 							</dd>
-							<dd class="product type1">
-								<ul class="product_list">
-									<li class="item">
-										<div class="fullname">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원 현탄액 외 3건</div>
-										<div class="state">
-											<strong class="fw500">반품처리중</strong>
-										</div>
-									</li>
-								</ul>
+							<dd class="product type2 accordions_wrap">
+								<div class="accordion" onclick="accordions(this)">상품 상세 정보</div>
+								<div class="toggle">
+									<ul class="product_list">
+										<li class="item">
+											<div class="info_box">
+												<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+												<div class="summary">
+													<span class="box">100box</span>
+													<span class="box">제조사</span>
+												</div>
+												<div class="summary ea">
+													<span class="box">신청수량 : <span class="fw500 fcdefault">5</span></span>
+													<span class="box">확정수량 : <span class="fw500 fcdefault">5</span></span>
+												</div>
+											</div>
+											<div class="price_box">
+												<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
+												<div class="box pay">반품(예정)액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+											</div>
+											<div class="state">
+												<a href="#" class="buttons xsmall white round0">신청취소</a>
+												<strong class="fw500">반품신청</strong>
+											</div>
+										</li>
+									</ul>
+								</div>
 							</dd>
 						</dl>
 					</div><!-- //group -->

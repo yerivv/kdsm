@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "반품신청서"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "반품신청서(입점업체)",
+			"gnb" : "hidden",
+			"toolbar" : "hidden"
+		})
+
+		<main id="container">
+			<div class="page_mypage mypage_return">
+				<div class="common_orderList request">
+					<div class="check_select">
+						<span class="check"><input type="checkbox" name="" id="" /><label for="">전체선택</label></span>
+						<button type="button" class="buttons small white">선택삭제</button>
+						<span class="mlauto">
+							<button type="button" class="buttons iconBtn point fw500"><i class="ico icoAdd"></i>반품상품추가</button>
+						</span>
+					</div>
+					<div class="group">
+						<dl>
+							<dt><input type="checkbox" name="groupCheckAll" id="group1" /><label for="group1">인천약품</label></dt>
+							<dd class="product type2">
+								<ul class="product_list have_check">
+									<li class="item">
+										<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
+										<div class="info_box">
+											<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+											<div class="summary">
+												<span class="box">100box</span>
+											</div>
+											<div class="summary ea">
+												<span class="box">신청수량 : <span class="fw500 fcdefault">5</span></span>
+												<span class="box">확정수량 : <span class="fw500 fcdefault">5</span></span>
+											</div>
+										</div>
+										<div class="form_dealer">
+											<dl>
+												<dt>반품신청 수량</dt>
+												<dd>
+													<div class="ea_box">
+														<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+														<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+														<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+													</div>
+												</dd>
+											</dl>
+											<dl>
+												<dt>반품사유</dt>
+												<dd>
+													<select name="">
+														<option>반품사유 선택</option>
+														<option>유효기간임박/경과</option>
+														<option>재고정리</option>
+													</select>
+												</dd>
+											</dl>
+											<dl>
+												<dt>메모</dt>
+												<dd>
+													<input type="text" name="" />
+												</dd>
+											</dl>
+										</div>
+									</li>
+									<li class="item">
+										<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
+										<div class="info_box">
+											<div class="name">광동제약 비타500</div>
+											<div class="summary">
+												<span class="box">100box</span>
+											</div>
+											<div class="summary ea">
+												<span class="box">신청수량 : <span class="fw500 fcdefault">5</span></span>
+												<span class="box">확정수량 : <span class="fw500 fcdefault">5</span></span>
+											</div>
+										</div>
+										<div class="form_dealer">
+											<dl>
+												<dt>반품신청 수량</dt>
+												<dd>
+													<div class="ea_box">
+														<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+														<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+														<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+													</div>
+												</dd>
+											</dl>
+											<dl>
+												<dt>반품사유</dt>
+												<dd>
+													<select name="">
+														<option>반품사유 선택</option>
+														<option>유효기간임박/경과</option>
+														<option>재고정리</option>
+													</select>
+												</dd>
+											</dl>
+											<dl>
+												<dt>메모</dt>
+												<dd>
+													<input type="text" name="" />
+												</dd>
+											</dl>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div><!-- //group -->
+					<div class="group">
+						<dl>
+							<dt><input type="checkbox" name="groupCheckAll" id="group1" /><label for="group1">인천약품</label></dt>
+							<dd class="product type2">
+								<ul class="product_list have_check">
+									<li class="item">
+										<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
+										<div class="info_box">
+											<div class="name">광동제약 비타500</div>
+											<div class="summary">
+												<span class="box">100box</span>
+											</div>
+											<div class="summary ea">
+												<span class="box">신청수량 : <span class="fw500 fcdefault">5</span></span>
+												<span class="box">확정수량 : <span class="fw500 fcdefault">5</span></span>
+											</div>
+										</div>
+										<div class="form_dealer">
+											<dl>
+												<dt>반품신청 수량</dt>
+												<dd>
+													<div class="ea_box">
+														<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+														<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+														<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+													</div>
+												</dd>
+											</dl>
+											<dl>
+												<dt>반품사유</dt>
+												<dd>
+													<select name="">
+														<option>반품사유 선택</option>
+														<option>유효기간임박/경과</option>
+														<option>재고정리</option>
+													</select>
+												</dd>
+											</dl>
+											<dl>
+												<dt>메모</dt>
+												<dd>
+													<input type="text" name="" />
+												</dd>
+											</dl>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div><!-- //group -->
+					<div class="check_select">
+						<span class="check"><input type="checkbox" name="" id="" /><label for="">전체선택</label></span>
+						<span class="mlauto">
+							<button type="button" class="buttons small white">선택삭제</button>
+						</span>
+					</div>
+				</div><!-- //common_orderList -->
+
+				<!-- 반품 쿠폰 적용 -->
+				<div class="title_box">
+					<h3 class="title">반품 쿠폰 적용</h3>
+					<div class="tooltip_wrap">
+						<a href="javascript:void(0);" onclick="tooltip(this)" class="click btn_i"><i class="ico"></i></a>
+						<div class="message_box small">
+							<p class="subtext">입점업체 반품 시 발생하는 회수택배비 무료반품 적용이 가능한 쿠폰입니다.</p>
+							<span class="close">닫기</span>
+						</div>
+					</div>
+					<div class="mlauto">사용가능 : <span class="number fcpoint fw500">0</span>개</div>
+				</div>
+				<div class="coupon_list">
+					<dl>
+						<dt>
+							인천약품
+							<div class="line_box">
+								<span class="box">품목수 : <span class="fw500 fcdefault">5</span></span>
+								<span class="box">신청수량 : <span class="fw500 fcdefault">5</span></span>
+							</div>
+						</dt>
+						<dd>
+							<select name="">
+								<option>쿠폰선택</option>
+								<option>9월 무료 반품 쿠폰 (23.01.01~01.31)</option>
+							</select>
+							<div class="line_box">
+								<span class="box">회수택배비</span>
+								<span class="box">자사부담</span>
+								<span class="box">한진택배</span>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							인천약품
+							<div class="line_box">
+								<span class="box">품목수 : <span class="fw500 fcdefault">5</span></span>
+								<span class="box">신청수량 : <span class="fw500 fcdefault">5</span></span>
+							</div>
+						</dt>
+						<dd>
+							<select name="">
+								<option>쿠폰선택</option>
+								<option>9월 무료 반품 쿠폰 (23.01.01~01.31)</option>
+							</select>
+						</dd>
+					</dl>
+				</div>
+				<!-- //반품 쿠폰 적용 -->
+
+				<!-- 반품 신청 정보 -->
+				<div class="title_box">
+					<h3 class="title">반품 신청 정보</h3>
+				</div>
+				<div class="billing_info type1">
+					<div class="list">
+						<dl>
+							<dt>총 선택 품목</dt>
+							<dd><strong class="number">3</strong>개</dd>
+						</dl>
+						<dl>
+							<dt>총 신청 수량</dt>
+							<dd><strong class="number">30</strong>개</dd>
+						</dl>
+						<dl>
+							<dt>예상 회수 택배</dt>
+							<dd><strong class="number">3</strong>건</dd>
+						</dl>
+					</div>
+				</div>
+				<!-- 반품 신청 정보 -->
+			</div><!-- //page_mypage -->
+
+			<div class="floating_btn">
+				<div class="more" onclick="floatingMore(this)">자세히 보기</div>
+				<div class="calculation_list">
+					<dl>
+						<dt>총 선택 품목</dt>
+						<dd><strong class="number">2</strong>개</dd>
+					</dl>
+					<dl>
+						<dt>총 선택 수량</dt>
+						<dd><strong class="number">10</strong>개</dd>
+					</dl>
+				</div>
+				<div class="total_price">
+					<div class="total fcblack">예상 회수 택배</div>
+					<div class="price fcpoint"><strong class="number">3</strong>건</div>
+				</div>
+				<div class="button_box">
+					<a href="#" class="buttons fill">반품신청</a>
+				</div>
+			</div>
+			
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+		window.onload = function(){
+			modalUrlOpen('order_return_request_search_dealer.html', 'full')
+		};
+	</script>
+</body>
+</html>

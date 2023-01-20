@@ -1,22 +1,13 @@
 <div id="modal" class="modalFull modal_return">
 	<div class="wrap">
 		<div class="head">
-			<h2>반품신청 상품조회(광동제약)</h2>
+			<h2>반품신청 상품조회(입점업체)</h2>
 			<a href="../mypage/order_return_request.html" class="close">닫기</a>
 		</div>
 		<div class="contents">
 			<div class="period_check">
 				<div class="detail">
-					<dl>
-						<dt>반품선택</dt>
-						<dd>
-							<ul class="textType gap4">
-								<li><input type="radio" name="type" id="type_online" value="online" onclick="typeCheck(this);"><label for="type_online">온라인 반품</label></li>
-								<li><input type="radio" name="type" id="type_offline" value="offline" onclick="typeCheck(this);"><label for="type_offline">오프라인 반품</label></li>
-							</ul>
-						</dd>
-					</dl>
-					<dl id="online" style="display:none">
+					<dl id="online">
 						<dt>조회기간</dt>
 						<dd>
 							<ul class="textType gap4">
@@ -40,6 +31,14 @@
 						</dd>
 					</dl>
 					<dl>
+						<dt>입점업체</dt>
+						<dd>
+							<select name="">
+								<option>입점업체 전체</option>
+							</select>
+						</dd>
+					</dl>
+					<dl>
 						<dt>검색</dt>
 						<dd class="inputSelect">
 							<select name="">
@@ -57,51 +56,23 @@
 			</div>
 			<div class="result_box">
 				<p class="result">총 <strong class="number fw500 fcpoint">45</strong>개의 내역이 있습니다.</p>
+				<div class="mlauto">
+					<select>
+						<option>최신 주문 순</option>
+						<option>과거 주문 순</option>
+						<option>주문수량 많은 순</option>
+						<option>주문수량 적은 순</option>
+					</select>
+				</div>
 			</div>
 
 			<div class="result_state_box">
 				<!-- 없을 시-->
-				<div class="no_result_box bold" style="display:none">
+				<div class="no_result_box bold">
 					<i class="ico"></i>
 					<div class="text">조회된 내역이 없습니다.</div>
 				</div><!-- //no_result_box -->
-				<div class="common_orderList request">
-					<div class="group">
-						<div class="product type2">
-							<ul class="product_list have_check">
-								<li class="item">
-									<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
-									<div class="info_box">
-										<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
-										<div class="summary">
-											<span class="box">제조사</span>
-											<span class="box">100box</span>
-										</div>
-									</div>
-								</li>
-								<li class="item">
-									<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
-									<div class="info_box">
-										<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원</div>
-										<div class="summary">
-											<span class="box">제조사</span>
-											<span class="box">100box</span>
-										</div>
-									</div>
-								</li>
-								<li class="item">
-									<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
-									<div class="info_box">
-										<div class="name">광동제약 비타500</div>
-										<div class="summary">
-											<span class="box">제조사</span>
-											<span class="box">100box</span>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div><!-- //group -->
+				<div class="common_orderList request" style="display:none">
 					<div class="group">
 						<dl>
 							<dt><input type="checkbox" name="groupCheckAll" id="group1" /><label for="group1">주문번호 <strong class="number fw500">A2231156316316</strong></label></dt>
@@ -110,6 +81,7 @@
 									<li class="item">
 										<div class="summary type1">
 											<span class="box">주문일자 : <span class="number">2022-11-23</span></span>
+											<span class="box">입점업체명 : 인천약품</span>
 										</div>
 										<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원 현탄액</div>
 										<div class="summary">
@@ -133,6 +105,7 @@
 									<li class="item">
 										<div class="summary type1">
 											<span class="box">주문일자 : <span class="number">2022-11-23</span></span>
+											<span class="box">입점업체명 : 인천약품</span>
 										</div>
 										<div class="name">광동제약 비타500</div>
 										<div class="summary">
@@ -156,6 +129,7 @@
 									<li class="item">
 										<div class="summary type1">
 											<span class="box">주문일자 : <span class="number">2022-11-23</span></span>
+											<span class="box">입점업체명 : 인천약품</span>
 										</div>
 										<div class="name">광동제약 비타500</div>
 										<div class="summary">
@@ -177,28 +151,6 @@
 				<a href="../mypage/order_return_request.html" class="buttons fcdefault">취소</a>
 				<a href="javascript:void(0)" onclick="modalUrlCloseFull();" class="buttons fill">선택완료</a>
 			</div>
-			<div class="person_info">
-				<p class="text">
-					조회되지 않는 품목은 <br />
-					담당자에게 연락 바랍니다.<br />
-					<span class="fw500">영업담당자 홍길동 <span class="number fw500">010-1234-5678</span></span>
-				</p>
-				<div class="btns">
-					<a href="tel:${GLOBAL.authmemberpernrtel}" class="btn_circle"><i class="ico tel"></i>전화하기</a>
-					<a href="../cscenter/sms.do" class="btn_circle"><i class="ico sms"></i>문자보내기</a>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>
-
-<script>
-function typeCheck(a){
-	const name = a.value;
-	if(name=='online'){
-		document.querySelector('#online').style.display = 'block';
-	} else {
-		document.querySelector('#online').style.display = 'none';
-	}
-}
-</script>

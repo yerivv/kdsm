@@ -12,7 +12,7 @@
 	<div id="app">
 		@@include('@@webRoot/_include/header.html',{
 			"header" : "type2",
-			"title": "반품신청서(광동제약or입점업체)",
+			"title": "반품신청서(광동제약)",
 			"gnb" : "hidden",
 		})
 
@@ -20,7 +20,11 @@
 			<div class="page_mypage mypage_return">
 				<div class="common_orderList request">
 					<div class="check_select">
-						<input type="checkbox" name="" id="" /><label for="">전체선택</label>
+						<span class="check"><input type="checkbox" name="" id="" /><label for="">전체선택</label></span>
+						<button type="button" class="buttons small white">선택삭제</button>
+						<span class="mlauto">
+							<button type="button" class="buttons iconBtn point fw500"><i class="ico icoAdd"></i>반품상품추가</button>
+						</span>
 					</div>
 					<div class="group">
 						<dl>
@@ -37,95 +41,76 @@
 											<span class="box">제조사</span>
 											<span class="box">50ml</span>
 										</div>
+										<div class="form">
+											<div class="box ea">
+												<dl>
+													<dt>주문수량</dt>
+													<dd class="txtCenter"><span class="number fw500">5</span></dd>
+												</dl>
+												<dl>
+													<dt>반품가능수량</dt>
+													<dd class="txtCenter"><span class="number fw500">4,525</span></dd>
+												</dl>
+											</div>
+											<div class="box input">
+												<dl>
+													<dt>완통</dt>
+													<dd><input type="number" name="cea1" class="number txtCenter" pattern="\d*" value="10" /></dd>
+												</dl>
+												<dl>
+													<dt>낱알</dt>
+													<dd><input type="number" name="cea2" class="number txtCenter" pattern="\d*" value="10" readonly="readonly" /></dd>
+												</dl>
+											</div>
+										</div>
 									</li>
-								</ul>
-							</dd>
-							<dd class="form">
-								<ul class="box ea">
-									<li>주문수량5</li>
-									<li>주문수량5</li>
-								</ul>
-								<ul class="box input">
-									<li>완통<input type="text" class="number" value="10" />개</li>
-									<li>낱알<input type="text" class="number" value="10" readonly="readonly" />개</li>
 								</ul>
 							</dd>
 						</dl>
 					</div><!-- //group -->
-					<!-- 입점업체 -->
 					<div class="group">
 						<dl>
-							<dt><input type="checkbox" name="groupCheckAll" id="group1" /><label for="group1">인천약품</label></dt>
-							<dd class="product type2">
-								<ul class="product_list have_check">
+							<dt><input type="checkbox" name="groupCheckAll" id="group1" /><label for="group1">주문번호 <strong class="number fw500">A2231156316316</strong></label></dt>
+							<dd class="product">
+								<ul class="product_list">
 									<li class="item">
-										<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
-										<div class="info_box">
-											<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
-											<div class="summary">
-												<span class="box">100box</span>
+										<div class="summary type1">
+											<span class="box">주문일자 : <span class="number">2022-11-23</span></span>
+											<span class="box">입점업체명 : 광동제약</span>
+										</div>
+										<div class="name">광동제약 비타500</div>
+										<div class="summary">
+											<span class="box">제조사</span>
+											<span class="box">50ml</span>
+										</div>
+										<div class="form">
+											<div class="box ea">
+												<dl>
+													<dt>주문수량</dt>
+													<dd class="txtCenter"><span class="number fw500">5</span></dd>
+												</dl>
+												<dl>
+													<dt>반품가능수량</dt>
+													<dd class="txtCenter"><span class="number fw500">4,525</span></dd>
+												</dl>
 											</div>
-											<div class="summary ea">
-												<span class="box">신청수량 : <span class="fw500 fcdefault">5</span></span>
-												<span class="box">확정수량 : <span class="fw500 fcdefault">5</span></span>
+											<div class="box input">
+												<dl>
+													<dt>완통</dt>
+													<dd><input type="number" name="cea1" class="number txtCenter" pattern="\d*" value="10" /></dd>
+												</dl>
+												<dl>
+													<dt>낱알</dt>
+													<dd><input type="number" name="cea2" class="number txtCenter" pattern="\d*" value="10" readonly="readonly" /></dd>
+												</dl>
 											</div>
 										</div>
 									</li>
 								</ul>
-							</dd>
-							<dd class="form">
-								<dl>
-									<dt>반품신청 수량</dt>
-									<dd>
-										<div class="ea_box">
-											<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
-											<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
-											<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
-										</div>
-									</dd>
-								</dl>
-								<dl>
-									<dt>반품사유</dt>
-									<dd>
-										<select name="">
-											<option>반품사유 선택</option>
-											<option>유효기간임박/경과</option>
-											<option>재고정리</option>
-										</select>
-									</dd>
-								</dl>
-								<dl>
-									<dt>메모</dt>
-									<dd>
-										<input type="text" name="" />
-									</dd>
-								</dl>
 							</dd>
 						</dl>
 					</div><!-- //group -->
 				</div><!-- //common_orderList -->
-
-				<!-- 반품 신청 정보 -->
-				<div class="title_box">
-					<h3 class="title">반품 신청 정보</h3>
-				</div>
-				<div class="billing_info type1">
-					<div class="list">
-						<dl>
-							<dt>총 선택 품목</dt>
-							<dd><strong class="number">3</strong>개</dd>
-						</dl>
-						<dl>
-							<dt>총 신청 수량</dt>
-							<dd><strong class="number">30</strong>개</dd>
-						</dl>
-						<dl>
-							<dt>예상 회수 택배</dt>
-							<dd><strong class="number">3</strong>건</dd>
-						</dl>
-					</div>
-				</div>
-				<!-- 반품 신청 정보 -->
 
 				<!-- 반품 사유 -->
 				<div class="title_box">
@@ -173,29 +158,17 @@
 					<button type="button" class="buttons fill">반품신청</button>
 				</div>
 			</div><!-- //page_mypage -->
-
-			<div class="floating_btn">
-				<div class="more" onclick="floatingMore(this)">자세히 보기</div>
-				<div class="calculation_list">
-					<dl>
-						<dt>총 선택 품목</dt>
-						<dd><strong class="number">2</strong>개</dd>
-					</dl>
-					<dl>
-						<dt>총 선택 수량</dt>
-						<dd><strong class="number">10</strong>개</dd>
-					</dl>
-				</div>
-				<div class="button_box">
-					<a href="#" class="buttons fill">반품신청</a>
-				</div>
-			</div>
-			
 		</main>
 
 		@@include('@@webRoot/_include/footer.html')
 		@@include('@@webRoot/_include/foot.html')
 		@@include('@@webRoot/_include/modal.html')
 	</div>
+	
+	<script>
+		window.onload = function(){
+			modalUrlOpen('order_return_request_search.html', 'full')
+		};
+	</script>
 </body>
 </html>
