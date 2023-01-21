@@ -91,8 +91,12 @@ input[type=radio].type1 + label {line-height:16px;}
 .textType.gap4 {gap:4px;}
 .textType li {width:100%;text-align:center;}
 .textType li input[type=radio] {display:none;}
-.textType li input[type=radio] + label {display:block;padding:10px 0 7px;margin:0;border-radius:4px;border:1px solid #dee0e4;background-color:#fff;font-size:13px;font-weight:500;line-height:1;}
+.textType li input[type=radio] + label {display:flex;justify-content:center;width:100%;height:100%;padding:10px 0 7px;margin:0;border-radius:4px;border:1px solid #dee0e4;background-color:#fff;font-size:13px;font-weight:500;line-height:1;}
 .textType li input[type=radio]:checked + label {border-color:#E8340C;background-color:#E8340C;color:#fff;}
+@media (max-width: 320px) {
+	/* 2줄 되는 것 */
+	.textType.type1 li input[type=radio] + label {flex-direction:column;padding-top:3px;padding-bottom:2px;}
+}
 
 /* textarea */
 textarea {height:auto;padding:15px;}
@@ -119,6 +123,9 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .calendar_box .calendar {position:absolute;right:0;top:0;width:36px;height:100%;border-left:1px solid #edf0f2;text-indent:-999em;}
 .calendar_box .calendar::after {content:'';position:absolute;right:0;top:0;width:100%;height:100%;background:url(../imgs/global/icon_calendar.png) center center no-repeat;background-size:20px 20px;}
 .calendar_box .text {width:24px;color:#666;text-align:center;}
+@media (max-width: 320px) {
+	.calendar_box .box input[type=text] {padding-left:4px;padding-right:0;}
+}
 
 /* title */
 .page_title {padding:0 0 8px;margin-bottom:8px;border-bottom:1px solid #edf0f2;font-size:16px;font-weight:500;line-height:24px;}
@@ -277,6 +284,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .buttons.iconBtn {height:28px;font-size:12px;font-weight:400;}
 @media (max-width: 320px) {
 	.buttons {flex-direction:column;}
+	.buttons.iconBtn {flex-direction:row;}
 }
 /* button type */
 .buttons > i {display:inline-block;background-position:center center;background-repeat:no-repeat;background-size:contain;}
