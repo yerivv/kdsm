@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div id="app">
-		<header id="header_member">
+		<header id="header2">
 			<h1><img src="@@webRoot/imgs/global/logo_KDShop.png" alt="KD-shop 광동약국몰" /></h1>
 		</header>
 		<main id="container">
@@ -37,8 +37,8 @@
 						<button type="submit" class="buttons fill">로그인</button>
 					</div>
 					<ul class="menu">
-						<li><a href="javascript:void(0);" onclick="find('id');">아이디 찾기</a></li>
-						<li><a href="javascript:void(0);" onclick="find('pw');">비밀번호 찾기</a></li>
+						<li><a href="javascript:void(0);" onclick="findOpen('id');">아이디 찾기</a></li>
+						<li><a href="javascript:void(0);" onclick="findOpen('pw');">비밀번호 찾기</a></li>
 					</ul>
 				</fieldset>
 			</form>
@@ -47,7 +47,7 @@
 				<div class="join_text">
 					<div class="text"><span class="block">KD-Shop </span>회원가입하시고 다양한 혜택을 누려보세요.</div>
 					<div class="button_box">
-						<a href="javascript:void(0);" onclick="modalOpen('modal_member_state1');" class="buttons medium point">회원가입</a>
+						<a href="javascript:void(0);" onclick="modalUrlOpen('join.html', 'full');" class="buttons medium point">회원가입</a>
 					</div>
 				</div>
 
@@ -67,172 +67,30 @@
 
 			<!-- 회원상태 체크 필요 -->
 			<div class="button_box single">
-				<a href="javascript:void(0);" onclick="modalOpen('modal_member_state1');" class="buttons xsmall">회원가입 승인대기</a>
-				<a href="javascript:void(0);" onclick="modalOpen('modal_member_state2');" class="buttons xsmall">탈퇴신청중</a>
-				<a href="javascript:void(0);" onclick="modalOpen('modal_member_state3');" class="buttons xsmall">정보수정요청승인대기</a>
-				<a href="javascript:void(0);" onclick="modalOpen('modal_member_state4');" class="buttons xsmall">권한통제</a>
-				<a href="javascript:void(0);" onclick="modalOpen('modal_member_state5');" class="buttons xsmall">휴면회원</a>
+				<a href="javascript:void(0);" onclick="modalOpen('state_join');" class="buttons xsmall">회원가입 승인대기</a>
+				<a href="javascript:void(0);" onclick="modalOpen('state_secession');" class="buttons xsmall">탈퇴신청중</a>
+				<a href="javascript:void(0);" onclick="modalOpen('state_modify');" class="buttons xsmall">정보수정요청승인대기</a>
+				<a href="javascript:void(0);" onclick="modalOpen('state_limit');" class="buttons xsmall">권한통제</a>
+				<a href="javascript:void(0);" onclick="modalOpen('state_sleep');" class="buttons xsmall">휴면회원</a>
 			</div>
 
 			<div class="button_box single">
-				<a href="javascript:void(0);" onclick="modalOpen('modal_sleepCertify');" class="buttons xsmall">휴면해지 신청</a>
+				<a href="javascript:void(0);" onclick="modalUrlOpen('sleep_certify.html', 'full');" class="buttons xsmall">휴면해지 신청</a>
 			</div>
 		</main>
-		<footer id="footer_member">
+		<footer id="footer2">
 			<ul class="menu">
-				<li><a href="#">이용약관</a></li>
-				<li><a href="#"><strong>개인정보처리방침</strong></a></li>
+				<li><a href="javascript:void(0);" onclick="modalUrlOpen('../etc/terms_of_use_pop.html');">이용약관</a></li>
+				<li><a href="javascript:void(0);" onclick="modalUrlOpen('../etc/terms_of_use_pop.html');"><strong>개인정보처리방침</strong></a></li>
 			</ul>
 			<p class="copy">COPYRIGHT&copy; KWANGDONG PHARMACEUTICAL CO,. LTD.<br />ALL RIGHT RESERVED</p>
 		</footer>
 
-		<div id="modal" class="modalFull modal_sleepCertify">
-			<div class="wrap">
-				<div class="head">
-					<h2>KD-Shop 휴면해지 신청</h2>
-					<div class="close" onclick="modalClose('modal_sleepCertify');">닫기</div>
-				</div>
-				<div class="contents page_member">
-					<div class="stpe1" style="display:none;">
-						<div class="step_box">
-							<ol>
-								<li class="stay">본인인증</li>
-								<li>비밀번호변경</li>
-								<li>해지신청완료</li>
-							</ol>
-						</div>
-						<div class="title_box type1">
-							<h3 class="title">본인인증</h3>
-							<p class="subtext">아래 인증 수단 중 소지하고 계신 인증방식 하나를 선택하여 인증 받으시기 바랍니다.</p>
-						</div>
-						<div class="certify_select">
-							<ul>
-								<li class="mobile">
-									<dl>
-										<dt><span class="block">휴대폰</span> 인증</dt>
-										<dd><span class="block">본인의 이름과 </span>생년월일로 <br />가입된 휴대폰으로 <br />확인하세요.</dd>
-										<dd class="btn">
-											<a href="#" class="buttons medium"><span class="block">휴대폰</span> 인증하기</a>
-										</dd>
-									</dl>
-								</li>
-								<li class="card">
-									<dl>
-										<dt><span class="block">카드(신용/체크)</span> 인증</dt>
-										<dd><span class="block">본인의 이름과 </span>생년월일로 <br />가입된 신용카드로 <br />확인하세요.</dd>
-										<dd class="btn">
-											<a href="#" class="buttons medium"><span class="block">신용카드</span> 인증하기</a>
-										</dd>
-									</dl>
-								</li>
-							</ul>
-						</div>
-						<div class="noticebox type3">
-							<dl>
-								<dt>유의사항</dt>
-								<dd>
-									<ul>
-										<li>타인의 정보를 도용하여 임의로 사용하면 민사상 불법행위 책임 및 업무방해에 대하여 5년 이하의 징역 또는 1천 500만원 이하의 벌금이 부과될 수 있습니다.</li>
-										<li>타인의 정보를 부정하게 사용하는 경우 5년 이하의 징역 또는 1천 만원 이하의 벌금(업무방해죄)에 처해지게 되며, 민사상 불법행위로 인하여 손해배상 의무가 있습니다.</li>
-									</ul>
-								</dd>
-							</dl>
-						</div>
-					</div>
-					<div class="stpe2" style="display:none;">
-						<div class="step_box">
-							<ol>
-								<li>본인인증</li>
-								<li class="stay">비밀번호변경</li>
-								<li>해지신청완료</li>
-							</ol>
-						</div>
-						<div class="title_box type1">
-							<h3 class="title">기본정보</h3>
-						</div>
-						<div class="form_col_box">
-							<dl>
-								<dt><span class="required"></span>이름</dt>
-								<dd>
-									<div class="form_line">
-										<input type="text" name="name" maxlength="10" value="홍길동" readonly="readonly" />
-									</div>
-								</dd>
-							</dl>
-							<dl>
-								<dt><span class="required"></span>생년월일</dt>
-								<dd>
-									<div class="form_line">
-										<input type="text" name="birth" maxlength="8" value="19800101" readonly="readonly" />
-									</div>
-								</dd>
-							</dl>
-							<dl>
-								<dt><span class="required"></span>성별</dt>
-								<dd>
-									<div class="form_line">
-										<input type="text" name="gender" maxlength="2" value="남자" readonly="readonly" />
-									</div>
-								</dd>
-							</dl>
-							<dl>
-								<dt><span class="required"></span>아이디</dt>
-								<dd>
-									<div class="form_line">
-										<input type="text" name="memberId" maxlength="8" value="hong11" readonly="readonly" />
-									</div>
-								</dd>
-							</dl>
-							<dl>
-								<dt><span class="required"></span>비밀번호</dt>
-								<dd>
-									<div class="form_line">
-										<input type="password" name="pw" maxlength="20" placeholder="8자 이상 영문, 숫자, 특수문자 조합" />
-									</div>
-								</dd>
-							</dl>
-							<dl>
-								<dt><span class="required"></span>비밀번호 재확인</dt>
-								<dd>
-									<div class="form_line">
-										<input type="password" name="rePw" maxlength="20" placeholder="비밀번호를 한 번 더 입력해주세요." />
-									</div>
-								</dd>
-							</dl>
-						</div>
-						<div class="button_box">
-							<a href="#" class="buttons medium point size1">해지신청</a>
-						</div>
-					</div>
-					<div class="stpe3">
-						<div class="step_box">
-							<ol>
-								<li>본인인증</li>
-								<li>비밀번호변경</li>
-								<li class="stay">해지신청완료</li>
-							</ol>
-						</div>
-						<div class="confirm_box">
-							<i class="ico"></i>
-							<h3 class="title">신청이 완료되었습니다.</h3>
-						</div>
-						<div class="confirm_detail_box">
-							KDShop 휴면해지신청이 완료되었습니다.<br />관리자 승인 후 서비스 이용이 가능합니다.<br /><br />
-							해지승인이 완료되면 <span class="block">카카오 알림톡을 발송해드립니다.</span>
-						</div>
-						<div class="button_box">
-							<a href="#" class="buttons fill">확인</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="modal" class="modalCenter modal_member_state1">
+		<div id="modal" class="modalCenter modal_member_state state_join">
 			<div class="wrap">
 				<div class="head">
 					<h2>회원안내</h2>
-					<div class="close" onclick="modalClose('modal_member_state1');">닫기</div>
+					<div class="close" onclick="modalClose('modal_state_join');">닫기</div>
 				</div>
 				<div class="contents member_state">
 					<div class="no_result_box">
@@ -250,16 +108,16 @@
 						</dl>
 					</div>
 					<div class="button_box">
-						<a href="javascript:void(0)" onclick="modalClose('modal_member_state1');" class="buttons medium point size1">확인</a>
+						<a href="javascript:void(0)" onclick="modalClose('modal_state_join');" class="buttons medium point size1">확인</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="modal" class="modalCenter modal_member_state2">
+		<div id="modal" class="modalCenter modal_member_state state_secession">
 			<div class="wrap">
 				<div class="head">
 					<h2>회원안내</h2>
-					<div class="close" onclick="modalClose('modal_member_state2');">닫기</div>
+					<div class="close" onclick="modalClose('modal_state_secession');">닫기</div>
 				</div>
 				<div class="contents member_state">
 					<div class="no_result_box">
@@ -275,16 +133,16 @@
 						</dl>
 					</div>
 					<div class="button_box">
-						<a href="#" class="buttons medium point size1">마이페이지로 이동</a>
+						<a href="?" class="buttons medium point size1">마이페이지로 이동</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="modal" class="modalCenter modal_member_state3">
+		<div id="modal" class="modalCenter modal_member_state state_modify">
 			<div class="wrap">
 				<div class="head">
 					<h2>회원안내</h2>
-					<div class="close" onclick="modalClose('modal_member_state3');">닫기</div>
+					<div class="close" onclick="modalClose('modal_state_modify');">닫기</div>
 				</div>
 				<div class="contents member_state">
 					<div class="no_result_box">
@@ -305,11 +163,11 @@
 				</div>
 			</div>
 		</div>
-		<div id="modal" class="modalCenter modal_member_state4">
+		<div id="modal" class="modalCenter modal_member_state state_limit">
 			<div class="wrap">
 				<div class="head">
 					<h2>회원안내</h2>
-					<div class="close" onclick="modalClose('modal_member_state4');">닫기</div>
+					<div class="close" onclick="modalClose('modal_state_limit');">닫기</div>
 				</div>
 				<div class="contents member_state">
 					<div class="no_result_box">
@@ -319,7 +177,7 @@
 					<div class="noticebox type3">
 						<dl>
 							<dt>KD-Shop 이용안내</dt>
-							<dd>현재 회원님은 아래와 같은 사유로 주문 및 반품 등의 서비스 이용이 제한된 상태입니다.<br />(사유 : #사유노출)</dd>
+							<dd>현재 회원님은 아래와 같은 사유로 주문 및 반품 등의 서비스 이용이 제한된 상태입니다.<div>(사유 : #사유노출)</div></dd>
 							<dd>원활한 서비스 운영을 위해 자세한 문의는  고객센터에 문의 바랍니다.</dd>
 							<dd>관련문의 : <a href="tel:080-024-0030" class="fcpoint fw500">080-024-0030</a></dd>
 						</dl>
@@ -330,11 +188,11 @@
 				</div>
 			</div>
 		</div>
-		<div id="modal" class="modalCenter modal_member_state5 ">
+		<div id="modal" class="modalCenter modal_member_state state_sleep">
 			<div class="wrap">
 				<div class="head">
 					<h2>회원안내</h2>
-					<div class="close" onclick="modalClose('modal_member_state5');">닫기</div>
+					<div class="close" onclick="modalClose('modal_state_sleep');">닫기</div>
 				</div>
 				<div class="contents member_state">
 					<div class="no_result_box">
@@ -349,31 +207,34 @@
 						</dl>
 					</div>
 					<div class="button_box">
-						<a href="javascript:void(0);" onclick="modalClose('modal_member_state5');" class="buttons medium">취소</a>
-						<a href="#" class="buttons medium point">휴면해지 신청</a>
+						<a href="javascript:void(0);" onclick="modalClose('modal_state_sleep');" class="buttons medium">취소</a>
+						<button type="button" onclick="fnSleepCertify()" class="buttons medium point">휴면해지 신청</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="modalwrap"></div>
 		<div id="modalFullwrap"></div>
+
+		@@include('find.html')
 	</div>
 	<script>
 		slideBannerSlide('benefitSlide', 'bullets');
-		function find(a){
-			$('#modalwrap').load('find.html', function(){
-				$(this).find('#modal').addClass('open');
-				$('body').addClass('ismodal');
-				$(this).find('.menu_tab li').removeClass('active');
-				$(this).find('.contents_tab .content').removeClass('active');
-				if(a == 'id'){
-					$(this).find('.menu_tab .menu1').addClass('active');
-					$(this).find('#tab1').load('find_id.html').addClass('active');
-				} else if(a == 'pw') {
-					$(this).find('.menu_tab .menu2').addClass('active');
-					$(this).find('#tab2').load('find_pw.html').addClass('active');
-				}
-			});
+		function findOpen(a){
+			const findBox = $('.modal_member_find');
+			modalOpen('modal_member_find');
+			findBox.find('.menu_tab li, .contents_tab .content').removeClass('active');
+			if(a == 'id'){
+				findBox.find('.menu_tab .menu1').addClass('active');
+				findBox.find('#tab1').addClass('active').load('find_id.html');
+			} else if(a == 'pw') {
+				findBox.find('.menu_tab .menu2').addClass('active');
+				findBox.find('#tab2').addClass('active').load('find_pw.html');
+			}
+		}
+		function fnSleepCertify(){
+			modalClose('state_sleep');
+			modalUrlOpen('sleep_certify.html', 'full');
 		}
 	</script>
 </body>

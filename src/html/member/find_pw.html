@@ -1,94 +1,105 @@
 <form name="Frm" method="post" autocomplete="off">
-	<div class="title_box type1">
-		<h3 class="title">회원정보</h3>
-		<p class="subtext">등록된 내 회원정보로 찾으실 수 있습니다.</p>
-	</div>
-	<div class="form_row_box">
-		<dl>
-			<dt>인증방법</dt>
-			<dd>
-				<div class="form_line">
-					<input type="radio" name="certify" id="certify_mobile" value="mobile" onclick="checkCertify(this)" checked="checked"><label for="certify_mobile">휴대폰</label>
-					<input type="radio" name="certify" id="certify_email" value="email" onclick="checkCertify(this)"><label for="certify_email">이메일</label>
+			<div class="formbox">
+				<div class="title_box type1">
+					<h3 class="title">회원정보</h3>
+					<p class="subtext">등록된 내 회원정보로 찾으실 수 있습니다.</p>
 				</div>
-			</dd>
-		</dl>
-		<dl>
-			<dt>아이디</dt>
-			<dd>
-				<div class="form_line">
-					<input type="text" name="bizNo1" maxlength="3" placeholder="아이디 입력" />
+				<div class="form_row_box">
+					<dl>
+						<dt>인증방법</dt>
+						<dd>
+							<div class="inputset">
+								<input type="radio" name="certify" id="certify_mobile" value="mobile" onclick="checkCertify(this)" checked="checked"><label for="certify_mobile">휴대폰</label>
+								<input type="radio" name="certify" id="certify_email" value="email" onclick="checkCertify(this)"><label for="certify_email">이메일</label>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>아이디</dt>
+						<dd>
+							<div class="inputset">
+								<input type="text" name="bizNo1" maxlength="3" placeholder="아이디 입력" />
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>사업자등록번호</dt>
+						<dd>
+							<div class="inputset cols3">
+								<input type="text" name="bizNo1" maxlength="3" />
+								<span class="hyphen">-</span>
+								<input type="text" name="bizNo2" maxlength="2" />
+								<span class="hyphen">-</span>
+								<input type="text" name="bizNo3" maxlength="5" />
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="certifyText">휴대폰</dt>
+						<dd id="mobile">
+							<div class="inputset cols3btn">
+								<input type="text" name="mobile1" maxlength="3" />
+								<span class="hyphen">-</span>
+								<input type="text" name="mobile2" maxlength="4" />
+								<span class="hyphen">-</span>
+								<input type="text" name="mobile3" maxlength="4" />
+								<button type="button" name="certifyButton" class="buttons medium white" onclick="requestCertifyNum('mobile')">인증</button>
+							</div>
+						</dd>
+						<dd id="email" style="display:none">
+							<div class="inputset email">
+								<input type="text" name="emailId" maxlength="20" />
+								<span class="at">@</span>
+								<input type="text" name="emailDomain" maxlength="100" style="display:none" />
+								<select name="">
+									<option value="input">직접입력</option>
+								</select>
+								<button type="button" name="certifyButton" class="buttons medium white" onclick="requestCertifyNum('email')">인증</button>
+							</div>
+						</dd>
+						<dd class="type1">
+							<div class="inputset timer">
+								<input type="text" name="certifyNo" placeholder="인증번호" disabled="disabled" />
+								<span class="time fcpoint"></span>
+							</div>
+						</dd>
+					</dl>
 				</div>
-			</dd>
-		</dl>
-		<dl>
-			<dt>사업자등록번호</dt>
-			<dd>
-				<div class="form_line cols3">
-					<input type="text" name="bizNo1" maxlength="3" />
-					<span class="hyphen">-</span>
-					<input type="text" name="bizNo2" maxlength="2" />
-					<span class="hyphen">-</span>
-					<input type="text" name="bizNo3" maxlength="5" />
+				<div class="button_box">
+					<a href="javascript:void(0);" class="buttons medium" onclick="modalClose('modal_member_find');">취소</a>
+					<button type="button" onclick="return requestCertify();" class="buttons medium point">확인</button>
 				</div>
-			</dd>
-		</dl>
-		<dl>
-			<dt class="certifyText">휴대폰</dt>
-			<dd id="mobile">
-				<div class="form_line cols3btn">
-					<input type="text" name="mobile1" maxlength="3" />
-					<span class="hyphen">-</span>
-					<input type="text" name="mobile2" maxlength="4" />
-					<span class="hyphen">-</span>
-					<input type="text" name="mobile3" maxlength="4" />
-					<button type="button" name="certifyButton" class="buttons medium white" onclick="requestCertifyNum('mobile')">인증</button>
-				</div>
-			</dd>
-			<dd id="email" style="display:none">
-				<div class="form_line email">
-					<input type="text" name="emailId" maxlength="20" />
-					<span class="at">@</span>
-					<input type="text" name="emailDomain" maxlength="100" style="display:none" />
-					<select name="">
-						<option value="input">직접입력</option>
-					</select>
-					<button type="button" name="certifyButton" class="buttons medium white" onclick="requestCertifyNum('email')">인증</button>
-				</div>
-			</dd>
-			<dd class="type1">
-				<div class="form_line timer">
-					<input type="text" name="certifyNo" placeholder="인증번호" disabled="disabled" />
-					<span class="time fcpoint"></span>
-				</div>
-			</dd>
-		</dl>
-	</div>
+			</div>
 </form>
-
-<form name="">
-	<div class="title_box type2">
-		<p class="subtext">새로운 비밀번호를 입력해주세요.</p>
-	</div>
-	<div class="form_row_box">
-		<dl>
-			<dt>비밀번호</dt>
-			<dd>
-				<div class="form_line">
-					<input type="text" name="bizNo1" maxlength="3" placeholder="8자 이상으로 영문, 숫자, 특수문자 조합" />
-				</div>
-			</dd>
-		</dl>
-		<dl>
-			<dt>아이디</dt>
-			<dd>
-				<div class="form_line">
-					<input type="text" name="bizNo1" maxlength="3" placeholder="비밀번호를 한 번 더 입력해주세요." />
-				</div>
-			</dd>
-		</dl>
-	</div>
-</form>
+			<div class="resultbox" style="display:none">
+				<form name="">
+					<div class="title_box type2">
+						<p class="subtext">새로운 비밀번호를 입력해주세요.</p>
+					</div>
+					<div class="form_row_box">
+						<dl>
+							<dt>비밀번호</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="bizNo1" maxlength="3" placeholder="8자 이상으로 영문, 숫자, 특수문자 조합" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>비밀번호 재확인</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="bizNo1" maxlength="3" placeholder="비밀번호를 한 번 더 입력해주세요." />
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="button_box">
+						<a href="javascript:void(0);" class="buttons medium" onclick="modalClose('modal_member_find');">취소</a>
+						<button type="button" onclick="modalClose('modal_member_find');" class="buttons medium point">확인</button>
+					</div>
+				</form>
+			</div>
 
 <script>
 function checkCertify(a){
@@ -108,5 +119,11 @@ function checkCertify(a){
 function requestCertifyNum(type){
 	document.querySelector('[name="certifyNo"]').disabled = false;
 	document.querySelector('.timer .time').innerHTML = '3:00';
+}
+function requestCertify(){
+	const find = document.querySelector('.modal_member_find');
+
+	find.querySelector('.formbox').style.display = 'none';
+	find.querySelector('.resultbox').style.display = 'block';
 }
 </script>

@@ -26,10 +26,12 @@ function getScrollDirection(){
 	const toolbar = body.querySelector('#toolbar');
 	const fixBtn = body.querySelector('#fixedBtn');
 
-	if(scrollTop >= 50){
-		fixBtn.classList.add('scroll');
-	} else {
-		fixBtn.classList.remove('scroll');
+	if(body.querySelectorAll('#fixedBtn').length){
+		if(scrollTop >= 50){
+			fixBtn.classList.add('scroll');
+		} else {
+			fixBtn.classList.remove('scroll');
+		}
 	}
 	if(body.querySelectorAll('#toolbar').length){
 		if(scrollTop >= 50){
@@ -79,7 +81,7 @@ function isModal(){
 
 function modalOpen(a){
 	let target = document.querySelector('.'+a);
-	console.log(a)
+	//console.log(a)
 	document.querySelector('body').classList.add('ismodal');
 	target.classList.add('open');
 	document.querySelector('body').addEventListener('scroll touchmove mousewheel', function(e){e.preventDefault();}, false);
@@ -550,4 +552,12 @@ function scrollCustom(){
 	}
 	scrollBox.addEventListener('scroll', setTblScroll);
 	window.addEventListener('resize', setScrollDisplay);
+}
+
+//아이디비번찾기
+function modalPageMove(a){
+	modalUrlClose();
+	setTimeout(function(){
+		modalUrlOpen(a);
+	}, 100);
 }

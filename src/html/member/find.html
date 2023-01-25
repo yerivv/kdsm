@@ -2,7 +2,7 @@
 	<div class="wrap">
 		<div class="head">
 			<h2>아이디·비밀번호 찾기</h2>
-			<div class="close" onclick="modalUrlClose();">닫기</div>
+			<div class="close" onclick="modalClose('modal_member_find');">닫기</div>
 		</div>
 		<div class="contents">
 			<div id="tab_find">
@@ -17,10 +17,6 @@
 					<div id="tab2" class="content">비밀번호 page</div>
 				</div>
 			</div>
-			<div class="button_box">
-				<a href="javascript:void(0);" class="buttons medium" onclick="modalUrlClose();">취소</a>
-				<a href="#" class="buttons medium point">확인</a>
-			</div>
 		</div>
 	</div>
 </div>
@@ -28,16 +24,18 @@
 function pageMove(a, b){
 	$('.menu_tab li, .contents_tab .content').removeClass('active');
 	$(a).parent().addClass('active');
-	if(b == 'id'){
-		$(a).closest('#tab_find').find('#tab1').load('find_id.html', function(){
-			$(this).addClass('active');
-			$('#tab2').empty();
-		});
-	} else if(b == 'pw') {
-		$(a).closest('#tab_find').find('#tab2').load('find_pw.html', function(){
-			$(this).addClass('active');
-			$('#tab1').empty();
-		});
-	}
+	setTimeout(function(){
+		if(b == 'id'){
+			$(a).closest('#tab_find').find('#tab1').load('find_id.html', function(){
+				$(this).addClass('active');
+				$('#tab2').empty();
+			});
+		} else if(b == 'pw') {
+			$(a).closest('#tab_find').find('#tab2').load('find_pw.html', function(){
+				$(this).addClass('active');
+				$('#tab1').empty();
+			});
+		}
+	}, 100);
 }
 </script>

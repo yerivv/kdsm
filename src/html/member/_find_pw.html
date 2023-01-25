@@ -1,3 +1,16 @@
+<div id="modal" class="modalCenter modal_member_find">
+	<div class="wrap">
+		<div class="head">
+			<h2>아이디·비밀번호 찾기</h2>
+			<div class="close" onclick="modalUrlClose();">닫기</div>
+		</div>
+		<div class="contents">
+			<div class="menu_tab cols2">
+				<ul class="list">
+					<li class="menu1"><span onclick="modalPageMove('find_id.html')" class="btn">아이디 찾기</span></li>
+					<li class="menu2 active"><span onclick="modalPageMove('find_pw.html')" class="btn">비밀번호 찾기</span></li>
+				</ul>
+			</div>
 <form name="Frm" method="post" autocomplete="off">
 			<div class="formbox">
 				<div class="title_box type1">
@@ -8,16 +21,24 @@
 					<dl>
 						<dt>인증방법</dt>
 						<dd>
-							<div class="inputset">
+							<div class="form_line">
 								<input type="radio" name="certify" id="certify_mobile" value="mobile" onclick="checkCertify(this)" checked="checked"><label for="certify_mobile">휴대폰</label>
 								<input type="radio" name="certify" id="certify_email" value="email" onclick="checkCertify(this)"><label for="certify_email">이메일</label>
 							</div>
 						</dd>
 					</dl>
 					<dl>
+						<dt>아이디</dt>
+						<dd>
+							<div class="form_line">
+								<input type="text" name="bizNo1" maxlength="3" placeholder="아이디 입력" />
+							</div>
+						</dd>
+					</dl>
+					<dl>
 						<dt>사업자등록번호</dt>
 						<dd>
-							<div class="inputset cols3">
+							<div class="form_line cols3">
 								<input type="text" name="bizNo1" maxlength="3" />
 								<span class="hyphen">-</span>
 								<input type="text" name="bizNo2" maxlength="2" />
@@ -29,7 +50,7 @@
 					<dl>
 						<dt class="certifyText">휴대폰</dt>
 						<dd id="mobile">
-							<div class="inputset cols3btn">
+							<div class="form_line cols3btn">
 								<input type="text" name="mobile1" maxlength="3" />
 								<span class="hyphen">-</span>
 								<input type="text" name="mobile2" maxlength="4" />
@@ -39,7 +60,7 @@
 							</div>
 						</dd>
 						<dd id="email" style="display:none">
-							<div class="inputset email">
+							<div class="form_line email">
 								<input type="text" name="emailId" maxlength="20" />
 								<span class="at">@</span>
 								<input type="text" name="emailDomain" maxlength="100" style="display:none" />
@@ -50,7 +71,7 @@
 							</div>
 						</dd>
 						<dd class="type1">
-							<div class="inputset timer">
+							<div class="form_line timer">
 								<input type="text" name="certifyNo" placeholder="인증번호" disabled="disabled" />
 								<span class="time fcpoint"></span>
 							</div>
@@ -58,19 +79,39 @@
 					</dl>
 				</div>
 				<div class="button_box">
-					<a href="javascript:void(0);" class="buttons medium" onclick="modalClose('modal_member_find');">취소</a>
-					<button type="button" onclick="return requestCertify();" class="buttons medium point">확인</button>
+					<a href="javascript:void(0);" class="buttons medium" onclick="modalUrlClose();">취소</a>
+					<a href="#" class="buttons medium point">확인</a>
 				</div>
 			</div>
 </form>
 			<div class="resultbox" style="display:none">
-				<div class="result">
-					<span class="fcdefault fw500">홍길동</span>님의 아이디는 <span class="block"><span class="fcpoint fw500">KD-Shop123</span> 입니다.</span>
-				</div>
-				<div class="button_box">
-					<button type="button" onclick="modalClose('modal_member_find');" class="buttons medium point size1">확인</button>
-				</div>
+				<form name="">
+					<div class="title_box type2">
+						<p class="subtext">새로운 비밀번호를 입력해주세요.</p>
+					</div>
+					<div class="form_row_box">
+						<dl>
+							<dt>비밀번호</dt>
+							<dd>
+								<div class="form_line">
+									<input type="text" name="bizNo1" maxlength="3" placeholder="8자 이상으로 영문, 숫자, 특수문자 조합" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>아이디</dt>
+							<dd>
+								<div class="form_line">
+									<input type="text" name="bizNo1" maxlength="3" placeholder="비밀번호를 한 번 더 입력해주세요." />
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</form>
 			</div>
+		</div><!-- //contents -->
+	</div>
+</div><!-- modal_member_find -->
 
 <script>
 function checkCertify(a){
@@ -90,11 +131,5 @@ function checkCertify(a){
 function requestCertifyNum(type){
 	document.querySelector('[name="certifyNo"]').disabled = false;
 	document.querySelector('.timer .time').innerHTML = '3:00';
-}
-function requestCertify(){
-	const find = document.querySelector('.modal_member_find');
-
-	find.querySelector('.formbox').style.display = 'none';
-	find.querySelector('.resultbox').style.display = 'block';
 }
 </script>

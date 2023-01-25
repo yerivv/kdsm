@@ -219,3 +219,16 @@
 	.modal_agree .terms_agree_box .child {flex-direction:column;justify-content:flex-start;align-items:flex-start;}
 	.modal_agree .terms_agree_box .child span + span {margin-left:0;margin-top:8px;}
 }
+
+/* other */
+#header2 {padding:48px 16px 16px}
+#header2 h1 {width:222px;margin:0 auto;}
+#header2 h1 img {display:block;}
+
+#footer2 {padding:20px 16px 40px;color:#b0b0b0;text-align:center;}
+#footer2 .menu {display:flex;justify-content:center;align-items:center;margin-bottom:8px;}
+#footer2 .menu li {position:relative;text-align:center;}
+#footer2 .menu li:not(:first-child)::before {content:'';position:absolute;left:-1px;top:0px;width:1px;height:12px;background-color:#b0b0b0;}
+#footer2 .menu li a {display:block;padding:0 9px 0 8px;color:#b0b0b0;font-size:12px;line-height:14px;}
+#footer2 .menu li strong {font-weight:500;}
+#footer2 .copy {font-size:11px;line-height:1;font-weight:300;letter-spacing:0.2px;}
