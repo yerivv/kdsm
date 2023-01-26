@@ -99,7 +99,7 @@
 					</dl>
 				</div>
 			</div>
-			<div id="" class="stepCont stpe3">
+			<div id="form" class="stepCont stpe3">
 				<div class="step_box type1">
 					<ol>
 						<li>회원조회</li>
@@ -108,72 +108,421 @@
 						<li>신청완료</li>
 					</ol>
 				</div>
-				<div class="title_box">
-					<h3 class="title">기본정보</h3>
-					<p class="mlauto subtext"><span class="required fcpoint">*</span>표시는 필수입력항목 입니다.</p>
-				</div>
-				<div class="form_col_box">
-					<dl>
-						<dt><span class="required"></span>이름</dt>
-						<dd>
-							<div class="inputset">
-								<input type="text" name="name" maxlength="10" value="홍길동" readonly="readonly" />
-							</div>
-						</dd>
-					</dl>
-					<dl>
-						<dt><span class="required"></span>생년월일</dt>
-						<dd>
-							<div class="inputset">
-								<input type="text" name="birth" maxlength="8" value="19800101" readonly="readonly" />
-							</div>
-						</dd>
-					</dl>
-					<dl>
-						<dt><span class="required"></span>성별</dt>
-						<dd>
-							<div class="inputset">
-								<input type="text" name="gender" maxlength="2" value="남자" readonly="readonly" />
-							</div>
-						</dd>
-					</dl>
-					<dl>
-						<dt><span class="required"></span>휴대폰<br/>번호</dt>
-						<dd>
-							<div class="inputset">
-								<input type="text" name="mobile1" maxlength="3" />
-								<span class="hyphen">-</span>
-								<input type="text" name="mobile2" maxlength="4" />
-								<span class="hyphen">-</span>
-								<input type="text" name="mobile3" maxlength="4" />
-							</div>
-						</dd>
-					</dl>
-					<dl>
-						<dt><span class="required"></span>아이디</dt>
-						<dd>
-							<div class="inputset">
-								<input type="text" name="memberId" maxlength="8" value="hong11" readonly="readonly" />
-							</div>
-						</dd>
-					</dl>
-					<dl>
-						<dt><span class="required"></span>비밀번호</dt>
-						<dd>
-							<div class="inputset">
-								<input type="password" name="pw" maxlength="20" placeholder="8자 이상 영문, 숫자, 특수문자 조합" />
-							</div>
-						</dd>
-					</dl>
-					<dl>
-						<dt><span class="required"></span>비밀번호 재확인</dt>
-						<dd>
-							<div class="inputset">
-								<input type="password" name="rePw" maxlength="20" placeholder="비밀번호를 한 번 더 입력해주세요." />
-							</div>
-						</dd>
-					</dl>
-				</div>
+				<!-- 기본정보 -->
+				<div class="section">
+					<div class="title_box">
+						<h3 class="title">기본정보</h3>
+						<p class="mlauto subtext"><span class="required fcpoint">*</span>표시는 필수입력항목 입니다.</p>
+					</div>
+					<div class="form_col_box">
+						<dl>
+							<dt><span class="required"></span>이름</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="name" maxlength="10" value="홍길동" readonly="readonly" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><span class="required"></span>생년월일</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="birth" maxlength="8" value="19800101" readonly="readonly" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><span class="required"></span>성별</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="gender" maxlength="2" value="남자" readonly="readonly" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><span class="required"></span>휴대폰<br/>번호</dt>
+							<dd>
+								<div class="inputset cols3">
+									<input type="text" name="mobile1" maxlength="3" value="010" readonly="readonly" />
+									<span class="hyphen">-</span>
+									<input type="text" name="mobile2" maxlength="4" value="1234" readonly="readonly" />
+									<span class="hyphen">-</span>
+									<input type="text" name="mobile3" maxlength="4" value="5678" readonly="readonly" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><span class="required"></span>아이디</dt>
+							<dd>
+								<div class="inputset cols1btn">
+									<input type="text" name="memberId" maxlength="8" placeholder="6~12자로 영문, 숫자 조합" />
+									<button type="button" onclick="checkOverlapId();" class="buttons medium white">중복확인</button>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><span class="required"></span>비밀번호</dt>
+							<dd>
+								<div class="inputset">
+									<input type="password" name="pw" maxlength="20" placeholder="8자 이상 영문, 숫자, 특수문자 조합" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><span class="required"></span>비밀번호 재확인</dt>
+							<dd>
+								<div class="inputset">
+									<input type="password" name="rePw" maxlength="20" placeholder="비밀번호를 한 번 더 입력해주세요." />
+								</div>
+							</dd>
+						</dl>
+						<dl class="type1">
+							<dt><span class="required"></span>이메일</dt>
+							<dd>
+								<div class="inputset email">
+									<input type="text" name="emailId" maxlength="20" />
+									<span class="at">@</span>
+									<input type="text" name="emailDomain" maxlength="100" />
+									<select name="">
+										<option value="input">직접입력</option>
+									</select>
+								</div>
+							</dd>
+						</dl>
+						<dl class="type1">
+							<dt><span class="required"></span>세금계산서 수신메일</dt>
+							<dd>
+								<div class="inputset email">
+									<input type="text" name="emailId" maxlength="20" />
+									<span class="at">@</span>
+									<input type="text" name="emailDomain" maxlength="100" />
+									<select name="">
+										<option value="input">직접입력</option>
+									</select>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><span class="required"></span>전화번호</dt>
+							<dd>
+								<div class="inputset cols3_1">
+									<select name="">
+										<option value="input">선택</option>
+									</select>
+									<span class="hyphen">-</span>
+									<input type="text" name="mobile2" maxlength="4" />
+									<span class="hyphen">-</span>
+									<input type="text" name="mobile3" maxlength="4" />
+								</div>
+							</dd>
+						</dl>
+						<dl class="type1 environment_select">
+							<dt><span class="required"></span>거래처 위치 환경</dt>
+							<dd>
+								<ul class="inputset">
+									<li>
+										<input type="checkbox" name="" id="" /><label for="">주거지역</label>
+									</li>
+									<li>
+										<input type="checkbox" name="" id="" /><label for="">오피스지역</label>
+									</li>
+									<li>
+										<input type="checkbox" name="" id="" /><label for="">대학가</label>
+									</li>
+									<li>
+										<input type="checkbox" name="" id="" /><label for="">번화한 거리</label>
+									</li>
+									<li>
+										<input type="checkbox" name="" id="" /><label for="">아파트상가 내</label>
+									</li>
+									<li>
+										<input type="checkbox" name="" id="" /><label for="">주택가</label>
+									</li>
+									<li>
+										<input type="checkbox" name="" id="" /><label for="">골목내</label>
+									</li>
+									<li>
+										<input type="checkbox" name="" id="" /><label for="">병원 안</label>
+									</li>
+									<li>
+										<input type="checkbox" name="" id="" /><label for="">병원 근처</label>
+									</li>
+									<li>
+										<input type="checkbox" name="" id="" /><label for="">지하상가 내</label>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt>FAX</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="" maxlength="" placeholder="띄어쓰기 없이, 숫자만 입력" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>요양기관번호</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="" maxlength="" placeholder="띄어쓰기 없이, 숫자만 입력" />
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div><!-- //section -->
+				<!-- 복수 핸드폰 정보 -->
+				<div class="section">
+					<div class="title_box">
+						<h3 class="title">복수 핸드폰 정보</h3>
+					</div>
+					<div class="form_col_box">
+						<dl>
+							<dt>이름</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="name" maxlength="" value="" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>휴대폰 <br />번호</dt>
+							<dd>
+								<div class="inputset cols3">
+									<input type="text" name="mobile1" maxlength="3" value="" />
+									<span class="hyphen">-</span>
+									<input type="text" name="mobile2" maxlength="4" value="" />
+									<span class="hyphen">-</span>
+									<input type="text" name="mobile3" maxlength="4" value="" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>이름</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="name" maxlength="" value="" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>휴대폰 <br />번호</dt>
+							<dd>
+								<div class="inputset cols3">
+									<input type="text" name="mobile1" maxlength="3" value="" />
+									<span class="hyphen">-</span>
+									<input type="text" name="mobile2" maxlength="4" value="" />
+									<span class="hyphen">-</span>
+									<input type="text" name="mobile3" maxlength="4" value="" />
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div><!-- //section -->
+				<!-- 상세정보 -->
+				<div class="section">
+					<div class="title_box">
+						<h3 class="title">상세정보</h3>
+						<p class="mlauto subtext"><span class="required fcpoint">*</span>표시는 필수입력항목 입니다.</p>
+					</div>
+					<div class="form_col_box">
+						<dl>
+							<dt><span class="required"></span>거래처명</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="name" maxlength="10" value="" placeholder="사업자등록증 상의 사업자명 입력" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><span class="required"></span>대표자명</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="name" maxlength="10" value="" placeholder="사업자등록증 상의 대표자명 입력" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><span class="required"></span>업태</dt>
+							<dd>
+								<div class="inputset cols2_1">
+									<select name="">
+										<option value="input">선택</option>
+									</select>
+									<input type="text" name="" disabled="disabled" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><span class="required"></span>업종</dt>
+							<dd>
+								<div class="inputset cols2_1">
+									<select name="">
+										<option value="input">선택</option>
+									</select>
+									<input type="text" name="" disabled="disabled" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><span class="required"></span>사업자<br/>등록번호</dt>
+							<dd>
+								<div class="inputset cols3">
+									<input type="text" name="mobile1" maxlength="2" value="12" readonly="readonly" />
+									<span class="hyphen">-</span>
+									<input type="text" name="mobile2" maxlength="5" value="31567" readonly="readonly" />
+									<span class="hyphen">-</span>
+									<input type="text" name="mobile3" maxlength="3" value="890" readonly="readonly" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><span class="required"></span>사업자<br/>등록증<br/>첨부</dt>
+							<dd>
+								<div class="inputset fileinput">
+									<input type="text" name="biz_file_name" id="biz_file_name" value="" placeholder="파일첨부" />
+									<input type="file" name="biz_file" id="biz_file" onchange="fileSelect(this)" accept="image/jpge, image/png, .pdf" />
+									<label for="biz_file" class="buttons medium white">파일선택</label>
+								</div>
+								<div class="note">
+									JPG, PDF, PNG와 같은 이미지 파일로 첨부해주세요.<br />첨부하실 파일 내 주민번호 뒷자리는 가려주세요.
+								</div>
+							</dd>
+						</dl>
+						<dl class="type1">
+							<dt><span class="required"></span>주소</dt>
+							<dd>
+								<div class="inputset post">
+									<input type="text" name="" maxlength="5" readonly="readonly" />
+									<button type="button" onclick="" class="buttons medium white">우편번호 찾기</button>
+								</div>
+								<div class="inputset">
+									<input type="text" name="" maxlength="5" readonly="readonly" />
+								</div>
+								<div class="inputset">
+									<input type="text" name="" maxlength="5" placeholder="상세주소를 입력하세요." />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>은행명</dt>
+							<dd>
+								<div class="inputset">
+									<select name="">
+										<option>선택</option>
+									</select>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>환불<br />계좌번호</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="" placeholder="띄어쓰기 없이, 숫자만 입력" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>예금주</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>통장사본<br />첨부</dt>
+							<dd>
+								<div class="inputset fileinput">
+									<input type="text" name="bank_file_name" id="bank_file_name" value="" placeholder="파일첨부" />
+									<input type="file" name="bank_file" id="bank_file" onchange="fileSelect(this)" accept="image/jpge, image/png, .pdf" />
+									<label for="bank_file" class="buttons medium white">파일선택</label>
+								</div>
+								<div class="note">
+									JPG, PDF, PNG와 같은 이미지 파일로 첨부해주세요.
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><span class="required"></span>면허번호</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="" placeholder="띄어쓰기 없이, 숫자만 입력" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><span class="required"></span>약사면허<br />파일첨부</dt>
+							<dd>
+								<div class="inputset fileinput">
+									<input type="text" name="license_file_name" id="license_file_name" value="" placeholder="파일첨부" />
+									<input type="file" name="license_file" id="license_file" onchange="fileSelect(this)" accept="image/jpge, image/png, .pdf" />
+									<label for="license_file" class="buttons medium white">파일선택</label>
+								</div>
+								<div class="note">
+									JPG, PDF, PNG와 같은 이미지 파일로 첨부해주세요.<br />첨부하실 파일 내 주민번호 뒷자리는 가려주세요.
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>동물약품<br />개설자<br />면허번호</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="" placeholder="띄어쓰기 없이, 숫자만 입력" />
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>동물약품<br />개설자<br />파일첨부</dt>
+							<dd>
+								<div class="inputset fileinput">
+									<input type="text" name="animal_file_name" id="animal_file_name" value="" placeholder="파일첨부" />
+									<input type="file" name="animal_file" id="animal_file" onchange="fileSelect(this)" accept="image/jpge, image/png, .pdf" />
+									<label for="animal_file" class="buttons medium white">파일선택</label>
+								</div>
+								<div class="note">
+									JPG, PDF, PNG와 같은 이미지 파일로 첨부해주세요.<br />첨부하실 파일 내 주민번호 뒷자리는 가려주세요.
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div><!-- //section -->
+				<!-- 약관동의 -->
+				<div class="section">
+					<div class="title_box">
+						<h3 class="title">약관동의</h3>
+					</div>
+					<div class="form_row_box terms_list">
+						<dl>
+							<dt>
+								<input type="checkbox" name="terms_all" id="terms_all" /><label for="terms_all">아래 사항에 전체 동의합니다.</label>
+							</dt>
+							<dd>
+								<input type="checkbox" name="terms" id="terms1" class="list" value="kdshop" /><label for="terms1">KD-Shop 이용약관 (필수)</label>
+								<button type="button" onclick="termsView()" class="buttons xsmall white2 round0">보기</button>
+							</dd>
+							<dd>
+								<input type="checkbox" name="terms" id="terms2" class="list" value="private" /><label for="terms2">개인정보 수집 및 이용 동의 (필수)</label>
+								<button type="button" onclick="termsView()" class="buttons xsmall white2 round0">보기</button>
+							</dd>
+							<dd>
+								<input type="checkbox" name="terms" id="terms3" class="list" value="private2" /><label for="terms3">개인정보 제3자 제공동의 (필수)</label>
+								<button type="button" onclick="termsView()" class="buttons xsmall white2 round0">보기</button>
+							</dd>
+							<dd>
+								<input type="checkbox" name="terms" id="terms4" class="list ingroup" value="1" /><label for="terms4">광고성 정보수신 <span class="fcgray8f">(선택)</span></label>
+								<div class="child">
+									<input type="checkbox" name="terms" id="admailing_agree" class="list listchild" value="isadmailing" /><label for="admailing_agree">이메일 수신</label>
+									<input type="checkbox" name="terms" id="adsms_agree" class="list listchild" value="isadsms" /><label for="adsms_agree">SMS 수신</label>
+								</div>
+							</dd>
+							<dd>
+								<input type="checkbox" name="terms" id="terms5" class="list" value="is_use_mk" /><label for="terms5">마케팅 정보 활용 동의 <span class="fcgray8f">(선택)</span></label>
+								<button type="button" onclick="termsView()" class="buttons xsmall white2 round0">보기</button>
+							</dd>
+						</dl>
+					</div>
+				</div><!-- //section -->
 				<div class="button_box">
 					<a href="javascript:void(0);" class="buttons medium" onclick="modalUrlCloseFull();">취소</a>
 					<button type="button" onclick="return requestCertify();" class="buttons medium point">가입신청</button>
@@ -218,12 +567,36 @@
 	</div>
 </div>
 <script>
-function moveJoinForm(type){
-	$('.stepCont').hide();
-	$('#change_pw').show();
+function termsView(){
+	modalUrlOpen('../etc/terms_of_use_pop.html');
 }
-function validSubmit(){
-	$('.stepCont').hide();
-	$('#proc_result').show();
+function checkOverlapId(){
+	modalUrlOpen('../member/overlap_id_pop.html');
 }
+$(function(){
+	const termsBox = $('.terms_list');
+	//전체 선택
+	termsBox.on('click', '#terms_all', function(){
+		termsBox.find('input').prop('checked', $(this).is(':checked'));
+	})
+	//개별선택
+	termsBox.on('click', '.list', function(){
+		let isChecked = true;
+		termsBox.find('.list').each(function(){
+			isChecked = isChecked && $(this).is(':checked');
+		})
+		$('#terms_all').prop('checked', isChecked);
+	})
+	//하위 체크가 있는 경우
+	termsBox.on('click', '.ingroup', function(){
+		termsBox.find('.ingroup').find('input').prop('checked', $(this).is(':checked'));
+	})
+	termsBox.on('click', '.listchild', function(){
+		let isChecked2 = true;
+		termsBox.find('.listchild').each(function(){
+			isChecked2 = isChecked2 && $(this).is(':checked');
+		})
+		$('.ingroup').prop('checked', isChecked2);
+	})
+})
 </script>

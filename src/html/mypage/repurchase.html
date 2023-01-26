@@ -18,7 +18,7 @@
 		})
 
 		<main id="container">
-			<div class="page_mypage">
+			<div class="page_mypage"> 
 				<div class="period_check accordions_wrap">
 					<div class="period">
 						<strong class="box number date">2022-10-23 ~ 2022-11-23</strong>
@@ -92,11 +92,7 @@
 							<ul class="product_list have_check">
 								<li class="item">
 									<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
-									<div class="thumb_box">
-										<div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="" /></div>
-									</div>
 									<div class="info_box">
-										<div class="dealer">광동제약</div>
 										<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
 										<div class="summary">
 											<span class="box">광동제약</span>
@@ -105,7 +101,12 @@
 										</div>
 									</div>
 									<div class="price_box">
-										<div class="price"><strong class="number">1,030,900</strong>원</div>
+										<div class="date">주문일자 : <span class="number fw500 fcdefault">2022-01-01</span></div>
+										<div class="price"><span class="number fw500">1,030,900</span>원</div>
+									</div>
+									<div>
+										<span class="box">기존 주문수량 : <span class="number fw500 fcdefault">5</span></span>
+										<span class="box">공급업체 : <span class="fw500 fcdefault">광동제약</span></span>
 										<div class="btns"><a href="#" class="buttons xsmall white2 round0">업체변경</a></div>
 									</div>
 									<div class="other">
@@ -116,7 +117,6 @@
 												<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
 												<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
 											</div>
-											<button type="button" class="buttons small white">변경</button>
 										</div>
 										<div class="total">
 											<div class="price"><strong class="number">4,554,400</strong>원</div>

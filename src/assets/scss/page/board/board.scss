@@ -1,5 +1,5 @@
-@charset "utf-8";
-
+/* 게시판
+*/
 .board_detail_wrap {margin:-24px -16px 0;}
 .board_detail_wrap .head_box {padding:18px 16px 24px;border-bottom:1px solid #797d8d;}
 .board_detail_wrap .head_box .title {font-size:17px;font-weight:500;line-height:24px;}
@@ -7,6 +7,7 @@
 .board_detail_wrap .info_box span + span {position:relative;margin-left:9px;}
 .board_detail_wrap .info_box span + span::before {content:'';position:absolute;left:-5px;top:3px;width:1px;height:8px;background-color:#e3e3e3;}
 .board_detail_wrap .content_box {min-height:336px;padding:24px 16px;border-bottom:1px solid #797d8d;}
+.board_detail_wrap .content_box .inner {word-break:break-all;}
 .board_detail_wrap .content_box .button_box {margin:16px;}
 .board_detail_wrap .list_box dl {display:flex;flex-wrap:wrap;padding:13px 16px 14px;border-bottom:1px solid #edf0f2;font-size:12px;line-height:16px;}
 .board_detail_wrap .list_box dt {width:40px;}

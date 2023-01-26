@@ -554,10 +554,10 @@ function scrollCustom(){
 	window.addEventListener('resize', setScrollDisplay);
 }
 
-//아이디비번찾기
-function modalPageMove(a){
-	modalUrlClose();
-	setTimeout(function(){
-		modalUrlOpen(a);
-	}, 100);
+//파일찾기
+function fileSelect(a){
+	const box = a.closest('.fileinput');
+	let fileName = a.files[0].name;
+	//console.log(a);
+	box.querySelector('input[type=text]').value = fileName;
 }
