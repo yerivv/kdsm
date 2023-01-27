@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "자주하는 질문(FAQ)"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/cscenter/cscenter.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "자주하는 질문(FAQ)",
+			"gnb" : "hidden",
+			"toolbar" : ""
+		})
+
+		<main id="container">
+			<div class="page_cscenter">
+				<div class="faq_search">
+					<dl>
+						<dt>궁금하신 사항은 먼저 검색해 보세요!</dt>
+						<dd>
+							<div class="search_form"> 
+								<input type="search" class="input_search" name="" placeholder="검색어를 입력하세요." />
+								<button type="button" class="btn_search">검색</button>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="blank_space"></div>
+				<div class="category_menu">
+					<ul class="list">
+						<li class="active"><a href="#" class="btn">회원</a></li>
+						<li><a href="#" class="btn">등급/이벤트</a></li>
+						<li><a href="#" class="btn">주문/결제</a></li>
+						<li><a href="#" class="btn">배송</a></li>
+						<li><a href="#" class="btn">취소/교환/환불</a></li>
+						<li><a href="#" class="btn">동물의약품</a></li>
+						<li><a href="#" class="btn">기타</a></li>
+					</ul>
+				</div>
+				<div class="no_result_box bold" style="display:none">
+					<i class="ico"></i>
+					<div class="text">등록된 질문내역이 없습니다.</div>
+				</div>
+				<div class="faq_list">
+					<dl>
+						<dt>사업장의 대표자가 변경되었습니다. 어떻게 하나요?</dt>
+						<dd>
+							<div class="inner">변경된 대표 약사님께서는 사업자 등록번호가 변경된경우 신규로 회원가입을 하셔야 정상거래 이용이 가능합니다.<br />(사업자 등록번호 변경없이 대표자만 변경된 경우는 회원정보 수정을 통해 요청 하시면 됩니다.)</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>비밀번호를 잊어버렸어요</dt>
+						<dd>
+							<div class="inner">변경된 대표 약사님께서는 사업자 등록번호가 변경된경우 신규로 회원가입을 하셔야 정상거래 이용이 가능합니다.<br />(사업자 등록번호 변경없이 대표자만 변경된 경우는 회원정보 수정을 통해 요청 하시면 됩니다.)</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="inquiry_text">
+					<p>답변에 만족하셨나요?</p>
+					<p>원하시는 해답을 얻지 못하셨다면 관리자에게 문의하세요!</p>
+					<a href="inquiry_write.html" class="buttons medium size1">1:1 문의하기</a>
+				</div>
+			</div><!-- //page_cscenter -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+
+	<script>
+		const questions = document.querySelectorAll('.faq_list dl');
+		questions.forEach(function(question){
+			question.addEventListener('click', function(){
+				questions.forEach(function(item){
+					if(item !== question){
+						item.classList.remove('active');
+					}
+				})
+				question.classList.toggle('active');
+			})
+		})
+	</script>
+	
+</body>
+</html>

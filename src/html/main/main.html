@@ -474,12 +474,100 @@
         @@include('@@webRoot/_include/foot.html')
 
         @@include('@@webRoot/_include/modal.html')
+
+		
+		<div id="modal" class="modalCenter modal_member_state state_secession">
+			<div class="wrap">
+				<div class="head">
+					<h2>회원안내</h2>
+					<div class="close" onclick="modalClose('state_secession');">닫기</div>
+				</div>
+				<div class="contents member_state">
+					<div class="no_result_box">
+						<i class="ico note"></i>
+						<div class="text">회원님은 현재 <span class="block">탈퇴신청 중이십니다.</span></div>
+					</div>
+					<div class="noticebox type3">
+						<dl>
+							<dt>KD-Shop 이용안내</dt>
+							<dd>현재 회원님은 탈퇴신청 관리자승인 대기 중이므로 주문 및 반품 등의 서비스 이용이 제한된 상태입니다.</dd>
+							<dd>원활한 서비스 운영을 위해 자세한 문의는 고객센터에 문의 바랍니다.</dd>
+							<dd>관련문의 : <a href="tel:080-024-0030" class="fcpoint fw500">080-024-0030</a></dd>
+						</dl>
+					</div>
+					<div class="button_box">
+						<a href="javascript:void(0)" onclick="goMy('state_secession');" class="buttons medium point size1">마이페이지로 이동</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal" class="modalCenter modal_member_state state_modify">
+			<div class="wrap">
+				<div class="head">
+					<h2>회원안내</h2>
+					<div class="close" onclick="modalClose('state_modify');">닫기</div>
+				</div>
+				<div class="contents member_state">
+					<div class="no_result_box">
+						<i class="ico note"></i>
+						<div class="text">회원님은 현재 <span class="block">거래처 정보수정요청 </span><div>승인대기 중이십니다.</div></div>
+					</div>
+					<div class="noticebox type3">
+						<dl>
+							<dt>KD-Shop 이용안내</dt>
+							<dd>현재 회원님은 거래처 정보 수정요청 관리자 승인 대기 중이므로 주문 및 반품 등의 서비스 이용이 제한된 상태입니다.</dd>
+							<dd>마이페이지의 거래내역 등의 조회는 가능하오며, 원활한 서비스 운영을 위해 자세한 문의는 고객센터에 문의 바랍니다.</dd>
+							<dd>관련문의 : <a href="tel:080-024-0030" class="fcpoint fw500">080-024-0030</a></dd>
+						</dl>
+					</div>
+					<div class="button_box">
+						<a href="#" class="buttons medium point size1">마이페이지로 이동</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal" class="modalCenter modal_member_state state_limit">
+			<div class="wrap">
+				<div class="head">
+					<h2>회원안내</h2>
+					<div class="close" onclick="modalClose('state_limit');">닫기</div>
+				</div>
+				<div class="contents member_state">
+					<div class="no_result_box">
+						<i class="ico note"></i>
+						<div class="text">회원님은 현재 <span class="block">서비스 이용제한 중이십니다.</span></div>
+					</div>
+					<div class="noticebox type3">
+						<dl>
+							<dt>KD-Shop 이용안내</dt>
+							<dd>현재 회원님은 아래와 같은 사유로 주문 및 반품 등의 서비스 이용이 제한된 상태입니다.<div>(사유 : #사유노출)</div></dd>
+							<dd>원활한 서비스 운영을 위해 자세한 문의는  고객센터에 문의 바랍니다.</dd>
+							<dd>관련문의 : <a href="tel:080-024-0030" class="fcpoint fw500">080-024-0030</a></dd>
+						</dl>
+					</div>
+					<div class="button_box">
+						<a href="#" class="buttons medium point size1">마이페이지로 이동</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
     </div>
     
     <script>
 		window.onload = function(){
-			mainPopup()
+			mainPopup();
+			//탈퇴신청중
+			//modalOpen('state_secession');
+			//정보수정중
+			//modalOpen('state_modify');
+			//이용제한
+			//modalOpen('state_limit');
 		};
+		function goMy(a){
+			modalClose(a);
+			modalOpen('modal_mypage');
+		}
 		//setTimeout(() => {mainPopup(), 600});
 		slideBannerSlide('section_visual','bullets');
 		slideBannerSlide('section_banner1','fraction');

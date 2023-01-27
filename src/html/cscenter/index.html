@@ -21,31 +21,101 @@
 		<main id="container">
 			<div class="page_cscenter">
 				<div class="index_wrap">
-					<div class="title_box">
-						<h3>자주하는 질문 TOP 10</h3>
-						<div class="mlauto">더보기</div>
+					<div  class="section_faq">
+						<div class="title_box">
+							<h3 class="title">자주하는 질문 TOP 10</h3>
+							<div class="mlauto"><a href="faq.html" class="buttons text more">더보기<i class="arrow"></i></a></div>
+						</div>
+						<div class="faq_scroll">
+							<ol>
+								<li>
+									<a href="faq.html">반품 기준 및 반품비용은 어떻게 하나요?</a>
+								</li>
+								<li>
+									<a href="faq.html">예치금 선구매는 어떻게 하나요?</a>
+								</li>
+								<li>
+									<a href="faq.html">반품 기준 및 반품비용은 어떻게 하나요?</a>
+								</li>
+								<li>
+									<a href="faq.html">예치금 선구매는 어떻게 하나요?</a>
+								</li>
+							</ol>
+						</div>
 					</div>
-					<div class="title_box">
-						<h3>공지사항</h3>
-						<div class="mlauto">더보기</div>
+					<div id="tab_board" class="section_board">
+						<div class="title_box">
+							<h3 class="title">공지사항</h3>
+						</div>
+						<div class="menu_tab cols3">
+							<ul class="list">
+								<li class="menu1 active" data-tab-target="tab1"><span class="btn">KD-Shop</span></li>
+								<li class="menu2" data-tab-target="tab2"><span class="btn">입점업체</span></li>
+								<li class="menu3" data-tab-target="tab3"><span class="btn">약가인하</span></li>
+							</ul>
+						</div>
+						<div class="contents contents_tab">
+							<div id="tab1" class="content active">
+								<ul>
+									<li><a href="#">[공지] KD샵 시스템 점검 안내<span class="date">2022-09-16</span></a></li>
+									<li><a href="#">2022년 11월 신용카드 프로모션 진행 안내<span class="date">2022-09-16</span></a></li>
+									<li><a href="#">11월 약가변동 품목 안내<span class="date">2022-09-16</span></a></li>
+									<li><a href="#">2022년 11월 신용카드 프로모션 진행 안내<span class="date">2022-09-16</span></a></li>
+									<li><a href="#">11월 약가변동 품목 안내<span class="date">2022-09-16</span></a></li>
+								</ul>
+								<a href="../board/list.html" class="buttons text more">더보기<i class="arrow"></i></a>
+							</div>
+							<div id="tab2" class="content">
+								<ul>
+									<li><a href="#">2[공지] KD샵 시스템 점검 안내<span class="date">2022-09-16</span></a></li>
+									<li><a href="#">2022년 11월 신용카드 프로모션 진행 안내<span class="date">2022-09-16</span></a></li>
+									<li><a href="#">11월 약가변동 품목 안내<span class="date">2022-09-16</span></a></li>
+								</ul>
+								<a href="../board/list.html" class="buttons text more">더보기<i class="arrow"></i></a>
+							</div>
+							<div id="tab3" class="content">
+								<ul>
+									<li><a href="#">3[공지] KD샵 시스템 점검 안내<span class="date">2022-09-16</span></a></li>
+									<li><a href="#">2022년 11월 신용카드 프로모션 진행 안내<span class="date">2022-09-16</span></a></li>
+									<li><a href="#">11월 약가변동 품목 안내<span class="date">2022-09-16</span></a></li>
+								</ul>
+								<a href="../board/list.html" class="buttons text more">더보기<i class="arrow"></i></a>
+							</div>
+						</div>
 					</div>
 					<div class="blank_space"></div>
 					<div class="menu_link">
 						<ul>
-							<li><a href="#">1:1 문의</a></li>
-							<li><a href="#">영업담당자 무료문자</a></li>
-							<li><a href="#">입점업체안내</a></li>
-							<li><a href="#">배송안내</a></li>
+							<li><a href="inquiry_write.html"><span class="box">1:1 문의<i class="label_count new">N</i></span></a></li>
+							<li><a href="sms.html"><span class="box">영업담당자 <span class="block">무료문자</span></span></a></li>
+							<li><a href="dealerinfo.html"><span class="box">입점업체안내</span></a></li>
+							<li><a href="deliveryinfo.html"><span class="box">배송안내</span></a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</main>
+
+		<footer id="footer">
+			<div class="innerbox">
+				<div class="customer">
+					<h6 class="blind">고객센터</h6>
+					<a href="tel:080-024-0030" class="tel number">080-024-0030</a>
+					<a href="tel:080-024-0030" class="btn_tel">전화걸기<i></i></a>
+					<dl>
+						<dt class="blind">운영시간</dt>
+						<dd>평일 (토/일/공휴일 휴무)</dd>
+						<dd>점심시간 12:30 ~ 13:30</dd>
+					</dl>
+				</div>
+			</div>
+		</footer>
 		@@include('@@webRoot/_include/foot.html')
 		@@include('@@webRoot/_include/modal.html')
 	</div>
 	
 	<script>
+		tabInit('#tab_board');
 	</script>
 </body>
 </html>

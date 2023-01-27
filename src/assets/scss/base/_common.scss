@@ -339,6 +339,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .iconlabel_box.etc .label {padding:0 4px;border-radius:0;font-size:11px;line-height:16px;}
 .label_count {display:inline-block;min-width:22px;height:14px;padding:1px 4px 0;border-radius:7px;background-color:#E8340C;color:#fff;font-family:'Roboto';font-size:12px;line-height:1em;font-weight:400;text-indent:0;text-align:center;vertical-align:top;}
 .label_count.etc {background-color:#242424;}
+.label_count.new {min-width:17px;font-style:normal;}
 .label_stock {display:inline-flex;align-items:center;justify-content:center;gap:2px;height:22px;padding:4px 8px;border:1px solid #e3e3e3;border-radius:10px;background:rgba(255, 255, 255, 0.7);font-size:11px;line-height:12px;}
 .label_stock dt {position:relative;padding-left:14px;color:#8f8f8f;}
 .label_stock dt::before {content:'';position:absolute;left:0;top:0;width:12px;height:12px;background:url(../imgs/global/icon_stock.png) center center no-repeat;background-size:contain;}
@@ -365,7 +366,8 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .buttons.text {height:auto;padding:0;border:0 none;border-radius:0;background-color:transparent;font-weight:400;}
 @media (max-width: 320px) {
 	.buttons {flex-direction:column;}
-	.buttons.iconBtn {flex-direction:row;}
+	.buttons.iconBtn,
+	.buttons.text {flex-direction:row;}
 }
 /* button type */
 .buttons > i {display:inline-block;background-position:center center;background-repeat:no-repeat;background-size:contain;}
