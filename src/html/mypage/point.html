@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "마일리지 내역"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "마일리지 내역",
+			"gnb" : "hidden"
+		})
+
+		<main id="container">
+			<div class="page_mypage">
+				<div class="have_info point">
+					<div class="icon"></div>
+					<dl>
+						<dt>사용 가능한 마일리지</dt>
+						<dd class="fcpoint"><strong class="number">5,000,000</strong>원</dd>
+					</dl>
+				</div>
+				<div class="blank_line"></div>
+				<div class="period_check accordions_wrap">
+					<div class="period">
+						<strong class="box number date">2022-10-23 ~ 2022-11-23</strong>
+						<strong class="box state">전체</strong>
+						<span class="buttons iconBtn white" onclick="accordions(this)">상세조회<i class="arrow"></i></span>
+					</div>
+					<div class="toggle detail">
+						<dl>
+							<dt>조회기간</dt>
+							<dd>
+								<ul class="textType gap4">
+									<li><input type="radio" name="period" id="period_week" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'd', -7);"><label for="period_week">7일</label></li>
+									<li><input type="radio" name="period" id="period_month1" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -1);" checked="checked"><label for="period_month1">1개월</label></li>
+									<li><input type="radio" name="period" id="period_month3" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -3);"><label for="period_month3">3개월</label></li>
+									<li><input type="radio" name="period" id="period_month6" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -6);"><label for="period_month6">6개월</label></li>
+									<li><input type="radio" name="period" id="period_year1" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'y', -1);"><label for="period_year1">12개월</label></li>
+								</ul>
+								<div class="calendar_box">
+									<span class="box">
+										<input type="text" id="sdts" name="sdts" value="2022-12-12" onclick="calendar.open(event, this, 'YYYY-MM-DD')" readonly="readOnly">
+										<button type="button" class="calendar" onclick="calendar.open(event, 'sdts', 'YYYY-MM-DD')">시작기간설정</button>
+									</span>
+									<span class="text">~</span>
+									<span class="box">
+										<input type="text" id="sdte" name="sdte" value="2023-01-12" onclick="calendar.open(event, this, 'YYYY-MM-DD')" readonly="readOnly">
+										<button type="button" class="calendar" onclick="calendar.open(event, 'sdte', 'YYYY-MM-DD')">종료기간설정</button>
+									</span>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>마일리지 구분</dt>
+							<dd>
+								<ul class="textType gap4">
+									<li><input type="radio" name="range" id="range1" checked="checked"><label for="range1">전체</label></li>
+									<li><input type="radio" name="range" id="range2"><label for="range2">적립</label></li>
+									<li><input type="radio" name="range" id="range3"><label for="range3">사용</label></li>
+									<li><input type="radio" name="range" id="range4"><label for="range4">소멸</label></li>
+								</ul>
+							</dd>
+						</dl>
+						<div class="button_box">
+							<button type="button" onclick="formReset()" class="buttons small white">초기화</button>
+							<button type="submit" class="buttons small point">조회하기</button>
+						</div>
+					</div>
+				</div>
+				<div class="have_wrap">
+					<div class="result_box">
+						<p class="result">총 <strong class="number fw500 fcpoint">45</strong>개의 내역이 있습니다.</p>
+					</div>
+					<!-- 없을 시-->
+					<div class="no_result_box bold" style="display:none">
+						<i class="ico"></i>
+						<div class="text">마일리지 적립/사용 내역이 없습니다.</div>
+					</div><!-- //no_result_box -->
+					<!-- 내역 있을 시 -->
+					<div class="have_list">
+						<dl>
+							<dt>
+								<div class="date number fw500">2022-11-04</div>
+							</dt>
+							<dd>
+								<div class="info">
+									<p>내용 : 반품환불</p>
+									<p>주문번호 : <span class="number fw500">A2210571423423</span></p>
+								</div> 
+								<div class="total">
+									<dl>
+										<dt>내역</dt>
+										<dd class="price fcpoint">
+											<span class="number fw500">+164,400</span>원
+										</dd>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<div class="date number fw500">2022-11-04</div>
+							</dt>
+							<dd>
+								<div class="info">
+									<p>내용 : 반품환불</p>
+									<p>주문번호 : <span class="number fw500">A2210571423423</span></p>
+								</div> 
+								<div class="total">
+									<dl>
+										<dt>내역</dt>
+										<dd class="price fcdefault">
+											<span class="number fw500">-164,400</span>원
+										</dd>
+									</dl>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div><!-- //have_wrap -->
+			</div><!-- //page_mypage -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>

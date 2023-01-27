@@ -4,6 +4,7 @@
 	@@include('@@webRoot/_include/head.html',{
 		"title": "특가세일"
 	})
+	<link rel="stylesheet" href="@@webRoot/css/page/goods/goods.css">
 	@@include('@@webRoot/_include/library.html')
 	<script type="text/javascript" src="//kdshop.co.kr/jscript/jquery/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="//kdshop.co.kr/jscript/jquery/jquery-migrate-1.2.1.min.js"></script>
@@ -13,7 +14,9 @@
 <body>
 	<div id="app">
 		@@include('@@webRoot/_include/header.html',{
-			"toolbarNo" :"style='display:none'"
+			"header" : "type1",
+			"gnb" : "",
+			"toolbar" : "hidden",
 		})
 
 		<main id="container">

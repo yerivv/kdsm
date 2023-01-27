@@ -4,6 +4,7 @@
 	@@include('@@webRoot/_include/head.html',{
 		"title": "공동구매"
 	})
+	<link rel="stylesheet" href="@@webRoot/css/page/goods/goods.css">
 	@@include('@@webRoot/_include/library.html')
 	<script src="@@webRoot/js/ui.js"></script>
 	<script src="@@webRoot/js/develop.js"></script>
@@ -12,6 +13,8 @@
 	<div id="app">
 		@@include('@@webRoot/_include/header.html',{
 			"header" : "type1",
+			"gnb" : "",
+			"toolbar" : "",
 		})
 
 		<main id="container">
@@ -230,7 +233,7 @@
 								<!-- 간편결제 카드가 없을시-->
 								<div id="modal" class="modalCenter modal_payCardInfo_no">
 									<div class="wrap noHead">
-										<div class="contents">
+										<div class="contents" style="text-align:center;">
 											<div class="box">
 												<p><span class="block">간편결제 카드가 </span>등록되어 있지 않습니다.<br />간편결제 카드를 등록해주세요.</p>
 											</div>

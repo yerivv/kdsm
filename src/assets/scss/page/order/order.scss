@@ -1,5 +1,5 @@
-@charset "utf-8";
-
+/* 주문결제
+*/
 /* 주문리스트 */
 .orderlist_wrap .allcheck {display:flex;align-items:center;justify-content:space-between;padding:12px;}
 .orderlist_wrap .group {border:1px solid #dee0e4;border-radius:4px;}
@@ -138,34 +138,6 @@
 .paytotal_calc .total dd {font-size:12px;}
 .paytotal_calc .total dd strong {font-size:16px;font-weight:700;}
 .paytotal_calc .discount_info .title {background-color:#ffe7e1;}
-
-.paymethod_list .method_choice {display:flex;flex-wrap:wrap;border:1px solid #dee0e4;border-radius:4px;}
-.paymethod_list .method_choice li {position:relative;width:calc(100% / 3);}
-.paymethod_list .method_choice li::before {content:'';position:absolute;right:-1px;top:0;z-index:1;width:1px;height:100%;background-color:#DEE0E4;}
-.paymethod_list .method_choice li:first-child label {border-radius:4px 0 0 4px;}
-.paymethod_list .method_choice li:last-child label {border-radius:0 4px 4px 0;}
-.paymethod_list .method_choice input[type=radio] {overflow:hidden;position:absolute;width:1px;height:1px;clip:rect(0 0 0 0);}
-.paymethod_list .method_choice label {display:block;width:100%;height:74px;padding:8px 0;margin:0;color:#666;font-weight:400;text-align:center;}
-.paymethod_list .method_choice label .ico {display:block;width:100%;height:36px;background-position:center center;background-repeat:no-repeat;background-size:36px 36px;}
-.paymethod_list .method_choice :checked + label {background-color:#e8340c;color:#fff;}
-.paymethod_list .method_choice .kdpay label .ico {background-image:url(../imgs/global/icon_payway_kdpay.png);background-size:48px 36px;}
-.paymethod_list .method_choice .kdpay :checked + label .ico {background-image:url(../imgs/global/icon_payway_kdpay_checked.png);}
-.paymethod_list .method_choice .card label .ico {background-image:url(../imgs/global/icon_payway_card.png);}
-.paymethod_list .method_choice .card :checked + label .ico {background-image:url(../imgs/global/icon_payway_card_checked.png);}
-.paymethod_list .method_choice .bank label .ico {background-image:url(../imgs/global/icon_payway_bank.png);}
-.paymethod_list .method_choice .bank :checked + label .ico {background-image:url(../imgs/global/icon_payway_bank_checked.png);}
-.paymethod_list .method_choice .discount {position:absolute;top:16px;left:50%;margin-left:-36px;}
-.paymethod_list .type_detail > div {display:none;}
-.paymethod_list .type_detail .kdpay {display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
-.paymethod_list .type_detail .kdpay li {width:calc(100% - 144px);}
-.paymethod_list .type_detail .kdpay li.period {width:136px;}
-.paymethod_list .type_detail .button_box {margin-top:12px;}
-@media (max-width: 320px) {
-	.paymethod_list .method_choice label {height:92px;line-height:16px;}
-	.paymethod_list .method_choice .card label {line-height:32px;}
-	.paymethod_list .type_detail .kdpay li,
-	.paymethod_list .type_detail .kdpay li.period {width:calc((100% / 2) - 4px);}
-}
 
 .agree_view_box,
 .pay_save_box {margin:16px 0;}

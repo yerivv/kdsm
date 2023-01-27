@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "쿠폰 내역"
+	})
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "쿠폰 내역",
+			"gnb" : "hidden"
+		})
+
+		<main id="container">
+			<div class="page_mypage" id="couponTab">
+				<div class="menu_tab cols2">
+					<ul class="list">
+						<li class="menu1 active" data-tab-target="tab1"><span class="btn">사용 가능한 쿠폰</span></li>
+						<li class="menu2" data-tab-target="tab2"><span class="btn">지난 쿠폰내역</span></li>
+					</ul>
+				</div>
+				<div class="contents contents_tab wide coupon_wrap">
+					<div id="tab1" class="content active">
+						<div class="result_box">
+							<p class="result">사용 가능한쿠폰 총 <strong class="number fw500 fcpoint">45</strong>개</p>
+							<ul class="sort">
+								<li class="active"><a href="#">만료임박순</a></li>
+								<li><a href="#">최근등록순</a></li>
+							</ul>
+						</div>
+						<div class="blank_line"></div>
+						<!-- 없을 시-->
+						<div class="no_result_box bold" style="display:none">
+							<i class="ico"></i>
+							<div class="text">사용 가능하신 쿠폰이 없습니다.</div>
+						</div><!-- //no_result_box -->
+						<!-- 내역 있을 시 -->
+						<div class="coupon_list">
+							<dl>
+								<dt>상품할인쿠폰</dt>
+								<dd>
+									<div class="name">[의약외품 전용] 신규 회원가입 감사 3,000원 할인쿠폰 - 재발급</div>
+									<div class="info">
+										<p>사용조건 : 100,000원 이상</p>
+										<p>유효기간 : 2022-10-01 ~ 2022-10-30</p>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>주문할인쿠폰</dt>
+								<dd>
+									<div class="name">[의약외품 전용] 신규 회원가입 감사 5% 할인쿠폰</div>
+									<div class="info">
+										<p>사용조건 : 1,000,000원 이상</p>
+										<p>유효기간 : 2022-10-01 ~ 2022-10-30</p>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>반품배송비쿠폰</dt>
+								<dd>
+									<div class="name">[의약외품 전용] 신규 회원가입 감사 반품배송비 무료 쿠폰</div>
+									<div class="info">
+										<p>사용조건 : 100,000원 이상</p>
+										<p>유효기간 : 2022-10-01 ~ 2022-10-30</p>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div id="tab2" class="content">
+						<div class="notice_text">최근 1년간 사용하셨거나, 쿠폰 사용 기간이 종료되어 더이상 사용할 수 없는 쿠폰 내역입니다.</div>
+						<div class="blank_line"></div>
+						<!-- 없을 시-->
+						<div class="no_result_box bold" style="display:none">
+							<i class="ico"></i>
+							<div class="text">지난 쿠폰 내역이 없습니다.</div>
+						</div><!-- //no_result_box -->
+						<!-- 내역 있을 시 -->
+						<div class="coupon_list pass">
+							<dl>
+								<dt>상품할인쿠폰</dt>
+								<dd>
+									<div class="name">[의약외품 전용] 신규 회원가입 감사 3,000원 할인쿠폰 - 재발급</div>
+									<div class="info">
+										<p>사용조건 : 100,000원 이상</p>
+										<p>유효기간 : 2022-10-01 ~ 2022-10-30</p>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>주문할인쿠폰</dt>
+								<dd>
+									<div class="name">[의약외품 전용] 신규 회원가입 감사 5% 할인쿠폰</div>
+									<div class="info">
+										<p>사용조건 : 1,000,000원 이상</p>
+										<p>유효기간 : 2022-10-01 ~ 2022-10-30</p>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>반품배송비쿠폰</dt>
+								<dd>
+									<div class="name">[의약외품 전용] 신규 회원가입 감사 반품배송비 무료 쿠폰</div>
+									<div class="info">
+										<p>사용조건 : 100,000원 이상</p>
+										<p>유효기간 : 2022-10-01 ~ 2022-10-30</p>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+		tabInit('#couponTab');
+	</script>
+</body>
+</html>

@@ -27,9 +27,9 @@
 }
 .common_product .bestranking {counter-increment:group;counter-reset:row;}
 .common_product .bestranking .item {counter-increment:row;}
-.common_product .bestranking .bestlabel {position:absolute;left:8px;top:0;z-index:2;width:32px;height:32px;background-image:url(../imgs/global/bg_bestranking.png);background-position:left top;background-repeat:no-repeat;background-size:contain;}
+.common_product .bestranking .bestlabel {position:absolute;left:8px;top:0;z-index:2;width:32px;height:32px;background-image:url(../../../imgs/global/bg_bestranking.png);background-position:left top;background-repeat:no-repeat;background-size:contain;}
 .common_product .bestranking .bestlabel:before {content:counter(row);position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);margin-top:-2px;text-align:center;font-size:14px;font-family:'roboto';font-weight:700;color:#fff;}
-.common_product .bestranking .item:first-child .bestlabel {background-image:url(../imgs/global/bg_bestranking_first.png);}
+.common_product .bestranking .item:first-child .bestlabel {background-image:url(../../../imgs/global/bg_bestranking_first.png);}
 /* 상품리스트 유형 추가 : 지역별베스트 */
 .common_product.other_type .item {align-items:flex-start;}
 .common_product.other_type .info_box {padding-top:4px;}
@@ -71,7 +71,7 @@
 .detail_info_box .discount_info_box dt,
 .detail_info_box .discount_info_box dd {width:100%;}
 .detail_info_box .note {position:relative;padding-left:12px;margin-top:4px;color:#8f8f8f;font-size:12px;line-height:17px;}
-.detail_info_box .note::before {content:'';position:absolute;left:0;top:3px;width:10px;height:10px;background:url(../imgs/global/icon_note.png) center center no-repeat;background-size:contain;}
+.detail_info_box .note::before {content:'';position:absolute;left:0;top:3px;width:10px;height:10px;background:url(../../../imgs/global/icon_note.png) center center no-repeat;background-size:contain;}
 .detail_info_box .noti {padding:12px 0 0;margin-top:12px;border-top:1px solid #edf0f2;}
 .detail_contents_editor {overflow:hidden;margin-top:24px;text-align:center;}
 
@@ -101,7 +101,7 @@
 // .page_brand .brand_list .roundbox {overflow:hidden;border:1px solid #dee0e4;border-radius:4px;}
 .youtubeslide .imgbox {position:relative;}
 .youtubeslide .imgbox::before {content:'';position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.2);}
-.youtubeslide .imgbox::after {content:'';position:absolute;left:50%;top:50%;width:56px;height:56px;background:url(../imgs/global/btn_video_play.png) center center no-repeat;background-size:contain;transform:translate(-50%, -50%);}
+.youtubeslide .imgbox::after {content:'';position:absolute;left:50%;top:50%;width:56px;height:56px;background:url(../../../imgs/global/btn_video_play.png) center center no-repeat;background-size:contain;transform:translate(-50%, -50%);}
 .youtubeslide .imgbox img {display:block;}
 .youtubelayer .video_box {position:relative;height:0;max-width:100%;padding-bottom:56.25%;overflow:hidden;}
 .youtubelayer .video_box .my_video {position:absolute;left:0;top:0;width:100%;height:100%;}
@@ -111,7 +111,7 @@
 .youtubelayer .video_list ul li {position:relative;width:calc(50% - 4px);}
 .youtubelayer .video_list ul li .imgbox {position:relative;overflow:hidden;width:100%;padding-top:78%;border-radius:4px;}
 .youtubelayer .video_list ul li .imgbox::before {content:'';position:absolute;left:0;top:0;z-index:1;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.2);}
-.youtubelayer .video_list ul li .imgbox::after {content:'';position:absolute;left:50%;top:50%;z-index:2;width:40px;height:40px;background:url(../imgs/global/btn_video_play.png) center center no-repeat;background-size:contain;transform:translate(-50%, -50%);}
+.youtubelayer .video_list ul li .imgbox::after {content:'';position:absolute;left:50%;top:50%;z-index:2;width:40px;height:40px;background:url(../../../imgs/global/btn_video_play.png) center center no-repeat;background-size:contain;transform:translate(-50%, -50%);}
 .youtubelayer .video_list ul li img {display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
 .youtubelayer .video_list ul li.active::after {content:'';position:absolute;left:0;top:0;z-index:1;width:calc(100% - 8px);height:calc(100% - 8px);border:4px solid #e8340c;border-radius:4px;}
 .youtubelayer .video_list ul li.active::after .imgbox::after {display:none;}
@@ -126,7 +126,7 @@
 .recent_search .recent_search_box .search_list li {position:relative;padding-right:25px;border-top:1px solid #edf0f2;}
 .recent_search .recent_search_box .search_list li:first-child {border-top-width:0;}
 .recent_search .recent_search_box .search_list li span {display:block;overflow:hidden;padding:8px 0;color:#666;line-height:24px;text-overflow:ellipsis;white-space:nowrap;}
-.recent_search .recent_search_box .search_list li button {position:absolute;right:0;top:50%;width:16px;height:16px;margin-top:-8px;background:url(../imgs/global/icon_x.png) center center no-repeat;background-size:contain;text-indent:-999em;}
+.recent_search .recent_search_box .search_list li button {position:absolute;right:0;top:50%;width:16px;height:16px;margin-top:-8px;background:url(../../../imgs/global/icon_x.png) center center no-repeat;background-size:contain;text-indent:-999em;}
 .recent_search .recent_search_box .allDelete {padding:5px 15px;border-top:1px solid #edf0f2;text-align:right;}
 .recent_search .recent_search_box .allDelete .btn {display:inline-block;line-height:26px;vertical-align:top;}
 
@@ -169,7 +169,7 @@
 .page_sale .common_product .list .item:first-child {padding-top:0;}
 
 /* 공동구매 */
-.groupbuying_list > ul > li {position:relative;overflow:hidden;padding:20px 16px;margin-top:16px;border-radius:8px;background:#5a94d8 url(../imgs/global/bg_groupbuying_list.png) left top no-repeat;background-size:100% auto;}
+.groupbuying_list > ul > li {position:relative;overflow:hidden;padding:20px 16px;margin-top:16px;border-radius:8px;background:#5a94d8 url(../../../imgs/global/bg_groupbuying_list.png) left top no-repeat;background-size:100% auto;}
 .groupbuying_list > ul > li:first-child {margin-top:0;}
 .groupbuying_list .count {height:22px;margin-bottom:16px;color:#ffee61;font-size:22px;font-weight:700;line-height:1em;}
 .groupbuying_list .inner {overflow:hidden;padding:16px; border-radius:4px;background-color:#fff;}
@@ -193,10 +193,10 @@
 .groupbuying_list .step_box li .each {display:block;color:#666;line-height:1em;}
 .groupbuying_list .step_box li .each {margin-top:40px;font-size:12px;}
 .groupbuying_list .step_box li .number {line-height:1em;}
-.groupbuying_list .step_box li::after {content:'';position:absolute;right:4px;top:24px;z-index:1;width:20px;height:20px;border-radius:50%;background-color:#fff;background-image:url(../imgs/global/icon_progress.png);background-position:center center;background-repeat:no-repeat;background-size:8px auto;}
+.groupbuying_list .step_box li::after {content:'';position:absolute;right:4px;top:24px;z-index:1;width:20px;height:20px;border-radius:50%;background-color:#fff;background-image:url(../../../imgs/global/icon_progress.png);background-position:center center;background-repeat:no-repeat;background-size:8px auto;}
 .groupbuying_list .step_box li.attain .unit,
 .groupbuying_list .step_box li.attain .each {color:#e8340c;}
-.groupbuying_list .step_box li.attain::after {background-image:url(../imgs/global/icon_progress_attain.png);}
+.groupbuying_list .step_box li.attain::after {background-image:url(../../../imgs/global/icon_progress_attain.png);}
 .groupbuying_list .step_box .cols1 li {width:calc(100%/1);}
 .groupbuying_list .step_box .cols2 li {width:calc(100%/2);}
 .groupbuying_list .step_box .cols3 li {width:calc(100%/3);}
@@ -206,7 +206,7 @@
 .groupbuying_list .check .price .current {margin-right:4px;font-size:14px;}
 .groupbuying_list .check .price strong {font-size:17px;}
 .groupbuying_list .state_layerbox {position:absolute;left:0;top:0;z-index:2;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.6)}
-.groupbuying_list .state_layerbox strong {position:absolute;left:50%;top:50%;padding-top:72px;background:url(../imgs/global/ico_complete.png) center top no-repeat;background-size:64px 64px;color:#fff;font-size:20px;font-weight:500;line-height:1em;transform:translate(-50%, -50%);}
+.groupbuying_list .state_layerbox strong {position:absolute;left:50%;top:50%;padding-top:72px;background:url(../../../imgs/global/ico_complete.png) center top no-repeat;background-size:64px 64px;color:#fff;font-size:20px;font-weight:500;line-height:1em;transform:translate(-50%, -50%);}
 @media (max-width: 320px) {
 	.groupbuying_list .product_box {flex-direction:column;}
 	.groupbuying_list .thumb_box {width:100%;}

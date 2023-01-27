@@ -4,13 +4,18 @@
 	@@include('@@webRoot/_include/head.html',{
 		"title": "온라인쇼룸"
 	})
+	<link rel="stylesheet" href="@@webRoot/css/page/board/board.css">
 	@@include('@@webRoot/_include/library.html')
 	<script src="@@webRoot/js/ui.js"></script>
 	<script src="@@webRoot/js/develop.js"></script>
 </head>
 <body>
 	<div id="app">
-		@@include('@@webRoot/_include/header.html')
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type1",
+			"gnb" : "",
+			"toolbar" : "",
+		})
 
 		<main id="container">
 			<div class="page_showroom">

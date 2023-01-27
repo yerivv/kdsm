@@ -1,0 +1,113 @@
+<div id="modal" class="modalFull modal_deposit_charge">
+	<div class="wrap">
+		<div class="head">
+			<h2>예치금 충전</h2>
+			<div class="close" onclick="modalUrlCloseFull()">닫기</div>
+		</div>
+		<div class="contents padBtn">
+<form name="Frm">
+			<div class="title_box">
+				<h3>충전하실 금액을 선택 또는 입력해주세요.</h3>
+			</div>
+			<div class="charge">
+				<div><input type="number" name="price_input" class="number" pattern="\d*" placeholder="1원 이상~1억원까지 결제 가능합니다." /></div>
+				<ul class="textType gap4">
+					<li><input type="radio" name="price" id="price_1" value="100000"><label for="price_1">10만원</label></li>
+					<li><input type="radio" name="price" id="price_2" value="500000"><label for="price_2">50만원</label></li>
+					<li><input type="radio" name="price" id="price_3" value="1000000"><label for="price_3">100만원</label></li>
+					<li><input type="radio" name="price" id="price_4" value="5000000"><label for="price_4">500만원</label></li>
+				</ul>
+			</div>
+			<div class="title_box">
+				<h3>결제수단 선택</h3>
+			</div>
+			<div class="paymethod_list">
+				<ul class="method_choice">
+					<li class="kdpay">
+						<input type="radio" name="payway" id="payway_kdpay" value="PAYWAY_CARD_KDS" onClick="checkPayway(this);" />
+						<label for="payway_kdpay" class="fw500"><i class="ico"></i><span class="block">KD</span>간편결제</label>
+						<!-- <div class="discount tooltip_wrap">
+							<a href="javascript:void(0)" onclick="tooltip(this);" class="btn_direct click"><i class="ico"></i>즉시할인</a>
+							<div class="message_box">
+								<p class="text"><span class="fcpoint">우리/롯데</span> 즉시할인 프로모션이 진행 중입니다.</p>
+								<p class="subtext">주문/결제 화면에서 신용카드 선택 후 우리, 롯데로 결제</p>
+								<span class="close">툴팁닫기</span>
+							</div>
+						</div> -->
+					</li>
+					<li class="card">
+						<input type="radio" name="payway" id="payway_card" value="PAYWAY_CARD" onClick="checkPayway(this);" />
+						<label for="payway_card"><i class="ico"></i><span class="block">신용카드</span></label>
+					</li>
+					<li class="bank">
+						<input type="radio" name="payway" id="payway_bank" value="PAYWAY_BANK" onClick="checkPayway(this);" />
+						<label for="payway_bank"><i class="ico"></i><span class="block">실시간 </span>계좌이체</label>
+					</li>
+				</ul>
+				
+				<div class="type_detail">
+					<div id="detail_kdpay" style="display:block;">
+						<ul class="kdpay">
+							<li>
+								<select id="billkey" name="billkey">
+									<option value="">선택하세요.</option>
+									<c:forEach var="row" items="${model.memberPayList}" varStatus="vstatus">
+									<option data-idx="${row.IDX}" data-pg="${row.PG}" data-financecode="${row.FINANCECODE}" data-instanttype="${row.INSTANT_TYPE}" data-iskd="${row.INSTANT_ISKD}" value="${row.BILLKEY}">
+										<c:if test="${row.INSTANT eq 'Y'}">즉시할인 | </c:if>${row.NICKNAME} ㅣ ${row.FINANCENAME}
+									</option>
+									</c:forEach>
+								</select>
+							</li>
+							<li class="period">
+								<select id="installPeriod" name="installPeriod">
+								<option data-noint="00" value="00">일시불</option>
+								</select>
+							</li>
+						</ul>
+						<div class="button_box">
+							<a href="javascript:checkCert(document.Frm)" class="buttons iconBtn medium"><i class="icoCard"></i>간편결제 카드등록</a>
+						</div>
+						<div class="notice_text">간편결제 무이자 할부는 <span class="fcpoint">카드사 정책에 따라 적용</span>되며, 무이자 관련 상세 내용은 각 카드사에 문의바랍니다.</div>
+					</div>
+					<div id="detail_card">
+						<div class="notice_text"><span class="fcpoint">결제하기 버튼을 클릭</span>하면 ${model.var.cfgCurrentPg } 결제 창으로 연결되며 결제 창에서 결제정보를 입력하실 수 있습니다.</div>
+					</div>
+					<div id="detail_bank">
+						<div class="notice_text"><span class="fcpoint">결제하기 버튼을 클릭</span>하면 ${model.var.cfgCurrentPg } 결제 창으로 연결되며 결제 창에서 결제정보를 입력하실 수 있습니다.</div>
+					</div>
+				</div>
+			</div>
+			<div class="button_box fix_bottom">
+				<a href="javascript:void(0)" onclick="modalUrlCloseFull()" class="buttons fcdefault">취소</a>
+				<button type="button" class="buttons fill">결제하기</button>
+			</div>
+</form>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(function(){
+		$('[name=payway]:first').prop('checked', true);
+		checkPayway();
+	})
+function checkPayway(a){
+	var f = document.Frm;
+	var payway = $(a).val();
+
+	console.log(payway)
+
+	if(payway == 'PAYWAY_CARD_KDS'){
+		$('.type_detail > div').hide();
+		$('#detail_kdpay').show();
+	}
+	if(payway == 'PAYWAY_CARD'){
+		$('.type_detail > div').hide();
+		$('#detail_card').show();
+	}
+	if(payway == 'PAYWAY_BANK'){
+		$('.type_detail > div').hide();
+		$('#detail_bank').show();
+	}
+}
+</script>

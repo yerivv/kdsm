@@ -48,14 +48,16 @@
 								</div>
 							</dd>
 						</dl>
-						<dl>
-							<dt>카테고리</dt>
-							<dd><select name=""><option>전체</option></select></dd>
-						</dl>
-						<dl>
-							<dt>입점업체</dt>
-							<dd><select name=""><option>전체</option></select></dd>
-						</dl>
+						<div class="cols">
+							<dl>
+								<dt>카테고리</dt>
+								<dd><select name=""><option>전체</option></select></dd>
+							</dl>
+							<dl>
+								<dt>입점업체</dt>
+								<dd><select name=""><option>전체</option></select></dd>
+							</dl>
+						</div>
 						<dl>
 							<dt>상품명</dt>
 							<dd><input type="text" name=""/></dd>
@@ -99,35 +101,38 @@
 											<span class="box">50ml</span>
 											<span class="box">10병</span>
 										</div>
-									</div>
-									<div class="price_box">
-										<div class="date">주문일자 : <span class="number fw500 fcdefault">2022-01-01</span></div>
-										<div class="price"><span class="number fw500">1,030,900</span>원</div>
-									</div>
-									<div>
-										<span class="box">기존 주문수량 : <span class="number fw500 fcdefault">5</span></span>
-										<span class="box">공급업체 : <span class="fw500 fcdefault">광동제약</span></span>
-										<div class="btns"><a href="#" class="buttons xsmall white2 round0">업체변경</a></div>
-									</div>
-									<div class="other">
-										<div class="ea_box_wrap">
-											<label for="cea" class="blind">수량</label>
-											<div class="ea_box">
-												<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
-												<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
-												<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
-											</div>
+										<div class="info info1">
+											<div class="date fcgray8f">주문일자 : <span class="number fw500 fcdefault">2022-01-01</span></div>
+											<div class="price"><span class="number fw500">1,030,900</span>원</div>
 										</div>
-										<div class="total">
-											<div class="price"><strong class="number">4,554,400</strong>원</div>
+										<div class="info info2">
+											<dl class="box1">
+												<dt>기존 주문수량&nbsp;:&nbsp;</dt>
+												<dd><span class="number fw500">4,585</span></dd>
+											</dl>
+											<div class="line"></div>
+											<dl class="box2">
+												<dt>공급업체&nbsp;:&nbsp;</dt>
+												<dd><span class="fw500">광동제약</span><a href="#" class="buttons xsmall white2 round0">업체변경</a></dd>
+											</dl>
+										</div> 
+										<div class="other">
+											<div class="ea_box_wrap">
+												<label for="cea" class="blind">수량</label>
+												<div class="ea_box">
+													<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+													<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+													<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+												</div>
+											</div>
+											<div class="total">
+												<div class="price"><strong class="number">4,554,400</strong>원</div>
+											</div>
 										</div>
 									</div>
 								</li>
 								<li class="item">
 									<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
-									<div class="thumb_box">
-										<div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="" /></div>
-									</div>
 									<div class="info_box">
 										<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
 										<div class="summary">
@@ -135,23 +140,32 @@
 											<span class="box">50ml</span>
 											<span class="box">10병</span>
 										</div>
-									</div>
-									<div class="price_box">
-										<div class="price"><span class="fw500 fcpoint small">최저가</span> <strong class="number">10,000</strong>원</div>
-										<div class="btns"><a href="#" class="buttons xsmall white2 round0">업체변경</a></div>
-									</div>
-									<div class="other">
-										<div class="ea_box_wrap">
-											<label for="cea" class="blind">수량</label>
-											<div class="ea_box">
-												<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
-												<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
-												<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
-											</div>
-											<button type="button" class="buttons small white">변경</button>
+										<div class="info info1">
+											<div class="date fcgray8f">주문일자 : <span class="number fw500 fcdefault">2022-01-01</span></div>
+											<div class="price"><span class="fw500 fcpoint small">최저가</span> <span class="number fw500">1,030,900</span>원</div>
 										</div>
-										<div class="total">
-											<div class="price"><strong class="number">4,554,400</strong>원</div>
+										<div class="info info2">
+											<dl class="box1">
+												<dt>기존 주문수량&nbsp;:&nbsp;</dt>
+												<dd><span class="number fw500">485</span></dd>
+											</dl>
+											<dl class="box2">
+												<dt>공급업체&nbsp;:&nbsp;</dt>
+												<dd><span class="fw500">광동제약</span><a href="#" class="buttons xsmall white2 round0">업체변경</a></dd>
+											</dl>
+										</div> 
+										<div class="other">
+											<div class="ea_box_wrap">
+												<label for="cea" class="blind">수량</label>
+												<div class="ea_box">
+													<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+													<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+													<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+												</div>
+											</div>
+											<div class="total">
+												<div class="price"><strong class="number">4,554,400</strong>원</div>
+											</div>
 										</div>
 									</div>
 								</li>

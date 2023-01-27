@@ -4,6 +4,7 @@
 	@@include('@@webRoot/_include/head.html',{
 		"title": "고객센터"
 	})
+	<link rel="stylesheet" href="@@webRoot/css/page/cscenter/cscenter.css">
 	@@include('@@webRoot/_include/library.html')
 	<script src="@@webRoot/js/ui.js"></script>
 	<script src="@@webRoot/js/develop.js"></script>
@@ -18,14 +19,28 @@
 		})
 
 		<main id="container">
-			<div class="page_areaBest">
-				<h3 class="page_title">자주하는 질문 TOP 10</h3>
-				
-				<h3 class="page_title">공지사항</h3>
+			<div class="page_cscenter">
+				<div class="index_wrap">
+					<div class="title_box">
+						<h3>자주하는 질문 TOP 10</h3>
+						<div class="mlauto">더보기</div>
+					</div>
+					<div class="title_box">
+						<h3>공지사항</h3>
+						<div class="mlauto">더보기</div>
+					</div>
+					<div class="blank_space"></div>
+					<div class="menu_link">
+						<ul>
+							<li><a href="#">1:1 문의</a></li>
+							<li><a href="#">영업담당자 무료문자</a></li>
+							<li><a href="#">입점업체안내</a></li>
+							<li><a href="#">배송안내</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</main>
-
-		@@include('@@webRoot/_include/footer.html')
 		@@include('@@webRoot/_include/foot.html')
 		@@include('@@webRoot/_include/modal.html')
 	</div>

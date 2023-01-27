@@ -40,6 +40,7 @@ strong.number {font-weight:700;}
 /* display */
 .blind{position:absolute !important;top:-9999px !important;overflow:hidden !important;width:0 !important;height:0 !important;padding:0 !important;line-height:0 !important;clip:rect(0, 0, 0, 0) !important;}
 .blank_space {height:12px;padding:0 16px;margin:0 -16px;border-top:solid 1px #EDF0F2;background-color:#F4F7F9;}
+.blank_line {height:1px;padding:0 16px;margin:0 -16px;background-color:#EDF0F2;}
 
 /* 검색영역 */
 .search_form {position:relative;width:100%;height:40px;padding:10px 40px 10px 16px;border-radius:40px;background-color:#F4F7F9;}
@@ -312,6 +313,8 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .menu_tab.cols4 .list .menu4.active::before {right:0;background-image:url(../imgs/global/bg_tab4_4.png);}
 .contents_tab .content {overflow:hidden;opacity:0;height:0;transition:all 0.2s;}
 .contents_tab .content.active {opacity:1;height:auto;}
+.contents_tab.wide {margin:0 -16px;}
+.contents_tab.wide .content {padding:0 16px;}
 .menu_tab .subList {padding:18px 36px 17px;background-color:#f4f7f9;}
 .menu_tab .subList ul {display:flex;flex-wrap:wrap;justify-content:center;align-items:center;}
 .menu_tab .subList ul li {padding:0 6px;line-height:22px;}
@@ -354,12 +357,12 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 }
 /* button size */
 .buttons {display:inline-flex;justify-content:center;align-items:center;height:44px;padding:2px 8px 0;border:1px solid #dee0e4;border-radius:4px;background-color:#f4f7f9;color:#5b5e6a;font-weight:500;line-height:1;text-align:center;}
+.buttons.iconBtn {height:28px;font-size:12px;font-weight:400;}
 .buttons.other {height:40px;font-size:13px;}
 .buttons.medium {height:36px;font-size:13px;}
 .buttons.small {height:32px;font-size:13px;}
 .buttons.xsmall {height:18px;font-size:12px;font-weight:400;}
 .buttons.text {height:auto;padding:0;border:0 none;border-radius:0;background-color:transparent;font-weight:400;}
-.buttons.iconBtn {height:28px;font-size:12px;font-weight:400;}
 @media (max-width: 320px) {
 	.buttons {flex-direction:column;}
 	.buttons.iconBtn {flex-direction:row;}
@@ -391,6 +394,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .buttons .icoRequest {background-image:url(../imgs/global/icon_request.png);}
 .buttons .icoDetail {background-image:url(../imgs/global/icon_detail.png);}
 .buttons .icoAdd {background-image:url(../imgs/global/icon_plus3.png);}
+.buttons .icoCharge {background-image:url(../imgs/global/icon_plus4.png);}
 .btn_direct {display:inline-flex;justify-content:center;width:72px;padding:5px 8px 3px;border-radius:12px;background-color:#ff7556;color:#fff;font-size:12px;font-weight:500;line-height:1;text-align:center;}
 .btn_direct.type2 {background-color:rgba(36, 36, 36, 0.2);}
 .btn_direct.type3 {background-color:rgba(165, 30, 0, 0.5);}
@@ -612,7 +616,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .result_count .total {font-size:15px;}
 .result_count .mlauto {margin-left:auto;}
 .result_count select {height:24px;padding-right:24px;border:none 0;background-position:right center;}
-.result_count.type1 {padding:0;margin:16px 0 8px;height:24px;}
+.result_count.type1 {padding:0;margin:16px 0 8px;min-height:24px;}
 
 /* no result */
 .no_result_box {display:flex;flex-direction:column;width:100%;padding:24px 0;text-align:center;}
@@ -656,6 +660,35 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 	.certify_select .buttons {width:106px;}
 }
 
+/* 결제수단 */
+.paymethod_list .method_choice {display:flex;flex-wrap:wrap;border:1px solid #dee0e4;border-radius:4px;}
+.paymethod_list .method_choice li {position:relative;width:calc(100% / 3);}
+.paymethod_list .method_choice li::before {content:'';position:absolute;right:-1px;top:0;z-index:1;width:1px;height:100%;background-color:#DEE0E4;}
+.paymethod_list .method_choice li:first-child label {border-radius:4px 0 0 4px;}
+.paymethod_list .method_choice li:last-child label {border-radius:0 4px 4px 0;}
+.paymethod_list .method_choice input[type=radio] {overflow:hidden;position:absolute;width:1px;height:1px;clip:rect(0 0 0 0);}
+.paymethod_list .method_choice label {display:block;width:100%;height:74px;padding:8px 0;margin:0;color:#666;font-weight:400;text-align:center;}
+.paymethod_list .method_choice label .ico {display:block;width:100%;height:36px;background-position:center center;background-repeat:no-repeat;background-size:36px 36px;}
+.paymethod_list .method_choice :checked + label {background-color:#e8340c;color:#fff;}
+.paymethod_list .method_choice .kdpay label .ico {background-image:url(../imgs/global/icon_payway_kdpay.png);background-size:48px 36px;}
+.paymethod_list .method_choice .kdpay :checked + label .ico {background-image:url(../imgs/global/icon_payway_kdpay_checked.png);}
+.paymethod_list .method_choice .card label .ico {background-image:url(../imgs/global/icon_payway_card.png);}
+.paymethod_list .method_choice .card :checked + label .ico {background-image:url(../imgs/global/icon_payway_card_checked.png);}
+.paymethod_list .method_choice .bank label .ico {background-image:url(../imgs/global/icon_payway_bank.png);}
+.paymethod_list .method_choice .bank :checked + label .ico {background-image:url(../imgs/global/icon_payway_bank_checked.png);}
+.paymethod_list .method_choice .discount {position:absolute;top:16px;left:50%;margin-left:-36px;}
+.paymethod_list .type_detail > div {display:none;}
+.paymethod_list .type_detail .kdpay {display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+.paymethod_list .type_detail .kdpay li {width:calc(100% - 144px);}
+.paymethod_list .type_detail .kdpay li.period {width:136px;}
+.paymethod_list .type_detail .button_box {margin-top:12px;}
+@media (max-width: 320px) {
+	.paymethod_list .method_choice label {height:92px;line-height:16px;}
+	.paymethod_list .method_choice .card label {line-height:32px;}
+	.paymethod_list .type_detail .kdpay li {width:calc(100% - 102px);}
+	.paymethod_list .type_detail .kdpay li.period {width:94px;}
+}
+
 /* modal */
 .ismodal {overflow:hidden;width:100%;height:100%;touch-action:none;}
 .ismodal::-webkit-scrollbar {display:none;}
@@ -673,6 +706,9 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 #modal .contents .wide {padding-left:16px;padding-right:16px;margin-left:-16px;margin-right:-16px;}
 #modal .contents .title_box .title {padding:0;}
 #modal .menu_tab {margin:0;}
+#modal .tooltip_wrap .message_box {left:0 !important;margin-left:0 !important}
+#modal .tooltip_wrap .message_box .text {padding-right:20px;}
+#modal .tooltip_wrap .message_box .close {top:8px;right:10px;background-size:16px 16px;}
 
 /* modal default */
 .modalCenter::before {z-index:99;}
@@ -902,3 +938,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .modal_overlapId .contents {padding-top:0;}
 .modal_overlapId .confirm_detail_box {padding:0 0 48px;border-bottom:1px solid #edf0f2;}
 .modal_overlapId .confirm_detail_box::before {display:none;}
+
+/* 예치금충전 */
+.modal_deposit_charge .contents {padding-top:0;}
+.modal_deposit_charge .charge .textType {margin-top:8px;}
