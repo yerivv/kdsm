@@ -23,7 +23,7 @@
 .page_member .step_box ol {display:flex;justify-content:center;align-items:center;height:48px;padding:12px 0;}
 .page_member .step_box ol li {position:relative;height:24px;padding-top:6px;color:#666;font-size:15px;line-height:1;}
 .page_member .step_box ol li:not(:last-child) {padding-right:24px;}
-.page_member .step_box ol li:not(:last-child)::after {content:'';position:absolute;right:0;top:0;width:24px;height:24px;background:url(../imgs/global/icon_arrow_right.png) center center no-repeat;background-size:contain;}
+.page_member .step_box ol li:not(:last-child)::after {content:'';position:absolute;right:0;top:0;width:24px;height:24px;background:url(../../../imgs/global/icon_arrow_right.png) center center no-repeat;background-size:contain;}
 .page_member .step_box ol li.stay {color:#e8340c;font-weight:500;}
 @media (max-width: 320px) {
 	.page_member .step_box.type1 ol {flex-wrap:wrap;height:72px;padding:12px 40px;}

@@ -160,7 +160,6 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 	.inputset textarea,
 	.inputset select {padding-left:2px;padding-right:2px;}
 	.inputset select {padding-right:24px;background-position:right 3px center;}
-	.inputset ::placeholder {font-size:12px;}
 	.inputset.email input {width:58px;}
 	.inputset.email select {width:calc(100% - 142px);}
 	.inputset.cols2_1 select {width:66px;}
@@ -924,16 +923,20 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .modal_member_find .resultbox .result {padding:48px 0;border-bottom:1px solid #edf0f2;color:#797d8d;line-height:18px;text-align:center;}
 
 /* 휴면회원 */
-.modal_sleepCertify .button_box {margin-top:24px;}
-.modal_sleepCertify .noticebox {margin-top:16px;margin-bottom:0;}
-.modal_sleepCertify .stpe3 {padding-bottom:100px;}
+.modal_sleep .button_box {margin-top:24px;}
+.modal_sleep .noticebox {margin-top:16px;margin-bottom:0;}
+.modal_sleep .step3 {padding-bottom:100px;}
+@media (max-width: 320px) {
+	.modal_sleep .step2 ::placeholder {color:transparent;}
+}
 
 /* 회원가입 */
 .modal_join .button_box {padding:0 42px;margin-top:24px;}
 .modal_join .noticebox {margin-top:16px;margin-bottom:0;}
-.modal_join .stpe1 .noticebox {margin-top:24px;}
+.modal_join .step1 .noticebox {margin-top:24px;}
 @media (max-width: 320px) {
 	.modal_join .button_box {padding:0;}
+	.modal_join .step3 ::placeholder {color:transparent;}
 }
 
 /* 아이디 중복 */

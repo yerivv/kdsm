@@ -1,0 +1,20 @@
+<div id="modal" class="modalFull modal_sleep">
+	<div class="wrap">
+		<div class="head">
+			<h2>KD-Shop 휴면해지 신청</h2>
+			<div class="close" onclick="sleepClose();">닫기</div>
+		</div>
+		<div class="contents page_member"></div>
+	</div>
+</div>
+<script>
+function sleepClose(){
+	modalClose('modal_sleep');
+	$('.modal_sleep .contents').empty();
+}
+function fnSleepNext(a){
+	const sleepCont = $('.modal_sleep .contents');
+	sleepCont.empty();
+	sleepCont.load(a);
+}
+</script>

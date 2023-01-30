@@ -48,7 +48,7 @@
 				<div class="join_text">
 					<div class="text"><span class="block">KD-Shop </span>회원가입하시고 다양한 혜택을 누려보세요.</div>
 					<div class="button_box">
-						<a href="javascript:void(0);" onclick="modalUrlOpen('join.html', 'full');" class="buttons medium point">회원가입</a>
+						<a href="javascript:void(0);" onclick="fnJoin();" class="buttons medium point">회원가입</a>
 					</div>
 				</div>
 
@@ -73,7 +73,7 @@
 			</div>
 
 			<div class="button_box single">
-				<a href="javascript:void(0);" onclick="modalUrlOpen('sleep_certify.html', 'full');" class="buttons xsmall">휴면해지 신청</a>
+				<a href="javascript:void(0);" onclick="fnSleepCertify();" class="buttons xsmall">휴면해지 신청</a>
 			</div>
 		</main>
 		<footer id="footer2">
@@ -136,10 +136,13 @@
 				</div>
 			</div>
 		</div>
+		
+		@@include('find.html')
+		@@include('join.html')
+		@@include('sleep.html')
+
 		<div id="modalwrap"></div>
 		<div id="modalFullwrap"></div>
-
-		@@include('find.html')
 	</div>
 	<script>
 		slideBannerSlide('benefitSlide', 'bullets');
@@ -157,7 +160,13 @@
 		}
 		function fnSleepCertify(){
 			modalClose('state_sleep');
-			modalUrlOpen('sleep_certify.html', 'full');
+			modalOpen('modal_sleep');
+			$('.modal_sleep .contents').load('sleep_certify.html');
+		}
+		function fnJoin(){
+			const joinBox = $('.modal_join');
+			modalOpen('modal_join');
+			joinBox.find('.contents').load('join_inquiry.html');
 		}
 	</script>
 </body>

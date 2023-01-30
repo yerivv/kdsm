@@ -1,67 +1,52 @@
-<div id="modal" class="modalFull modal_join">
-	<div class="wrap">
-		<div class="head">
-			<h2>회원가입신청</h2>
-			<div class="close" onclick="modalUrlClose();">닫기</div>
-		</div>
-		<div class="contents page_member">
-			<div id="certify" class="stepCont stpe1">
-				<div class="step_box">
-					<ol>
-						<li class="stay">회원조회</li>
-						<li>본인인증</li>
-						<li>약관/정보입력</li>
-						<li>신청완료</li>
-					</ol>
+<div class="step1">
+	<div class="step_box type1">
+		<ol>
+			<li class="stay">회원조회</li>
+			<li>본인인증</li>
+			<li>약관/정보입력</li>
+			<li>신청완료</li>
+		</ol>
+	</div>
+	<div class="noticebox type3">
+		<dl>
+			<dt>꼭 알아두세요!</dt>
+			<dd>KD-Shop에 가입한 대표자만 서비스 이용이 가능하며, 다수의 공동대표인 경우 최초 1명 가입했을 시 중복하여 가입은 불가능합니다.</dd>
+			<dd>문의사항은 <a href="tel:080-024-0030" class="fcpoint fw500">080-024-0030</a>으로 연락바랍니다.</dd>
+			<dd>온라인몰 회원가입 시 기존 오프라인 거래 약사님은 <span class="fcpoint">오프라인 거래가 중지</span>되오니 이점 유의하시기 바랍니다.<br />자세한 내용은 담당 영업사원에게 문의바랍니다.</dd>
+		</dl>
+	</div>
+	<div class="title_box type1">
+		<h3 class="title">회원조회</h3>
+	</div>
+	<div class="form_row_box">
+		<dl>
+			<dt>대표자명</dt>
+			<dd>
+				<div class="inputset">
+					<input type="text" name="name" maxlength="10" placeholder="사업자등록증 상의 대표자명 입력" />
 				</div>
-				<div class="noticebox type3">
-					<dl>
-						<dt>꼭 알아두세요!</dt>
-						<dd>KD-Shop에 가입한 대표자만 서비스 이용이 가능하며, 다수의 공동대표인 경우 최초 1명 가입했을 시 중복하여 가입은 불가능합니다.</dd>
-						<dd>문의사항은 <a href="tel:080-024-0030" class="fcpoint fw500">080-024-0030</a>으로 연락바랍니다.</dd>
-						<dd>온라인몰 회원가입 시 기존 오프라인 거래 약사님은 <span class="fcpoint">오프라인 거래가 중지</span>되오니 이점 유의하시기 바랍니다.<br />자세한 내용은 담당 영업사원에게 문의바랍니다.</dd>
-					</dl>
+			</dd>
+		</dl>
+		<dl>
+			<dt>사업자등록번호</dt>
+			<dd>
+				<div class="inputset cols3">
+					<input type="text" name="bizNo1" maxlength="3" />
+					<span class="hyphen">-</span>
+					<input type="text" name="bizNo2" maxlength="2" />
+					<span class="hyphen">-</span>
+					<input type="text" name="bizNo3" maxlength="5" />
 				</div>
-				<div class="title_box type1">
-					<h3 class="title">회원조회</h3>
-				</div>
-				<div class="form_row_box">
-					<dl>
-						<dt>대표자명</dt>
-						<dd>
-							<div class="form_line">
-								<input type="text" name="name" maxlength="10" value="사업자등록증 상의 대표자명 입력" readonly="readonly" />
-							</div>
-						</dd>
-					</dl>
-					<dl>
-						<dt>사업자등록번호</dt>
-						<dd>
-							<div class="inputset cols3">
-								<input type="text" name="bizNo1" maxlength="3" />
-								<span class="hyphen">-</span>
-								<input type="text" name="bizNo2" maxlength="2" />
-								<span class="hyphen">-</span>
-								<input type="text" name="bizNo3" maxlength="5" />
-							</div>
-						</dd>
-					</dl>
-				</div>
-			</div>
-			<div id="" class="stepCont stpe2" style="display:none;">
-			</div>
-			<div id="" class="stepCont stpe3" style="display:none;">
-			</div>
-		</div>
+			</dd>
+		</dl>
+	</div>
+	<div class="button_box">
+		<a href="login.html" class="buttons medium">취소</a>
+		<button type="button" onclick="validSubmit();" class="buttons medium point">확인</button>
 	</div>
 </div>
 <script>
-function moveJoinForm(type){
-	$('.stepCont').hide();
-	$('#change_pw').show();
-}
 function validSubmit(){
-	$('.stepCont').hide();
-	$('#proc_result').show();
+	fnJoinNext('join_certify.html');
 }
 </script>
