@@ -1,0 +1,168 @@
+<div id="modal" class="modalFull modal_claim">
+	<div class="wrap">
+		<div class="head">
+			<h2>정기배송 주문 취소</h2>
+			<div class="close" onclick="modalUrlCloseFull();">닫기</div>
+		</div>
+		<div class="contents">
+			<!-- 주문정보 -->
+			<div class="title_box mgt0">
+				<h3 class="title">주문정보</h3>
+			</div>
+			<div class="common_tbl tbl_round">
+				<table>
+					<caption>주문정보</caption>
+					<colgroup>
+						<col width="91"><col width="*">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">주문일자</th>
+							<td><span class="number">2022-11-17</span></td>
+						</tr>
+						<tr>
+							<th scope="row">주문번호</th>
+							<td><span class="number">A2231156316424</span></td>
+						</tr>
+						<tr>
+							<th scope="row">업체 및 상품</th>
+							<td>
+								<div class="box_line">
+									<span class="box">광동제약</span>
+									<span class="box">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">정기배송<br />이용기간</th>
+							<td>2022-12-05 ~ 2022-05-26 (6개월)</td>
+						</tr>
+						<tr>
+							<th scope="row">신청주기 및<br />요일</th>
+							<td>1주 / 월요일</td>
+						</tr>
+						<tr>
+							<th scope="row">결제방식</th>
+							<td>신용카드 + 비용할인</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //주문정보 -->
+			<!-- 이용내역 -->
+			<div class="title_box">
+				<h3 class="title">이용내역</h3>
+			</div>
+			<div class="regular_detail">
+				<div class="simple_box">
+					<dl>
+						<dt>총 결제 예상금액</dt>
+						<dd><strong class="number">238,000</strong>원</dd>
+					</dl>
+					<dl>
+						<dt>이용금액</dt>
+						<dd><strong class="number">0</strong>원</dd>
+					</dl>
+				</div>
+				<div class="round_list">
+					<dl class="accordions_wrap">
+						<dt>2회차
+							<div class="state">
+								<strong class="fw500">완료</strong>
+							</div>
+						</dt>
+						<dd class="info accordion" onclick="accordions(this)">
+							<div class="date">배송일 : 2022-12-12(월)</div>
+							<div>결제금액 <span class="fw500 fcpoint"><span class="number fw500">359,086</span>원</span></div>
+						</dd>
+						<dd class="billing_info toggle">
+							<div class="list">
+								<dl>
+									<dt>상품금액</dt>
+									<dd><strong class="number">580,000</strong>원</dd>
+								</dl>
+								<dl>
+									<dt>수량</dt>
+									<dd><strong class="number">100</strong>개</dd>
+								</dl>
+								<dl>
+									<dt>주문금액</dt>
+									<dd><strong class="number">48,400</strong>원</dd>
+								</dl>
+								<dl>
+									<dt>비용할인</dt>
+									<dd><strong class="number">-800</strong>원</dd>
+								</dl>
+								<dl>
+									<dt>구매수량할인</dt>
+									<dd><strong class="number">-0</strong>원</dd>
+								</dl>
+							</div>
+							<div class="total">
+								<dl>
+									<dt>총 결제금액</dt>
+									<dd class="fcpoint"><strong class="number">359,086</strong>원</dd>
+								</dl>
+								<dl>
+									<dt>비고</dt>
+									<dd>-</dd>
+								</dl>
+							</div>
+						</dd>
+					</dl>
+					<dl class="accordions_wrap">
+						<dt>1회차
+							<div class="state">
+								<strong class="fw500">완료</strong>
+							</div>
+						</dt>
+						<dd class="info accordion" onclick="accordions(this)">
+							<div class="date">배송일 : 2022-12-12(월)</div>
+							<div>결제금액 <span class="fw500 fcpoint"><span class="number fw500">359,086</span>원</span></div>
+						</dd>
+						<dd class="billing_info toggle">
+							<div class="list">
+								<dl>
+									<dt>상품금액</dt>
+									<dd><strong class="number">580,000</strong>원</dd>
+								</dl>
+								<dl>
+									<dt>수량</dt>
+									<dd><strong class="number">100</strong>개</dd>
+								</dl>
+								<dl>
+									<dt>주문금액</dt>
+									<dd><strong class="number">48,400</strong>원</dd>
+								</dl>
+								<dl>
+									<dt>비용할인</dt>
+									<dd><strong class="number">-800</strong>원</dd>
+								</dl>
+								<dl>
+									<dt>구매수량할인</dt>
+									<dd><strong class="number">-0</strong>원</dd>
+								</dl>
+							</div>
+							<div class="total">
+								<dl>
+									<dt>총 결제금액</dt>
+									<dd class="fcpoint"><strong class="number">359,086</strong>원</dd>
+								</dl>
+								<dl>
+									<dt>비고</dt>
+									<dd>-</dd>
+								</dl>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<!-- //이용내역 -->
+			
+			<div class="button_box">
+				<a href="javascript:void(0)" onclick="modalUrlCloseFull()" class="buttons fcdefault">닫기</a>
+				<a href="javascript:void(0)" onclick="modalUrlOpen('regular_claim_result.html', 'full')" class="buttons fill">정기배송 취소신청</a>
+			</div>
+		</div>
+	</div>
+</div>

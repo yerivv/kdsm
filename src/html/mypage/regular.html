@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "정기배송 관리"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/mypage/mypage.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "정기배송 관리",
+			"gnb" : "hidden"
+		})
+
+		<main id="container">
+			<div class="page_mypage">
+				
+				<div class="period_check accordions_wrap">
+					<div class="period">
+						<strong class="box number date">2022-10-23 ~ 2022-11-23</strong>
+						<strong class="box state">전체</strong>
+						<span class="buttons iconBtn white" onclick="accordions(this)">상세조회<i class="arrow"></i></span>
+					</div>
+					<div class="toggle detail">
+						<dl>
+							<dt>조회기간</dt>
+							<dd>
+								<ul class="textType gap4">
+									<li><input type="radio" name="period" id="period_week" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'd', -7);"><label for="period_week">7일</label></li>
+									<li><input type="radio" name="period" id="period_month1" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -1);" checked="checked"><label for="period_month1">1개월</label></li>
+									<li><input type="radio" name="period" id="period_month3" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -3);"><label for="period_month3">3개월</label></li>
+									<li><input type="radio" name="period" id="period_month6" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -6);"><label for="period_month6">6개월</label></li>
+									<li><input type="radio" name="period" id="period_year1" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'y', -1);"><label for="period_year1">12개월</label></li>
+								</ul>
+								<div class="calendar_box">
+									<span class="box">
+										<input type="text" id="sdts" name="sdts" value="2022-12-12" onclick="calendar.open(event, this, 'YYYY-MM-DD')" readonly="readOnly">
+										<button type="button" class="calendar" onclick="calendar.open(event, 'sdts', 'YYYY-MM-DD')">시작기간설정</button>
+									</span>
+									<span class="text">~</span>
+									<span class="box">
+										<input type="text" id="sdte" name="sdte" value="2023-01-12" onclick="calendar.open(event, this, 'YYYY-MM-DD')" readonly="readOnly">
+										<button type="button" class="calendar" onclick="calendar.open(event, 'sdte', 'YYYY-MM-DD')">종료기간설정</button>
+									</span>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>정기배송 구분</dt>
+							<dd>
+								<ul class="textType gap4">
+									<li><input type="radio" name="range" id="range1" checked="checked"><label for="range1">전체</label></li>
+									<li><input type="radio" name="range" id="range2"><label for="range2">이용중</label></li>
+									<li><input type="radio" name="range" id="range3"><label for="range3">이용완료</label></li>
+								</ul>
+							</dd>
+						</dl>
+						<div class="button_box">
+							<button type="button" onclick="formReset()" class="buttons small white">초기화</button>
+							<button type="submit" class="buttons small point">조회하기</button>
+						</div>
+					</div>
+				</div>
+				<div class="result_box">
+					<p class="result">총 <strong class="number fw500 fcpoint">45</strong>개의 내역이 있습니다.</p>
+				</div>
+				<!-- 없을 시-->
+				<div class="no_result_box bold" style="display:none">
+					<i class="ico"></i>
+					<div class="text">정기배송 신청 내역이 없습니다.</div>
+				</div><!-- //no_result_box -->
+				<!-- 내역 있을 시 -->
+				<div class="common_orderList">
+					<div class="group">
+						<dl>
+							<dt>주문번호&nbsp;<strong class="number fw500">A2231156316316</strong>
+								<div class="state">
+									<strong class="fw500">이용중</strong>
+								</div>
+							</dt>
+							<dd class="info">
+								<div>주문일자 : <span class="number">2022-11-23</span></div>
+								<div>정기배송차수 : <span class="fw500 fcdefault"><span class="number">1/5</span>회차</span></div>
+								<div>배송예정일 : <span class="number">2022-12-05</span>(월)</div>
+								<a href="regular_detail.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
+							</dd>
+							<dd class="product type2 accordions_wrap">
+								<div class="accordion" onclick="accordions(this)">상품 상세 정보</div>
+								<div class="toggle">
+									<ul class="product_list">
+										<li class="item">
+											<div class="info_box">
+												<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+												<div class="summary">
+													<span class="box">100box</span>
+												</div>
+											</div>
+											<div class="price_box">
+												<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
+												<div class="box pay">결제금액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div><!-- //group -->
+					<div class="group">
+						<dl>
+							<dt>주문번호&nbsp;<strong class="number fw500">A2231156316316</strong>
+								<div class="state">
+									<strong class="fw500">예약취소</strong>
+								</div>
+							</dt>
+							<dd class="info">
+								<div>주문일자 : <span class="number">2022-11-23</span></div>
+								<div>정기배송차수 : <span class="fw500 fcdefault"><span class="number">1/5</span>회차</span></div>
+								<div>배송예정일 : <span class="number">2022-12-05</span>(월)</div>
+								<a href="regular_detail.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
+							</dd>
+							<dd class="product type2 accordions_wrap">
+								<div class="accordion" onclick="accordions(this)">상품 상세 정보</div>
+								<div class="toggle">
+									<ul class="product_list">
+										<li class="item">
+											<div class="info_box">
+												<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+												<div class="summary">
+													<span class="box">100box</span>
+												</div>
+											</div>
+											<div class="price_box">
+												<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
+												<div class="box pay">결제금액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div><!-- //group -->
+					<div class="group">
+						<dl>
+							<dt>주문번호&nbsp;<strong class="number fw500">A2231156316316</strong>
+								<div class="state">
+									<strong class="fw500">이용완료</strong>
+								</div>
+							</dt>
+							<dd class="info">
+								<div>주문일자 : <span class="number">2022-11-23</span></div>
+								<div>정기배송차수 : <span class="fw500 fcdefault"><span class="number">5/5</span>회차</span></div>
+								<div>배송예정일 : <span class="number">2022-12-05</span>(월)</div>
+								<a href="regular_detail.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
+							</dd>
+							<dd class="product type2 accordions_wrap">
+								<div class="accordion" onclick="accordions(this)">상품 상세 정보</div>
+								<div class="toggle">
+									<ul class="product_list">
+										<li class="item">
+											<div class="info_box">
+												<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+												<div class="summary">
+													<span class="box">100box</span>
+												</div>
+											</div>
+											<div class="price_box">
+												<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
+												<div class="box pay">결제금액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div><!-- //group -->
+				</div><!-- //common_orderList -->
+			</div><!-- //page_mypage -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>

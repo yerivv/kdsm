@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "재입고 알림 신청내역"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/mypage/mypage.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "재입고 알림 신청내역",
+			"gnb" : "hidden"
+		})
+
+		<main id="container">
+			<div class="page_mypage">
+				<div class="noticebox accordions_wrap">
+					<dl>
+						<dt onclick="accordions(this)">꼭 참고해주세요!</dt>
+						<dd class="toggle">
+							<ul>
+								<li>최근 7일간 재입고 알림을 신청한 상품 내역입니다.</li>
+								<li>재입고 알림은 1회만 발송됩니다.</li>
+								<li>입고 시점에 따라 할인율, 가격정보 등이 변경될수 있습니다.</li>
+								<li>접속 시점에 따라 조기 품절 될 수 있습니다.</li>
+								<li>알림 신청일로 부터 7일이 지나면 자동 취소(삭제) 처리됩니다.</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<!-- 없을 시-->
+				<div class="no_result_box bold" style="display:none">
+					<i class="ico"></i>
+					<div class="text">재입고 알림 신청내역이 없습니다.</div>
+				</div><!-- //no_result_box -->
+				<!-- 내역 있을 시 -->
+				<div class="common_orderList restock">
+					<div class="group">
+						<dl>
+							<dt>광동제약</dt>
+							<dd class="product">
+								<ul class="product_list">
+									<li class="item">
+										<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원 현탄액</div>
+										<div class="summary">휴대전화번호 : <span class="number">010-1234-5678</span></div>
+										<div class="summary ea">
+											<span class="box">재입고신청일 : <span class="fw500 fcdefault number">2022-11-11</span></span>
+											<span class="box">알림종료일 : <span class="fw500 fcdefault number">2022-11-11</span></span>
+										</div>
+										<div class="state">
+											<strong class="fw500">알림완료</strong>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div><!-- //group -->
+					<div class="group">
+						<dl>
+							<dt>광동제약</dt>
+							<dd class="product">
+								<ul class="product_list">
+									<li class="item">
+										<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원 현탄액</div>
+										<div class="summary">휴대전화번호 : <span class="number">010-1234-5678</span></div>
+										<div class="summary ea">
+											<span class="box">재입고신청일 : <span class="fw500 fcdefault number">2022-11-11</span></span>
+											<span class="box">알림종료일 : <span class="fw500 fcdefault number">2022-11-11</span></span>
+										</div>
+										<div class="state">
+											<button type="button" class="buttons xsmall white round0">재입고 알림취소</button>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div><!-- //group -->
+				</div><!-- //common_orderList -->
+			</div><!-- //page_mypage -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>

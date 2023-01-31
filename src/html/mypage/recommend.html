@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "추천상품"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/mypage/mypage.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "추천상품",
+			"gnb" : "hidden",
+			"toolbar" : "hidden"
+		})
+
+		<main id="container">
+			<div class="page_mypage">
+				<!-- 없을 시 -->
+				<div class="no_result_box bold" style="display:none">
+					<i class="ico"></i>
+					<div class="text">추천상품 내역이 없습니다.</div>
+				</div><!-- //no_result_box -->
+				<!-- 있을 시 -->
+				<div class="product_box">
+					<div class="result_box">
+						<p class="result">총 <strong class="number fw500 fcpoint">45</strong>개의 내역이 있습니다.</p>
+					</div>
+					<div class="result_count">
+						<input type="checkbox" name="" id="" /><label for="">전체선택</label>
+					</div>
+					<div class="common_orderList">
+						<div class="product product_wrap">
+							<ul class="product_list have_check">
+								<li class="item">
+									<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
+									<div class="thumb_box">
+										<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt="" /></div>
+									</div>
+									<div class="info_box">
+										<span class="dealer">광동제약</span>
+										<div class="name">광동제약 비타500</div>
+										<div class="summary">
+											<span class="box">광동제약</span>
+											<span class="box">50ml</span>
+											<span class="box">10병</span>
+										</div>
+										<div class="summary fcgray8f">발송예정일 : <span class="number">2022-12-09</span></div>
+										<div class="etc"> 
+											<span class="price"><span class="number fw500">10,000</span>원</span>
+											<button type="button" onclick="" class="buttons xsmall white">삭제</button>
+										</div>
+									</div>
+									<div class="other">
+										<div class="ea">수량 : <span class="number fw500">10</span></div>
+										<div class="total">
+											<div class="price"><strong class="number">4,554,400</strong>원</div>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
+									<div class="thumb_box">
+										<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt="" /></div>
+									</div>
+									<div class="info_box">
+										<span class="dealer">광동제약</span>
+										<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+										<div class="summary">
+											<span class="box">광동제약</span>
+											<span class="box">50ml</span>
+											<span class="box">10병</span>
+										</div>
+										<div class="summary fcgray8f">발송예정일 : <span class="number">2022-12-09</span></div>
+										<div class="etc"> 
+											<span class="price"><span class="fw500 fcpoint small">최저가</span>  <span class="number fw500">10,000</span>원</span>
+											<button type="button" onclick="" class="buttons xsmall white">삭제</button>
+										</div>
+									</div>
+									<div class="other">
+										<div class="ea">수량 : <span class="number fw500">10</span></div>
+										<div class="total">
+											<div class="price"><strong class="number">4,554,400</strong>원</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div><!-- //common_orderList -->
+				</div>
+			</div><!-- //page_mypage -->
+			<div class="floating_btn">
+				<div class="more" onclick="floatingMore(this)">자세히 보기</div>
+				<div class="calculation_list">
+					<dl>
+						<dt>선택 상품(<span class="fcpoint fw500">4</span>개)</dt>
+						<dd><strong class="number">4,554,400</strong>원</dd>
+					</dl>
+					<dl>
+						<dt>비용할인</dt>
+						<dd><i class="minus"></i><strong class="number">10,400</strong>원</dd>
+					</dl>
+				</div>
+				<div class="total_price">
+					<div class="total fcblack">총 주문금액</div>
+					<div class="price fcpoint"><strong class="number">4,544,000</strong>원</div>
+				</div>
+				<div class="button_box">
+					<a href="#" class="buttons fill">주문하기</a>
+				</div>
+			</div>
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>

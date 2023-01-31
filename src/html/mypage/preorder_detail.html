@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "예약주문 상세"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/mypage/mypage.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "예약주문 상세",
+			"gnb" : "hidden",
+		})
+
+		<main id="container">
+			<div class="page_mypage">
+				<!-- 주문정보 -->
+				<div class="title_box">
+					<h3 class="title">주문정보</h3>
+				</div>
+				<div class="common_tbl tbl_round">
+					<table>
+						<caption>주문정보</caption>
+						<colgroup>
+							<col width="91"><col width="*">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">주문일자</th>
+								<td><span class="number">2022-11-17</span></td>
+							</tr>
+							<tr>
+								<th scope="row">주문번호</th>
+								<td><span class="number">A2231156316424</span></td>
+							</tr>
+							<tr>
+								<th scope="row">예약신청일자</th>
+								<td><span class="number">2022-11-17</span></td>
+							</tr>
+							<tr>
+								<th scope="row">결제방식</th>
+								<td>
+									신용카드 + 비용할인
+									<div class="mgt8"><a href="#" class="buttons xsmall white round0">카드명세서 조회</a></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //주문정보 -->
+				
+				<!-- 상품정보 -->
+				<div class="title_box">
+					<h3 class="title">상품정보</h3>
+				</div>
+				<div class="common_orderList">
+					<div class="group">
+						<dl>
+							<dt class="gray">광동제약</dt>
+							<dd class="product">
+								<ul class="product_list">
+									<li class="item">
+										<div class="thumb_box">
+											<div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="" /></div>
+											<!-- <div class="soldout">일시<br />품절</div> -->
+										</div>
+										<div class="info_box">
+											<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+											<div class="summary">
+												<span class="box">광동제약</span>
+											</div>
+										</div>
+										<div class="price_box">
+											<div class="box priceEa"><strong class="number">12,000</strong>원 x <strong class="number">10</strong>개</div>
+											<div class="box pay"><span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+										</div>
+										<div class="state">
+											<strong class="fw500">결제완료</strong>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div><!-- //group -->
+				</div><!-- //common_orderList -->
+				<!-- //상품정보 -->
+				<!-- 결제 내역 -->
+				<div class="title_box">
+					<h3 class="title">결제 및 할인내역</h3>
+				</div>
+				<div class="billing_info">
+					<div class="list">
+						<dl>
+							<dt>상품금액</dt>
+							<dd><strong class="number">580,000</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>수량</dt>
+							<dd><strong class="number">100</strong>개</dd>
+						</dl>
+						<dl>
+							<dt>주문금액</dt>
+							<dd><strong class="number">48,400</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>비용할인</dt>
+							<dd><strong class="number">-800</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>구매수량할인</dt>
+							<dd><strong class="number">-0</strong>원</dd>
+						</dl>
+					</div>
+					<div class="total">
+						<dl>
+							<dt>총 결제금액</dt>
+							<dd class="fcpoint"><strong class="number">359,086</strong>원</dd>
+						</dl>
+					</div>
+				</div>
+				<!-- //결제 내역 -->
+				<!-- 배송정보 -->
+				<div class="title_box">
+					<h3 class="title">배송정보</h3>
+				</div>
+				<div class="common_tbl tbl_round">
+					<table>
+						<caption>배송지 정보</caption>
+						<colgroup>
+							<col width="91"><col width="*">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">받으시는분</th>
+								<td>홍길동</td>
+							</tr>
+							<tr>
+								<th scope="row">연락처</th>
+								<td>010-1234-5678</td>
+							</tr>
+							<tr>
+								<th scope="row">주소</th>
+								<td>06650, 서울특별시 서초구 서초중앙로 85 가산빌딩</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //배송정보 -->
+				<div class="button_box">
+					<a href="regular.html" class="buttons fcdefault">주문 목록</a>
+					<a href="javascript:void(0)" onclick="preOrderClaim()" class="buttons fill">예약구매 취소신청</a>
+				</div>
+			</div>
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+		function preOrderClaim(){
+			alert('예약구매 신청하신 상품을 취소하겠습니까?')
+			modalUrlOpen('preorder_claim_result.html', 'full')
+		}
+	</script>
+</body>
+</html>

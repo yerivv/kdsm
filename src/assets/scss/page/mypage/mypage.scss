@@ -1,14 +1,20 @@
 /*
 	mypage */
+#container {padding:0;}
+#container .page_mypage {min-height:60vh;padding:0 16px 32px;}
+.page_mypage.bgGray {background-color:#f4f7f9;}
+.page_mypage .button_box {margin-top:24px;}
+
 .common_orderList .group {overflow:hidden;border:1px solid #dee0e4;border-radius:4px;}
 .common_orderList .group:not(:first-child) {margin-top:12px;}
 .common_orderList .group > dl > dt {display:flex;flex-wrap:wrap;align-items:center;padding:12px 16px;background-color:#ffe7e1;font-size:15px;line-height:1;}
+.common_orderList .group > dl > dt.gray {background-color:#f4f7f9;}
 .common_orderList .group dt label {max-width:calc(100% - 32px);}
 .common_orderList .group dt .state {margin-left:auto;font-size:14px;}
 .common_orderList .group > dl > dd {border-top:1px solid #dee0e4;}
 .common_orderList .group .accordions_wrap {border-color:#edf0f2;}
 .common_orderList .group .accordions_wrap .accordion {position:relative;padding:12px 15px;color:#797d8d;font-size:13px;}
-.common_orderList .group .accordions_wrap .accordion::after {content:'';position:absolute;right:15px;top:50%;width:12px;height:12px;margin-top:-6px;background:url(../imgs/global/arrow_category.png) center center no-repeat;background-size:contain;transition:0.2s;}
+.common_orderList .group .accordions_wrap .accordion::after {content:'';position:absolute;right:15px;top:50%;width:12px;height:12px;margin-top:-6px;background:url(../../../imgs/global/arrow_category.png) center center no-repeat;background-size:contain;transition:0.2s;}
 .common_orderList .group .accordions_wrap.on .accordion::after {transform:rotate(180deg);}
 .common_orderList .group .accordions_wrap .toggle {border-top:1px solid #dee0e4;background-color:#f4f7f9;}
 .common_orderList .info {position:relative;padding:10px 15px 8px;color:#8f8f8f;font-size:12px;line-height:20px;}
@@ -121,7 +127,7 @@
 .noticebox .stepbox_row li {position:relative;padding:8px 16px;margin:0;border-radius:4px;background-color:#fff;color:#242424;font-size:13px;line-height:1;text-align:center;}
 .noticebox .stepbox_row li:not(:first-child) {margin-top:24px;}
 .noticebox .stepbox_row li:before {counter-increment:row;content:'STEP 'counter(row, decimal-leading-zero);display:block;position:relative;left:auto;top:auto;width:100%;height:auto;margin-bottom:4px;background:none;color:#8f8f8f;font-size:12px;line-height:1;transform:none;}
-.noticebox .stepbox_row li:not(:last-child):after {content:'다음단계';position:absolute;left:0;bottom:-24px;width:100%;height:24px;background:url(../imgs/global/icon_arrow_down.png) center center no-repeat;background-size:24px 24px;text-indent:-999em;}
+.noticebox .stepbox_row li:not(:last-child):after {content:'다음단계';position:absolute;left:0;bottom:-24px;width:100%;height:24px;background:url(../../../imgs/global/icon_arrow_down.png) center center no-repeat;background-size:24px 24px;text-indent:-999em;}
 
 /* 상세조회 */
 .period_check {margin:24px -16px 0;}
@@ -160,9 +166,6 @@
 .result_box .sort li a {color:#b0b0b0;line-height:1;}
 .result_box .sort li.active a {color:#242424;}
 .result_count {padding:0 12px;}
-
-.page_mypage {margin-top:-24px;}
-.page_mypage .button_box {margin-top:24px;}
 
 /* 취소신청,완료 */
 .modal_claim .button_box {margin-top:24px;}
@@ -260,6 +263,60 @@
 .repurchase_box .common_orderList .item .info_box .info2 .box2 .buttons {margin-left:6px;}
 .repurchase_box .common_orderList .item .info_box .other {margin:0;}
 
+/* 정기배송 */
+.regular_detail .simple_box,
+.regular_detail .round_list > dl {overflow:hidden;border:1px solid #dee0e4;border-radius:4px;}
+.regular_detail .simple_box {display:flex;padding:16px 0;}
+.regular_detail .simple_box dl {width:50%;text-align:center;}
+.regular_detail .simple_box dt {color:#666;font-size:13px;line-height:1;margin-bottom:8px;}
+.regular_detail .simple_box dd {font-size:12px;line-height:19px;}
+.regular_detail .simple_box dd .number {font-size:18px;line-height:18px;}
+.regular_detail .simple_box dl:not(:first-child) {border-left:1px solid #e3e3e3}
+.regular_detail .round_list > dl {margin-top:12px;}
+.regular_detail .round_list > dl > dt {display:flex;justify-content:space-between;padding:12px 15px;background-color:#f4f7f9;font-size:15px;line-height:1;}
+.regular_detail .round_list > dl > dd {border-top:1px solid #dee0e4;}
+.regular_detail .round_list .info {padding:12px 15px;line-height:1;}
+.regular_detail .round_list .info .date {margin-bottom:8px;color:#8f8f8f;font-size:12px;}
+.regular_detail .round_list .accordions_wrap .accordion {position:relative;}
+.regular_detail .round_list .accordions_wrap .accordion::after {content:'';position:absolute;right:15px;top:50%;width:12px;height:12px;margin-top:-6px;background:url(../../../imgs/global/arrow_category.png) center center no-repeat;background-size:contain;transition:0.2s;}
+.regular_detail .round_list .accordions_wrap.on .accordion::after {transform:rotate(180deg);}
+.regular_detail .round_list .billing_info {border-width:0;border-top-width:1px;border-radius:0;background-color:#f4f7f9;}
+
+/* 공동구매 */
+.page_mypage .groupbuying .item {padding-bottom:14px;}
+.page_mypage .groupbuying .item .summary.ea {margin-top:10px;}
+.page_mypage .groupbuying .item .etc {display:flex;justify-content:space-between;width:100%;}
+.page_mypage .groupbuying.pass .item {padding-bottom:0;}
+.page_mypage .groupbuying.pass .item .price_box {border-top:1px solid #edf0f2;margin-top:10px;}
+
+/* 재입고신청 */
+.page_mypage .accordions_wrap {margin-top:16px;}
+.page_mypage .restock .item .state {margin-top:12px;}
+.page_mypage .restock .item .summary.ea {margin-top:10px;color:#8f8f8f;font-size:13px;}
+.page_mypage .restock .item .summary.ea .box:first-child {padding-right:8px}
+.page_mypage .restock .item .summary.ea .box:not(:first-child) {padding:0 8px}
+.page_mypage .restock .item .summary.ea .box:not(:first-child)::before {height:13px;}
+.page_mypage .restock .item .state .buttons {margin:0;}
+
+/* 관심상품, 추천상품 */
+.page_mypage .product_box .result_count {min-height:auto;padding:12px;}
+.page_mypage .product_box .item {padding:15px 12px 0;}
+.page_mypage .product_box .item .info_box {padding-bottom:15px;}
+.page_mypage .product_box .item .info_box .etc {display:flex;align-items:center;gap:0 8px;margin-top:12px;}
+.page_mypage .product_box .item .info_box .etc .mlauto {margin-left:auto;}
+
+/* 간편결제 */
+.page_mypage .payment_add {padding:20px 0;background-color:#fff;}
+.page_mypage .payment_add .button_box {margin-top:12px;}
+.page_mypage .payment_list {margin-top:24px;}
+.page_mypage .payment_list dl {overflow:hidden;border:1px solid #dee0e4;border-radius:8px;background-color:#fff;line-height:1;}
+.page_mypage .payment_list dl+dl {margin-top:12px;}
+.page_mypage .payment_list dt {padding:16px 15px 8px;font-size:15px;font-weight:500;}
+.page_mypage .payment_list .card {padding:0 15px 16px;color:#8f8f8f;font-size:12px;}
+.page_mypage .payment_list .button_box {gap:0;margin:0;border-top:1px solid #edf0f2;}
+.page_mypage .payment_list .button_box .buttons {border-radius:0;border-width:0;}
+.page_mypage .payment_list .button_box .buttons:not(:first-child) {border-left-width:1px;border-color:#edf0f2;}
+
 /* 쿠폰 */
 .page_mypage .coupon_wrap .notice_text {margin:16px 0;padding-right:4px;}
 .page_mypage .coupon_list {padding:24px 16px 32px;margin:0 -16px;background-color:#f4f7f9;}
@@ -278,9 +335,9 @@
 .page_mypage .have_info dd {margin-top:4px;font-size:12px;line-height:26px;}
 .page_mypage .have_info dd .number {font-size:22px;}
 .page_mypage .have_info .button_box {margin-top:12px;}
-.page_mypage .have_info.point .icon {background-image:url(../imgs/global/icon_point.png);}
-.page_mypage .have_info.deposit .icon {width:21px;height:23px;background-image:url(../imgs/global/icon_deposit.png);}
-.page_mypage .have_info.kdcash .icon {width:24px;height:24px;background-image:url(../imgs/global/icon_kdcash.png);}
+.page_mypage .have_info.point .icon {background-image:url(../../../imgs/global/icon_point.png);}
+.page_mypage .have_info.deposit .icon {width:21px;height:23px;background-image:url(../../../imgs/global/icon_deposit.png);}
+.page_mypage .have_info.kdcash .icon {width:24px;height:24px;background-image:url(../../../imgs/global/icon_kdcash.png);}
 .page_mypage .have_wrap .notice_text {margin-top:24px;}
 .page_mypage .have_wrap .notice_text + .result_box {margin-top:16px;}
 .page_mypage .have_list {overflow:hidden;border:1px solid #dee0e4;border-radius:4px;}

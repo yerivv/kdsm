@@ -61,3 +61,15 @@
 @media (max-width:320px) {
 	.inquiry_text p {padding-right:50px;}
 }
+.page_cscenter .inputset.cols3 {gap:0 8px;}
+.page_cscenter .inputset.cols3 input {width:calc((100% - 16px) / 3);}
+.page_cscenter .inputset.email {flex-wrap:wrap;}
+.page_cscenter .inputset.email .at {width:32px;color:#000;font-size:14px;}
+.page_cscenter .inputset.email input {width:calc(50% - 16px);}
+.page_cscenter .inputset.email select {width:100%;margin:8px 0 0;}
+
+.inquiry_write .common_tbl {margin-top:24px;}
+.inquiry_write .title_box .title {font-size:14px;font-weight:400;}
+.inquiry_write .title_box + .common_tbl {margin:0;}
+.inquiry_write .common_tbl label {color:#242424;font-size:15px;}
+.inquiry_write .common_tbl .inputset + .inputset {margin-top:12px;}

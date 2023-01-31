@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "KD간편결제 관리"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/mypage/mypage.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "KD간편결제 관리",
+			"gnb" : "hidden"
+		})
+		<main id="container">
+			<div class="page_mypage bgGray">
+				<div class="payment_add">
+					<input type="text" name="" placeholder="간편결제 별칭 입력은 필수입니다." />
+					<div class="button_box">
+						<button type="button" class="buttons iconBtn medium fill"><i class="icoCharge"></i>예치금 충전</button>
+					</div>
+				</div>
+				<div class="blank_line"></div>
+				<div class="payment_list">
+					<!-- 없을 시-->
+					<div class="no_result_box bold" style="display:none;">
+						<i class="ico"></i>
+						<div class="text">등록한 간편결제 카드가 없습니다.</div>
+					</div><!-- //no_result_box -->
+					<dl>
+						<dt>나의 첫번째 카드</dt>
+						<dd class="card">카드사 : 비씨</dd>
+						<dd class="button_box">
+							<button type="button" class="buttons medium white">삭제</button>
+							<button type="button" onclick="modify()" class="buttons medium white">별칭수정</button>
+						</dd>
+					</dl>
+					<dl>
+						<dt>나의 첫번째 카드</dt>
+						<dd class="card">카드사 : 비씨</dd>
+						<dd class="button_box">
+							<button type="button" class="buttons medium white">삭제</button>
+							<button type="button" onclick="modify()" class="buttons medium white">별칭수정</button>
+						</dd>
+					</dl>
+				</div>
+			</div><!-- //page_mypage -->
+
+			<div id="modal" class="modalCenter modal_payment_modify">
+				<div class="wrap">
+					<div class="head">
+						<h2>간편결제 카드 별칭 수정</h2>
+						<div class="close" onclick="modalClose('modal_payment_modify');">닫기</div>
+					</div>
+					<div class="contents">
+						<div><input type="text" name="" value="나의 첫번째 카드" placeholder="간편결제 별칭 입력은 필수입니다." /></div>
+						<div class="button_box type1">
+							<a href="javascript:void(0)" onclick="modalClose('modal_payment_modify')" class="buttons medium">취소</a>
+							<button type="button" class="buttons medium point">수정</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+		function modify(){
+			modalOpen('modal_payment_modify')
+		}
+	</script>
+</body>
+</html>

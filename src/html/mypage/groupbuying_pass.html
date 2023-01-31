@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "공동구매 관리"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/mypage/mypage.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "공동구매 관리",
+			"gnb" : "hidden"
+		})
+
+		<main id="container">
+			<div class="page_mypage">
+				<div class="menu_tab cols2">
+					<ul class="list">
+						<li class="menu1"><a href="groupbuying.html" class="btn">진행중인 공동구매</a></li>
+						<li class="menu2 active"><a href="groupbuying_pass.html" class="btn">지난 공동구매 내역</a></li>
+					</ul>
+				</div>
+				<div class="result_box">
+					<p class="result">총 <strong class="number fw500 fcpoint">45</strong>개의 내역이 있습니다.</p>
+				</div>
+				<!-- 없을 시-->
+				<div class="no_result_box bold" style="display:none">
+					<i class="ico"></i>
+					<div class="text">지난 공동구매 내역이 없습니다.</div>
+				</div><!-- //no_result_box -->
+				<!-- 내역 있을 시 -->
+				<div class="common_orderList groupbuying pass">
+					<div class="group">
+						<dl>
+							<dt class="gray">2022-11-14 00시 ~ 2022-11-30 23시
+								<div class="state">
+									<strong class="fw500">취소</strong>
+								</div>
+							</dt>
+							<dd class="product">
+								<ul class="product_list">
+									<li class="item">
+										<div class="etc">
+											<span class="dealer">광동제약</span>
+										</div>
+										<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원 현탄액</div>
+										<div class="summary ea">
+											<span class="box">신청수량 : <span class="fw500 fcdefault">5</span></span>
+											<span class="box">신청현황 : <span class="fw500 fcdefault">6/10</span></span>
+											<span class="box">공동구매할인 : <span class="fcdefault"><span class="fw500 number">-2,540</span>원</span></span>
+										</div>
+										<div class="price_box">
+											<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
+											<div class="box pay">결제금액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div><!-- //group -->
+					<div class="group">
+						<dl>
+							<dt class="gray">2022-11-14 00시 ~ 2022-11-30 23시
+								<div class="state">
+									<strong class="fw500">완료</strong>
+								</div>
+							</dt>
+							<dd class="product">
+								<ul class="product_list">
+									<li class="item">
+										<div class="etc">
+											<span class="dealer">광동제약</span>
+										</div>
+										<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원 현탄액</div>
+										<div class="summary ea">
+											<span class="box">신청수량 : <span class="fw500 fcdefault">5</span></span>
+											<span class="box">신청현황 : <span class="fw500 fcdefault">6/10</span></span>
+											<span class="box">공동구매할인 : <span class="fcdefault"><span class="fw500 number">-2,540</span>원</span></span>
+										</div>
+										<div class="price_box">
+											<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
+											<div class="box pay">결제금액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div><!-- //group -->
+				</div><!-- //common_orderList -->
+			</div><!-- //page_mypage -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>
