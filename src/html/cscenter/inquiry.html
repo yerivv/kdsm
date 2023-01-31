@@ -26,8 +26,34 @@
 						<li class="menu2 active"><a href="inquiry.html" class="btn">나의 문의내역</a></li>
 					</ul>
 				</div>
-				
-				11
+				<div class="inquiry_list">
+					<ul>
+						<li>
+							<div class="title">
+								<p class="state">
+									<span class="label">미완료</span>
+								</p>
+								<p class="date">2022-08-22</p>
+								<p class="type">[문의유형] [입점업체명]</p>
+								<p class="subject">1:1문의 제목 노출</p>
+							</div>
+							<div class="question">1:1문의 내용 노출</div>
+						</li>
+						<li>
+							<div class="title">
+								<p class="state">
+									<span class="label end">답변완료</span>
+									<span class="date">2023-01-01</span>
+								</p>
+								<p class="date">2022-08-22</p>
+								<p class="type">[문의유형] [입점업체명]</p>
+								<p class="subject">1:1문의 제목 노출</p>
+							</div>
+							<div class="question">1:1문의 내용 노출</div>
+							<div class="answer">변경된 대표 1:1문의 내용 노출</div>
+						</li>
+					</ul>
+				</div>
 			</div><!-- //page_cscenter -->
 		</main>
 
@@ -35,6 +61,20 @@
 		@@include('@@webRoot/_include/foot.html')
 		@@include('@@webRoot/_include/modal.html')
 	</div>
+
+	<script>
+		const questions = document.querySelectorAll('.inquiry_list li');
+		questions.forEach(function(question){
+			question.querySelector('.title').addEventListener('click', function(){
+				questions.forEach(function(item){
+					if(item !== question){
+						item.classList.remove('active');
+					}
+				})
+				question.classList.toggle('active');
+			})
+		})
+	</script>
 	
 </body>
 </html>

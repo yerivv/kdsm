@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "담당자 문자보내기"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/cscenter/cscenter.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "담당자 문자보내기",
+			"gnb" : "hidden",
+			"toolbar" : ""
+		})
+
+		<main id="container">
+			<div class="page_cscenter">
+				<div class="sms_box">
+					<div class="notice">약사님을 담당하는 광동제약 사원에게 문자 메시지를 보내실 수 있습니다. 비용은 무료이며, 담당자에게만 메시지가 전송됩니다.</div>
+					<div class="blank_space"></div>
+					<div class="form">
+						<div class="group">
+							<dl>
+								<dt class="blind">내용</dt>
+								<dd class="byte_box">
+									<textarea name="sms_content" placeholder="내용을 입력해주세요" maxlength="80"></textarea>
+									<span class="byte"><span id="sms_size">0</span>/80byte</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>문자메세지 선택</dt>
+								<dd class="message_select">
+									<div class="msg">
+										<textarea name="msg_cont1" readonly="readonly">카드사 혜택 관련 문의가 있으니 전화부탁드립니다.</textarea>
+										<ul class="textType">
+											<li><input type="radio" name="msg" id="msg1" onclick="msgSelect(this)" /><label for="msg1">선택</label></li>
+										</ul>
+									</div>
+									<div class="msg">
+										<textarea name="msg_cont2" readonly="readonly">알디액 구매 시 혜택 문의 드립니다.</textarea>
+										<ul class="textType">
+											<li><input type="radio" name="msg" id="msg2" onclick="msgSelect(this)" /><label for="msg2">선택</label></li>
+										</ul>
+									</div>
+									<div class="msg">
+										<textarea name="msg_cont3" readonly="readonly">문의할 내용이 있으니 전화 부탁드립니다.</textarea>
+										<ul class="textType">
+											<li><input type="radio" name="msg" id="msg3" onclick="msgSelect(this)" /><label for="msg3">선택</label></li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+						</div>
+						<div class="blank_line"></div>
+						<div class="group">
+							<dl>
+								<dt>받는 사람</dt>
+								<dd>
+									<div class="inputset cols3">
+										<input type="text" />
+										<input type="text" />
+										<input type="text" />
+									</div>
+								</dd>
+							</dl>
+							<dl class="type1">
+								<dt>담당자 선택</dt>
+								<dd>
+									<div class="inputset">
+										<input type="radio" name="seller" id="seller01" /><label for="seller01">[배송 담당자] 홍길동 010-1234-1234</label>
+									</div>
+									<div class="inputset">
+										<input type="radio" name="seller" id="seller02" /><label for="seller02">[배송 담당자] 홍길동 010-1234-1234</label>
+									</div>
+								</dd>
+							</dl>
+						</div>
+						<div class="blank_line"></div>
+						<div class="group">
+							<dl>
+								<dt>보내는 사람</dt>
+								<dd>
+									<div class="inputset cols3">
+										<input type="text" value="010" readonly="readonly" />
+										<input type="text" value="1234" readonly="readonly" />
+										<input type="text" value="5678" readonly="readonly" />
+									</div>
+								</dd>
+							</dl>
+						</div>
+						<div class="blank_line"></div>
+					</div>
+					<div class="button_box">
+						<button type="button" onclick="reWrite()" class="buttons fcdefault">다시쓰기</button>
+						<button type="submit" class="buttons fill">전송</button>
+					</div>
+				</div>
+			</div><!-- //page_cscenter -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+
+	<script>
+		function msgSelect(obj){
+			const box = $(obj).closest('.msg');
+			let txt = box.find('textarea').val();
+			const input = $('textarea[name=sms_content]');
+			//console.log(txt);
+			if(box.hasClass('choice')){
+				box.removeClass('choice');
+				input.attr('value', '');
+				$(obj).prop('checked', false);
+				$('#sms_size').text(0)
+			} else {
+				$('.message_select .box').removeClass('choice');
+				box.addClass('choice');
+				input.attr('value', txt);
+				$('#sms_size').text(txt.length)
+			}
+		}
+		function reWrite(){
+			$('textarea[name=sms_content]').attr('value', '');
+			$('.message_select .msg').removeClass('choice');
+			$('input:radio[name=msg]').prop('checked', false);
+		}
+	</script>
+	
+</body>
+</html>

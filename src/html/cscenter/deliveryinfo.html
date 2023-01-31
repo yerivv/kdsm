@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "배송안내"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/cscenter/cscenter.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "배송안내",
+			"gnb" : "hidden",
+			"toolbar" : ""
+		})
+
+		<main id="container">
+			<div class="page_cscenter">
+				<div id="deliveryInfo" class="delivery_info_box">
+					<div class="menu_tab cols3">
+						<ul class="list">
+							<li class="menu1 active" data-tab-target="tab1"><span class="btn">광동제약</span></li>
+							<li class="menu2" data-tab-target="tab2"><span class="btn">도매업체</span></li>
+							<li class="menu3" data-tab-target="tab3"><span class="btn">의약외품</span></li>
+						</ul>
+					</div>
+					<div class="contents contents_tab">
+						<div id="tab1" class="content active">
+							<!-- 배송안내 group -->
+							<div class="delivery_group">
+								<div class="tbl_info delivery">
+									<table class="common_tbl tbl_col">
+										<caption>광동제약 배송안내 표</caption>
+										<colgroup>
+											<col width="*">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="color">입점업체</th>
+												<th>배송구분</th>
+												<th>배송지역</th>
+												<th>최소주문금액</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>광동제약</th>
+												<td>1일 1배송<br />(고려택배)</td>
+												<td>전국</td>
+												<td>없음</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="accordions_wrap">
+									<div class="tbl_info delivery toggle">
+										<table class="common_tbl tbl_col">
+											<caption>주문 마감 시간 상세 표</caption>
+											<colgroup>
+												<col width="75"><col width="*">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>요일</th>
+													<th>주문마감시간</th>
+													<th>배송예정일</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>월 ~ 목</td>
+													<td>전일 14시 ~ 당일 14시</td>
+													<td>익일 18시 이전</td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="notice_text">일부 품목은 배송예정일보다 1~5일 지연될 수 있습니다.</div>
+									</div>
+									<div class="button_box">
+										<a href="javascript:void(0)" onclick="accordions(this)" class="buttons other fw400">주문마감시간 상세 열기<i class="arrow"></i></a>
+									</div>
+								</div>
+							</div><!-- //delivery_group -->
+						</div>
+						<div id="tab2" class="content">
+							<div class="noticebox type3">
+								<dl>
+									<dt>유의사항</dt>
+									<dd>
+										<ul>
+											<li>택배사 사정에 따라 배송 지연 및 변동될 수 있습니다.</li>
+											<li>제주도 및 도서 산간지역은 최소주문금액이 상이할 수 있고 배송예정일보다 1~2일 지연될 수 있습니다.</li>
+											<li>마트 내 입점약국은 검품장까지만 배송됩니다.</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<!-- 배송안내 group -->
+							<div class="delivery_group">
+								<div class="tbl_info delivery">
+									<table class="common_tbl tbl_col">
+										<caption>입점업체 배송안내 표</caption>
+										<colgroup>
+											<col width="*">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="color">입점업체</th>
+												<th>배송구분</th>
+												<th>배송지역</th>
+												<th>최소주문금액</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>광주지오팜</th>
+												<td>1일 2배송<br />(자차)</td>
+												<td>광주</td>
+												<td>20만원</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="accordions_wrap">
+									<div class="tbl_info delivery toggle">
+										<table class="common_tbl tbl_col">
+											<caption>주문 마감 시간 상세 표</caption>
+											<colgroup>
+												<col width="75"><col width="*">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>요일</th>
+													<th>주문마감시간</th>
+													<th>배송예정일</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>월 ~ 목</td>
+													<td>전일 14시 ~ 당일 09시</td>
+													<td>당일 오전 배송</td>
+												</tr>
+												<tr>
+													<td>월 ~ 금</td>
+													<td>당일 09시 ~ 당일 14시</td>
+													<td>당일 오후 배송</td>
+												</tr>
+												<tr>
+													<td>금</td>
+													<td>금요일 14시 ~ 금요일 18시</td>
+													<td>토요일 오후 배송</td>
+												</tr>
+												<tr>
+													<td>금 ~ 월</td>
+													<td>금요일 18시 ~ 월요일 09시</td>
+													<td>월요일 오전 배송</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="button_box">
+										<a href="javascript:void(0)" onclick="accordions(this)" class="buttons other fw400">주문마감시간 상세 열기<i class="arrow"></i></a>
+									</div>
+								</div>
+							</div><!-- //delivery_group -->
+							<!-- 배송안내 group -->
+							<div class="delivery_group">
+								<div class="tbl_info delivery">
+									<table class="common_tbl tbl_col">
+										<caption>입점업체 배송안내 표</caption>
+										<colgroup>
+											<col width="*">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="color">광주지오팜</th>
+												<th>배송구분</th>
+												<th>배송지역</th>
+												<th>최소주문금액</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>광주지오팜</th>
+												<td>1일 2배송<br />(자차)</td>
+												<td>화순</td>
+												<td>20만원</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="accordions_wrap">
+									<div class="tbl_info delivery toggle">
+										<table class="common_tbl tbl_col">
+											<caption>주문 마감 시간 상세 표</caption>
+											<colgroup>
+												<col width="75"><col width="*">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>요일</th>
+													<th>주문마감시간</th>
+													<th>배송예정일</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>월 ~ 목</td>
+													<td>전일 14시 ~ 당일 09시</td>
+													<td>당일 오전 배송</td>
+												</tr>
+												<tr>
+													<td>월 ~ 금</td>
+													<td>당일 09시 ~ 당일 14시</td>
+													<td>당일 오후 배송</td>
+												</tr>
+												<tr>
+													<td>금</td>
+													<td>금요일 14시 ~ 금요일 18시</td>
+													<td>토요일 오후 배송</td>
+												</tr>
+												<tr>
+													<td>금 ~ 월</td>
+													<td>금요일 18시 ~ 일요일 24시</td>
+													<td>월요일 오전 배송</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="button_box">
+										<a href="javascript:void(0)" onclick="accordions(this)" class="buttons other fw400">주문마감시간 상세 열기<i class="arrow"></i></a>
+									</div>
+								</div>
+							</div><!-- //delivery_group -->
+							<!-- 배송안내 group -->
+							<div class="delivery_group">
+								<div class="tbl_info delivery">
+									<table class="common_tbl tbl_col">
+										<caption>입점업체 배송안내 표</caption>
+										<colgroup>
+											<col width="*">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="color">광주지오팜</th>
+												<th>배송구분</th>
+												<th>배송지역</th>
+												<th>최소주문금액</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>광주지오팜</th>
+												<td>1일 2배송<br />(자차)</td>
+												<td>순천,여수,광양,목포,무안,담양,장성,나주,함평,영광,구례,옥과,곡성</td>
+												<td>20만원</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="accordions_wrap">
+									<div class="tbl_info delivery toggle">
+										<table class="common_tbl tbl_col">
+											<caption>주문 마감 시간 상세 표</caption>
+											<colgroup>
+												<col width="75"><col width="*">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>요일</th>
+													<th>주문마감시간</th>
+													<th>배송예정일</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>월 ~ 목</td>
+													<td>당일 11시 ~ 당일 24시</td>
+													<td>익일 오전 배송</td>
+												</tr>
+												<tr>
+													<td>월 ~ 금</td>
+													<td>당일 00시 ~ 당일 11시</td>
+													<td>당일 오후 배송</td>
+												</tr>
+												<tr>
+													<td>금</td>
+													<td>금요일 11시 ~ 금요일 18시</td>
+													<td>토요일 오후 배송</td>
+												</tr>
+												<tr>
+													<td>금 ~ 월</td>
+													<td>금요일 18시 ~ 일요일 24시</td>
+													<td>월요일 오후 배송</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="button_box">
+										<a href="javascript:void(0)" onclick="accordions(this)" class="buttons other fw400">주문마감시간 상세 열기<i class="arrow"></i></a>
+									</div>
+								</div>
+							</div><!-- //delivery_group -->
+							<!-- 배송안내 group -->
+							<div class="delivery_group">
+								<div class="tbl_info delivery">
+									<table class="common_tbl tbl_col">
+										<caption>입점업체 배송안내 표</caption>
+										<colgroup>
+											<col width="*">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="color">광주지오팜</th>
+												<th>배송구분</th>
+												<th>배송지역</th>
+												<th>최소주문금액</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>광주지오팜</th>
+												<td>1일 1배송<br />(자차)</td>
+												<td>남원</td>
+												<td>20만원</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="accordions_wrap">
+									<div class="tbl_info delivery toggle">
+										<table class="common_tbl tbl_col">
+											<caption>주문 마감 시간 상세 표</caption>
+											<colgroup>
+												<col width="75"><col width="*">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>요일</th>
+													<th>주문마감시간</th>
+													<th>배송예정일</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>월 ~ 목</td>
+													<td>당일 00시 ~ 당일 24시</td>
+													<td>익일 오후 배송</td>
+												</tr>
+												<tr>
+													<td>금</td>
+													<td>금요일 00시 ~ 금요일 18시</td>
+													<td>토요일 오후 배송</td>
+												</tr>
+												<tr>
+													<td>금 ~ 월</td>
+													<td>금요일 18시 ~ 일요일 24시</td>
+													<td>월요일 오후 배송</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="button_box">
+										<a href="javascript:void(0)" onclick="accordions(this)" class="buttons other fw400">주문마감시간 상세 열기<i class="arrow"></i></a>
+									</div>
+								</div>
+							</div><!-- //delivery_group -->
+							<!-- 배송안내 group -->
+							<div class="delivery_group">
+								<div class="tbl_info delivery">
+									<table class="common_tbl tbl_col">
+										<caption>입점업체 배송안내 표</caption>
+										<colgroup>
+											<col width="*">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="color">광주지오팜</th>
+												<th>배송구분</th>
+												<th>배송지역</th>
+												<th>최소주문금액</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>광주지오팜</th>
+												<td>1일 1배송<br />(자차)</td>
+												<td>진도,영암,해남, 완도,장흥,강진, 보성,고흥,남해(경남)</td>
+												<td>20만원</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="accordions_wrap">
+									<div class="tbl_info delivery toggle">
+										<table class="common_tbl tbl_col">
+											<caption>주문 마감 시간 상세 표</caption>
+											<colgroup>
+												<col width="75"><col width="*">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>요일</th>
+													<th>주문마감시간</th>
+													<th>배송예정일</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>월 ~ 금</td>
+													<td>전일 11시 ~ 당일 11시</td>
+													<td>당일 오후 배송</td>
+												</tr>
+												<tr>
+													<td>금</td>
+													<td>금요일 11시 ~ 금요일 18시</td>
+													<td>토요일 오후 배송</td>
+												</tr>
+												<tr>
+													<td>금 ~ 월</td>
+													<td>금요일 18시 ~ 월요일 11시</td>
+													<td>월요일 오후 배송</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="button_box">
+										<a href="javascript:void(0)" onclick="accordions(this)" class="buttons other fw400">주문마감시간 상세 열기<i class="arrow"></i></a>
+									</div>
+								</div>
+							</div><!-- //delivery_group -->
+							<!-- 배송안내 group -->
+							<div class="delivery_group">
+								<div class="tbl_info delivery">
+									<table class="common_tbl tbl_col">
+										<caption>입점업체 배송안내 표</caption>
+										<colgroup>
+											<col width="*">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="color">광주지오팜</th>
+												<th>배송구분</th>
+												<th>배송지역</th>
+												<th>최소주문금액</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>광주지오팜</th>
+												<td>1일 1배송<br />(용마로지스)</td>
+												<td>자차 배송<br />불가지역</td>
+												<td>30만원</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="accordions_wrap">
+									<div class="tbl_info delivery toggle">
+										<table class="common_tbl tbl_col">
+											<caption>주문 마감 시간 상세 표</caption>
+											<colgroup>
+												<col width="75"><col width="*">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>요일</th>
+													<th>주문마감시간</th>
+													<th>배송예정일</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>월 ~ 금</td>
+													<td>전일 15시 ~ 당일 15시</td>
+													<td>익일 배송</td>
+												</tr>
+												<tr>
+													<td>금 ~ 월</td>
+													<td>금요일 15시 ~ 월요일 15시</td>
+													<td>화요일 배송</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="button_box">
+										<a href="javascript:void(0)" onclick="accordions(this)" class="buttons other fw400">주문마감시간 상세 열기<i class="arrow"></i></a>
+									</div>
+								</div>
+							</div><!-- //delivery_group -->
+						</div>
+						<div id="tab3" class="content">탭컨텐츠3</div>
+					</div>
+				</div>
+			</div><!-- //page_cscenter -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+
+	<script>
+		tabInit('#deliveryInfo');
+	</script>
+	
+</body>
+</html>

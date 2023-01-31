@@ -73,3 +73,73 @@
 .inquiry_write .title_box + .common_tbl {margin:0;}
 .inquiry_write .common_tbl label {color:#242424;font-size:15px;}
 .inquiry_write .common_tbl .inputset + .inputset {margin-top:12px;}
+
+.inquiry_list {margin:0 -16px;}
+.inquiry_list li {border-bottom:1px solid #d9d9d9;}
+.inquiry_list .title {display:flex;flex-direction:column;gap:8px 0;position:relative;padding:16px;padding-right:40px;line-height:16px;}
+.inquiry_list .title .state {display:flex;align-items:center;}
+.inquiry_list .title .state .label {height:16px;padding:0 8px;border:1px solid #dcdee0;color:#5b5e6a;font-size:12px;line-height:14px;}
+.inquiry_list .title .state .label.end {border-color:#e8340c;background-color:#e8340c;color:#fff;}
+.inquiry_list .title .state .date {margin-left:10px;}
+.inquiry_list .title .date {color:#b0b0b0;font-size:12px;}
+.inquiry_list .title .type {color:#797d8d;}
+.inquiry_list .title .subject {color:#000;}
+.inquiry_list .title::after {content:'';position:absolute;right:10px;top:50%;width:24px;height:24px;margin-top:-12px;background:url(../../../imgs/global/icon_arrow_down1.png) center center no-repeat;background-size:16px;transition:0.2s;}
+.inquiry_list .question,
+.inquiry_list .answer {display:none;min-height:168px;padding:11px 16px;line-height:18px;}
+.inquiry_list .question {background-color:#edf0f0;}
+.inquiry_list .active .title::after {transform:rotate(180deg);}
+.inquiry_list .active .question,
+.inquiry_list .active .answer {display:block;}
+
+/* 문자보내기 */
+.sms_box .notice {padding:12px 24px;margin:16px 0;border-radius:4px;background-color:#edf0f2;color:#8f8f8f;font-size:12px;line-height:13px;}
+.sms_box .form .group {padding:24px 0;}
+.sms_box .form .group:first-child {padding-top:16px;}
+.sms_box .form .group dl + dl {margin-top:24px;}
+.sms_box .form .group dl {display:flex;flex-direction:column;}
+.sms_box .form .group dt {font-size:16px;font-weight:500;line-height:24px;}
+.sms_box .form .group dd {margin-top:8px;}
+.sms_box .form .group .byte_box {position:relative;margin:0;}
+.sms_box .form .group .byte_box textarea {height:255px;padding-bottom:30px;}
+.sms_box .form .group .byte_box .byte {position:absolute;left:16px;bottom:16px;font-size:12px;}
+.sms_box .form .group .message_select {display:flex;gap:0 8px;}
+.sms_box .form .group .message_select > .msg {width:calc((100% - 16px) / 3);}
+.sms_box .form .group .message_select textarea {height:111px;padding:8px;border-color:#dee0e4;color:#666;line-height:1;}
+.sms_box .form .group .message_select .textType {width:40px;margin:16px auto 0;}
+.sms_box .form .group .type1 {flex-direction:row;}
+.sms_box .form .group .type1 dt {width:86px;}
+.sms_box .form .group .type1 dd {width:calc(100% - 86px);margin:0;}
+.sms_box .form .group .type1 .inputset {padding:2px 0;}
+.sms_box .form .group .type1 .inputset + .inputset {margin-top:12px;}
+@media (max-width:320px) {
+	.sms_box .form .group .message_select {flex-wrap:wrap;gap:16px 8px;}
+	.sms_box .form .group .message_select > .msg {width:calc((100% - 8px) / 2);}
+	.sms_box .form .group .type1 {flex-direction:column;}
+	.sms_box .form .group .type1 dt,
+	.sms_box .form .group .type1 dd {width:100%;}
+	.sms_box .form .group .type1 dd {margin-top:12px;}
+	.sms_box .form .group .type1 .inputset {padding:0;}
+	.sms_box .form .group .type1 .inputset + .inputset {margin-top:16px;}
+}
+
+/* 입점업체 안내, 배송안내 */
+.tbl_info {margin-top:16px;}
+.tbl_info .tbl_col th,
+.tbl_info .tbl_col td {text-align:center;vertical-align:middle;}
+.tbl_info .tbl_col th {padding:7px 3px;}
+.tbl_info .tbl_col td {padding:11px 3px;font-weight:400;}
+.tbl_info .tbl_col tbody th {padding:3px 8px;background-color:#fff;font-weight:500; }
+.tbl_info .tbl_col .address {padding:3px;}
+.tbl_info .tbl_col .address > div {display:flex;flex-wrap:wrap;justify-content:center;align-items:center;min-height:32px;padding:0 26px;}
+.tbl_info .tbl_col .color {background-color:#ffe7e1;}
+.tbl_info.delivery .tbl_col tbody th {font-size:14px;}
+.tbl_info.delivery .tbl_col td {height:38px;padding:3px;}
+.delivery_group .accordions_wrap {margin-top:8px;}
+.delivery_group .accordions_wrap .tbl_info {margin:0;}
+.delivery_group .accordions_wrap .notice_text {margin-bottom:24px;}
+.delivery_group .accordions_wrap .tbl_info + .button_box {margin-top:-1px;}
+.delivery_group .button_box {margin:0;}
+.delivery_group .button_box .buttons {border-top-left-radius:0;border-top-right-radius:0;}
+.delivery_group + .delivery_group {margin-top:32px;}
+.delivery_info_box .noticebox {margin-top:16px;}

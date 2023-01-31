@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "입점업체 안내"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/cscenter/cscenter.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "입점업체 안내",
+			"gnb" : "hidden",
+			"toolbar" : ""
+		})
+
+		<main id="container">
+			<div class="page_cscenter">
+				<div class="menu_tab cols3">
+					<ul class="list">
+						<li class="menu1 active"><a href="?" class="btn">광동제약</a></li>
+						<li class="menu2"><a href="?" class="btn">도매업체</a></li>
+						<li class="menu3"><a href="?" class="btn">의약외품</a></li>
+					</ul>
+				</div>
+				<div class="tbl_info">
+					<table class="common_tbl tbl_col">
+						<caption>상품 정보 고시 표</caption>
+						<colgroup>
+							<col width="*">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>입점업체</th>
+								<th>대표전화번호</th>
+								<th>운영담당자</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>광동제약</th>
+								<td>080-024-0030</td>
+								<td>KDShop</td>
+							</tr>
+							<tr>
+								<td colspan="3" class="address">
+									<div><p>주소 : 서울 서초구 서초 중앙로 85 (서초동, 가산빌딩) 광동제약</p></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tbl_info">
+					<table class="common_tbl tbl_col">
+						<caption>상품 정보 고시 표</caption>
+						<colgroup>
+							<col width="*">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>입점업체</th>
+								<th>대표전화번호</th>
+								<th>운영담당자</th>
+								<th>담당자 연락처</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>대성메디케어</th>
+								<td>031-571-7385</td>
+								<td>양정남</td>
+								<td>031-571-7385</td>
+							</tr>
+							<tr>
+								<td colspan="4" class="address">
+									<div><p>주소 : 서울 서초구 서초 중앙로 85 (서초동, 가산빌딩) 광동제약</p></div>
+								</td>
+							</tr>
+							<tr>
+								<th>상원메드</th>
+								<td>031-571-7385</td>
+								<td>양정남</td>
+								<td>031-571-7385</td>
+							</tr>
+							<tr>
+								<td colspan="4" class="address">
+									<div><p>주소 : 서울 구로구 디지털로 288 (구로동, 대륭포스트타워1차) 2층 209-A201호</p></div>
+								</td>
+							</tr>
+							<tr>
+								<th>금원하이텍 (온장고)</th>
+								<td>031-571-7385</td>
+								<td>양정남</td>
+								<td>031-571-7385</td>
+							</tr>
+							<tr>
+								<td colspan="4" class="address">
+									<div><p>주소 : 서울 구로구 디지털로 288 (구로동, 대륭포스트타워1차) 2층 209-A201호</p></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div><!-- //page_cscenter -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+
+	<script>
+	</script>
+	
+</body>
+</html>
