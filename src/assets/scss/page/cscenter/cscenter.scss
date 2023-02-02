@@ -3,11 +3,17 @@
 #container {padding-top:0;}
 #footer {padding:0;}
 #footer .customer {padding:0 0 4px;margin:0;border-width:0;}
-.page_cscenter {margin-top:0}
 .page_cscenter .category_menu {margin-top:24px;}
 .page_cscenter .category_menu ul {margin-bottom:-1px;}
 .page_cscenter .button_box {margin-top:16px;}
+.page_cscenter .inputset.cols3 {gap:0 8px;}
+.page_cscenter .inputset.cols3 input {width:calc((100% - 16px) / 3);}
+.page_cscenter .inputset.email {flex-wrap:wrap;}
+.page_cscenter .inputset.email .at {width:32px;color:#000;font-size:14px;}
+.page_cscenter .inputset.email input {width:calc(50% - 16px);}
+.page_cscenter .inputset.email select {width:100%;margin:8px 0 0;}
 
+/* 메인 */
 .section_faq .faq_scroll {overflow-x:auto;position:relative;z-index:1;margin:0 -16px;}
 .section_faq .faq_scroll ::-webkit-scrollbar {display: none;}
 .section_faq .faq_scroll ol::-webkit-scrollbar {display: none;}
@@ -17,7 +23,6 @@
 .section_faq .faq_scroll ol li:last-child {margin-right:16px;}
 .section_faq .faq_scroll ol li a {display:block;width:100%;height:100%;padding:8px 16px;color:#666;font-size:12px;line-height:14px;}
 .section_faq .faq_scroll ol li a::before {content:'Q'counter(row)'.';display:block;height:28px;margin-bottom:4px;color:#e8340c;font-family: 'roboto';font-size:18px;font-weight:700;line-height:27px;}
-
 .section_board {position:relative;}
 .section_board .more {position:absolute;right:0;top:5px;}
 .section_board .contents_tab ul {padding:18px 0;}
@@ -27,7 +32,6 @@
 @media (max-width:320px) {
 	.section_board .contents_tab li a {white-space:normal;word-break:break-all;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
 }
-
 .menu_link {margin-top:24px;}
 .menu_link ul {display:flex;flex-wrap:wrap;gap:8px;}
 .menu_link ul li {width:calc(50% - 4px);}
@@ -35,10 +39,10 @@
 .menu_link ul li .box {display:block;font-weight:500;line-height:1;}
 .menu_link ul li .label_count {vertical-align:baseline;margin-left:4px;}
 
+/* FAQ */
 .faq_search {padding:16px 16px 24px;margin:0 -16px;background-color:#797d8d;}
 .faq_search dt {color:#fff;line-height:1;}
 .faq_search dd {margin-top:16px;}
-
 .faq_list {margin-top:10px;}
 .faq_list dl {overflow:hidden;border:1px solid #dee0e4;border-radius:4px;}
 .faq_list dl + dl {margin-top:16px;}
@@ -53,27 +57,17 @@
 .faq_list dd::before {content:'A.';}
 .faq_list .active dt::after {transform:rotate(180deg);}
 .faq_list .active dd {display:flex;}
-
 .inquiry_text {padding:12px 0;border-bottom:1px solid #edf0f2;}
 .inquiry_text p {color:#666;font-size:15px;line-height:1;letter-spacing: -0.06em;}
 .inquiry_text p + p {margin-top:8px;}
 .inquiry_text .buttons {margin-top:12px;}
-@media (max-width:320px) {
-	.inquiry_text p {padding-right:50px;}
-}
-.page_cscenter .inputset.cols3 {gap:0 8px;}
-.page_cscenter .inputset.cols3 input {width:calc((100% - 16px) / 3);}
-.page_cscenter .inputset.email {flex-wrap:wrap;}
-.page_cscenter .inputset.email .at {width:32px;color:#000;font-size:14px;}
-.page_cscenter .inputset.email input {width:calc(50% - 16px);}
-.page_cscenter .inputset.email select {width:100%;margin:8px 0 0;}
 
+/* 1:1문의 */
 .inquiry_write .common_tbl {margin-top:24px;}
 .inquiry_write .title_box .title {font-size:14px;font-weight:400;}
 .inquiry_write .title_box + .common_tbl {margin:0;}
 .inquiry_write .common_tbl label {color:#242424;font-size:15px;}
 .inquiry_write .common_tbl .inputset + .inputset {margin-top:12px;}
-
 .inquiry_list {margin:0 -16px;}
 .inquiry_list li {border-bottom:1px solid #d9d9d9;}
 .inquiry_list .title {display:flex;flex-direction:column;gap:8px 0;position:relative;padding:16px;padding-right:40px;line-height:16px;}
@@ -116,9 +110,8 @@
 	.sms_box .form .group .message_select {flex-wrap:wrap;gap:16px 8px;}
 	.sms_box .form .group .message_select > .msg {width:calc((100% - 8px) / 2);}
 	.sms_box .form .group .type1 {flex-direction:column;}
-	.sms_box .form .group .type1 dt,
-	.sms_box .form .group .type1 dd {width:100%;}
-	.sms_box .form .group .type1 dd {margin-top:12px;}
+	.sms_box .form .group .type1 dt {width:100%;}
+	.sms_box .form .group .type1 dd {width:100%;margin-top:12px;}
 	.sms_box .form .group .type1 .inputset {padding:0;}
 	.sms_box .form .group .type1 .inputset + .inputset {margin-top:16px;}
 }

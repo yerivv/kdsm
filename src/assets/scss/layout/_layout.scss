@@ -81,6 +81,11 @@
 #footer .info address a {color:#B0B0B0;}
 #footer .info address .btn_biz {position:absolute;right:0;bottom:3px;width:100px;border:1px solid #8f8f8f;font-size:12px;line-height:18px;text-align:center;}
 #footer .info .copy {padding:6px 0;margin-top:3px;font-weight:300;}
+@media (max-width: 320px) {
+	#footer .menu {flex-wrap:wrap;}
+	#footer .footer_menu .menu li {flex:auto;}
+	#footer .info .menu li a {padding:0 5px 0 4px;}
+}
 
 .menu_icon_list {display:flex;flex-wrap:wrap;gap:8px;}
 .menu_icon_list li {width:calc(50% - 4px);border:1px solid #dee0e4;border-radius:4px;}
