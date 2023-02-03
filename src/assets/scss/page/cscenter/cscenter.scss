@@ -1,8 +1,8 @@
 /* 고객센터
 */
 #container {padding-top:0;}
-#footer {padding:0;}
-#footer .customer {padding:0 0 4px;margin:0;border-width:0;}
+#footer.csIndex {padding:0;}
+#footer.csIndex .customer {padding:0 0 4px;margin:0;border-width:0;}
 .page_cscenter .category_menu {margin-top:24px;}
 .page_cscenter .category_menu ul {margin-bottom:-1px;}
 .page_cscenter .button_box {margin-top:16px;}
@@ -62,30 +62,6 @@
 .inquiry_text p + p {margin-top:8px;}
 .inquiry_text .buttons {margin-top:12px;}
 
-/* 1:1문의 */
-.inquiry_write .common_tbl {margin-top:24px;}
-.inquiry_write .title_box .title {font-size:14px;font-weight:400;}
-.inquiry_write .title_box + .common_tbl {margin:0;}
-.inquiry_write .common_tbl label {color:#242424;font-size:15px;}
-.inquiry_write .common_tbl .inputset + .inputset {margin-top:12px;}
-.inquiry_list {margin:0 -16px;}
-.inquiry_list li {border-bottom:1px solid #d9d9d9;}
-.inquiry_list .title {display:flex;flex-direction:column;gap:8px 0;position:relative;padding:16px;padding-right:40px;line-height:16px;}
-.inquiry_list .title .state {display:flex;align-items:center;}
-.inquiry_list .title .state .label {height:16px;padding:0 8px;border:1px solid #dcdee0;color:#5b5e6a;font-size:12px;line-height:14px;}
-.inquiry_list .title .state .label.end {border-color:#e8340c;background-color:#e8340c;color:#fff;}
-.inquiry_list .title .state .date {margin-left:10px;}
-.inquiry_list .title .date {color:#b0b0b0;font-size:12px;}
-.inquiry_list .title .type {color:#797d8d;}
-.inquiry_list .title .subject {color:#000;}
-.inquiry_list .title::after {content:'';position:absolute;right:10px;top:50%;width:24px;height:24px;margin-top:-12px;background:url(../../../imgs/global/icon_arrow_down1.png) center center no-repeat;background-size:16px;transition:0.2s;}
-.inquiry_list .question,
-.inquiry_list .answer {display:none;min-height:168px;padding:11px 16px;line-height:18px;}
-.inquiry_list .question {background-color:#edf0f0;}
-.inquiry_list .active .title::after {transform:rotate(180deg);}
-.inquiry_list .active .question,
-.inquiry_list .active .answer {display:block;}
-
 /* 문자보내기 */
 .sms_box .notice {padding:12px 24px;margin:16px 0;border-radius:4px;background-color:#edf0f2;color:#8f8f8f;font-size:12px;line-height:13px;}
 .sms_box .form .group {padding:24px 0;}
@@ -119,8 +95,16 @@
 /* 입점업체 안내, 배송안내 */
 .tbl_info {margin-top:16px;}
 .tbl_info .tbl_col th,
-.tbl_info .tbl_col td {text-align:center;vertical-align:middle;}
-.tbl_info .tbl_col th {padding:7px 3px;}
+.tbl_info .tbl_col td {text-align:center;vertical-align:middle;line-height:16px;}
+.tbl_info .tbl_col thead th {height:32px;padding:0 3px;line-height:1;}
+.tbl_info .tbl_col .s1,
+.tbl_info .tbl_col .s2,
+.tbl_info .tbl_col .s3,
+.tbl_info .tbl_col .s4 {width:25%;}
+.tbl_info .tbl_col.kdshop .s1,
+.tbl_info .tbl_col.kdshop .s2,
+.tbl_info .tbl_col.kdshop .s3 {width:calc(100% / 3);}
+.tbl_info .tbl_col.kdshop td {height:39px;}
 .tbl_info .tbl_col td {padding:11px 3px;font-weight:400;}
 .tbl_info .tbl_col tbody th {padding:3px 8px;background-color:#fff;font-weight:500; }
 .tbl_info .tbl_col .address {padding:3px;}
@@ -130,9 +114,19 @@
 .tbl_info.delivery .tbl_col td {height:38px;padding:3px;}
 .delivery_group .accordions_wrap {margin-top:8px;}
 .delivery_group .accordions_wrap .tbl_info {margin:0;}
-.delivery_group .accordions_wrap .notice_text {margin-bottom:24px;}
+.delivery_group .accordions_wrap .tbl_info .tbl_col .s1 {width:22%;}
+.delivery_group .accordions_wrap .tbl_info .tbl_col .s2 {width:39%;}
+.delivery_group .accordions_wrap .tbl_info .tbl_col .s3 {width:39%;}
+.delivery_group .accordions_wrap .center_box {display:flex;justify-content:center;margin-bottom:24px;}
 .delivery_group .accordions_wrap .tbl_info + .button_box {margin-top:-1px;}
 .delivery_group .button_box {margin:0;}
 .delivery_group .button_box .buttons {border-top-left-radius:0;border-top-right-radius:0;}
 .delivery_group + .delivery_group {margin-top:32px;}
 .delivery_info_box .noticebox {margin-top:16px;}
+@media (max-width:320px) {
+	.tbl_info .tbl_col thead th {padding-left:5px;padding-right:5px;}
+	.tbl_info .tbl_col td {padding-top:3px;padding-bottom:3px;}
+	.tbl_info .tbl_col tbody th {padding-left:3px;padding-right:3px;}
+	.tbl_info .tbl_col .address > div {padding:0 3px;}
+	.delivery_group .accordions_wrap .notice_text {font-size:11px;}
+}

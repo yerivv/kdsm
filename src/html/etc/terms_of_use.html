@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "관리자에서 등록한 약관제목"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/etc/etc.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "약관제목",
+			"gnb" : "hidden",
+			"toolbar" : ""
+		})
+
+		<main id="container">
+			<div class="page_terms">
+				<!-- 개인정보 관련에서만 노출 -->
+				<div class="menu_tab cols2">
+					<ul class="list">
+						<li class="menu1 active"><a href="#" class="btn">개인정보 취급방침</a></li>
+						<li class="menu2"><a href="#" class="btn">제 3자 정보제공동의</a></li>
+					</ul>
+				</div><!-- //menu_tab -->
+				<div class="version">
+					<select name="">
+						<option value="">개인정보취급방침 [ver 1.0] 현재</option>
+					</select>
+				</div>
+				<div class="editorcontent">
+					관리자에서 등록한 내용 노출
+				</div>
+			</div><!-- //page_terms -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+</body>
+</html>
