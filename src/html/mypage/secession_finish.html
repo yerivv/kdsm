@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "회원탈퇴"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/mypage/mypage.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "회원탈퇴",
+			"gnb" : "hidden",
+			"toolbar" : ""
+		})
+
+		<main id="container">
+			<div class="page_mypage">
+				<div class="finish_wrap">
+					<div class="confirm_box">
+						<i class="ico"></i>
+						<h3 class="title">탈퇴신청이 완료되었습니다.</h3>
+					</div>
+					<div class="confirm_detail_box">
+						KD-Shop 탈퇴신청이 완료되었습니다.<br /><br />
+						검토 후 신속하게 조치하여 드리겠습니다.<br />
+						관리자 탈퇴승인 전까지 주문/반품 등의 <span class="block">거래 관련
+						서비스 이용에 </span>일부 제한이 있으며<br />
+						탈퇴승인이 완료되면 카카오 알림톡을 <span class="block">발송해드립니다.</span><br />
+					</div>
+				</div>
+				<div class="button_box">
+					<a href="../member/login.html" class="buttons fill">확인</a>
+				</div>
+			</div><!-- //page_mypage -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+		function validSubmit(){
+			location.replace('secession.html');
+		}
+	</script>
+</body>
+</html>

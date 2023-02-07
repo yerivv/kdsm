@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "회원탈퇴"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/mypage/mypage.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "회원탈퇴",
+			"gnb" : "hidden",
+			"toolbar" : ""
+		})
+
+		<main id="container">
+			<div class="page_mypage">
+				<div class="secession_wrap">
+					<div class="section">
+						<div class="title_box">
+							<h3 class="title">탈퇴 신청 전 꼭 확인하세요!</h3>
+						</div>
+						<div class="common_tbl tbl_round">
+							<table>
+								<caption>헤택 정보 및 영업사원 정보</caption>
+								<colgroup>
+									<col width="122"><col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">회원등급</th>
+										<td><span class="number">VIP</span></td>
+									</tr>
+									<tr>
+										<th scope="row">보유쿠폰</th>
+										<td><a href="" class="fcpoint underline"><span class="number fw500">10</span>개</a></td>
+									</tr>
+									<tr>
+										<th scope="row">예치금</th>
+										<td><a href="" class="fcpoint underline"><span class="number fw500">300,000</span>원</a></td>
+									</tr>
+									<tr>
+										<th scope="row">마이너스잔고</th>
+										<td><a href="" class="fcpoint underline"><span class="number fw500">10,000</span>원</a></td>
+									</tr>
+									<tr>
+										<th scope="row">마일리지</th>
+										<td><a href="" class="fcpoint underline"><span class="number fw500">20,000</span>P</a></td>
+									</tr>
+									<tr>
+										<th scope="row">영업사원 연락처</th>
+										<td>홍길동 <a href="" class="number fw500">010-1234-5678</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="noticebox white">
+							<ul>
+								<li>회원탈퇴 하시면, 관리자 탈퇴신청 접수 후 예치금, 잔고 환불업무가 진행됩니다.</li>
+								<li>탈퇴 후 3개월내(90일) 재가입시 신규회원 가입혜택이 지급되지 않습니다.</li>
+							</ul>
+						</div>
+						<div class="noticebox type1">
+							<dl>
+								<dt class="blind">안내</dt>
+								<dd>
+									<ul>
+										<li>탈퇴 후 고객님의 정보는 전자상거래 소비자보호법에 의거한 개인정보보호정책에 따라 관리 됩니다.</li>
+										<li>탈퇴 후 일정기간 재가입 여부판단을 목적으로 고객님의 최소정보(아이디,성명)을 보존 합니다.</li>
+										<li>탈퇴 시 고객님께서 보유하셨던 마일리지, 쿠폰, 관심상품의 저장상품은 모두 삭제될 수 있으니 꼭 확인하시고 신중하게 탈퇴 신청해 주시기 바랍니다.</li>
+										<li>다음의 경우는 회원탈퇴에 주의가 필요 합니다.
+											<ul>
+												<li>현재 고객님의 반품처리 요청사항이나 고객서비스가 완료되지 않은 경우<br />→ 서비스 처리 완료 후 탈퇴 가능합니다.</li>
+												<li>거래가 진행중인 경우<br />→ 진행 중인 거래를 우선 마무리 해주시기 바랍니다.</li>
+											</ul>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="section">
+						<div class="title_box">
+							<h3 class="title">이용하시면서 불편하셨던 사항을 체크해 주세요.<br />(중복체크 가능)</h3>
+						</div>
+						<div class="reason_check">
+							<ul>
+								<li class="inputset">
+									<input type="checkbox" name="reason" id="problem_price" value="다른 쇼핑몰에 비해 가격이 비쌈" /><label for="problem_price">다른 쇼핑몰에 비해 가격이 비쌈</label>
+								</li>
+								<li class="inputset">
+									<input type="checkbox" name="reason" id="problem_change" value="교환/환불/반품에 대한 불만" /><label for="problem_change">교환/환불/반품에 대한 불만</label>
+								</li>
+								<li class="inputset">
+									<input type="checkbox" name="reason" id="problem_quality" value="상품 품질이 안 좋음" /><label for="problem_quality">상품 품질이 안좋음</label>
+								</li>
+								<li class="inputset">
+									<input type="checkbox" name="reason" id="problem_event" value="이벤트/회원서비스가 다양하지 않음" /><label for="problem_event">이벤트/회원서비스가 다양하지 않음</label>
+								</li>
+								<li class="inputset">
+									<input type="checkbox" name="reason" id="problem_lack" value="상품이 별로 없음" /><label for="problem_lack">상품이 별로 없음</label>
+								</li>
+								<li class="inputset">
+									<input type="checkbox" name="reason" id="problem_privacy" value="개인정보 유출 우려" /><label for="problem_lack">개인정보 유출 우려</label>
+								</li>
+								<li class="inputset">
+									<input type="checkbox" name="reason" id="problem_delivery" value="배송이 늦음" /><label for="problem_delivery">배송이 늦음</label>
+								</li>
+								<li class="inputset">
+									<input type="checkbox" name="reason" id="problem_unuse" value="자주 이용하지 않음" /><label for="problem_unuse">자주 이용하지 않음</label>
+								</li>
+								<li class="etc">
+									<div class="inputset">
+										<input type="checkbox" name="reason" id="problem_etc" value="기타" /><label for="problem_unuse">기타</label>
+									</div>
+									<div class="mgt8">
+										<textarea name="reasonEtc" rows="" cols=""></textarea>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="inputset recheck">
+							<input type="checkbox" name="agreeSecession" id="agreeSecession" value="1" /><label for="agreeSecession">회원탈퇴 안내를 모두 확인하였습니다.<br />탈퇴에 동의합니다.</label>
+						</div>
+					</div>
+					<div class="button_box">
+						<a href="order_return.html" class="buttons fcdefault">취소</a>
+						<button type="submit" class="buttons fill">확인</button>
+					</div>
+				</div>
+			</div><!-- //page_mypage -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>

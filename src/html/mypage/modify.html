@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "회원정보 수정"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/mypage/mypage.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "회원정보 수정",
+			"gnb" : "hidden",
+			"toolbar" : ""
+		})
+
+		<main id="container">
+			<div class="page_mypage">
+				<div class="modify_wrap">
+					<div class="info">
+						<div class="noticebox type1">
+							<dl>
+								<dt class="blind">안내</dt>
+								<dd>
+									<ul>
+										<li>고객님의 가입여부확인 및 개인정보보호를 위한 실명확인 서비스를 실시하고 있습니다.</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!-- 기본정보 -->
+					<div class="section">
+						<div class="title_box">
+							<h3 class="title">기본정보</h3>
+							<p class="mlauto subtext"><span class="required fcpoint">*</span>표시는 필수입력항목 입니다.</p>
+						</div>
+						<div class="form_col_box">
+							<dl>
+								<dt><span class="required"></span>이름</dt>
+								<dd>
+									<div class="inputset">
+										<input type="text" name="name" maxlength="10" value="홍길동" readonly="readonly" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span class="required"></span>생년월일</dt>
+								<dd>
+									<div class="inputset">
+										<input type="text" name="birth" maxlength="8" value="19800101" readonly="readonly" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span class="required"></span>성별</dt>
+								<dd>
+									<div class="inputset">
+										<input type="text" name="gender" maxlength="2" value="남자" readonly="readonly" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span class="required"></span>아이디</dt>
+								<dd>
+									<div class="inputset">
+										<input type="text" name="memberId" maxlength="" value="kwandong" readonly="readonly" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>비밀번호</dt>
+								<dd>
+									<div class="inputset">
+										<input type="password" name="pw" maxlength="20" placeholder="8자 이상 영문, 숫자, 특수문자 조합" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>비밀번호 재확인</dt>
+								<dd>
+									<div class="inputset">
+										<input type="password" name="rePw" maxlength="20" placeholder="비밀번호를 한 번 더 입력해주세요." />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span class="required"></span>휴대폰<br/>번호</dt>
+								<dd>
+									<div class="inputset cols3">
+										<input type="text" name="mobile1" maxlength="3" value="010" />
+										<span class="hyphen">-</span>
+										<input type="text" name="mobile2" maxlength="4" value="1234" />
+										<span class="hyphen">-</span>
+										<input type="text" name="mobile3" maxlength="4" value="5678" />
+									</div>
+								</dd>
+							</dl>
+							<dl class="type1">
+								<dt><span class="required"></span>이메일</dt>
+								<dd>
+									<div class="inputset email">
+										<input type="text" name="emailId" maxlength="20" />
+										<span class="at">@</span>
+										<input type="text" name="emailDomain" maxlength="100" />
+										<select name="">
+											<option value="input">직접입력</option>
+										</select>
+									</div>
+								</dd>
+							</dl>
+							<dl class="type1">
+								<dt><span class="required"></span>세금계산서 수신메일</dt>
+								<dd>
+									<div class="inputset email">
+										<input type="text" name="emailId" maxlength="20" />
+										<span class="at">@</span>
+										<input type="text" name="emailDomain" maxlength="100" />
+										<select name="">
+											<option value="input">직접입력</option>
+										</select>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span class="required"></span>전화번호</dt>
+								<dd>
+									<div class="inputset cols3_1">
+										<select name="">
+											<option value="input">선택</option>
+										</select>
+										<span class="hyphen">-</span>
+										<input type="text" name="mobile2" maxlength="4" />
+										<span class="hyphen">-</span>
+										<input type="text" name="mobile3" maxlength="4" />
+									</div>
+								</dd>
+							</dl>
+							<dl class="type1 environment_select">
+								<dt><span class="required"></span>거래처 위치 환경</dt>
+								<dd>
+									<ul class="inputset">
+										<li>
+											<input type="checkbox" name="" id="" /><label for="">주거지역</label>
+										</li>
+										<li>
+											<input type="checkbox" name="" id="" /><label for="">오피스지역</label>
+										</li>
+										<li>
+											<input type="checkbox" name="" id="" /><label for="">대학가</label>
+										</li>
+										<li>
+											<input type="checkbox" name="" id="" /><label for="">번화한 거리</label>
+										</li>
+										<li>
+											<input type="checkbox" name="" id="" /><label for="">아파트상가 내</label>
+										</li>
+										<li>
+											<input type="checkbox" name="" id="" /><label for="">주택가</label>
+										</li>
+										<li>
+											<input type="checkbox" name="" id="" /><label for="">골목내</label>
+										</li>
+										<li>
+											<input type="checkbox" name="" id="" /><label for="">병원 안</label>
+										</li>
+										<li>
+											<input type="checkbox" name="" id="" /><label for="">병원 근처</label>
+										</li>
+										<li>
+											<input type="checkbox" name="" id="" /><label for="">지하상가 내</label>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt>FAX</dt>
+								<dd>
+									<div class="inputset">
+										<input type="text" name="" maxlength="" placeholder="띄어쓰기 없이, 숫자만 입력" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>요양기관번호</dt>
+								<dd>
+									<div class="inputset">
+										<input type="text" name="" maxlength="" placeholder="띄어쓰기 없이, 숫자만 입력" />
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div><!-- //section -->
+					<!-- 복수 핸드폰 정보 -->
+					<div class="section">
+						<div class="title_box">
+							<h3 class="title">복수 핸드폰 정보</h3>
+						</div>
+						<div class="form_col_box">
+							<dl>
+								<dt>이름</dt>
+								<dd>
+									<div class="inputset">
+										<input type="text" name="name" maxlength="" value="" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>휴대폰 <br />번호</dt>
+								<dd>
+									<div class="inputset cols3">
+										<input type="text" name="mobile1" maxlength="3" value="" />
+										<span class="hyphen">-</span>
+										<input type="text" name="mobile2" maxlength="4" value="" />
+										<span class="hyphen">-</span>
+										<input type="text" name="mobile3" maxlength="4" value="" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>이름</dt>
+								<dd>
+									<div class="inputset">
+										<input type="text" name="name" maxlength="" value="" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>휴대폰 <br />번호</dt>
+								<dd>
+									<div class="inputset cols3">
+										<input type="text" name="mobile1" maxlength="3" value="" />
+										<span class="hyphen">-</span>
+										<input type="text" name="mobile2" maxlength="4" value="" />
+										<span class="hyphen">-</span>
+										<input type="text" name="mobile3" maxlength="4" value="" />
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div><!-- //section -->
+					<!-- 상세정보 -->
+					<div class="section">
+						<div class="title_box">
+							<h3 class="title">상세정보</h3>
+							<p class="mlauto subtext"><span class="required fcpoint">*</span>표시는 필수입력항목 입니다.</p>
+						</div>
+						<div class="noticebox type1">
+							<dl>
+								<dt class="blind">안내</dt>
+								<dd>
+									<ul>
+										<li class="fcpoint">거래처 정보를 수정하시면 관리자의 승인이 필요합니다.<br />수정 요청 후 관리자 승인처리 전까지는 주문/결제 등의 일부 서비스 제한이 있을 수 있으니 참고 바랍니다.</li>
+										<li class="fcpoint">관리자 검토가 필요한 정보이므로 꼭 확인하시고 신중하게 수정해주시기 바랍니다.</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+						<div class="form_col_box">
+							<dl>
+								<dt><span class="required"></span>거래처명</dt>
+								<dd>
+									<div class="inputset">
+										<input type="text" name="name" maxlength="10" value="거래처명" placeholder="사업자등록증 상의 사업자명 입력" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span class="required"></span>대표자명</dt>
+								<dd>
+									<div class="inputset">
+										<input type="text" name="name" maxlength="10" value="홍길동" placeholder="사업자등록증 상의 대표자명 입력" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span class="required"></span>업태</dt>
+								<dd>
+									<div class="inputset cols2_1">
+										<select name="">
+											<option value="input">업태</option>
+										</select>
+										<input type="text" name="" disabled="disabled" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span class="required"></span>업종</dt>
+								<dd>
+									<div class="inputset cols2_1">
+										<select name="">
+											<option value="input">업종</option>
+										</select>
+										<input type="text" name="" disabled="disabled" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span class="required"></span>사업자<br/>등록번호</dt>
+								<dd>
+									<div class="inputset cols3">
+										<input type="text" name="mobile1" maxlength="2" value="12" readonly="readonly" />
+										<span class="hyphen">-</span>
+										<input type="text" name="mobile2" maxlength="5" value="31567" readonly="readonly" />
+										<span class="hyphen">-</span>
+										<input type="text" name="mobile3" maxlength="3" value="890" readonly="readonly" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span class="required"></span>사업자<br/>등록증<br/>첨부</dt>
+								<dd>
+									<div class="inputset fileinput">
+										<input type="text" name="biz_file_name" id="biz_file_name" value="파일명.jpge" placeholder="파일첨부" />
+										<input type="file" name="biz_file" id="biz_file" onchange="fileSelect(this)" accept="image/jpge, image/png, .pdf" />
+										<label for="biz_file" class="buttons medium white">파일선택</label>
+									</div>
+									<div class="note">
+										JPG, PDF, PNG와 같은 이미지 파일로 첨부해주세요.<br />첨부하실 파일 내 주민번호 뒷자리는 가려주세요.
+									</div>
+								</dd>
+							</dl>
+							<dl class="type1">
+								<dt><span class="required"></span>주소</dt>
+								<dd>
+									<div class="inputset post">
+										<input type="text" name="" maxlength="5" value="12345" readonly="readonly" />
+										<button type="button" onclick="" class="buttons medium white">우편번호 찾기</button>
+									</div>
+									<div class="inputset">
+										<input type="text" name="" maxlength="" value="서울시 강남구 역삼동" readonly="readonly" />
+									</div>
+									<div class="inputset">
+										<input type="text" name="" maxlength="" value="123-12" placeholder="상세주소를 입력하세요." />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>은행명</dt>
+								<dd>
+									<div class="inputset">
+										<select name="">
+											<option>선택</option>
+										</select>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>환불<br />계좌번호</dt>
+								<dd>
+									<div class="inputset">
+										<input type="text" name="" placeholder="띄어쓰기 없이, 숫자만 입력" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>예금주</dt>
+								<dd>
+									<div class="inputset">
+										<input type="text" name="" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>통장사본<br />첨부</dt>
+								<dd>
+									<div class="inputset fileinput">
+										<input type="text" name="bank_file_name" id="bank_file_name" value="" placeholder="파일첨부" />
+										<input type="file" name="bank_file" id="bank_file" onchange="fileSelect(this)" accept="image/jpge, image/png, .pdf" />
+										<label for="bank_file" class="buttons medium white">파일선택</label>
+									</div>
+									<div class="note">
+										JPG, PDF, PNG와 같은 이미지 파일로 첨부해주세요.
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span class="required"></span>면허번호</dt>
+								<dd>
+									<div class="inputset">
+										<input type="text" name="" value="12345858" placeholder="띄어쓰기 없이, 숫자만 입력" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span class="required"></span>약사면허<br />파일첨부</dt>
+								<dd>
+									<div class="inputset fileinput">
+										<input type="text" name="license_file_name" id="license_file_name" value="의사면허.jpg" placeholder="파일첨부" />
+										<input type="file" name="license_file" id="license_file" onchange="fileSelect(this)" accept="image/jpge, image/png, .pdf" />
+										<label for="license_file" class="buttons medium white">파일선택</label>
+									</div>
+									<div class="note">
+										JPG, PDF, PNG와 같은 이미지 파일로 첨부해주세요.<br />첨부하실 파일 내 주민번호 뒷자리는 가려주세요.
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>동물약품<br />개설자<br />면허번호</dt>
+								<dd>
+									<div class="inputset">
+										<input type="text" name="" placeholder="띄어쓰기 없이, 숫자만 입력" />
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>동물약품<br />개설자<br />파일첨부</dt>
+								<dd>
+									<div class="inputset fileinput">
+										<input type="text" name="animal_file_name" id="animal_file_name" value="" placeholder="파일첨부" />
+										<input type="file" name="animal_file" id="animal_file" onchange="fileSelect(this)" accept="image/jpge, image/png, .pdf" />
+										<label for="animal_file" class="buttons medium white">파일선택</label>
+									</div>
+									<div class="note">
+										JPG, PDF, PNG와 같은 이미지 파일로 첨부해주세요.<br />첨부하실 파일 내 주민번호 뒷자리는 가려주세요.
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div><!-- //section -->
+					<!-- 약관동의 -->
+					<div class="section">
+						<div class="title_box">
+							<h3 class="title">약관동의</h3>
+						</div>
+						<div class="form_row_box terms_list">
+							<dl>
+								<dt class="blind">선택약관동의</dt>
+								<dd>
+									<input type="checkbox" name="terms" id="terms4" class="list ingroup" value="1" /><label for="terms4">광고성 정보수신 <span class="fcgray8f">(선택)</span></label>
+									<div class="child">
+										<input type="checkbox" name="terms" id="admailing_agree" class="list listchild" value="isadmailing" /><label for="admailing_agree">이메일 수신</label>
+										<input type="checkbox" name="terms" id="adsms_agree" class="list listchild" value="isadsms" /><label for="adsms_agree">SMS 수신</label>
+									</div>
+								</dd>
+								<dd>
+									<input type="checkbox" name="terms" id="terms5" class="list" value="is_use_mk" /><label for="terms5">마케팅 정보 활용 동의 <span class="fcgray8f">(선택)</span></label>
+									<button type="button" onclick="termsView()" class="buttons xsmall white2 round0">보기</button>
+								</dd>
+							</dl>
+						</div>
+					</div><!-- //section -->
+					<div class="button_box">
+						<a href="login.html" class="buttons medium">취소</a>
+						<button type="button" onclick="validSubmit();" class="buttons medium point">회원정보 수정</button>
+					</div>
+					<div class="noticebox type3">
+						<dl>
+							<dt>유의사항</dt>
+							<dd>
+								<ul>
+									<li>담당자 정보는 승인 완료 후 마이페이지에서 확인 가능합니다.</li>
+									<li>회색 색상의 항목은 수정이 불가능합니다.<br />수정을 원하실 경우, 담당영업사원 혹은 KD-Shop 고객센터로  연락 주시기 바랍니다.</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div><!-- //page_mypage -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+		function validSubmit(){
+			const f = document.Frm;
+			f.action = 'modify.html';
+			f.submit();
+		}
+	</script>
+</body>
+</html>

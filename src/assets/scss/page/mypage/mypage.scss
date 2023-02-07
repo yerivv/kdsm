@@ -422,3 +422,41 @@
 .inquiry_list .active .title::after {transform:rotate(180deg);}
 .inquiry_list .active .question,
 .inquiry_list .active .answer {display:block;}
+
+/* 등급안내 */
+.grade_wrap {padding-top:24px;}
+.grade_wrap .noticebox {margin:16px 0 0;}
+.grade_wrap .grade_box {margin-top:32px;}
+.grade_wrap .grade_box .title_box .title {font-weight:400;line-height:20px;}
+.grade_wrap .grade_info {display:flex;overflow:hidden;border:1px solid #dee0e4;border-radius:4px;}
+.grade_wrap .grade_info .box {width:calc(100% / 3);padding:8px 0 12px;text-align:center;}
+.grade_wrap .grade_info .box:not(:first-child) {border-left:1px solid #dee0e4}
+.grade_wrap .grade_info .box dt {font-weight:500;line-height:1;}
+.grade_wrap .grade_info .box .imgs {display:block;width:60px;margin:0 auto 12px;}
+.grade_wrap .grade_info .box dd {margin-top:8px;color:#8f8f8f;font-size:13px;line-height:17px;}
+.grade_wrap .common_tbl {overflow:hidden;border-radius:4px;}
+.grade_wrap .common_tbl th,
+.grade_wrap .common_tbl td {padding:10px 16px;color:#242424;font-size:14px;font-weight:400;line-height:18px;}
+
+/* 본인확인 */
+.check_pw_wrap {min-height:calc(60vh - 32px);}
+.check_pw_wrap .form_row_box {margin-top:16px;}
+
+/* 정보수정 */
+.modify_wrap .noticebox {margin-bottom:0;}
+.modify_wrap .info {padding:16px 0;}
+.modify_wrap .info .noticebox {margin:0;}
+.modify_wrap .button_box {margin:24px 42px 16px;}
+.modify_wrap .section .noticebox {margin-bottom:16px;}
+.modify_wrap .terms_list dd {margin-top:-1px;}
+
+/* 회원탈퇴 */
+.secession_wrap .tbl_round {margin:16px 0;}
+.secession_wrap .reason_check {overflow:hidden;border:1px solid #dee0e4;border-radius:4px;}
+.secession_wrap .reason_check li:not(:first-child) {border-top:1px solid #dee0e4;}
+.secession_wrap .reason_check li {padding:12px 15px;}
+.secession_wrap .reason_check label {font-size:15px;line-height:1;}
+.secession_wrap .reason_check .etc textarea {height:124px;}
+.secession_wrap .recheck {align-items:flex-start;margin-top:16px;}
+.secession_wrap .recheck label {line-height:18px;}
+.finish_wrap {min-height:calc(60vh - 32px);padding-top:24px;}

@@ -176,7 +176,7 @@
 .modal_mypage .mypage_index .menu_list dl li {position:relative;border-top:1px solid #edf0f2;}
 .modal_mypage .mypage_index .menu_list dl li::after {content:'';position:absolute;right:15px;top:50%;width:12px;height:12px;margin-top:-6px;background:url(../imgs/global/icon_arrow_right1.png) center center no-repeat;background-size:contain;transition:0.2s;}
 .modal_mypage .mypage_index .menu_list dl li a {display:block;padding:7px 15px;color:#666;line-height:22px;}
-.modal_mypage .mypage_index .menu_list dl.on dt::after {transform:rotate(180deg);}
+.modal_mypage .mypage_index .menu_list.on dl dt::after {transform:rotate(180deg);}
 .modal_mypage .button_box {padding-top:16px;margin-top:16px;border-top:1px solid #edf0f2;}
 @media (max-width: 320px) {
 	.modal_mypage .mypage_index .order li {width:calc((100% / 2) - 24px);}

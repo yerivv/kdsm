@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "회원정보 수정"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/mypage/mypage.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "회원정보 수정",
+			"gnb" : "hidden",
+			"toolbar" : ""
+		})
+
+		<main id="container">
+			<div class="page_mypage">
+<form name="Frm" method="post" onsubmit="return validSubmit(this)">
+				<div class="check_pw_wrap">
+					<div class="title_box type1">
+						<h3 class="title">본인확인</h3>
+						<p class="subtext">개인정보 도용으로 인한 피해를 예방하기 위해 <br />비밀번호를 다시 한번 확인하고 있습니다.</p>
+					</div>
+					<div class="form_row_box">
+						<dl>
+							<dt>비밀번호 확인</dt>
+							<dd>
+								<div class="inputset">
+									<input type="text" name="pw" maxlength="20" placeholder="비밀번호 입력" />
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="button_box">
+					<a href="order_return.html" class="buttons fcdefault">취소</a>
+					<button type="submit" class="buttons fill">확인</button>
+				</div>
+</form>
+			</div><!-- //page_mypage -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+		function validSubmit(){
+			location.replace('modify.html');
+		}
+	</script>
+</body>
+</html>
