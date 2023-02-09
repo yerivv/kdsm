@@ -14,6 +14,7 @@
 .page_cscenter .inputset.email select {width:100%;margin:8px 0 0;}
 
 /* 메인 */
+.page_cscenter .index_wrap {min-height:calc(100vh - 220px);}
 .section_faq .faq_scroll {overflow-x:auto;position:relative;z-index:1;margin:0 -16px;}
 .section_faq .faq_scroll ::-webkit-scrollbar {display: none;}
 .section_faq .faq_scroll ol::-webkit-scrollbar {display: none;}
@@ -106,17 +107,20 @@
 .tbl_info .tbl_col.kdshop .s3 {width:calc(100% / 3);}
 .tbl_info .tbl_col.kdshop td {height:39px;}
 .tbl_info .tbl_col td {padding:11px 3px;font-weight:400;}
+.tbl_info .tbl_col td a {color:#8f8f8f;}
 .tbl_info .tbl_col tbody th {padding:3px 8px;background-color:#fff;font-weight:500; }
 .tbl_info .tbl_col .address {padding:3px;}
 .tbl_info .tbl_col .address > div {display:flex;flex-wrap:wrap;justify-content:center;align-items:center;min-height:32px;padding:0 26px;}
 .tbl_info .tbl_col .color {background-color:#ffe7e1;}
+.tbl_info .tbl_col .line {border-left:1px solid #DEE0E4;}
 .tbl_info.delivery .tbl_col tbody th {font-size:14px;}
-.tbl_info.delivery .tbl_col td {height:38px;padding:3px;}
+.tbl_info.delivery .tbl_col td {padding:3px 8px;}
+.tbl_info.delivery .tbl_col .hFix {display:inline-flex;flex-direction:column;justify-content:center;align-items:center;min-height:32px;}
 .delivery_group .accordions_wrap {margin-top:8px;}
 .delivery_group .accordions_wrap .tbl_info {margin:0;}
 .delivery_group .accordions_wrap .tbl_info .tbl_col .s1 {width:22%;}
-.delivery_group .accordions_wrap .tbl_info .tbl_col .s2 {width:39%;}
-.delivery_group .accordions_wrap .tbl_info .tbl_col .s3 {width:39%;}
+.delivery_group .accordions_wrap .tbl_info .tbl_col .s2 {width:42%;}
+.delivery_group .accordions_wrap .tbl_info .tbl_col .s3 {width:36%;}
 .delivery_group .accordions_wrap .center_box {display:flex;justify-content:center;margin-bottom:24px;}
 .delivery_group .accordions_wrap .tbl_info + .button_box {margin-top:-1px;}
 .delivery_group .button_box {margin:0;}
@@ -128,5 +132,6 @@
 	.tbl_info .tbl_col td {padding-top:3px;padding-bottom:3px;}
 	.tbl_info .tbl_col tbody th {padding-left:3px;padding-right:3px;}
 	.tbl_info .tbl_col .address > div {padding:0 3px;}
+	.tbl_info.delivery .tbl_col td {padding:3px;}
 	.delivery_group .accordions_wrap .notice_text {font-size:11px;}
 }

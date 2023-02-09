@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "공지사항"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/board/board.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "공지사항",
+			"gnb" : "hidden",
+			"toolbar" : ""
+		})
+
+		<main id="container">
+			<div class="page_board">
+				<div class="menu_tab cols3">
+					<ul class="list">
+						<li class="menu1 active"><a href="#" class="btn">KD-Shop</a></li>
+						<li class="menu2"><a href="#" class="btn">입점업체</a></li>
+						<li class="menu3"><a href="#" class="btn">약가인하</a></li>
+					</ul>
+				</div>
+
+				<div class="board_list_wrap">
+					<div class="search_form_wrap">
+						<p class="total">총 <strong>124</strong>개</p>
+						<div class="select_sort"><select name="skey"><option value="subject">제목</option><option value="content">내용</option></select></div>
+						<div class="search_form">
+							<input type="search" class="input_search" name="sword" placeholder="검색어를 입력하세요." />
+							<button type="button" class="btn_search">검색</button>
+						</div>
+					</div>
+					<div class="board_list">
+						<ul>
+							<li class="admin">
+								<a href="event_winners_detail.html">
+									<span class="box_line">
+										<span class="box">2022-11-15</span>
+										<span class="box">조회 : 1,000</span>
+										<span class="box">글쓴이 : 등록자명</span>
+									</span>
+									<span class="title">공지사항 제목</span>
+								</a>
+							</li>
+							<li>
+								<a href="event_winners_detail.html">
+									<span class="box_line">
+										<span class="box">2022-11-15</span>
+										<span class="box">조회 : 1,000</span>
+										<span class="box">글쓴이 : 등록자명</span>
+									</span>
+									<span class="title">공지사항 제목 <i class="label_count new">N</i></span>
+								</a>
+							</li>
+							<li>
+								<a href="event_winners_detail.html">
+									<span class="box_line">
+										<span class="box">2022-11-15</span>
+										<span class="box">조회 : 1,000</span>
+										<span class="box">글쓴이 : 등록자명</span>
+									</span>
+									<span class="title">공지사항 제목 <strong class="number fcpoint">(99)</strong></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="no_result_box">
+						<i class="ico"></i>
+						<div class="text">등록된 공지사항이 없습니다.</div>
+					</div>
+				</div>
+			</div><!-- //page_board -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+
+	<script>
+	</script>
+	
+</body>
+</html>

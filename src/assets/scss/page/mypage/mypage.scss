@@ -336,7 +336,7 @@
 }
 
 /* 간편결제 */
-.page_mypage .payment_add {padding:20px 0;background-color:#fff;}
+.page_mypage .payment_add {padding:20px 16px;margin:0 -16px;background-color:#fff;}
 .page_mypage .payment_add .button_box {margin-top:12px;}
 .page_mypage .payment_list {margin-top:24px;}
 .page_mypage .payment_list dl {overflow:hidden;border:1px solid #dee0e4;border-radius:8px;background-color:#fff;line-height:1;}
@@ -392,37 +392,6 @@
 	.page_mypage .have_list > dl > dd .order dt {width:100%;}
 }
 
-/* 1:1문의 */
-.inquiry_write .common_tbl {margin-top:24px;}
-.inquiry_write .title_box .title {font-size:14px;font-weight:400;}
-.inquiry_write .title_box + .common_tbl {margin:0;}
-.inquiry_write .common_tbl label {color:#242424;font-size:15px;}
-.inquiry_write .common_tbl .inputset + .inputset {margin-top:12px;}
-.inquiry_write .inputset.cols3 {gap:0 8px;}
-.inquiry_write .inputset.cols3 input {width:calc((100% - 16px) / 3);}
-.inquiry_write .inputset.email {flex-wrap:wrap;}
-.inquiry_write .inputset.email .at {width:32px;color:#000;font-size:14px;}
-.inquiry_write .inputset.email input {width:calc(50% - 16px);}
-.inquiry_write .inputset.email select {width:100%;margin:8px 0 0;}
-.inquiry_write .button_box {margin-top:16px;}
-.inquiry_list {margin:0 -16px;}
-.inquiry_list li {border-bottom:1px solid #d9d9d9;}
-.inquiry_list .title {display:flex;flex-direction:column;gap:8px 0;position:relative;padding:16px;padding-right:40px;line-height:16px;}
-.inquiry_list .title .state {display:flex;align-items:center;}
-.inquiry_list .title .state .label {height:16px;padding:0 8px;border:1px solid #dcdee0;color:#5b5e6a;font-size:12px;line-height:14px;}
-.inquiry_list .title .state .label.end {border-color:#e8340c;background-color:#e8340c;color:#fff;}
-.inquiry_list .title .state .date {margin-left:10px;}
-.inquiry_list .title .date {color:#b0b0b0;font-size:12px;}
-.inquiry_list .title .type {color:#797d8d;}
-.inquiry_list .title .subject {color:#000;}
-.inquiry_list .title::after {content:'';position:absolute;right:10px;top:50%;width:24px;height:24px;margin-top:-12px;background:url(../../../imgs/global/icon_arrow_down1.png) center center no-repeat;background-size:16px;transition:0.2s;}
-.inquiry_list .question,
-.inquiry_list .answer {display:none;min-height:168px;padding:11px 16px;line-height:18px;}
-.inquiry_list .question {background-color:#edf0f0;}
-.inquiry_list .active .title::after {transform:rotate(180deg);}
-.inquiry_list .active .question,
-.inquiry_list .active .answer {display:block;}
-
 /* 등급안내 */
 .grade_wrap {padding-top:24px;}
 .grade_wrap .noticebox {margin:16px 0 0;}
@@ -460,3 +429,34 @@
 .secession_wrap .recheck {align-items:flex-start;margin-top:16px;}
 .secession_wrap .recheck label {line-height:18px;}
 .finish_wrap {min-height:calc(60vh - 32px);padding-top:24px;}
+
+/* 1:1문의 */
+.inquiry_write .common_tbl {margin-top:24px;}
+.inquiry_write .title_box .title {font-size:14px;font-weight:400;}
+.inquiry_write .title_box + .common_tbl {margin:0;}
+.inquiry_write .common_tbl label {color:#242424;font-size:15px;}
+.inquiry_write .common_tbl .inputset + .inputset {margin-top:12px;}
+.inquiry_write .inputset.cols3 {gap:0 8px;}
+.inquiry_write .inputset.cols3 input {width:calc((100% - 16px) / 3);}
+.inquiry_write .inputset.email {flex-wrap:wrap;}
+.inquiry_write .inputset.email .at {width:32px;color:#000;font-size:14px;}
+.inquiry_write .inputset.email input {width:calc(50% - 16px);}
+.inquiry_write .inputset.email select {width:100%;margin:8px 0 0;}
+.inquiry_write .button_box {margin-top:16px;}
+.inquiry_list {margin:0 -16px;}
+.inquiry_list li {border-bottom:1px solid #d9d9d9;}
+.inquiry_list .title {display:flex;flex-direction:column;gap:8px 0;position:relative;padding:16px;padding-right:40px;line-height:16px;}
+.inquiry_list .title .state {display:flex;align-items:center;}
+.inquiry_list .title .state .label {height:16px;padding:0 8px;border:1px solid #dcdee0;color:#5b5e6a;font-size:12px;line-height:14px;}
+.inquiry_list .title .state .label.end {border-color:#e8340c;background-color:#e8340c;color:#fff;}
+.inquiry_list .title .state .date {margin-left:10px;}
+.inquiry_list .title .date {color:#b0b0b0;font-size:12px;}
+.inquiry_list .title .type {color:#797d8d;}
+.inquiry_list .title .subject {color:#000;}
+.inquiry_list .title::after {content:'';position:absolute;right:10px;top:50%;width:24px;height:24px;margin-top:-12px;background:url(../../../imgs/global/icon_arrow_down1.png) center center no-repeat;background-size:16px;transition:0.2s;}
+.inquiry_list .question,
+.inquiry_list .answer {display:none;min-height:168px;padding:11px 16px;line-height:18px;}
+.inquiry_list .question {background-color:#edf0f0;}
+.inquiry_list .active .title::after {transform:rotate(180deg);}
+.inquiry_list .active .question,
+.inquiry_list .active .answer {display:block;}

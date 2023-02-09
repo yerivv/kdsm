@@ -1,5 +1,8 @@
 /* 게시판
 */
+.page_board .menu_tab {margin-top:-24px;}
+.page_board .board_list_wrap .board_list {border-top:1px solid #edf0f2;}
+
 .board_detail_wrap {margin:-24px -16px 0;}
 .board_detail_wrap .head_box {padding:18px 16px 24px;border-bottom:1px solid #797d8d;}
 .board_detail_wrap .head_box .title {font-size:17px;font-weight:500;line-height:24px;}
@@ -17,12 +20,14 @@
 .board_detail_wrap .button_box.list .buttons {width:128px;}
 
 .board_list_wrap .search_form_wrap {display:flex;align-items:center;margin:16px 0;}
+.board_list_wrap .search_form_wrap .total {width:60px;}
 .board_list_wrap .search_form_wrap .select_sort {width:85px;margin-right:8px;}
-.board_list_wrap .search_form_wrap .search_form {width:calc(100% - 93px);}
+.board_list_wrap .search_form_wrap .search_form {width:auto;}
 
 .board_list_wrap .board_list {margin:0 -16px;}
 .board_list_wrap .board_list li {position:relative;border-bottom:1px solid #edf0f2;}
-.board_list_wrap .board_list li::after {content:'';position:absolute;right:20px;top:50%;width:18px;height:18px;margin-top:-9px;background:url(../imgs/global/icon_arrow_right1.png) center center no-repeat;background-size:contain;}
+.board_list_wrap .board_list li::after {content:'';position:absolute;right:20px;top:50%;width:18px;height:18px;margin-top:-9px;background:url(../../../imgs/global/icon_arrow_right1.png) center center no-repeat;background-size:contain;}
+.board_list_wrap .board_list .admin {background-color:#fdf2f0;}
 .board_list_wrap .board_list a {display:block;padding:14px 50px 14px 24px;}
 .board_list_wrap .board_list .date,
 .board_list_wrap .board_list .title,
