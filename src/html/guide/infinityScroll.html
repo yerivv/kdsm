@@ -1,0 +1,71 @@
+<script>
+//infinity scroll
+var listScroll = 0;
+var totalList = ''; 
+var scrollCheck = true; //스크롤 여부
+
+$(function(){
+	if(location.hash){
+		var data = history.state;
+		if(data){
+			$("#moreList").append(data.list);
+			$('#currentPage').val(data.currentPage);
+			scrollCheck = true;
+		}
+	}
+});
+
+function pageMore(){
+	var totalPage = parseInt($("#totalPage").val());
+	var currentPage = parseInt($("#currentPage").val());
+
+	if(currentPage < totalPage){
+		//console.log('page ing');
+		$("#currentPage").val(currentPage+1);
+		
+		$.ajax({
+			type: "POST",
+			url: "../goods/list_more.do",
+			async:false,
+			data: {
+				cate:$("form[name='sFrm'] input[name='cate']").val()
+				, subcate:$("form[name='sFrm'] input[name='subcate']").val()
+				, pview:$("form[name='sFrm'] input[name='pview']").val()
+				, dealerno:$("form[name='sFrm'] input[name='dealerno']").val()
+				, sword:$("form[name='sFrm'] input[name='sword']").val()
+				, stype:$("form[name='sFrm'] input[name='stype']").val()
+				, psort:$("form[name='sFrm'] select[name='psort']").val()
+				, page:$("#currentPage").val()
+			},
+			error: function (request, status, error) {
+				alert(request.responseText);
+			},
+			success: function (data) {
+				$("#moreList").append(data);
+				totalList += data;//모바일앵커
+				history.replaceState({list:totalList, currentPage:parseInt($("#currentPage").val()), scroll:listScroll}, 'Page '+parseInt($("#currentPage").val()), 'list.do?${model.var.params}&##');
+			}
+		});
+		
+	}
+	else{
+		//console.log('page end');
+	}
+}
+
+$(window).scroll(function(){//scroll이 list하단에 왔을때 pageMore
+	var idScrollEnd = $(window).innerHeight() + $(window).scrollTop() + $('#footer').height() > $(document).height();
+	if(scrollCheck){ //스크롤 여부 체크 (뒤로가기, 새로고침..)
+		if(idScrollEnd) {
+			pageMore()
+			//console.log('scroll yes')
+		}	
+	}
+})
+</script>
+
+<input type="hidden" name="currentPage" id="currentPage" value="1" /> <!-- 현재 페이징 -->
+<input type="hidden" name="totalPage" id="totalPage" value="${model.var.totalpage}" /> <!-- 전체 페이징 수 -->
+
+<div class="list" id="moreList"><!-- 스크롤하려는 곳 -->
+</div>

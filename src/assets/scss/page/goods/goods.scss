@@ -1,29 +1,32 @@
 @charset "utf-8";
 /* 상품리스트 유형 추가 */
-.common_product .list .related {display:none;width:100%;padding:0 11px;margin-top:16px;border:1px solid #dee0e4;border-radius:4px;background-color:#f4f7f9;}
-.common_product .list .related li {display:flex;flex-wrap:wrap;align-items:center;padding:11px 0;border-top:1px solid #dee0e4;}
-.common_product .list .related li:first-child {border-top:0 none;}
-.common_product .list .related .thumb_box {width:72px;height:72px;}
-.common_product .list .related .thumb_box .thumb {border-color:#edf0f2;}
-.common_product .list .related .info_box {width:calc(100% - 72px);padding:0;padding-left:8px;}
-.common_product .list .related .price2,
-.common_product .list .related .price2 dl {display:flex;flex-wrap:wrap;align-items:center;}
-.common_product .list .related .price2 dl + dl {position:relative;margin-left:17px;}
-.common_product .list .related .price2 dl + dl::before {content:'';position:absolute;left:-9px;top:3px;width:1px;height:12px;background-color:#b0b0b0;}
-.common_product .list .related .price2 {margin-top:4px;font-size:12px;line-height:18px;}
-.common_product .list .related .price2 dt {margin-right:4px;}
-.common_product .list .related .price2 .sale {color:#e8340c;}
-.common_product .list .related .price2 strong {font-weight:500;line-height:1;} 
-.common_product .list .item.active .related {display:block;}
+.common_product .item .related {display:none;width:100%;padding:0 11px;margin-top:16px;border:1px solid #dee0e4;border-radius:4px;background-color:#f4f7f9;}
+.common_product .item .related li {display:flex;flex-wrap:wrap;align-items:center;padding:11px 0;border-top:1px solid #dee0e4;}
+.common_product .item .related li:first-child {border-top:0 none;}
+.common_product .item .related .thumb_box {width:72px;height:72px;}
+.common_product .item .related .thumb_box .thumb {border-color:#edf0f2;}
+.common_product .item .related .dim_soldout::after {content:'일시\A품절';font-size:15px;line-height:18px;white-space:pre;}
+.common_product .item .related .info_box {width:calc(100% - 72px);padding:0;padding-left:8px;}
+.common_product .item .related .price2,
+.common_product .item .related .price2 dl {display:flex;flex-wrap:wrap;align-items:center;}
+.common_product .item .related .price2 dl + dl {position:relative;margin-left:17px;}
+.common_product .item .related .price2 dl + dl::before {content:'';position:absolute;left:-9px;top:3px;width:1px;height:12px;background-color:#b0b0b0;}
+.common_product .item .related .price2 {margin-top:4px;font-size:12px;line-height:18px;}
+.common_product .item .related .price2 dt {margin-right:4px;}
+.common_product .item .related .price2 .sale {color:#e8340c;}
+.common_product .item .related .price2 strong {font-weight:500;line-height:1;}
+.common_product .item.active .related {display:block;}
+.common_product .grid .item .related {position:relative;width:calc(100vw - 32px);margin-bottom:8px;}
+.common_product .grid .item:nth-child(2n) .related {left:calc(-50vw + 12px);}
 @media (max-width: 320px) {
-	.common_product .list .item_buttons {padding:0 8px;}
-	.common_product .list .related {margin-top:12px;}
-	.common_product .list .related li {align-items:flex-start;}
-	.common_product .list .related .thumb_box .thumb {padding-top:0;}
-	.common_product .list .related .thumb_box .thumb img {position:relative;top:auto;left:auto;width:70px;height:70px;margin:0;}
-	.common_product .list .related .price2 {flex-direction:column;align-items:flex-start;}
-	.common_product .list .related .price2 dl + dl {margin:0;}
-	.common_product .list .related .price2 dl + dl::before {display:none;}
+	.common_product .item .item_buttons {padding:0 8px;margin-top:8px;}
+	.common_product .item .related {margin-top:12px;}
+	.common_product .item .related li {align-items:flex-start;}
+	.common_product .item .related .thumb_box .thumb {padding-top:0;}
+	.common_product .item .related .thumb_box .thumb img {position:relative;top:auto;left:auto;width:70px;height:70px;margin:0;}
+	.common_product .item .related .price2 {flex-direction:column;align-items:flex-start;}
+	.common_product .item .related .price2 dl + dl {margin:0;}
+	.common_product .item .related .price2 dl + dl::before {display:none;}
 }
 .common_product .bestranking {counter-increment:group;counter-reset:row;}
 .common_product .bestranking .item {counter-increment:row;}

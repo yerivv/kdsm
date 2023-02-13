@@ -18,6 +18,18 @@
 .board_detail_wrap .button_box {margin:12px 12px 0;}
 .board_detail_wrap .button_box.list {justify-content:flex-end;}
 .board_detail_wrap .button_box.list .buttons {width:128px;}
+.board_detail_wrap .comment_box {padding-bottom:40px;border-bottom:1px solid #edf0f2;}
+.board_detail_wrap .comment_box .bg_box {padding:24px 16px;background-color:#edf0f2;}
+.board_detail_wrap .comment_box .total {margin-bottom:8px;font-size:16px;line-height:24px;}
+.board_detail_wrap .comment_box .total .number {font-size:15px;}
+.board_detail_wrap .comment_box .reg_form {position:relative;padding:15px 15px 48px;border-radius:4px;border:1px solid #dee0e4;background-color:#fff;}
+.board_detail_wrap .comment_box .reg_form textarea {height:82px;padding:0;border-width:0;background:transparent;}
+.board_detail_wrap .comment_box .reg_form .box {display:flex;justify-content:space-between;align-items:center;position:absolute;left:16px;bottom:11px;width:calc(100% - 32px);}
+.board_detail_wrap .comment_box .reg_form .box .byte {color:#666;font-size:13px;}
+.board_detail_wrap .comment_list li {padding:16px;border-bottom:1px solid #edf0f2;}
+.board_detail_wrap .comment_list li .box_line {align-items:center;}
+.board_detail_wrap .comment_list li .box_line .buttons {margin-left:6px;}
+.board_detail_wrap .comment_list li .comment {margin-top:8px;}
 
 .board_list_wrap .search_form_wrap {display:flex;align-items:center;margin:16px 0;}
 .board_list_wrap .search_form_wrap .total {width:60px;}
@@ -34,6 +46,7 @@
 .board_list_wrap .board_list .notice {display:block;}
 .board_list_wrap .board_list .date {color:#b0b0b0;font-size:12px;line-height:18px;}
 .board_list_wrap .board_list .title {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:18px;}
+.board_list_wrap .board_list .box_title {display:flex;align-items:center;gap:2px;line-height:18px;}
 
 .pop_list ul {display:flex;flex-wrap: wrap;gap:8px;}
 .pop_list ul li {width:calc(50% - 4px);background-color:#fff;}

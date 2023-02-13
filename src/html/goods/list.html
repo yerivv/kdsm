@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "상품리스트"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/goods/goods.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type1",
+			"gnb" : "",
+			"toolbar" : "",
+		})
+
+		<main id="container">
+			<div class="page_goods">
+				<h2 class="page_title">카테고리1 > 카테고리2</h2>
+				<div class="result_count">
+					<div class="total">전체상품 <strong class="number fcpoint fw500">2,555</strong>개</div>
+					<div class="mlauto">
+						<select name="">
+							<option>판매순</option>
+						</select>
+					</div>
+				</div>
+				<div class="common_product">
+					<div class="list" id="moreList">
+						<div class="item">
+							<div class="thumb_box" onclick="detailSelect(9741);">
+								<div class="thumb"><img src="#" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+								<div class="dim_soldout"></div>
+							</div>
+							<div class="info_box" onclick="detailSelect(9741);">
+								<div class="iconlabel_box etc"> 
+									<a href="#" class="label time">타임세일</a>
+									<a href="#" class="label regular">정기배송</a>
+								</div>
+								<div class="info">
+									<div class="name">광동 원방 우황청심원 현탄액 영묘향 함유</div>
+									<div class="summary">
+										<span class="box">광동제약</span>
+										<span class="box">50ml</span>
+										<span class="box">10병</span>
+									</div>
+								</div>
+								<div class="price">
+									<dl>
+										<dt>정상가</dt>
+										<dd><strong class="number">4,548,000</strong>원</dd>
+									</dl>
+									<dl class="sale">
+										<dt>최대할인가</dt>
+										<dd><strong class="number">4,548,000</strong>원</dd>
+									</dl>
+								</div>
+							</div>
+						</div><!--//item-->
+						<div class="item">
+							<div class="thumb_box" onclick="detailSelect(9741);">
+								<div class="thumb"><img src="#" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+							</div>
+							<div class="info_box" onclick="detailSelect(9741);">
+								<div class="info">
+									<div class="name">광동제약 마시는 비타민-C 비타500</div>
+									<div class="summary">
+										<span class="box">광동제약</span>
+										<span class="box">50ml</span>
+										<span class="box">10병</span>
+									</div>
+								</div>
+								<div class="price">
+									<dl>
+										<dt>정상가</dt>
+										<dd><strong class="number">4,548,000</strong>원</dd>
+									</dl>
+									<dl class="sale">
+										<dt>최대할인가</dt>
+										<dd><strong class="number">4,548,000</strong>원</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="item_buttons">
+								<a href="javascript:void(0)" onClick="relatedList(this); return false;"class="buttons iconBtn btn_related">연관상품<i class="arrow toggle"></i></a>
+							</div>
+							<div class="related" id="relatedListContainer">
+								<ul>
+									<li>
+										<div class="thumb_box">
+											<div class="thumb"><img src="#" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+										</div>
+										<div class="info_box">
+											<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+											<div class="summary">
+												<span class="box">광동제약</span>
+												<span class="box">50ml</span>
+												<span class="box">10병</span>
+											</div>
+											<div class="price2">
+												<dl>
+													<dt class="fw500">정상가</dt>
+													<dd><strong class="number">500,000</strong>원</dd>
+												</dl>
+												<dl class="sale">
+													<dt class="fw500">최대할인가</dt>
+													<dd><strong class="number">300,000</strong>원</dd>
+												</dl>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="thumb_box">
+											<div class="thumb"><img src="#" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+											<div class="dim_soldout"></div>
+										</div>
+										<div class="info_box">
+											<div class="name">풀케어네일카라 6.6ml</div>
+											<div class="summary">
+												<span class="box">광동제약</span>
+												<span class="box">50ml</span>
+												<span class="box">10병</span>
+											</div>
+											<div class="price2">
+												<dl>
+													<dt class="fw500">정상가</dt>
+													<dd><strong class="number">500,000</strong>원</dd>
+												</dl>
+												<dl class="sale">
+													<dt class="fw500">최대할인가</dt>
+													<dd><strong class="number">300,000</strong>원</dd>
+												</dl>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div><!--//item-->
+					</div><!-- //list -->
+				</div><!-- //common_product -->
+
+				<div class="common_product">
+					<div class="grid" id="moreList">
+						<div class="item">
+							<div class="thumb_box" onclick="detailSelect(9741);">
+								<div class="thumb"><img src="#" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+								<div class="iconlabel_box"> 
+									<a href="#" class="label time"><i></i>타임세일</a>
+									<a href="#" class="label regular">정기배송</a>
+								</div>
+								<div class="dim_soldout"></div>
+							</div>
+							<div class="info_box" onclick="detailSelect(9741);">
+								<div class="info">
+									<div class="name">광동 원방 우황청심원 현탄액 영묘향 함유</div>
+									<div class="summary">
+										<span class="box">광동제약</span>
+										<span class="box">50ml</span>
+										<span class="box">10병</span>
+									</div>
+								</div>
+								<div class="price">
+									<dl>
+										<dt>정상가</dt>
+										<dd><strong class="number">4,548,000</strong>원</dd>
+									</dl>
+									<dl class="sale">
+										<dt>최대할인가</dt>
+										<dd><strong class="number">4,548,000</strong>원</dd>
+									</dl>
+								</div>
+							</div>
+						</div><!--//item-->
+						<div class="item">
+							<div class="thumb_box" onclick="detailSelect(9741);">
+								<div class="thumb"><img src="#" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+							</div>
+							<div class="info_box" onclick="detailSelect(9741);">
+								<div class="info">
+									<div class="name">광동제약 마시는 비타민-C 비타500</div>
+									<div class="summary">
+										<span class="box">광동제약</span>
+										<span class="box">50ml</span>
+										<span class="box">10병</span>
+									</div>
+								</div>
+								<div class="price">
+									<dl>
+										<dt>정상가</dt>
+										<dd><strong class="number">4,548,000</strong>원</dd>
+									</dl>
+									<dl class="sale">
+										<dt>최대할인가</dt>
+										<dd><strong class="number">4,548,000</strong>원</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="item_buttons">
+								<a href="javascript:void(0)" onClick="relatedList(this); return false;"class="buttons iconBtn btn_related">연관상품<i class="arrow toggle"></i></a>
+							</div>
+							<div class="related" id="relatedListContainer">
+								<ul>
+									<li>
+										<div class="thumb_box">
+											<div class="thumb"><img src="#" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+										</div>
+										<div class="info_box">
+											<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+											<div class="summary">
+												<span class="box">광동제약</span>
+												<span class="box">50ml</span>
+												<span class="box">10병</span>
+											</div>
+											<div class="price2">
+												<dl>
+													<dt class="fw500">정상가</dt>
+													<dd><strong class="number">500,000</strong>원</dd>
+												</dl>
+												<dl class="sale">
+													<dt class="fw500">최대할인가</dt>
+													<dd><strong class="number">300,000</strong>원</dd>
+												</dl>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="thumb_box">
+											<div class="thumb"><img src="#" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+											<div class="dim_soldout"></div>
+										</div>
+										<div class="info_box">
+											<div class="name">풀케어네일카라 6.6ml</div>
+											<div class="summary">
+												<span class="box">광동제약</span>
+												<span class="box">50ml</span>
+												<span class="box">10병</span>
+											</div>
+											<div class="price2">
+												<dl>
+													<dt class="fw500">정상가</dt>
+													<dd><strong class="number">500,000</strong>원</dd>
+												</dl>
+												<dl class="sale">
+													<dt class="fw500">최대할인가</dt>
+													<dd><strong class="number">300,000</strong>원</dd>
+												</dl>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div><!--//item-->
+						<div class="item">
+							<div class="thumb_box" onclick="detailSelect(9741);">
+								<div class="thumb"><img src="#" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+								<div class="iconlabel_box"> 
+									<a href="#" class="label time"><i></i>타임세일</a>
+									<a href="#" class="label regular">정기배송</a>
+								</div>
+								<div class="dim_soldout"></div>
+							</div>
+							<div class="info_box" onclick="detailSelect(9741);">
+								<div class="info">
+									<div class="name">광동제약 생강 쌍화</div>
+									<div class="summary">
+										<span class="box">광동제약</span>
+										<span class="box">50ml</span>
+										<span class="box">10병</span>
+									</div>
+								</div>
+								<div class="price">
+									<dl>
+										<dt>정상가</dt>
+										<dd><strong class="number">4,548,000</strong>원</dd>
+									</dl>
+									<dl class="sale">
+										<dt>최대할인가</dt>
+										<dd><strong class="number">4,548,000</strong>원</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="item_buttons">
+								<a href="javascript:void(0)" onClick="relatedList(this); return false;"class="buttons iconBtn btn_related">연관상품<i class="arrow toggle"></i></a>
+							</div>
+							<div class="related" id="relatedListContainer">
+								<ul>
+									<li>
+										<div class="thumb_box">
+											<div class="thumb"><img src="#" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+										</div>
+										<div class="info_box">
+											<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+											<div class="summary">
+												<span class="box">광동제약</span>
+												<span class="box">50ml</span>
+												<span class="box">10병</span>
+											</div>
+											<div class="price2">
+												<dl>
+													<dt class="fw500">정상가</dt>
+													<dd><strong class="number">500,000</strong>원</dd>
+												</dl>
+												<dl class="sale">
+													<dt class="fw500">최대할인가</dt>
+													<dd><strong class="number">300,000</strong>원</dd>
+												</dl>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="thumb_box">
+											<div class="thumb"><img src="#" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+											<div class="dim_soldout"></div>
+										</div>
+										<div class="info_box">
+											<div class="name">풀케어네일카라 6.6ml</div>
+											<div class="summary">
+												<span class="box">광동제약</span>
+												<span class="box">50ml</span>
+												<span class="box">10병</span>
+											</div>
+											<div class="price2">
+												<dl>
+													<dt class="fw500">정상가</dt>
+													<dd><strong class="number">500,000</strong>원</dd>
+												</dl>
+												<dl class="sale">
+													<dt class="fw500">최대할인가</dt>
+													<dd><strong class="number">300,000</strong>원</dd>
+												</dl>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div><!--//item-->
+						<div class="item">
+							<div class="thumb_box" onclick="detailSelect(9741);">
+								<div class="thumb"><img src="#" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+							</div>
+							<div class="info_box" onclick="detailSelect(9741);">
+								<div class="info">
+									<div class="name">광동제약 마시는 비타민-C 비타500</div>
+									<div class="summary">
+										<span class="box">광동제약</span>
+										<span class="box">50ml</span>
+										<span class="box">10병</span>
+									</div>
+								</div>
+								<div class="price">
+									<dl>
+										<dt>정상가</dt>
+										<dd><strong class="number">4,548,000</strong>원</dd>
+									</dl>
+									<dl class="sale">
+										<dt>최대할인가</dt>
+										<dd><strong class="number">4,548,000</strong>원</dd>
+									</dl>
+								</div>
+							</div>
+						</div><!--//item-->
+					</div><!-- //list -->
+				</div><!-- //common_product -->
+			</div>
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+
+		@@include('@@webRoot/_include/foot.html')
+
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+		function relatedList(obj){
+			var btn = $(obj);
+			var target = btn.closest('.item');
+			var activeList = target.children('#relatedListContainer');
+			var gno = target.attr("gno");
+
+			if(target.hasClass('active')){
+				target.removeClass('active');
+				btn.removeClass('active');
+			} else {
+				target.addClass('active');
+				btn.addClass('active');
+			}
+		}
+	</script>
+</body>
+</html>

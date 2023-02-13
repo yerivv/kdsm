@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "게시판 상세"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/board/board.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "게시판 상세",
+			"gnb" : "hidden",
+			"toolbar" : "",
+		})
+
+		<main id="container">
+			<div class="page_board">
+				<div class="board_detail_wrap">
+					<div class="bard_detail">
+						<div class="head_box">
+							<h3>공지사항 제목</h3>
+							<div class="info_box">
+								<span class="date">2022-11-15 00:00:00</span>
+								<span class="view">조회수 : 20</span>
+								<span class="writer">글쓴이 : 등록자명</span>
+							</div>
+						</div>
+						<div class="content_box">
+							내용노출
+						</div>
+						<!-- 댓글 -->
+						<div class="comment_box">
+							<div class="bg_box">
+								<div class="total"><span class="fw500">댓글</span> 총 <strong class="number">124</strong>개</div>
+								<div class="reg_form">
+									<textarea id="comment_memo" name="comment" maxlength="400" placeholder="댓글을 입력해주세요."></textarea>
+									<div class="box">
+										<span class="byte"><span id="comment_count">0</span>/400</span>
+										<button type="submit" class="buttons small white">등록</button>
+									</div>
+								</div>
+							</div>
+							<ul class="comment_list">
+								<li>
+									<div class="box_line">
+										<span class="box">mas**********</span>
+										<span class="box number">2022-11-15 00:00:00</span>
+										<a href="#" class="buttons xsmall white">삭제</a>
+									</div>
+									<div class="comment">댓글내용</div>
+								</li>
+								<li>
+									<div class="info">
+										<div class="box_line">
+											<span class="box">mas**********</span>
+											<span class="box number">2022-11-15 00:00:00</span>
+										</div>
+									</div>
+									<div class="comment">댓글내용</div>
+								</li>
+							</ul>
+							<div class="paging">
+								<ul>
+									<li class="btn first"><a href="#"><span class="box">First</span></a></li>
+									<li class="btn prev"><a href="#"><span class="box">Prev</span></a></li>
+									<li><a href="#"><span class="box active">1</span></a></li>
+									<li><a href="#"><span class="box">2</span></a></li>
+									<li class="btn next"><a href="#"><span class="box">Next</span></a></li>
+									<li class="btn last"><a href="#"><span class="box">Last</span></a></li>
+								</ul>
+							</div>
+						</div><!-- //comment_box -->
+						<div class="list_box">
+							<dl>
+								<dt>이전글 :</dt>
+								<dd><span class="fw400 fcgray8f">이전 이벤트가 있습니다.</span></dd>
+							</dl>
+							<dl>
+								<dt>다음글 :</dt>
+								<dd><a href="#" class="fcgray8f">다음 이벤트가 있습니다.</a></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="button_box single list">
+						<a href="list.html" class="buttons medium">목록보기</a>
+					</div>
+				</div><!-- //board_detail_wrap -->
+			</div><!-- //page_event -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+
+		@@include('@@webRoot/_include/foot.html')
+
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>

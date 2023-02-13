@@ -81,6 +81,8 @@
 #footer .info address a {color:#B0B0B0;}
 #footer .info address .btn_biz {position:absolute;right:0;bottom:3px;width:100px;border:1px solid #8f8f8f;font-size:12px;line-height:18px;text-align:center;}
 #footer .info .copy {padding:6px 0;margin-top:3px;font-weight:300;}
+#footer.type2 {padding:0;}
+#footer.type2 .customer {padding:0 0 4px;margin:0;border-width:0;}
 @media (max-width: 320px) {
 	#footer .menu {flex-wrap:wrap;}
 	#footer .footer_menu .menu li {flex:auto;}
