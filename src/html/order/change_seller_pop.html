@@ -1,0 +1,53 @@
+<div id="modal" class="modalCenter modal_change_seller">
+	<div class="wrap">
+		<div class="head">
+			<h2>입점업체 변경</h2>
+			<div class="close" onclick="modalUrlClose();">닫기</div>
+		</div>
+		<div class="contents media">
+			<div class="price_list_box">
+				<div class="list_box">
+					<table>
+						<caption>공급업체별 가격정보</caption>
+						<thead>
+							<tr>
+								<th class="s1">업체명</th>
+								<th class="s2">가격</th>
+								<th class="s3">최대할인가</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="choice">
+								<td>
+									<div class="select">
+										<input type="radio" name="price" id="price1" onclick="return choice(this);" class="media" checked />
+										<label for="price1">광동제약<br /><small>재고 : <span class="number">15,580</span></small></label>
+									</div>
+								</td>
+								<td><label for="price1"><strong class="number">2,420</strong>원</label></td>
+								<td><label for="price1"><strong class="number">2,420</strong>원</label></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="select">
+										<input type="radio" name="price" id="price1" onclick="return choice(this);" class="media" />
+										<label for="price1">광동제약<br /><small>재고 : <span class="number">15,580</span></small></label>
+									</div>
+								</td>
+								<td><label for="price2"><strong class="number">52,420</strong>원</label></td>
+								<td><label for="price2"><strong class="number">42,420</strong>원</label></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div><!--//price_list_box-->
+			<div class="button_box">
+				<button type="button" onclick="modalUrlClose()" class="buttons medium">취소</button>
+				<button type="button" onclick="" class="buttons medium point">입점업체 변경</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+</script>

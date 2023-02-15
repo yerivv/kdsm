@@ -101,9 +101,15 @@ function modalUrlOpen(a, b){
 		});	
 	} else {
 		$('#modalwrap').load(a, function(){
-			$(this).find('#modal').addClass('open');
+			if($(this).find('#modal').length > 1){
+				const firstTarget = $(this).find('#modal')[0];
+				$(firstTarget).addClass('open');
+			} else {
+				$(this).find('#modal').addClass('open');
+			}
 			$('body').addClass('ismodal');
-		});	
+			
+		});
 	}
 }
 

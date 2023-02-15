@@ -1,0 +1,69 @@
+<!-- datepicker -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+<div id="modal" class="modalCenter modal_goods_preorder">
+	<div class="wrap">
+		<div class="head">
+			<h2>예약주문</h2>
+			<div class="close" onclick="modalUrlClose();">닫기</div>
+		</div>
+		<div class="contents">
+			<div class="calendar_box">
+				<div id="datepicker"></div>
+				<p class="notice_text">예약주문은 주문일 3일 이후부터 선택 가능합니다.</p>
+				<dl class="date">
+					<dt>예약신청 일자 : </dt>
+					<dd class="fcpoint fw500">
+						<span id="year" class="number">2021</span>년
+						<span id="month" class="number">09</span>년
+						<span id="day" class="number">30</span>년
+					</dd>
+				</dl>
+			</div><!-- //calendar_box -->
+			<div class="wideline"></div>
+			<dl class="card_select">
+				<dt class="fw500">간편결제 카드 선택</dt>
+				<dd>
+					<select name="memberPayList">
+						<option value="">카드명</option>
+					</select>
+					<div class="no_result_box">
+						<i class="ico"></i>
+						<div class="text">등록된 간편결제 카드가 없습니다.</div>
+					</div>
+				</dd>
+			</dl><!-- //card_select -->
+			<p class="noti_bg_text">
+				예약 신청 시 등록한 <span class="fcpoint fw500">간편결제를 통해 예약 신청 일자 D-2일(영업일 기준) 자동으로 결제가 진행됩니다.</span><br />예약 신청 시 참고 부탁드립니다.
+			</p>
+			<div class="button_box cols1">
+				<button type="button" class="buttons medium point">예약 신청하기</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			// $( "#datepicker" ).datepicker({
+			// 	dateFormat: 'yy-mm-dd',
+			// 	prevText: '이전 달',
+			// 	nextText: '다음 달',
+			// 	monthNames: [
+			// 		'<strong>1</strong>월','<strong>2</strong>월','<strong>3</strong>월',
+			// 		'<strong>4</strong>월','<strong>5</strong>월','<strong>6</strong>월',
+			// 		'<strong>7</strong>월','<strong>8</strong>월','<strong>9</strong>월',
+			// 		'<strong>10</strong>월','<strong>11</strong>월','<strong>12</strong>월'
+			// 	],
+			// 	monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+			// 	dayNames: [],
+			// 	dayNamesShort: [],
+			// 	dayNamesMin: [],
+			// 	showMonthAfterYear: true,
+			// 	yearSuffix: '',
+			// 	showOn: 'both',
+			// 	minDate: '-3d',
+			// 	maxDate: '+3m',
+			// });
+		})
+	</script>
+</div>

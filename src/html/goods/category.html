@@ -1,0 +1,90 @@
+<div id="modal" class="modalFull modal_category">
+	<div class="wrap">
+		<div class="head">
+			<h2>카테고리</h2>
+			<div class="close" onclick="modalUrlCloseFull();">닫기</div>
+		</div>
+		<div id="category_tab" class="contents">
+			<div class="menu_tab cols2">
+				<ul class="list">
+					<li class="active" data-tab-target="tab1"><span class="btn">카테고리별 보기</span></li>
+					<li data-tab-target="tab2"><span class="btn">입점업체별 보기</span></li>
+				</ul>
+			</div>
+			<div class="contents_tab">
+				<div id="tab1" class="content active">
+					<div class="category depthList">
+						<ul class="cateList">
+							<li class="depth1_box">
+								<div class="depth1" onclick="depthToggle(this)">카테고리 이름</div>
+								<div class="depth2_box">
+									<ul>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리 서브 카테고리 서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리</a></li>
+										<li><a href="#">서브 카테고리 서브 카테고리 서브 카테고리</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="depth1_box noChild">
+								<a href="../goods/list.html" class="depth1">카테고리 이름</a>
+							</li>
+							<li class="link">
+								<a href="../goods/area_best.html"><i class="ico"></i>광동 지역별 베스트</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="tab2" class="content">
+					<div class="category depthList">
+						<ul class="cateList">
+							<li class="depth1_box">
+								<div class="depth1" onclick="depthToggle(this)">의약품</div>
+								<div class="depth2_box">
+									<ul>
+										<li><a href="#">의약품 카테고리</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="depth1_box">
+								<div class="depth1" onclick="depthToggle(this)">의외약품</div>
+								<div class="depth2_box">
+									<ul>
+										<li><a href="#">의외약품 카테고리</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	function depthToggle(a){
+		const depth1 = a.closest('.depth1_box');
+		depth1.classList.toggle('on');
+	}
+	tabInit('#category_tab');
+</script>

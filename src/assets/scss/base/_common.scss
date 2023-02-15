@@ -327,7 +327,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .menu_tab.cols4 .list .menu2.active::before {left:-16px;background-image:url(../imgs/global/bg_tab4_2.png);}
 .menu_tab.cols4 .list .menu3.active::before {left:-16px;background-image:url(../imgs/global/bg_tab4_3.png);}
 .menu_tab.cols4 .list .menu4.active::before {right:0;background-image:url(../imgs/global/bg_tab4_4.png);}
-.contents_tab .content {overflow:hidden;opacity:0;height:0;transition:all 0.2s;}
+.contents_tab .content {overflow:hidden;opacity:0;height:0;}
 .contents_tab .content.active {opacity:1;height:auto;}
 .contents_tab.wide {margin:0 -16px;}
 .contents_tab.wide .content {padding:0 16px;}
@@ -427,8 +427,6 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .btn_cartin::after {content:'';position:absolute;left:4px;top:4px;width:24px;height:24px;background:url(../imgs/global/icon_cart2.png) center center no-repeat;background-size:contain;}
 
 /* 상품 */
-.common_product .grid {display:flex;flex-wrap: wrap;gap:8px;}
-.common_product .grid .item {width:calc(50% - 4px);background-color:#fff;}
 .common_product .thumb_box {position:relative;overflow:hidden;border-radius:4px;}
 .common_product .thumb_box .thumb {position:relative;overflow:hidden;padding-top:calc(100% - 2px);border:1px solid #EDF0F2;border-radius:4px;}
 .common_product .thumb_box .thumb img {display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain;}
@@ -472,6 +470,9 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .common_product .soldout .thumb_box .iconlabel_box,
 .common_product .soldout .thumb_box .stock,
 .common_product .soldout .thumb_box .btn_box {display:none;}
+
+.common_product .grid {display:flex;flex-wrap: wrap;gap:8px;}
+.common_product .grid .item {width:calc(50% - 4px);background-color:#fff;}
 .common_product .grid .item_buttons {width:100%;margin-top:4px;text-align:right;}
 .common_product .grid .item_buttons.type1 {padding:0;margin-top:auto;}
 
@@ -712,7 +713,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 	.paymethod_list .type_detail .kdpay li.period {width:94px;}
 }
 
-/* 페이징 */
+/* paging */
 .paging {margin-top:24px;}
 .paging ul {display:flex;justify-content:center;align-items:center;gap:8px;}
 .paging li a {display:block;}

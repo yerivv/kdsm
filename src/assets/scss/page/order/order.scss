@@ -8,11 +8,11 @@
 .orderlist_wrap .dealer {display:inline-flex;align-items:center;width:calc(100% - 154px);margin-right:auto;}
 .orderlist_wrap .dealer label {max-width:calc(100% - 60px);font-size:15px;font-weight:500;}
 .orderlist_wrap .btn_tel {display:block;position:relative;width:20px;height:20px;margin-left:4px;border-radius:50%;background-color:rgba(255, 255, 255, 0.3);text-indent:-999em;}
-.orderlist_wrap .btn_tel::after {content:'';position:absolute;left:0;top:0;width:100%;height:100%;background:url(../imgs/global/icon_call.png) center center no-repeat;background-size:10px 10px;}
+.orderlist_wrap .btn_tel::after {content:'';position:absolute;left:0;top:0;width:100%;height:100%;background:url(../../../imgs/global/icon_call.png) center center no-repeat;background-size:10px 10px;}
 .orderlist_wrap .discount {margin-right:8px;}
 .orderlist_wrap .state_box {display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;width:154px;}
 .orderlist_wrap .state {position:relative;width:74px;height:24px;font-weight:500;line-height:24px;}
-.orderlist_wrap .state::after {content:'';position:absolute;right:0;top:50%;width:24px;height:24px;background:url(../imgs/global/icon_arrow_up2.png) center center no-repeat;background-size:contain;transform:translateY(-50%) rotate(-180deg);transition:0.2s;}
+.orderlist_wrap .state::after {content:'';position:absolute;right:0;top:50%;width:24px;height:24px;background:url(../../../imgs/global/icon_arrow_up2.png) center center no-repeat;background-size:contain;transform:translateY(-50%) rotate(-180deg);transition:0.2s;}
 .orderlist_wrap .total_info {padding:0 11px;}
 .orderlist_wrap .total_info .total {display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;padding:12px 0;}
 .orderlist_wrap .total_info .total dt {width:80px;margin-right:auto;}
@@ -141,8 +141,12 @@
 
 .agree_view_box,
 .pay_save_box {margin:16px 0;}
+.pay_save_box {display:flex;}
 .agree_view_box {display:flex;flex-wrap:wrap;align-items:center;}
 .agree_view_box .mlauto {margin-left:auto;}
+@media (max-width: 320px) {
+	.pay_save_box input[type=checkbox] + label {line-height:16px;}
+}
 
 /* 주문완료 */
 .order_finish .button_box {margin-top:46px;}

@@ -22,10 +22,18 @@
 				<h2 class="page_title">카테고리1 > 카테고리2</h2>
 				<div class="result_count">
 					<div class="total">전체상품 <strong class="number fcpoint fw500">2,555</strong>개</div>
-					<div class="mlauto">
-						<select name="">
-							<option>판매순</option>
+					<div class="mlauto list_view">
+						<select name="sort">
+							<option value="1">판매순</option>
+							<option value="2">상품명</option>
+							<option value="3">제조사</option>
+							<option value="4">높은가격순</option>
+							<option value="5">낮은가격순</option>
 						</select>
+						<ul class="view">
+							<li view="list" class="listtype on" onclick="changeView(this)">리스트로 보기</li>
+							<li view="grid" class="gridtype" onclick="changeView(this)">앨범으로 보기</li>
+						</ul>
 					</div>
 				</div>
 				<div class="common_product">
@@ -375,6 +383,9 @@
 	</div>
 	
 	<script>
+		function detailSelect(gno){
+			modalUrlOpen('../goods/detail_pop.html', 'full');
+		}
 		function relatedList(obj){
 			var btn = $(obj);
 			var target = btn.closest('.item');

@@ -1,0 +1,223 @@
+<div id="modal" class="modalFull modal_detail">
+	<div class="wrap">
+		<div class="head">
+			<h2>상품 상세보기</h2>
+			<div class="close" onclick="modalUrlCloseFull();">닫기</div>
+		</div>
+		<div class="contents">
+			<!-- 상품 정보 -->
+			<div class="common_product">
+				<div class="list">
+					<div class="item">
+						<div class="thumb_box">
+							<div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt=""></div>
+						</div>
+						<div class="info_box">
+							<div class="info">
+								<div class="name">광동 원방 우황청심원 현탄액 영묘향 함유</div>
+								<div class="summary">
+									<span class="box">광동제약</span>
+									<span class="box">50ml</span>
+									<span class="box">10병</span>
+								</div>
+							</div>
+							<div class="price">
+								<dl>
+									<dt>정상가</dt>
+									<dd><strong class="number">4,548,000</strong>원</dd>
+								</dl>
+								<dl class="sale">
+									<dt>최대할인가</dt>
+									<dd><strong class="number">4,548,000</strong>원</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- //common_product -->
+			<div class="button_box">
+				<a href="javascript:void(0);" onclick="detailInfo()" class="buttons other">상세정보<i class="arrow"></i></a>
+				<a href="javascript:void(0);" onclick="historyPop()" class="buttons other">구매이력<i class="arrow"></i></a>
+			</div>
+			<!-- 공급업체 선택 -->
+			<div class="price_list_box">
+				<h3 class="title">공급업체 선택</h3>
+				<div class="list_box">
+					<table>
+						<caption>공급업체별 가격정보</caption>
+						<colgroup>
+							<col width="*" /><col width="25%" /><col width="25%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>업체명</th>
+								<th>가격</th>
+								<th>최대할인가</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="choice">
+								<td>
+									<div class="select"><input type="radio" name="price" id="price1" onclick="return choice(this);" checked /><label for="price1">광동제약<br /><small>재고 : <span class="number">15,580</span></small></label></div>
+								</td>
+								<td><label for="price1"><strong class="number">2,420</strong>원</label></td>
+								<td><label for="price1"><strong class="number">2,420</strong>원</label></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="select"><input type="radio" name="price" id="price2" onclick="return choice(this);" /><label for="price2">인천약품<br /><small>재고 : <span class="number">15,580</span></small></label></div>
+								</td>
+								<td><label for="price2"><strong class="number">52,420</strong>원</label></td>
+								<td><label for="price2"><strong class="number">42,420</strong>원</label></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="select"><input type="radio" name="price" id="price3" onclick="return choice(this);" /><label for="price3">티제이팜<br /><small>재고 : <span class="number">150</span></small></label></div>
+								</td>
+								<td><label for="price3"><strong class="number">2,420</strong>원</label></td>
+								<td><label for="price3"><strong class="number">2,420</strong>원</label></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="select"><input type="radio" name="price" id="price4" onclick="return choice(this);" /><label for="price4">태전약품<br /><small>재고 : <span class="number">15,580</span></small></label></div>
+								</td>
+								<td><label for="price4"><strong class="number">420</strong>원</label></td>
+								<td><label for="price4"><strong class="number">380</strong>원</label></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="select"><input type="radio" name="price" id="price5" onclick="return choice(this);" /><label for="price5">입점업체명<br /><small>재고 : <span class="number">1</span></small></label></div>
+								</td>
+								<td><label for="price5"><strong class="number">2,420</strong>원</label></td>
+								<td><label for="price5"><strong class="number">2,420</strong>원</label></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div><!-- //price_list_box -->
+			<div class="wide choice_info_box">
+				<!-- 광동 상품인 경우 -->
+				<div id="kdDetailContainer" style="display: block;">
+					<!-- 배송안내 -->
+					<h4 class="title">배송 안내</h4>
+					<div class="info_inner delivery_info_box">
+						<dl>
+							<dt>주문마감시간</dt>
+							<dd id="deliveryEndDate" class="number fcpoint">2022-10-27 14:00 이전까지</dd>
+						</dl>
+						<dl>
+							<dt>발송예정일</dt>
+							<dd id="deliveryDate" class="number fcpoint">2022-10-27</dd>
+						</dl>
+						<p class="note">도서산간 및 제주도 지역의 경우 배송예정일 보다 2~3일 배송지연 될 수 있습니다.</p>
+						<p id="addDeliveryInfo" class="noti">
+							*해당 제품은 발송예정일과 상이하며, <span class="fcpoint">최대 10~15일</span> 소요됩니다.
+						</p>
+					</div>
+					
+					<!-- 광동상품 : 비용 할인 안내(금융할인) -->
+					<h4 class="title">비용 할인 안내(금융할인)</h4>
+					<div class="info_inner" id="cmsRateContainer">
+						<dl>
+							<dt>비용 할인</dt>
+							<dd><span class="number fcpoint" id="cmsRateText">1.8%</span></dd>
+						</dl>
+					</div>
+					
+					<!-- 광동상품 : 거래처 / 구매수량별 할인 안내 -->
+					<h4 class="title" id="discountTitle">구매수량별 할인 안내</h4>
+					<div class="info_inner discount_info_box" id="discountContainer">
+						<div>
+							<dl id="purchase_discount_container">
+								<dt>거래처 할인</dt>
+								<dd id="accountDiscount"></dd>
+							</dl>
+							<dl id="purchase_quantity_container">
+								<dt>구매 수량별 할인(개당)</dt>
+								<dd>
+									<ul id="purchase_quantity_list">
+										<li>
+											100개 이상 구매 시 <span class="fcpoint">440원(44원 할인)</span>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+						<p class="note">비용할인을 제외한 할인은 할인률이 가장 높은 할인으로 자동 적용됩니다.</p> 
+					</div>
+				</div><!-- //kdDetailContainer -->
+				<!-- 입점업체 상품인 경우 -->
+				<div id="dealerDetailContainer" style="display: none;">
+					<!-- 배송안내 -->
+					<div class="info_inner delivery_info_box">
+						<!-- 입점업체 -->
+						<h4>주문/배송일정 안내</h4>
+						<dl>
+							<dt>발송예정일</dt>
+							<dd id="dealerDeliveryDate"><span class="montserrat fcpoint">2022-12-08</span></dd>
+						</dl>
+						<p class="note">도서산간 및 제주도 지역의 경우 배송예정일 보다 2~3일 배송지연 될 수 있습니다.</p>
+						<dl>
+							<dt>주문마감시간</dt>
+							<dd id="dealerDeliveryEndDate"><span class="montserrat fcpoint">2022-12-08 13:00 이전까지</span></dd>
+						</dl>
+						<p id="addDeliveryInfoDealer" class="note" style="display: none;"></p>
+					</div>
+					
+					<!-- 입점업체 : 할인 및 반품 안내 -->
+					<div class="info_inner">
+						<h4>할인 및 반품 안내</h4>
+						<div id="dealerRateInfo"><dl>	<dt>반품 택배비</dt>	<dd><span class="montserrat fcpoint">4000원</span></dd></dl></div>
+						<p class="note">※ 비용할인을 제외한 할인은 할인률이 가장 높은 할인으로 자동 적용됩니다.</p>
+					</div>
+					
+					<!-- 입점업체 : 주문수량 안내 -->
+					<div class="info_inner">
+						<h4>주문수량 안내</h4>
+						<div id="dealerQty"><dl><dt>최소주문수량</dt><dd><span class="montserrat">1</span>개</dd></dl><dl><dt>최대주문수량</dt><dd><span class="montserrat">99999</span>개</dd></dl></div>
+					</div>
+				</div><!-- //dealerDetailContainer -->
+			</div>
+			<div class="floating_btn">
+				<div class="info_text">
+					<div>업체명 : 광동제약</div>
+					<div>재고 : 140,000개</div>
+				</div>
+				<div class="total_price">
+					<div class="ea_box">
+						<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+						<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+						<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+					</div>
+					<div class="price fcpoint"><strong class="number">4,544,000</strong>원</div>
+				</div>
+				<div class="button_box">
+					<a href="javascript:void(0)" onclick="preOrder()" class="buttons medium preorder_btn"><i class="icoRequest"></i>예약주문 신청</a>
+				</div>
+				<div class="button_box">
+					<a href="#" class="buttons">관심상품 등록</a>
+					<a href="#" class="buttons fill">장바구니 담기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function detailInfo(){
+			modalUrlOpen('../goods/detail_info.html');
+		}
+		function historyPop(){
+			modalUrlOpen('../goods/history_goods_pop.html');
+		}
+		function preOrder(){
+			modalUrlOpen('../goods/preorder_pop.html');
+		}
+		function choice(a){
+			let rows = document.querySelector('.list_box tbody').querySelectorAll('tr');
+			let radio = a.closest('tr');
+			rows.forEach(row => {
+				row.classList.remove('choice');
+			});
+			radio.classList.add('choice');
+		}
+	</script>
+</div>

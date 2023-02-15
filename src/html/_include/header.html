@@ -2,13 +2,13 @@
 @@if (header === 'type1') {
 	<div class="type1">
 		<h1><a href="../main/main.html"><img src="@@webRoot/imgs/global/logo.png" alt="광동제약"></a></h1>
-		<div class="search_form">
-			<input type="search" class="input_search" name="" placeholder="검색어를 입력하세요." />
+		<div class="search_form" id="go_search" onclick="location.href='../goods/search.html';">
+			<input type="search" class="input_search" name="" readonly="readonly" placeholder="검색어를 입력하세요." />
 			<button type="button" class="btn_search">검색</button>
 		</div>
 		<div class="top_btn">
-			<a href="#" class="btn btn_cart">장바구니<span class="label_count">240</span></a>
-			<a href="javascript:void(0);" onclick="modalOpen('modal_category')" class="btn btn_category">카테고리보기</a>
+			<a href="../order/cart.html" class="btn btn_cart">장바구니<span class="label_count">240</span></a>
+			<a href="javascript:void(0);" onclick="modalUrlOpen('../goods/category.html', 'full')" class="btn btn_category">카테고리보기</a>
 		</div>
 	</div>
 }
@@ -28,6 +28,16 @@
 			<h2>@@title</h2>
 			<a href="javascript:history.back()" class="btn_history">이전 페이지 이동</a>
 		</div>
+	</div>
+}
+@@if (header === 'type4') {
+	<div class="search_form_box">
+		<h1 class="blind">광동제약</h1>
+		<div class="search_form">
+			<input type="search" class="input_search" name="" placeholder="검색어를 입력하세요." />
+			<button type="button" class="btn_search">검색</button>
+		</div>
+		<a href="javascript:history.back()" class="btn_history">이전 페이지 이동</a>
 	</div>
 }
 </header>

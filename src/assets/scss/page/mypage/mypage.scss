@@ -3,6 +3,8 @@
 #container {padding:0;}
 #container .page_mypage {min-height:60vh;padding:0 16px 32px;}
 #container .page_mypage.pdbNo {padding-bottom:0;}
+#fixedBtn.scroll {transform: translate3d(0,-16px,0);}
+#footer {padding-bottom:0;}
 .page_mypage.bgGray {background-color:#f4f7f9;}
 .page_mypage .button_box {margin-top:24px;}
 
@@ -418,6 +420,7 @@
 .modify_wrap .button_box {margin:24px 42px 16px;}
 .modify_wrap .section .noticebox {margin-bottom:16px;}
 .modify_wrap .terms_list dd {margin-top:-1px;}
+.modify_wrap .terms_list label {font-size:14px;}
 
 /* 회원탈퇴 */
 .secession_wrap .tbl_round {margin:16px 0;}

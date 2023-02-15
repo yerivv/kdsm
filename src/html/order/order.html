@@ -183,7 +183,7 @@
 							<ul class="method_choice">
 								<li class="kdpay">
 									<input type="radio" name="payway" id="payway_kdpay" value="PAYWAY_CARD_KDS" onClick="checkPayway();" />
-									<label for="payway_kdpay" class="fw500"><i class="ico"></i>KD간편결제</label>
+									<label for="payway_kdpay" class="fw500"><i class="ico"></i><span class="block">KD</span>간편결제</label>
 									<!-- <div class="tooltip_wrap discount">
 										<span class="ico_discount">즉시할인</span>
 										<div class="message_box">
@@ -195,11 +195,11 @@
 								</li>
 								<li class="card">
 									<input type="radio" name="payway" id="payway_card" value="PAYWAY_CARD" onClick="checkPayway();" />
-									<label for="payway_card"><i class="ico"></i>신용카드</label>
+									<label for="payway_card"><i class="ico"></i><span class="block">신용카드</span></label>
 								</li>
 								<li class="bank">
 									<input type="radio" name="payway" id="payway_bank" value="PAYWAY_BANK" onClick="checkPayway();" />
-									<label for="payway_bank"><i class="ico"></i>실시간 계좌이체</label>
+									<label for="payway_bank"><i class="ico"></i><span class="block">실시간 </span>계좌이체</label>
 								</li>
 							</ul>
 							
@@ -235,6 +235,9 @@
 								</div>
 							</div>
 						</div>
+						<div class="pay_save_box">
+							<input type="checkbox" name="pay_save" id="pay_save" /><label for="pay_save">지금 선택하신 결제수단을 다음에도 사용</label>
+						</div>
 					</form>
 					</div><!--//section-->
 					<!-- 할인 및 보조결제수단 선택-->
@@ -255,12 +258,12 @@
 									<div class="box">
 										<label for="coupon_goods" class="type">상품할인</label>
 										<input type="text" name="totalCouponGoods" readonly="readonly" id="coupon_goods" class="number input"/>
-										<button type="button" class="buttons medium white">조회 및 사용</button>
+										<button type="button" onclick="couponOpen()" class="buttons medium white">조회 및 사용</button>
 									</div>
 									<div class="box">
 										<label for="coupon_order" class="type">주문할인</label>
 										<input type="text" name="totalCouponOrder" readonly="readonly" id="coupon_order" class="number input"/>
-										<button type="button" class="buttons medium white">조회 및 사용</button>
+										<button type="button" onclick="couponOpen()" class="buttons medium white">조회 및 사용</button>
 									</div>
 								</dd>
 							</dl>
@@ -422,7 +425,10 @@
 									</div>
 								</li>
 							</ul>
-							<div>개인정보</div>
+							<div class="agree_view_box">
+								<input type="checkbox" name="order_agree" id="order_agree" /><label for="order_agree">개인정보 제3자 제공동의(필수)</label>
+								<span class="mlauto"><button type="button" onclick="termsView(103)" class="buttons xsmall white2">보기</button></span>
+							</div>
 						</div>
 					</div><!--//section-->
 				</div><!-- //order_regist -->
@@ -434,12 +440,12 @@
 						<div>KD간편결제</div>
 					</div>
 					<div class="total_price">
-						<div class="total fcblack">합계금액(<span class="fcpoint fw500">4</span>개)</div>
+						<div class="total fcblack">최종 결제금액</div>
 						<div class="price fcpoint"><strong class="number">4,544,000</strong>원</div>
 					</div>
 					<div class="button_box">
-						<a href="#" class="buttons">장바구니 보기</a>
-						<a href="#" class="buttons fill">결제하기</a>
+						<a href="cart.html" class="buttons">장바구니 보기</a>
+						<a href="order_finish.html" class="buttons fill">결제하기</a>
 					</div>
 				</div><!-- //floating_btn -->
 			</div><!-- //page_order -->
@@ -451,6 +457,12 @@
 	</div>
 	
 	<script>
+		function termsView(){
+			modalUrlOpen('../etc/terms_of_use_pop.html');
+		}
+		function couponOpen(){
+			modalUrlOpen('../order/order_coupon_pop.html');
+		}
 	</script>
 </body>
 </html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "주문완료"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/order/order.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type1",
+			"gnb" : "",
+			"toolbar" : "",
+		})
+
+		<main id="container">
+			<div class="page_order order_finish">
+				<h2 class="page_title">주문완료</h2>
+				<!-- 실패
+				<div class="no_result_box">
+					<i class="ico"></i>
+					<div class="text">주문을 실패하였습니다.</div>
+				</div>
+				<div class="button_box cols1">
+					<button type="button" class="buttons fcdefault">계속 쇼핑하기</button>
+				</div> -->
+
+				<div class="finish_box">
+					<div class="confirm_box">
+						<i class="ico"></i>
+						<h3 class="title">주문이 정상적으로 완료되었습니다.</h3>
+					</div>
+					<div class="confirm_detail_box">
+						주문이 완료되었습니다.<br />주문하신 내역은 <span class="fcdefault">마이페이지에서 확인</span>하실 수 있습니다.
+					</div>
+				</div>
+				<!-- 정보 -->
+				<div class="common_tbl tbl_round">
+					<table>
+						<caption>주문정보 내역</caption>
+						<colgroup>
+							<col width="87"><col width="*">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">주문번호</th>
+								<td>A1234567891234597</td>
+							</tr>
+							<tr>
+								<th scope="row">주문유형</th>
+								<td>즉시할인</td>
+							</tr>
+							<tr>
+								<th scope="row">주문일시</th>
+								<td><span class="number">2022-11-02 10:30:54</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="button_box">
+					<a href="../main/main.html" class="buttons fcdefault">계속 쇼핑하기</a>
+					<a href="../mypage/order_delivery.html" class="buttons fill">주문내역 확인</a>
+				</div>
+			</div>
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+
+		@@include('@@webRoot/_include/foot.html')
+
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>

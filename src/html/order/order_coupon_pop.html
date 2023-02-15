@@ -1,0 +1,169 @@
+<div id="modal" class="modalCenter modal_orderCoupon">
+	<div class="wrap">
+		<div class="head">
+			<h2>쿠폰 조회 및 적용</h2>
+			<div class="close" onclick="modalUrlClose();">닫기</div>
+		</div>
+		<div class="contents">
+			<!--  쿠폰적용 -->
+			<div class="section">
+				<h3 class="title">총 <strong class="number fcpoint fw500">2</strong>개</h3>
+				<div class="coupon_apply_list">
+					<ul class="list">
+						<li class="item">
+							<div class="info">
+								<ul class="order">
+									<li class="name">광동제약 원방 우황방방바압</li>
+									<li class="ea">수량:<strong class="number fcdefault">58</strong></li>
+									<li class="price"><strong class="number">10,808,000</strong>원</li>
+								</ul>
+								<div class="coupon">
+									<select name="">
+										<option>쿠폰선택</option>
+									</select>
+								</div>
+							</div>
+							<div class="detail">
+								<dl class="noicon">
+									<dt>상품금액</dt>
+									<dd><strong class="number">10,808,000</strong>원</dd>
+								</dl>
+								<dl class="discount">
+									<dt>쿠폰할인</dt>
+									<dd><strong class="number">10,000</strong>원</dd>
+								</dl>
+								<dl class="apply">
+									<dt>적용금액</dt>
+									<dd class="fcpoint"><strong class="number">10,798,000</strong>원</dd>
+								</dl>
+							</div>
+						</li>
+						<li class="item">
+							<div class="info">
+								<ul class="order">
+									<li class="name">광동제약 원방 우황방방바압ㅇ바압압ㅇ</li>
+									<li class="ea">수량:<strong class="number">58</strong></li>
+									<li class="price"><strong class="number">10,808,000</strong>원</li>
+								</ul>
+								<ul class="order">
+									<li class="name">광동제약 원방 우황방방바압ㅇ바압압ㅇ</li>
+									<li class="ea">수량:<strong class="number">58</strong></li>
+									<li class="price"><strong class="number">10,808,000</strong>원</li>
+								</ul>
+								<div class="coupon">
+									<select name="" disabled="disabled">
+										<option>쿠폰없음</option>
+									</select>
+								</div>
+							</div>
+							<div class="detail">
+								<dl class="noicon">
+									<dt>상품금액</dt>
+									<dd><strong class="number">10,808,000</strong>원</dd>
+								</dl>
+								<dl class="discount">
+									<dt>쿠폰할인</dt>
+									<dd><strong class="number">10,000</strong>원</dd>
+								</dl>
+								<dl class="apply">
+									<dt>적용금액</dt>
+									<dd class="fcpoint"><strong class="number">10,798,000</strong>원</dd>
+								</dl>
+							</div>
+						</li>
+					</ul>
+					<div class="total">
+						<dl>
+							<dt>총 할인 금액</dt>
+							<dd class="fcpoint"><strong class="number">1,000</strong>원</dd>
+						</dl>
+						<dl>
+							<dt>총 쿠폰 적용 금액</dt>
+							<dd class="fcpoint"><strong class="number">29,800</strong>원</dd>
+						</dl>
+					</div>
+				</div><!-- //coupon_apply_list -->
+				
+				<div class="button_box">
+					<button type="button" onclick="modalUrlClose()" class="buttons medium">취소</button>
+					<button type="button" class="buttons medium point">쿠폰적용</button>
+				</div>
+			</div><!-- //section -->
+			<!--  보유쿠폰 -->
+			<div class="section">
+				<div class="title_box">
+					<h3 class="title">보유쿠폰</h3>
+					<div class="mlauto count">총 <strong class="number fcpoint fw500">2</strong>개</div>
+				</div>
+				<div class="coupon_have_list">
+					<ul>
+						<li>
+							<div class="info">
+								<p class="name">20% 할인쿠폰</p>
+								<p class="period">2022-11-02~2022-11-14</p>
+								<p class="limit">1,000원이상~1,000원이하</p>
+							</div>
+							<div class="other">
+								<div class="discount"><strong class="number fw500">1,000</strong>원</div>
+								<div class="use">
+									적용상품
+									<div>
+										<button type="button" onclick="openCouponDetail(this)" class="buttons xsmall white round0">조회</button>
+										<ul class="listHidden goodsList">
+											<li>[기획2+1] 부비손 프레쉬 퓨어 핸드겔(손소독제 에탄올 70%)</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="info">
+								<p class="name">50% 할인쿠폰</p>
+								<p class="period">2022-11-02~2022-11-14</p>
+								<p class="limit">1,000원이상~1,000원이하</p>
+							</div>
+							<div class="other">
+								<div class="discount"><strong class="number fw500">50%</strong></div>
+								<div class="use">
+									적용<span class="block">카테고리</span>
+									<div>
+										<button type="button" onclick="openCouponDetail(this)" class="buttons xsmall white round0">조회</button>
+										<ul class="listHidden cateList">
+											<li>부비손 프레쉬 퓨어 핸드겔(손소독제 에탄올 70%)</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="no_result_box border">
+					<i class="ico"></i>
+					<div class="text">보유하신 쿠폰이 없습니다.</div>
+				</div>
+			</div><!-- //section -->
+		</div>
+	</div>
+</div>
+
+<div id="modal" class="modalCenter modal_couponApplyInfo">
+	<div class="wrap">
+		<div class="head">
+			<h2>적용 상품</h2>
+			<div class="close" onclick="modalClose('modal_couponApplyInfo');">닫기</div>
+		</div>
+		<div class="contents">
+			<ul class="couponList">
+				<li>[기획2+1] 부비손 프레쉬 퓨어 핸드겔(손소독제 에탄올 70%)</li>
+			</ul>
+			<div class="button_box cols1">
+				<button type="button" onclick="modalClose('modal_couponApplyInfo');" class="buttons medium point">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function openCouponDetail(){
+		modalOpen('modal_couponApplyInfo');
+	}
+</script>
