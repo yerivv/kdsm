@@ -66,6 +66,12 @@ function accordions(a){
 	wrap.classList.toggle('on');
 }
 
+//기간검색
+function periodDetail(a){
+	const wrap = a.closest('.period_check');
+	wrap.classList.toggle('on');
+}
+
 //modal
 function isModal(){
 	let body = document.querySelector('body');
@@ -229,19 +235,18 @@ function cateH(){
 	let menus = cate.querySelectorAll('li');
 	let arrValue = new Array();
 	let max = 0;
-	
 	for(let i=0;i<3;i++){
 		let h = menus[i].clientHeight;
 		arrValue.push(h);
+		console.log(h);
 	}
 	max = Math.max.apply(null, arrValue);
-	
 	cate.style.cssText = 'height:'+max+'px';
 }
 function cateReady(){
-	const wrap = document.querySelectorAll('.category_menu');
-	if(wrap.length>0){
-		const cate = document.querySelector('.category_menu').querySelector('.list');
+	if(document.querySelectorAll('.category_menu').length>0){
+		const wrap = document.querySelector('.category_menu');
+		const cate = wrap.querySelector('.list');
 		let total = cate.childElementCount;
 		if(total<4){
 			document.querySelector('.category_menu').classList.add('minimum');
@@ -249,7 +254,7 @@ function cateReady(){
 			document.querySelector('.category_menu').classList.remove('minimum');
 			cateH();
 		}
-		window.addEventListener('resize', cateH);
+		//window.addEventListener('resize', cateH);
 	}
 }
 function controlCate(){

@@ -34,7 +34,7 @@
 #gnb ul .active a {color:#E8340C;font-weight:500;}
 #gnb ul .active::after {content:'';position:absolute;bottom:0;left:50%;width:28px;height:4px;border-radius: 4px 4px 0px 0px;background-color:#E8340C;transform:translateX(-50%);}
 
-#container {min-height:60vh;padding:24px 16px 32px;}
+#container {min-height:85vh;padding:24px 16px 32px;}
 
 #toolbar {position:fixed;left:0;bottom:0;z-index:9;width:100%;padding:8px 0 24px;border-top:1px solid #EDF0F2;background-color:#fff;box-shadow:0px -4px 20px rgba(0, 0, 0, 0.1);transition:transform 0.2s;transform: translate3d(0,80px,0);}
 #toolbar ul {display:flex;}
@@ -53,12 +53,13 @@
 #fixedBtn {position:fixed;right:16px;bottom:0;z-index:5;transition:transform 0.2s;transform: translate3d(0,-16px,0);}
 #fixedBtn .btn {display:block;position:relative;width:44px;height:44px;border-radius:40px;text-indent:-999em;}
 #fixedBtn .btn::after {content:'';position:absolute;left:50%;top:50%;width:24px;height:24px;background-position:center center;background-repeat:no-repeat;background-size:contain;transform:translate(-50%, -50%);}
-#fixedBtn .btn_top {display:none;opacity:0;overflow:hidden;border:solid 1px #e3e3e3;background-color:rgba(255, 255, 255, 0.7);margin-top:8px;transition:height 0.2s;}
+#fixedBtn .btn_top {position:absolute;right:-80px;bottom:0;opacity:0;overflow:hidden;border:solid 1px #e3e3e3;background-color:rgba(255, 255, 255, 0.7);margin-top:8px;transition:all 0.2s;}
 #fixedBtn .btn_top::after {background-image:url(../imgs/global/icon_top.png)}
-#fixedBtn .btn_talk {background:linear-gradient(135deg, #FFC397 0%, #E8340C 89.06%)}
+#fixedBtn .btn_talk {position:absolute;bottom:0;right:0;z-index:1;background:linear-gradient(135deg, #FFC397 0%, #E8340C 89.06%);transition:all 0.4s;}
 #fixedBtn .btn_talk::after {background-image:url(../imgs/global/icon_talk.png)}
 #fixedBtn.scroll {transform: translate3d(0,-80px,0);}
-#fixedBtn.scroll .btn_top {display:block;opacity:1;}
+#fixedBtn.scroll .btn_talk {bottom:50px;}
+#fixedBtn.scroll .btn_top {right:0;opacity:1;}
 
 #footer {background-color:#535353;padding-bottom:75px;}
 #footer .menu {display:flex;}

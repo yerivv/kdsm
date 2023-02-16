@@ -1,9 +1,9 @@
 /*
 	mypage */
 #container {padding:0;}
-#container .page_mypage {min-height:60vh;padding:0 16px 32px;}
+#container .page_mypage {min-height:85vh;padding:0 16px 32px;}
 #container .page_mypage.pdbNo {padding-bottom:0;}
-#fixedBtn.scroll {transform: translate3d(0,-16px,0);}
+#fixedBtn.scroll {transform:translate3d(0,-16px,0);}
 #footer {padding-bottom:0;}
 .page_mypage.bgGray {background-color:#f4f7f9;}
 .page_mypage .button_box {margin-top:24px;}
@@ -141,7 +141,9 @@
 .period_check .period .box:not(:first-child)::before {content:'';position:absolute;left:8px;top:0;width:1px;height:14px;background-color:#b0b0b0;}
 .period_check .period .date {padding-top:1px;}
 .period_check .period .buttons {margin-left:auto;flex-direction:inherit;}
-.period_check .detail {background-color:#f4f7f9;padding:8px 16px 24px;}
+.period_check .period .buttons .arrow {margin-right:0;}
+.period_check .detail {display:block !important;max-height:0;overflow:hidden;background-color:#f4f7f9;transition:max-height 0.15s ease-out;}
+.period_check .detail dl {padding:0 16px;}
 .period_check .detail dt {margin:16px 0 8px;font-size:15px;line-height:1;}
 .period_check .detail .calendar_box {margin-top:8px;}
 .period_check .detail .button_box {padding:0 32px;}
@@ -150,7 +152,8 @@
 .period_check .inputSelect {display:flex;gap:4px;}
 .period_check .inputSelect select {width:94px;}
 .period_check .inputSelect input {width:calc(100% - 98px);}
-.period_check .button_box {margin-top:24px;}
+.period_check .button_box {margin:24px 0;}
+.period_check.on .detail {max-height:500px;transition:max-height 0.2s ease-in;}
 @media (max-width: 320px) {
 	.period_check .period {font-size:13px;}
 	.period_check .period .box:not(:first-child) {padding-left:9px;}
