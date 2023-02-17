@@ -228,40 +228,34 @@ function tooltip(a){
 	})
 }
 
-//카테고리
-function cateH(){
+//카테고리 메뉴
+function cateReady(){
 	const wrap = document.querySelector('.category_menu');
 	const cate = wrap.querySelector('.list');
+	let total = cate.childElementCount;
 	let menus = cate.querySelectorAll('li');
-	let arrValue = new Array();
-	let max = 0;
-	for(let i=0;i<3;i++){
-		let h = menus[i].clientHeight;
-		arrValue.push(h);
-		console.log(h);
-	}
-	max = Math.max.apply(null, arrValue);
-	cate.style.cssText = 'height:'+max+'px';
-}
-function cateReady(){
-	if(document.querySelectorAll('.category_menu').length>0){
-		const wrap = document.querySelector('.category_menu');
-		const cate = wrap.querySelector('.list');
-		let total = cate.childElementCount;
-		if(total<4){
-			document.querySelector('.category_menu').classList.add('minimum');
-		} else {
-			document.querySelector('.category_menu').classList.remove('minimum');
-			cateH();
+	function init(){
+		let arrValue = new Array();
+		let max = 0;
+		for(let i=0;i<3;i++){
+			let h = menus[i].clientHeight;
+			arrValue.push(h);
 		}
-		//window.addEventListener('resize', cateH);
+		max = Math.max.apply(null, arrValue);
+		cate.style.cssText = 'height:'+max+'px';
 	}
+	init();
+	if(total<4){
+		document.querySelector('.category_menu').classList.add('minimum');
+	} else {
+		document.querySelector('.category_menu').classList.remove('minimum');
+	}
+	//window.addEventListener('resize', cateH);
 }
 function controlCate(){
 	const wrap = document.querySelector('.category_menu');
 	const cate = wrap.querySelector('.list');
 	const text = wrap.querySelector('.text');
-
 	if(wrap.classList.contains('init')){
 		wrap.classList.remove('init');
 		text.innerText = '닫기';
@@ -269,7 +263,7 @@ function controlCate(){
 	} else {
 		wrap.classList.add('init');
 		text.innerText = '열기';
-		cateH();
+		cateReady();
 	}
 }
 
