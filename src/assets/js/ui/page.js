@@ -43,7 +43,7 @@ function getScrollDirection(){
 }
 
 function goTop(){
-	window.scrollTo({top:0});
+	window.scrollTo({top:0, behavior:"smooth"});
 }
 
 //floating button detail
@@ -184,6 +184,9 @@ function ledger(a){
 		target.querySelector('.dimd').addEventListener('click', function(){
 			close();
 		})
+		target.querySelector('.close').addEventListener('click', function(){
+			close();
+		});
 	}
 	
 	function close(){

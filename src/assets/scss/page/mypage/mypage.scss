@@ -11,7 +11,7 @@
 /* 공통리스트 */
 .common_orderList .group {overflow:hidden;border:1px solid #dee0e4;border-radius:4px;}
 .common_orderList .group:not(:first-child) {margin-top:12px;}
-.common_orderList .group > dl > dt {display:flex;flex-wrap:wrap;align-items:center;padding:12px 16px;background-color:#ffe7e1;font-size:15px;line-height:1;}
+.common_orderList .group > dl > dt {display:flex;flex-wrap:wrap;align-items:center;gap:4px;padding:12px 16px;background-color:#ffe7e1;font-size:15px;line-height:1;}
 .common_orderList .group > dl > dt.gray {background-color:#f4f7f9;}
 .common_orderList .group dt label {max-width:calc(100% - 32px);}
 .common_orderList .group dt .state {margin-left:auto;font-size:14px;}

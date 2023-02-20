@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "마이페이지 가이드"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/mypage/mypage.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+	<div id="app">
+		@@include('@@webRoot/_include/header.html',{
+			"header" : "type2",
+			"title": "가이드",
+			"gnb" : "hidden",
+			"toolbar" : "hidden"
+		})
+
+		<main id="container">
+			<div class="page_mypage">
+				<div class="section">
+					<div class="title_box">
+						<h3 class="title"><span class="fcpoint">List</span> - Default</h3>
+						<div class="mlauto fcgray66">
+							List accordion
+						</div>
+					</div>
+					<div class="common_orderList">
+						<div class="group">
+							<dl>
+								<dt><span>주문번호</span><strong class="number fw500">A2231156316316</strong></dt>
+								<dd class="info">
+									<div>주문일자 : <span class="number">2022-11-23</span></div>
+									<div>주문유형 : 일반</div>
+									<a href="order_detail.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
+								</dd>
+								<dd class="product accordions_wrap">
+									<div class="accordion" onclick="accordions(this)">상품 상세 정보</div>
+									<div class="toggle">
+										<ul class="product_list">
+											<li class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="" /></div>
+													<!-- <div class="soldout">일시<br />품절</div> -->
+												</div>
+												<div class="info_box">
+													<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+													<div class="summary">
+														<span class="box">100box</span>
+													</div>
+												</div>
+												<div class="price_box">
+													<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
+													<div class="box pay">결제금액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+												</div>
+												<div class="state">
+													<strong class="fw500">상품준비중</strong>
+												</div>
+											</li>
+											<li class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="" /></div>
+													<!-- <div class="soldout">일시<br />품절</div> -->
+												</div>
+												<div class="info_box">
+													<div class="name">광동제약 비타500</div>
+													<div class="summary">
+														<span class="box">50ml</span>
+													</div>
+												</div>
+												<div class="price_box">
+													<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
+													<div class="box pay">결제금액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+												</div>
+												<div class="state">
+													<a href="#" class="buttons xsmall white round0">배송조회</a>
+													<strong class="fw500">발송완료</strong>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+						</div><!-- //group -->
+					</div><!-- //common_orderList -->
+				</div>
+				<div class="section">
+					<div class="title_box">
+						<h3 class="title"><span class="fcpoint">List</span> - Default</h3>
+						<div class="mlauto fcgray66">
+							List accordion
+						</div>
+					</div>
+					<div class="common_orderList">
+						<div class="group"> 
+							<dl>
+								<dt><span>주문번호</span><strong class="number fw500">A2231156316316</strong></dt>
+								<dd class="info">
+									<div>주문일자 : <span class="number">2022-11-23</span></div>
+									<div>주문유형 : 일반</div>
+									<a href="order_detail.html" class="buttons iconBtn white btn_detail"><i class="icoDetail"></i>내역 상세보기</a>
+								</dd>
+								<dd class="product accordions_wrap">
+									<div class="accordion" onclick="accordions(this)">상품 상세 정보</div>
+									<div class="toggle">
+										<ul class="product_list">
+											<li class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="" /></div>
+													<!-- <div class="soldout">일시<br />품절</div> -->
+												</div>
+												<div class="info_box">
+													<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+													<div class="summary">
+														<span class="box">100box</span>
+													</div>
+												</div>
+												<div class="price_box">
+													<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
+													<div class="box pay">결제금액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+												</div>
+												<div class="state">
+													<strong class="fw500">상품준비중</strong>
+												</div>
+											</li>
+											<li class="item">
+												<div class="thumb_box">
+													<div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="" /></div>
+													<!-- <div class="soldout">일시<br />품절</div> -->
+												</div>
+												<div class="info_box">
+													<div class="name">광동제약 비타500</div>
+													<div class="summary">
+														<span class="box">50ml</span>
+													</div>
+												</div>
+												<div class="price_box">
+													<div class="box price">상품금액 <strong class="number">1,045,000</strong>원</div>
+													<div class="box pay">결제금액 <span class="fcpoint"><strong class="number">1,030,900</strong>원</span></div>
+												</div>
+												<div class="state">
+													<a href="#" class="buttons xsmall white round0">배송조회</a>
+													<strong class="fw500">발송완료</strong>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+						</div><!-- //group -->
+					</div><!-- //common_orderList -->
+				</div>
+			</div><!-- //page_mypage -->
+		</main>
+
+		@@include('@@webRoot/_include/footer.html')
+		@@include('@@webRoot/_include/foot.html')
+		@@include('@@webRoot/_include/modal.html')
+	</div>
+	
+	<script>
+	</script>
+</body>
+</html>

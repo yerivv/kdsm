@@ -762,7 +762,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 
 /* modal full */
 .modalFull::before {z-index:97;}
-.modalFull .wrap {left:0;top:0;z-index:98;width:100%;height:calc((var(--vh, 1vh) * 100));border-radius:24px 24px 0px 0px;}
+.modalFull .wrap {left:0;top:20px;z-index:98;width:100%;height:calc((var(--vh, 1vh) * 100) - 20px);border-radius:24px 24px 0px 0px;}
 .modalFull .contents {height:calc((var(--vh, 1vh) * 100) - 60px);padding:16px 16px 32px;}
 .modalFull .contents.padNo {padding:0;}
 .modalFull .contents.padBtn {padding-bottom:100px;}
