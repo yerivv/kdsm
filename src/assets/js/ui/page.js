@@ -25,9 +25,16 @@ function getScrollDirection(){
 	const body = document.querySelector('body');
 	const toolbar = body.querySelector('#toolbar');
 	const fixBtn = body.querySelector('#fixedBtn');
+	const header = body.querySelector('#header');
+
+	if(scrollTop > 0){
+		header.classList.add('scroll');
+	} else {
+		header.classList.remove('scroll');
+	}
 
 	if(body.querySelectorAll('#fixedBtn').length){
-		if(scrollTop >= 50){
+		if(scrollTop > 50){
 			fixBtn.classList.add('scroll');
 		} else {
 			fixBtn.classList.remove('scroll');

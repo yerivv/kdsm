@@ -1,5 +1,8 @@
 /* 가이드
 */
+
+#header {height:0;opacity:0;padding:0;overflow:hidden;}
+
 .guide_header {position:sticky;top:0;left:0;z-index:9;background-color:#B0B0B0;color:#fff;font-size:24px;padding:16px;}
 .guide_container {border-bottom:11px solid #F4F7F9}
 .guide_container .section {padding:16px;border-bottom:1px solid #EDF0F2}
