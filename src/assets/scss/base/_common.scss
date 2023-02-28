@@ -4,7 +4,7 @@
 */
 
 /* 320 공통 */
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.block {display:block !important;}
 	.hide {display:none !important;}
 }
@@ -69,24 +69,24 @@ input::-webkit-search-results-decoration {display:none;}
 
 /* checkbox */
 input[type=checkbox] {width:24px;height:24px;padding:0;background-color:#fff;background-image:url(../imgs/global/input_checkbox.png);background-position:center top;background-repeat:no-repeat;background-size:22px auto;}
-input[type=checkbox] + label {padding-top:2px;margin-left:8px;line-height:2.2rem;}
+input[type=checkbox] + label {padding-top:2px;margin-left:8px;line-height:22px;}
 input[type=checkbox] + label + input[type=checkbox] {margin-left:12px;}
 input[type=checkbox]:checked {background-color:#E8340C;background-image:url(../imgs/global/input_checkbox.png);background-position:center bottom;border-color:#E8340C}
 
 /* radio */
 input[type=radio] {position:relative;width:20px;height:20px;padding:0;border-radius:50%;background-color:#fff !important;}
 input[type=radio]::after {content:'';position:absolute;left:50%;top:50%;width:12px;height:12px;border-radius:50%;transform:translate(-50%, -50%);}
-input[type=radio] + label {padding-top:1px;margin-left:8px;line-height:1.8rem;}
+input[type=radio] + label {padding-top:1px;margin-left:8px;line-height:18px;}
 input[type=radio] + label + input[type=radio] {margin-left:12px;}
 input[type=radio]:checked::after {background-color:#E8340C;}
 input[type=radio]:disabled::after {background-color:#E3E3E3;}
 input[type=radio].type1 {width:16px;height:16px;}
 input[type=radio].type1::after {width:10px;height:10px;}
-input[type=radio].type1 + label {line-height:1.6rem;}
-@media (max-width: 320px) {
+input[type=radio].type1 + label {line-height:16px;}
+@media all and (max-width: 320px) {
 	input[type=radio].media {width:16px;height:16px;}
 	input[type=radio].media::after {width:10px;height:10px;}
-	input[type=radio].media + label {line-height:1.6rem;}
+	input[type=radio].media + label {line-height:16px;}
 }
 
 /* check,radio Text */
@@ -96,7 +96,7 @@ input[type=radio].type1 + label {line-height:1.6rem;}
 .textType li input[type=radio] {display:none;}
 .textType li input[type=radio] + label {display:flex;justify-content:center;width:100%;height:100%;padding:10px 0 7px;margin:0;border-radius:4px;border:1px solid #dee0e4;background-color:#fff;font-size:1.3rem;font-weight:500;line-height:1;}
 .textType li input[type=radio]:checked + label {border-color:#E8340C;background-color:#E8340C;color:#fff;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	/* 2줄 되는 것 */
 	.textType.type1 li input[type=radio] + label {flex-direction:column;padding-top:3px;padding-bottom:2px;}
 }
@@ -126,7 +126,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .calendar_box .calendar {position:absolute;right:0;top:0;width:36px;height:100%;border-left:1px solid #edf0f2;text-indent:-999em;}
 .calendar_box .calendar::after {content:'';position:absolute;right:0;top:0;width:100%;height:100%;background:url(../imgs/global/icon_calendar.png) center center no-repeat;background-size:20px 20px;}
 .calendar_box .text {width:24px;color:#666;text-align:center;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.calendar_box .box input[type=text] {padding-left:4px;padding-right:0;}
 }
 
@@ -157,8 +157,9 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .inputset.fileinput .buttons {width:63px;margin-left:4px;}
 .inputset.post input {width:calc(100% - 92px);}
 .inputset.post .buttons {width:88px;margin-left:4px;}
-@media (max-width: 320px) {
-	.inputset select {padding-right:24px;background-position:right 3px center;}
+@media all and (max-width: 320px) {
+	.inputset select {padding-left:4px;padding-right:24px;background-position:right 3px center;}
+	.inputset input:not([type=checkbox], [type=radio]) {padding-left:4px;padding-right:4px;}
 	.inputset.email input {width:58px;}
 	.inputset.email select {width:calc(100% - 142px);}
 	.inputset.cols2_1 select {width:66px;}
@@ -179,7 +180,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .form_row_box.terms_list .child {display:flex;justify-content:center;align-items:center;width:calc(100% + 30px);padding-top:12px;margin:12px -15px 0;border-top:1px solid #dee0e4;}
 .form_row_box.terms_list .child label + input {margin-left:30px;}
 .form_row_box.terms_list label {font-size:1.3rem;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.form_row_box dt,
 	.form_row_box dd {padding-left:7px;padding-right:7px;}
 	.form_row_box.terms_list label {margin-left:4px;}
@@ -199,7 +200,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .environment_select .inputset {flex-wrap:wrap;align-items:flex-start;gap:0 4px;}
 .environment_select .inputset li {display:flex;width:calc((100% - 8px) / 3);height:40px;}
 .environment_select .inputset label {width:calc(100% - 32px);padding-top:5px;line-height:1;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.form_col_box dl {padding-left:7px;padding-right:7px;}
 	.environment_select .inputset label {margin-left:4px;}
 }
@@ -225,7 +226,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .wide_title_banner .banner img {display:block;max-width:none;width:100%;}
 .wide_title_banner.line {border-bottom:1px solid #edf0f2;}
 .wide_title_banner.type1 {margin-top:0;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.wide_title_banner .banner {height:176px;}
 	.wide_title_banner .banner img {position:absolute;left:50%;top:0;width:auto;height:100%;transform:translateX(-50%);}
 }
@@ -336,7 +337,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .menu_tab .subList ul li {padding:0 6px;line-height:2.2rem;}
 .menu_tab .subList .btn {color:#8f8f8f;}
 .menu_tab .subList .active .btn {color:#e8340c;font-weight:500;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.menu_tab .subList ul li {line-height:1.8rem;}
 	.menu_tab .subList {padding:18px 18px 17px;}
 	.menu_tab .subList .btn {font-size:1.2rem;}
@@ -372,7 +373,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .button_box.cols1 .buttons {width:50%;}
 .button_box.single {flex-wrap:wrap;gap:8px;}
 .button_box.single .buttons {width:auto;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.button_box.cols1 .buttons {width:60%;}
 }
 /* button size */
@@ -383,7 +384,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .buttons.small {height:32px;font-size:1.3rem;}
 .buttons.xsmall {height:26px;border-radius:0;font-size:1.2rem;font-weight:400;}
 .buttons.text {height:auto;padding:0;border:0 none;border-radius:0;background-color:transparent;font-weight:400;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.buttons {flex-direction:column;}
 	.buttons.iconBtn,
 	.buttons.text {flex-direction:row;}
@@ -521,7 +522,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .common_product .item .sale_section_list .attain::before {background-color:#5b5e6a;background-image:url(../imgs/global/icon_progress_attain2.png);}
 .common_product .item .sale_section_list .attain.stay {color:#e8340c;font-weight:500;}
 .common_product .item .sale_section_list .attain.stay::before {background-color:#e8340c;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.common_product .thumb_box .thumb {padding-top:160px;}
 	.common_product .thumb_box .thumb img {left:50%;width:160px;height:160px;margin-left:-80px;}
 	.common_product .info_box .info {min-height:auto}
@@ -612,12 +613,12 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .tooltip_wrap .arrow_down::before {border-color:rgba(232, 52, 12, 0);border-top-color:#e8340c;border-width:9px;margin-left:-9px;}
 .tooltip_wrap.active .message_box,
 .tooltip_wrap.active .arrow_down {display:block;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.tooltip_wrap .message_box {width:200px;margin-left:-100px;}
 }
 
 /* note */
-.notice_text {position:relative;padding-left:12px;margin-top:8px;color:#8f8f8f;font-size:1.3rem;line-height:1.7rem;}
+.notice_text {position:relative;padding-left:12px;margin-top:8px;color:#8f8f8f;font-size:1.2rem;line-height:1.7rem;}
 .notice_text::before {content:'';position:absolute;left:0;top:3px;width:10px;height:10px;background:url(../imgs/global/icon_note.png) center center no-repeat;background-size:contain;}
 
 /* floating btn */
@@ -669,7 +670,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .confirm_detail_box {position:relative;padding:25px 16px 56px;color:#8f8f8f;line-height:2.1rem;text-align:center;}
 .confirm_detail_box.type1 {padding-left:0;padding-right:0;}
 .confirm_detail_box::before {content:'';position:absolute;left:50%;top:0;width:120px;height:1px;margin-left:-60px;background-color:#edf0f2;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.confirm_detail_box {padding-left:0;padding-right:0;}
 }
 
@@ -686,7 +687,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .certify_select li dl dd {margin-top:8px;color:#8f8f8f;font-size:1.3rem;line-height:1.7rem;}
 .certify_select li dl .btn {margin-top:12px;}
 .certify_select .buttons {width:128px;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.certify_select .buttons {width:106px;}
 }
 
@@ -712,7 +713,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .paymethod_list .type_detail .kdpay li {width:calc(100% - 144px);}
 .paymethod_list .type_detail .kdpay li.period {width:136px;}
 .paymethod_list .type_detail .button_box {margin-top:12px;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.paymethod_list .method_choice label {height:92px;line-height:1.6rem;}
 	.paymethod_list .method_choice .card label {line-height:3.2rem;}
 	.paymethod_list .type_detail .kdpay li {width:calc(100% - 102px);}
@@ -760,7 +761,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .modalCenter .button_box.type1 {padding:16px 26px 0;margin:24px 0 0;border-top:1px solid #edf0f2;}
 .modalCenter .noHead .contents {position:relative;padding-top:56px;}
 .modalCenter .noHead .contents .close {position:absolute;right:16px;top:16px;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.modalCenter .contents.media {padding-left:8px;padding-right:8px;}
 	.modalCenter .button_box {margin:16px 0 0;}
 	.modalCenter .button_box.type1 {padding-left:0;padding-right:0;}
@@ -768,8 +769,8 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 
 /* modal full */
 .modalFull::before {z-index:97;}
-.modalFull .wrap {left:0;top:20px;z-index:98;width:100%;height:calc((var(--vh, 1vh) * 100) - 20px);border-radius:24px 24px 0px 0px;}
-.modalFull .contents {height:calc((var(--vh, 1vh) * 100) - 60px);padding:16px 16px 32px;}
+.modalFull .wrap {left:0;top:16px;z-index:98;width:100%;height:calc((var(--vh, 1vh) * 100) - 16px);border-radius:24px 24px 0px 0px;}
+.modalFull .contents {height:calc((var(--vh, 1vh) * 100) - 76px);padding:16px 16px 32px;}
 .modalFull .contents.padNo {padding:0;}
 .modalFull .contents.padBtn {padding-bottom:100px;}
 .modalFull .button_box.fix_bottom {position:fixed;bottom:0;width:calc(100% - 32px);padding:0 0 32px;}
@@ -801,7 +802,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .price_list_box .list_box .choice td {background-color:#EDF0F2;}
 .price_list_box .list_box .choice,
 .price_list_box .list_box .choice .select small {color:#e8340c;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.price_list_box .list_box thead th {padding:0 2px;}
 	.price_list_box .list_box tbody td {padding:0 7px;font-size:1.2rem;}
 	.price_list_box .list_box table .s1 {width:42%;}
@@ -887,7 +888,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .coupon_have_list li .other .use {width:58%;text-align:right;}
 .coupon_have_list li .other .use .buttons {margin-top:4px;}
 .coupon_have_list .listHidden{display:none}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.coupon_apply_list .info .order .name {width:calc(100% - 64px);}
 	.coupon_apply_list .info .order .ea {text-align:right;}
 	.coupon_apply_list .info .order .price {width:100%;margin-left:auto;margin-top:5px;text-align:right;}
@@ -967,7 +968,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .modal_sleep .button_box {margin-top:24px;}
 .modal_sleep .noticebox {margin-top:16px;margin-bottom:0;}
 .modal_sleep .step3 {padding-bottom:100px;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.modal_sleep .step2 ::placeholder {color:transparent;}
 }
 
@@ -975,7 +976,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .modal_join .button_box {padding:0 42px;margin-top:24px;}
 .modal_join .noticebox {margin-top:16px;margin-bottom:0;}
 .modal_join .step1 .noticebox {margin-top:24px;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.modal_join .button_box {padding:0;}
 	.modal_join .step3 ::placeholder {color:transparent;}
 }

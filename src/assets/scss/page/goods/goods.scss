@@ -62,7 +62,7 @@
 }
 
 /* view */
-.result_count .list_view select {width:auto;padding-left:0;}
+.result_count .list_view select {width:auto;padding-left:0;text-align:right;}
 .result_count .list_view .view {display:inline-block;vertical-align:top;height:24px;margin-left:8px;}
 .result_count .list_view .view li {display:inline-block;vertical-align:top;width:20px;height:24px;background-repeat:no-repeat;background-position:center center;background-size:20px 20px;text-indent:-999em;}
 .result_count .list_view .view li:not(:first-child) {position:relative;margin-left:17px;}

@@ -42,6 +42,25 @@
 	</div>
 </header>
 }
+@@if (header === 'type5') {
+	<header id="header" class="type4">
+		<div class="logo_box">
+			<h1><a href="../main/main.html"><img src="@@webRoot/imgs/global/logo.png" alt="광동제약"></a></h1>
+			<div class="search_form" id="go_search" onclick="location.href='../goods/search.html';">
+				<input type="search" class="input_search" name="" readonly="readonly" placeholder="검색어를 입력하세요." />
+				<button type="button" class="btn_search">검색</button>
+			</div>
+			<div class="top_btn">
+				<a href="../order/cart.html" class="btn btn_cart">장바구니<span class="label_count">240</span></a>
+				<a href="javascript:void(0);" onclick="modalUrlOpen('../goods/category.html', 'full')" class="btn btn_category">카테고리보기</a>
+			</div>
+		</div>
+		<div class="page_name_box">
+			<h2>@@title</h2>
+			<a href="javascript:history.back()" class="btn_history">이전 페이지 이동</a>
+		</div>
+	</header>
+}
 
 @@if (gnb !== 'hidden') {
 	@@include('@@webRoot/_include/gnb.html')

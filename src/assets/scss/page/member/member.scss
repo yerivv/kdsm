@@ -1,16 +1,16 @@
 /* 회원관련 css
 */
-.page_login .page_title {padding:0;margin-bottom:0;border-width:0;font-size:20px;line-height:1;}
+.page_login .page_title {padding:0;margin-bottom:0;border-width:0;font-size:2rem;line-height:1;}
 .page_login .form_login {padding:16px 0;border-bottom:1px solid #edf0f2;}
 .page_login .form_line {margin-top:16px;}
 .page_login .button_box {margin-top:16px;}
 .page_login .menu {display:flex;justify-content:center;align-items:center;margin-top:16px;}
 .page_login .menu li {position:relative;text-align:center;}
 .page_login .menu li:not(:first-child)::before {content:'';position:absolute;left:-1px;top:0px;width:1px;height:12px;background-color:#e3e3e3;}
-.page_login .menu li a {display:block;padding:0 9px 0 8px;color:#8f8f8f;font-size:13px;line-height:1;}
+.page_login .menu li a {display:block;padding:0 9px 0 8px;color:#8f8f8f;font-size:1.3rem;line-height:1;}
 .page_login .menu li strong {font-weight:500;}
 .page_login .join_text {display:flex;flex-wrap:wrap;align-items:center;padding:16px 0;}
-.page_login .join_text .text {width:calc(100% - 158px);margin-right:30px;line-height:18px;}
+.page_login .join_text .text {width:calc(100% - 158px);margin-right:30px;line-height:1.8rem;}
 .page_login .join_text .button_box {width:128px;margin-top:0;margin-left:auto;}
 .page_login .benefitSlide .swiper-container {overflow:hidden;border-radius:8px;}
 .page_login .benefitSlide .swiper-slide a,
@@ -18,13 +18,16 @@
 .page_login .benefitSlide .swiper-pagination.swiper-pagination-bullets {bottom:16px !important;}
 .page_login .input_box {display:block;}
 .page_login .input_box + .input_box {margin-top:8px;}
+@media all and (min-width: 321px) {
+	.page_login .form_login .input_box input {height:45px;}
+}
 
 .page_member .step_box {margin:-16px -16px 0;border-bottom:1px solid #edf0f2;}
 .page_member .step_box ol {display:flex;justify-content:center;align-items:center;height:48px;padding:12px 0;}
-.page_member .step_box ol li {position:relative;height:24px;padding-top:6px;color:#666;font-size:15px;line-height:1;}
+.page_member .step_box ol li {position:relative;height:24px;padding-top:6px;color:#666;font-size:1.5rem;line-height:1;}
 .page_member .step_box ol li:not(:last-child) {padding-right:24px;}
 .page_member .step_box ol li:not(:last-child)::after {content:'';position:absolute;right:0;top:0;width:24px;height:24px;background:url(../../../imgs/global/icon_arrow_right.png) center center no-repeat;background-size:contain;}
 .page_member .step_box ol li.stay {color:#e8340c;font-weight:500;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.page_member .step_box.type1 ol {flex-wrap:wrap;height:72px;padding:12px 40px;}
 }

@@ -95,7 +95,7 @@
 .common_orderList.request .form_dealer dd {width:calc(100% - 88px);}
 .common_orderList .group > .disabled > dt {background-color:#f4f7f9;}
 .common_orderList .disabled > dt label {color:#242424}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.common_orderList .product_wrap .item .other,
 	.common_orderList .product_wrap .item .price_box {flex-direction:column;align-items:flex-end;}
 	.common_orderList .product_wrap .item .price_box .btns {margin-top:8px;}
@@ -154,7 +154,7 @@
 .period_check .inputSelect input {width:calc(100% - 98px);}
 .period_check .button_box {margin:24px 0;}
 .period_check.on .detail {max-height:500px;transition:max-height 0.2s ease-in;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.period_check .period {font-size:13px;}
 	.period_check .period .box:not(:first-child) {padding-left:9px;}
 	.period_check .period .box:not(:first-child)::before {left:5px;}
@@ -182,7 +182,7 @@
 /* 반품 */
 .check_select {display:flex;align-items:center;gap:8px;margin:12px 0}
 .check_select .mlauto {margin-left:auto;}
-.mypage_return .request_intro {min-height:50vh;margin-top:16px;}
+.mypage_return .request_intro {min-height:70vh;margin-top:16px;}
 .mypage_return .title_box .mlauto {font-size:15px;}
 .mypage_return .noticebox {margin-bottom:12px;}
 .mypage_return .coupon_list dl {overflow:hidden;border:1px solid #dee0e4;border-radius:4px;}
@@ -204,7 +204,7 @@
 .mypage_return .reason_box dl:not(:first-child) {border-top:1px solid #dee0e4;}
 .mypage_return .reason_box dt {color:#666;line-height:24px;}
 .mypage_return .reason_box dd {margin-top:12px;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.check_select .buttons {padding-left:4px;padding-right:4px;}
 }
 
@@ -252,7 +252,7 @@
 .scrollBarCustom .bar::after {content:'';position:absolute;top:50%;width:1px;height:8px;margin-top:-4px;background:#e8340c;}
 .scrollBarCustom .bar::before {left:0;}
 .scrollBarCustom .bar::after {right:0; }
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.page_mypage .result_trading .list {padding-left:8px;}
 	.scrollBarCustom {width:calc(100% - 16px);margin-left:8px;margin-right:8px;}
 }
@@ -276,7 +276,7 @@
 .page_mypage .my_products .product .item .summary.ea .box:first-child {padding-right:8px}
 .page_mypage .my_products .product .item .summary.ea .box:not(:first-child) {padding:0 8px}
 .page_mypage .my_products .product .item .summary.ea .box:not(:first-child)::before {height:13px;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.page_mypage .my_products .group > dl > dt,
 	.page_mypage .my_products .group .info,
 	.page_mypage .my_products .group .accordions_wrap .accordion,
@@ -314,7 +314,7 @@
 .page_mypage .groupbuying .item .etc {display:flex;justify-content:space-between;width:100%;}
 .page_mypage .groupbuying.pass .item {padding-bottom:0;}
 .page_mypage .groupbuying.pass .item .price_box {padding-top:12px;margin-top:10px;border-top:1px solid #edf0f2;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.page_mypage .groupbuying .group > dl > dt {flex-direction:column;align-items:flex-end;}
 	.page_mypage .groupbuying .group dt .state {margin-top:8px;}
 	.page_mypage .groupbuying .item {padding:12px 7px;}
@@ -332,7 +332,7 @@
 .page_mypage .product_box .item .info_box .etc {display:flex;align-items:center;gap:0 8px;margin-top:12px;}
 .page_mypage .product_box .item .info_box .etc .small {font-size:12px;}
 .page_mypage .product_box .item .info_box .etc .mlauto {margin-left:auto;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.page_mypage .product_box .item .info_box .inner {min-height:56px;}
 	.page_mypage .product_box .item .info_box .etc {margin-left:-64px;}
 	.page_mypage .product_box .recommend .item .info_box .etc {gap:0;margin-left:0;}
@@ -393,7 +393,7 @@
 .page_mypage .have_list > dl > dd .order {width:100%;margin:5px 0 3px;color:#8f8f8f;font-size:12px;line-height:1;}
 .page_mypage .have_list > dl > dd .order dl {display:flex;flex-wrap:wrap;align-items:center;}
 .page_mypage .have_list > dl > dd .order dd + dd {margin-left:auto;}
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	.page_mypage .have_list > dl > dd .order dt {width:100%;}
 }
 
@@ -413,7 +413,7 @@
 .grade_wrap .common_tbl td {padding:10px 16px;color:#242424;font-size:14px;font-weight:400;line-height:18px;}
 
 /* 본인확인 */
-.check_pw_wrap {min-height:calc(60vh - 32px);}
+.check_pw_wrap {min-height:calc(75vh - 32px);}
 .check_pw_wrap .form_row_box {margin-top:16px;}
 
 /* 정보수정 */
@@ -424,6 +424,9 @@
 .modify_wrap .section .noticebox {margin-bottom:16px;}
 .modify_wrap .terms_list dd {margin-top:-1px;}
 .modify_wrap .terms_list label {font-size:14px;}
+@media all and (max-width: 320px) {
+	.modify_wrap ::placeholder {color:transparent;}
+}
 
 /* 회원탈퇴 */
 .secession_wrap .tbl_round {margin:16px 0;}
@@ -434,7 +437,7 @@
 .secession_wrap .reason_check .etc textarea {height:124px;}
 .secession_wrap .recheck {align-items:flex-start;margin-top:16px;}
 .secession_wrap .recheck label {line-height:18px;}
-.finish_wrap {min-height:calc(60vh - 32px);padding-top:24px;}
+.finish_wrap {min-height:calc(75vh - 32px);padding-top:24px;}
 
 /* 1:1문의 */
 .inquiry_write .common_tbl {margin-top:24px;}

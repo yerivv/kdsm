@@ -27,10 +27,12 @@ function getScrollDirection(){
 	const fixBtn = body.querySelector('#fixedBtn');
 	const header = body.querySelector('#header');
 
-	if(scrollTop > 0){
-		header.classList.add('scroll');
-	} else {
-		header.classList.remove('scroll');
+	if(body.querySelectorAll('#header').length){
+		if(scrollTop > 0){
+			header.classList.add('scroll');
+		} else {
+			header.classList.remove('scroll');
+		}
 	}
 
 	if(body.querySelectorAll('#fixedBtn').length){
