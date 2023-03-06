@@ -138,7 +138,7 @@
 .period_check .period .box:not(:first-child) {position:relative;padding-left:17px;}
 .period_check .period .box:not(:first-child)::before {content:'';position:absolute;left:8px;top:0;width:1px;height:14px;background-color:#b0b0b0;}
 .period_check .period .date {padding-top:1px;}
-.period_check .period .buttons {margin-left:auto;flex-direction:inherit;}
+.period_check .period .buttons {margin-left:auto;flex-direction:inherit;background-color:#f4f7f9;}
 .period_check .period .buttons .arrow {margin-right:0;}
 .period_check .detail {display:block !important;max-height:0;overflow:hidden;background-color:#f4f7f9;transition:max-height 0.15s ease-out;}
 .period_check .detail dl {padding:0 16px;}

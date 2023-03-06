@@ -354,7 +354,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .iconlabel_box .label.bundle {background-color:#726562;}
 .iconlabel_box .label.time i {background-image:url(../imgs/global/icon_time.png);}
 .iconlabel_box.etc .label {padding:0 4px;border-radius:0;font-size:11px;line-height:16px;}
-.label_count {display:inline-block;min-width:22px;height:14px;padding:1px 4px 0;border-radius:7px;background-color:#E8340C;color:#fff;font-family:'Roboto';font-size:12px;line-height:1;font-weight:400;text-indent:0;text-align:center;vertical-align:top;}
+.label_count {display:inline-block;min-width:22px;height:15px;padding:1px 4px 0;border-radius:7px;background-color:#E8340C;color:#fff;font-family:'Roboto';font-size:1.2rem;line-height:1;font-weight:400;text-indent:0;text-align:center;vertical-align:top;}
 .label_count.etc {background-color:#242424;}
 .label_count.new {min-width:17px;font-style:normal;}
 .label_stock {display:inline-flex;align-items:center;justify-content:center;gap:2px;height:22px;padding:4px 8px;border:1px solid #e3e3e3;border-radius:10px;background:rgba(255, 255, 255, 0.7);font-size:1.1rem;line-height:1.2rem;}
@@ -769,6 +769,9 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 
 /* modal full */
 .modalFull::before {z-index:97;}
+.modalFull .head {border-width:0 !important;background:linear-gradient(91.24deg, #E8340C 0%, #FF7556 100%);}
+.modalFull .head h2 {color:#fff !important;}
+.modalFull .close {background-image:url(../imgs/global/icon_x2.png) !important;}
 .modalFull .wrap {left:0;top:16px;z-index:98;width:100%;height:calc((var(--vh, 1vh) * 100) - 16px);border-radius:24px 24px 0px 0px;}
 .modalFull .contents {height:calc((var(--vh, 1vh) * 100) - 76px);padding:16px 16px 32px;}
 .modalFull .contents.padNo {padding:0;}
@@ -780,7 +783,6 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .main_popup .wrap {overflow:hidden;position:fixed;left:0;bottom:0;z-index:10;width:100%;background-color:#fff;border-radius:24px 24px 0px 0px;box-shadow:0px -4px 20px rgba(0, 0, 0, 0.1);transition:transform 0.2s;transform: translate3d(0,100%,0);}
 .main_popup .wrap .swiper-slide a,
 .main_popup .wrap .swiper-slide img {display:block;}
-.main_popup .wrap .popup_cont {max-height:50vh;overflow:hidden;}
 .main_popup .wrap .button_box {padding:16px 16px 24px;}
 .main_popup.open .dim {display:block;opacity:1;}
 .main_popup.open .wrap {transform:translate3d(0,0,0);}

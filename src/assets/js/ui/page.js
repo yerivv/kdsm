@@ -28,7 +28,8 @@ function getScrollDirection(){
 	const header = body.querySelector('#header');
 
 	if(body.querySelectorAll('#header').length){
-		if(scrollTop > 40){
+		//console.log(header.clientHeight)
+		if(scrollTop > 48){
 			header.classList.add('scroll');
 		} else {
 			header.classList.remove('scroll');
