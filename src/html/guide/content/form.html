@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "광동제약 온라인몰 퍼블리싱 가이드 - 컨텐츠"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/guide/guide.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+  <div id="skip_to_content" class="blind">
+      <ul>
+        <li><a href="#container">본문내용 바로가기</a></li>
+      </ul>
+  </div>
+	<div id="guide_wrap" class="wrap">
+    @@include('@@webRoot/guide/_include/header.html',{
+      "title": "컨텐츠"
+    })
+    @@include('@@webRoot/guide/_include/aside.html',{
+      "aside-1": "active"
+    })
+    @@include('@@webRoot/guide/_include/gnb1.html',{
+      "gnb-5": "active"
+    })
+
+    <div id="container">
+      <div class="guide_container">
+
+        <h3 class="h_type1">Form</h3>
+        <div class="section">
+          <h4 class="h_type2">textfild</h4>
+          <div class="data_list_row">
+            <dl>
+              <dt>Default</dt> 
+              <dd>
+                <div><input type="text" name="input-1" placeholder="업체메시지 전달 입력" /></div>
+                <div style="margin-top:4px;"><input type="text" name="input-1val" placeholder="업체메시지 전달 입력" value="입력내용" /></div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Disabled</dt>
+              <dd>
+                <input type="text" name="input-2" disabled="disabled" placeholder="disabled" />
+              </dd>
+            </dl>
+            <dl>
+              <dt>Readonly</dt>
+              <dd>
+                <input type="text" name="input-3" readonly="readonly" value="readonly" />
+              </dd>
+            </dl>
+          </div>
+        </div><!--//section-->
+
+        <div class="section">
+          <h4 class="h_type2">file</h4>
+          <div class="inputset fileinput">
+            <input type="text" name="biz_file_name" id="biz_file_name" value="" placeholder="파일첨부" />
+            <input type="file" name="biz_file" id="biz_file" onchange="fileSelect(this)" accept="image/jpge, image/png, .pdf" />
+            <label for="biz_file" class="buttons medium white">파일선택</label>
+          </div>
+        </div><!--//section-->
+
+        <div class="section">
+          <h4 class="h_type2">checkbox</h4>
+          <div class="data_list_row">
+            <dl>
+              <dt>Default</dt>
+              <dd>
+                <div><input type="checkbox" name="checkbox-1" /></div>
+                <div style="margin-top:4px;">
+                  <input type="checkbox" name="checkbox-2" id="checkbox-2" checked /><label for="checkbox-2">체크박스</label>
+                  <input type="checkbox" name="checkbox-2-1" id="checkbox-2-1" /><label for="checkbox-2-1">체크박스</label>
+                </div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Disabled</dt>
+              <dd>
+                <div><input type="checkbox" name="checkbox-3" disabled="disabled" /></div>
+                <div style="margin-top:4px;">
+                  <input type="checkbox" name="checkbox-3-1" disabled="disabled" id="checkbox-3-1" /><label for="">체크박스</label>
+                </div>
+              </dd>
+            </dl>
+          </div>
+        </div><!--//section-->
+
+        <div class="section">
+          <h4 class="h_type2">radio</h4>
+          <div class="data_list_row">
+            <dl>
+              <dt>Default</dt>
+              <dd>
+                <div><input type="radio" name="radio-1" /></div>
+                <div style="margin-top:4px;">
+                  <input type="radio" name="radio-2" id="radio-2" checked /><label for="radio-2">라디오버튼</label>
+                  <input type="radio" name="radio-2-1" id="radio-2-1" /><label for="radio-2-1">라디오버튼</label>
+                </div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Disabled</dt>
+              <dd>
+                <div><input type="radio" name="radio-3" disabled="disabled" /></div>
+                <div style="margin-top:4px;">
+                  <input type="radio" name="radio-3-1" disabled="disabled" id="radio-3-1" /><label for="radio-3-1">라디오버튼</label>
+                </div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Text</dt>
+              <dd>
+                <ul class="textType">
+                  <li><input type="radio" name="radio-4" id="radio-4-1" checked /><label for="radio-4-1">라디오버튼</label></li>
+                  <li><input type="radio" name="radio-4" id="radio-4-2" /><label for="radio-4-2">라디오버튼</label></li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <ul class="textType gap4" style="margin-top:8px;">
+            <li><input type="radio" name="period" id="period_week" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'd', -7);"><label for="period_week">7일</label></li>
+            <li><input type="radio" name="period" id="period_month1" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -1);" checked="checked"><label for="period_month1">1개월</label></li>
+            <li><input type="radio" name="period" id="period_month3" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -3);"><label for="period_month3">3개월</label></li>
+            <li><input type="radio" name="period" id="period_month6" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -6);"><label for="period_month6">6개월</label></li>
+            <li><input type="radio" name="period" id="period_year1" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'y', -1);"><label for="period_year1">12개월</label></li>
+          </ul>
+        </div><!--//section-->
+
+        <div class="section">
+          <h4 class="h_type2">select</h4>
+          <div class="data_list_row">
+            <dl>
+              <dt>Default</dt>
+              <dd>
+                <select name="">
+                  <option>선택</option>
+                  <option>카카오뱅크</option>
+                </select>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Disabled</dt>
+              <dd>
+                <select name="" disabled="disabled">
+                  <option>선택</option>
+                  <option>카카오뱅크</option>
+                </select>
+              </dd>
+            </dl>
+          </div>
+        </div><!--//section-->
+
+        <div class="section">
+          <h4 class="h_type2">textarea</h4>
+          <div class="data_list_row">
+            <dl>
+              <dt>Default</dt>
+              <dd>
+                <textarea name="" rows="5" placeholder="입력하세요"></textarea>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Disabled</dt>
+              <dd>
+                <textarea name="" rows="5" placeholder="입력하세요" disabled="disabled"></textarea>
+              </dd>
+            </dl>
+          </div>
+        </div><!--//section-->
+
+        <div class="section">
+          <h4 class="h_type2">수량체크</h4>
+          <div class="data_list_row">
+            <dl>
+              <dt>Default</dt>
+              <dd>
+                <div class="ea_box">
+                  <button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+                  <input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+                  <button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+                </div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Disabled</dt>
+              <dd>
+                <div class="ea_box">
+                  <button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-" disabled="disabled">상품 수량 1 감소</button>
+                  <input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)" disabled="disabled">
+                  <button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+" disabled="disabled">상품 수량 1 증가</button>
+                </div>
+              </dd>
+            </dl>
+          </div>
+        </div><!--//section-->
+
+        <div class="section">
+          <h4 class="h_type2">공통 검색 폼</h4>
+          <div class="search_form"> 
+            <input type="search" class="input_search" name="" placeholder="검색어를 입력하세요." />
+            <button type="button" class="btn_search">검색</button>
+          </div>
+        </div><!--//section-->
+
+        <div class="section">
+          <h4 class="h_type2">기간검색</h4>
+          <ul class="textType gap4">
+            <li><input type="radio" name="period" id="period_week" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'd', -7);"><label for="period_week">7일</label></li>
+            <li><input type="radio" name="period" id="period_month1" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -1);" checked="checked"><label for="period_month1">1개월</label></li>
+            <li><input type="radio" name="period" id="period_month3" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -3);"><label for="period_month3">3개월</label></li>
+            <li><input type="radio" name="period" id="period_month6" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'm', -6);"><label for="period_month6">6개월</label></li>
+            <li><input type="radio" name="period" id="period_year1" onclick="inperiod.input(this.form.sdts, this.form.sdte, 'y', -1);"><label for="period_year1">12개월</label></li>
+          </ul>
+          <div class="calendar_box" style="margin-top:8px;">
+            <span class="box">
+              <input type="text" id="sdts" name="sdts" value="2022-12-12" onclick="calendar.open(event, this, 'YYYY-MM-DD')" readonly="readOnly">
+              <button type="button" class="calendar" onclick="calendar.open(event, 'sdts', 'YYYY-MM-DD')">시작기간설정</button>
+            </span>
+            <span class="text">~</span>
+            <span class="box">
+              <input type="text" id="sdte" name="sdte" value="2023-01-12" onclick="calendar.open(event, this, 'YYYY-MM-DD')" readonly="readOnly">
+              <button type="button" class="calendar" onclick="calendar.open(event, 'sdte', 'YYYY-MM-DD')">종료기간설정</button>
+            </span>
+          </div>
+        </div><!--//section-->
+
+        <div class="section">
+          <h4 class="h_type2">Input Type</h4>
+          
+          <h5 class="h_type3">중복버튼</h5>
+          <div class="inputset cols1btn">
+						<input type="text" name="memberId" maxlength="8" placeholder="6~12자로 영문, 숫자 조합" />
+						<button type="button" onclick="checkOverlapId();" class="buttons medium white">중복확인</button>
+					</div>
+
+          <h5 class="h_type3">휴대폰</h5>
+          <div class="inputset cols3">
+						<input type="text" name="mobile1" maxlength="3" value="" />
+						<span class="hyphen">-</span>
+						<input type="text" name="mobile2" maxlength="4" value="" />
+						<span class="hyphen">-</span>
+						<input type="text" name="mobile3" maxlength="4" value="" />
+					</div>
+
+          <h5 class="h_type3">전화번호</h5>
+          <div class="inputset cols3_1">
+						<select name="">
+							<option value="input">선택</option>
+						</select>
+						<span class="hyphen">-</span>
+						<input type="text" name="mobile2" maxlength="4" />
+						<span class="hyphen">-</span>
+						<input type="text" name="mobile3" maxlength="4" />
+					</div>
+
+          <h5 class="h_type3">이메일</h5>
+          <div class="inputset email">
+						<input type="text" name="emailId" maxlength="20" />
+						<span class="at">@</span>
+						<input type="text" name="emailDomain" maxlength="100" />
+						<select name="">
+							<option value="input">직접입력</option>
+						</select>
+					</div>
+
+          <h5 class="h_type3">주소</h5>
+          <div class="inputset post">
+						<input type="text" name="" maxlength="5" readonly="readonly" />
+						<button type="button" onclick="" class="buttons medium white">우편번호 찾기</button>
+					</div>
+					<div class="inputset">
+						<input type="text" name="" maxlength="5" readonly="readonly" />
+					</div>
+					<div class="inputset">
+						<input type="text" name="" maxlength="5" placeholder="상세주소를 입력하세요." />
+					</div>
+
+          <h5 class="h_type3">업종, 업태</h5>
+          <div class="inputset cols2_1">
+						<select name="">
+							<option value="input">선택</option>
+						</select>
+						<input type="text" name="" disabled="disabled" />
+					</div>
+          <div class="inputset cols2_1" style="margin-top:8px;">
+						<select name="">
+							<option value="input">선택</option>
+						</select>
+						<input type="text" name="" />
+					</div>
+        </div><!--//section-->
+
+      </div>
+    </div><!-- //container -->
+
+    @@include('@@webRoot/guide/_include/footer.html')
+  </div>
+</body>
+</html>

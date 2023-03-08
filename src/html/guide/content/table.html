@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "광동제약 온라인몰 퍼블리싱 가이드 - 컨텐츠"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/guide/guide.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+  <div id="skip_to_content" class="blind">
+      <ul>
+        <li><a href="#container">본문내용 바로가기</a></li>
+      </ul>
+  </div>
+	<div id="guide_wrap" class="wrap">
+    @@include('@@webRoot/guide/_include/header.html',{
+      "title": "컨텐츠"
+    })
+    @@include('@@webRoot/guide/_include/aside.html',{
+      "aside-1": "active"
+    })
+    @@include('@@webRoot/guide/_include/gnb1.html',{
+      "gnb-6": "active"
+    })
+
+    <div id="container">
+      <div class="guide_container">
+        <h3 class="h_type1">Table</h3>
+        <div class="section">
+          <h4 class="h_type2">데이터형 테이블<small>(.tbl_row)</small></h4>
+          <table class="common_tbl tbl_row">
+            <caption>상품 정보 표</caption>
+            <colgroup>
+              <col width="40%" /><col width="60%" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>용도 및 제형</th>
+                <td>표백제의 경우 계열을 함께 표시해야 함</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- //section -->
+
+        <div class="section">
+          <h4 class="h_type2">목록형 테이블<small>(.tbl_col)</small></h4>
+          <table class="common_tbl tbl_col">
+            <caption>상품 정보 고시 표</caption>
+            <colgroup>
+              <col width="40%" /><col width="60%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>항목</th>
+                <th>내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>용도 및 제형</th>
+                <td>표백제의 경우 계열을 함께 표시해야 함</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- //section -->
+      </div>
+    </div><!-- //container -->
+
+    @@include('@@webRoot/guide/_include/footer.html')
+  </div>
+</body>
+</html>

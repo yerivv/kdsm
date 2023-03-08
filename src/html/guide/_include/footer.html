@@ -1,0 +1,21 @@
+<div id="fixedBtn">
+  <div class="btn btn_top" onclick="goTop()">TOP</div>
+</div>
+<footer id="footer" class="blind">
+  <p class="copy">ⓒ KWANGDONG PHARMACEUTICAL CO,. LTD. ALL RIGHT RESERVED</p>
+</footer>
+
+<script>
+  function menu(a){
+    const btn = a;
+    const aside = document.querySelector('#aside');
+
+    if(aside.classList.contains('show')){
+      aside.classList.remove('show');
+      a.classList.remove('show');
+    } else {
+      aside.classList.add('show');
+      a.classList.add('show');
+    }
+  }
+</script>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "광동제약 온라인몰 퍼블리싱 가이드 - 컨텐츠"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/guide/guide.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+  <div id="skip_to_content" class="blind">
+      <ul>
+        <li><a href="#container">본문내용 바로가기</a></li>
+      </ul>
+  </div>
+	<div id="guide_wrap" class="wrap">
+    @@include('@@webRoot/guide/_include/header.html',{
+      "title": "컨텐츠"
+    })
+    @@include('@@webRoot/guide/_include/aside.html',{
+      "aside-1": "active"
+    })
+    @@include('@@webRoot/guide/_include/gnb1.html',{
+      "gnb-3": "active"
+    })
+
+    <div id="container">
+      <div class="guide_container">
+        <h3 class="h_type1">Button</h3>
+        <div class="section">
+          <h4 class="h_type2">default (height:44px)</h4>
+          <div class="button_box">
+            <a href="#" class="buttons fill">장바구니 담기</a>
+          </div>
+          <div class="button_box" style="margin-top:8px;">
+            <a href="#" class="buttons fcdefault">장바구니 보기</a>
+            <a href="#" class="buttons fill fw700">장바구니 담기</a>
+          </div>
+          <div class="button_box" style="margin-top:8px;">
+            <a href="#" class="buttons fcdefault">장바구니 보기</a>
+            <button type="button" class="buttons fill fw700">장바구니 담기</button>
+            <button type="button" disabled="disabled" class="buttons fill fw700">장바구니 담기</button>
+          </div>
+        </div>
+        <div class="section">
+          <h4 class="h_type2">medium (height:36px)</h4>
+          <div class="button_box single">
+            <a href="#" class="buttons medium wide">간편결제 카드등록</a>
+            <a href="#" class="buttons medium point">주문하기</a>
+            <a href="#" class="buttons medium white">전액사용</a>
+            <a href="#" class="buttons medium fill">변경</a>
+          </div>
+        </div>
+        <div class="section">
+          <h4 class="h_type2">small (height:32px)</h4>
+          <div class="button_box single">
+            <a href="#" class="buttons small wide">주문하기</a>
+            <a href="#" class="buttons small point wide">주문하기</a>
+            <a href="#" class="buttons small white">변경</a>
+            <a href="#" class="buttons small fill">변경</a>
+            <button type="button" disabled="disabled" class="buttons small white">변경</button>
+          </div>
+        </div>
+        <div class="section">
+          <h4 class="h_type2">xsmall (height:18px)</h4>
+          <div class="button_box single">
+            <a href="#" class="buttons xsmall black fw500">특가상품 보기</a>
+            <a href="#" class="buttons xsmall gray round0">업체변경</a>
+            <a href="#" class="buttons xsmall white round0">삭제</a>
+          </div>
+        </div>
+        <div class="section">
+          <h4 class="h_type2">iconBtn (height:28px)</h4>
+          <div class="button_box single">
+            <a href="#" class="buttons iconBtn white"><i class="icoDetail"></i>내역 상세보기</a>
+          </div>
+        </div>
+        <div class="section">
+          <h4 class="h_type2">other (height:40px)</h4>
+          <a href="#" class="buttons iconBtn other">상세정보<i class="arrow"></i></a>
+          <div class="button_box single" style="margin-top:8px;">
+            <a href="#" class="buttons iconBtn other">상세정보<i class="arrow"></i></a>
+          </div>
+        </div>
+        <div class="section">
+          <h4 class="h_type2">기타</h4>
+          <div>
+            <a href="#" class="btn_direct type1"><i class="ico"></i>즉시할인</a>
+            <a href="#" class="btn_direct type2"><i class="ico"></i>즉시할인</a>
+            <a href="#" class="btn_direct type3"><i class="ico"></i>즉시할인</a>
+          </div>
+        </div>
+      </div>
+    </div><!-- //container -->
+
+    @@include('@@webRoot/guide/_include/footer.html')
+  </div>
+</body>
+</html>

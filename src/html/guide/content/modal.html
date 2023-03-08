@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "광동제약 온라인몰 퍼블리싱 가이드 - 컨텐츠"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/guide/guide.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+  <div id="skip_to_content" class="blind">
+      <ul>
+        <li><a href="#container">본문내용 바로가기</a></li>
+      </ul>
+  </div>
+	<div id="guide_wrap" class="wrap">
+    @@include('@@webRoot/guide/_include/header.html',{
+      "title": "컨텐츠"
+    })
+    @@include('@@webRoot/guide/_include/aside.html',{
+      "aside-1": "active"
+    })
+    @@include('@@webRoot/guide/_include/gnb1.html',{
+      "gnb-10": "active"
+    })
+
+    <div id="container">
+    </div><!-- //container -->
+
+    @@include('@@webRoot/guide/_include/footer.html')
+  </div>
+</body>
+</html>

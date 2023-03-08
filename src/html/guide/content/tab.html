@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "광동제약 온라인몰 퍼블리싱 가이드 - 컨텐츠"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/guide/guide.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+  <div id="skip_to_content" class="blind">
+      <ul>
+        <li><a href="#container">본문내용 바로가기</a></li>
+      </ul>
+  </div>
+	<div id="guide_wrap" class="wrap">
+    @@include('@@webRoot/guide/_include/header.html',{
+      "title": "컨텐츠"
+    })
+    @@include('@@webRoot/guide/_include/aside.html',{
+      "aside-1": "active"
+    })
+    @@include('@@webRoot/guide/_include/gnb1.html',{
+      "gnb-4": "active"
+    })
+
+    <div id="container">
+      <div class="guide_container">
+        <h3 class="h_type1">Tab</h3>
+        <div class="section">
+          <h4 class="h_type2">카테고리 탭<small>(3개 이상일 때 열기/닫기 버튼 노출)</small></h4>
+          <div class="category_menu init">
+            <ul class="list">
+              <li><a href="#" class="btn">탕류/쌍화탕류</a></li>
+              <li><a href="#" class="btn">청심원</a></li>
+              <li><a href="#" class="btn">비타500/드링크류</a></li>
+              <li><a href="#" class="btn">자양강장제말줄임테스트</a></li>
+              <li class="active"><a href="#" class="btn">비타민/철분제</a></li>
+              <li><a href="#" class="btn">감기해열진통</a></li>
+              <li><a href="#" class="btn">소화제/변비약</a></li>
+              <li><a href="#" class="btn">피부질환</a></li>
+              <li><a href="#" class="btn">안과용제</a></li>
+              <li><a href="#" class="btn">화장품</a></li>
+              <li><a href="#" class="btn">파스류</a></li>
+              <li><a href="#" class="btn">건강기능식품</a></li>
+              <li><a href="#" class="btn">기타</a></li>
+            </ul>
+            <div class="control" onclick="controlCate()">카테고리 <span class="text">열기</span></div>
+          </div>
+        </div>
+        <div class="section">
+          <h4 class="h_type2">메뉴 탭</h4>
+          <div id="tabbox2">
+            <h5 class="h_type3">2개</h5>
+            <div class="menu_tab cols2">
+              <ul class="list">
+                <li class="menu1 active" data-tab-target="tab1"><span class="btn">카테고리별 보기</span></li>
+                <li class="menu2" data-tab-target="tab2"><span class="btn">입점업체별 보기</span></li>
+              </ul>
+            </div>
+            <div class="contents contents_tab">
+              <div id="tab1" class="content active">탭컨텐츠1</div>
+              <div id="tab2" class="content">탭컨텐츠2</div>
+            </div>
+          </div>
+          <script>
+            tabInit('#tabbox2');
+          </script>
+          <div id="tabbox3">
+            <h5 class="h_type3">3개</h5>
+            <div class="menu_tab cols3">
+              <ul class="list">
+                <li class="menu1 active" data-tab-target="tab1"><span class="btn">KD-Shop</span></li>
+                <li class="menu2" data-tab-target="tab2"><span class="btn">입점업체</span></li>
+                <li class="menu3" data-tab-target="tab3"><span class="btn">약가인하</span></li>
+              </ul>
+            </div>
+            <div class="contents contents_tab">
+              <div id="tab1" class="content active">탭컨텐츠1</div>
+              <div id="tab2" class="content">탭컨텐츠2</div>
+              <div id="tab3" class="content">탭컨텐츠3</div>
+            </div>
+          </div>
+          <script>
+            tabInit('#tabbox3');
+          </script>
+          <div id="tabbox4">
+            <h5 class="h_type3">4개</h5>
+            <div class="menu_tab cols4">
+              <ul class="list">
+                <li class="menu1 active" data-tab-target="tab1"><span class="btn">상세정보</span></li>
+                <li class="menu2" data-tab-target="tab2"><span class="btn">약학정보</span></li>
+                <li class="menu3" data-tab-target="tab3"><span class="btn">상품확대</span></li>
+                <li class="menu4" data-tab-target="tab4"><span class="btn">판매지도</span></li>
+              </ul>
+            </div>
+            <div class="contents contents_tab">
+              <div id="tab1" class="content active">탭컨텐츠1</div>
+              <div id="tab2" class="content">탭컨텐츠2</div>
+              <div id="tab3" class="content">탭컨텐츠3</div>
+              <div id="tab4" class="content">탭컨텐츠4</div>
+            </div>
+          </div>
+          <script>
+            tabInit('#tabbox4');
+          </script>
+        </div>
+      </div>
+    </div><!-- //container -->
+
+    @@include('@@webRoot/guide/_include/footer.html')
+  </div>
+</body>
+</html>
