@@ -36,7 +36,8 @@
 #gnb .label_count {margin:1px 0 0 1px}
 #gnb ul .active a {color:#E8340C;font-weight:500;}
 #gnb ul .active::after {content:'';position:absolute;bottom:0;left:50%;width:28px;height:4px;border-radius: 4px 4px 0px 0px;background-color:#E8340C;transform:translateX(-50%);}
-
+#gnb ul .active:first-child::after {margin-left:4px;}
+#gnb ul .active:last-child::after {margin-left:-4px;}
 #container {min-height:85vh;overflow-x:hidden;padding:24px 16px 32px;}
 
 #toolbar {position:fixed;left:0;bottom:0;z-index:9;width:100%;padding:8px 0 24px;border-top:1px solid #EDF0F2;background-color:#fff;box-shadow:0px -4px 20px rgba(0, 0, 0, 0.1);transition:transform 0.2s;transform: translate3d(0,80px,0);}

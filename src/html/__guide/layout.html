@@ -1,0 +1,48 @@
+
+<div id="wrap" class="wrap">
+  <!-- 상단 -->
+  <header id="header" class="${headerType}"></header>
+  <!-- 메뉴 -->
+  <div id="gnb"></div>
+
+  <!-- 툴바 -->
+  <div id="toolbar"></div>
+
+  <!-- 컨텐츠 -->
+  <div id="container"></div>
+
+  <!-- 고정버튼 -->
+  <div id="fixedBtn"></div>
+
+  <!-- 하단 -->
+  <footer id="footer"></footer>
+</div>
+
+
+<header id="header" class="type1"></header>
+<div id="gnb"></div>
+<div id="toolbar"></div>
+
+<jsp:include page="/WEB-INF/jsp/mw/_include_m/topper.jsp" />
+
+<jsp:include page="/WEB-INF/jsp/mw/_include_m/topper.jsp"><jsp:param name="topperType" value="01" /></jsp:include>
+
+
+<button type="button" onclick="modalUrlOpen('페이지경로', 'full')">카테고리보기</button>
+
+<a href="javascript:void(0)" onclick="modalOpen('모달이름');">전체메뉴</a>
+
+<div id="modal" class="modalFull 모달이름">
+	<div class="wrap">
+		<div class="head">
+			<h2>타이틀</h2>
+			<div class="close" onclick="modalUrlCloseFull()">닫기</div>
+		</div>
+		<div class="contents">
+      <!--컨텐츠 내용-->
+    </div>
+  </div>
+</div>
+ 
+
+<button type="button" onclick="modalUrlOpen('페이지경로')">카테고리보기</button>

@@ -23,7 +23,7 @@
       "aside-1": "active"
     })
     @@include('@@webRoot/guide/_include/gnb1.html',{
-      "gnb-5": "active"
+      "gnb-05": "active"
     })
 
     <div id="container">
@@ -294,6 +294,61 @@
 					</div>
         </div><!--//section-->
 
+        <div class="section">
+          <h4 class="h_type2">form list</h4>
+          <h5 class="h_type3">row</h5>
+          <div class="form_row_box">
+            <dl>
+              <dt>인증방법</dt>
+              <dd>
+                <div class="inputset">
+                  <input type="radio" name="certify" id="certify_mobile" value="mobile" onclick="checkCertify(this)" checked="checked"><label for="certify_mobile">휴대폰</label>
+                  <input type="radio" name="certify" id="certify_email" value="email" onclick="checkCertify(this)"><label for="certify_email">이메일</label>
+                </div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>사업자등록번호</dt>
+              <dd>
+                <div class="inputset cols3">
+                  <input type="text" name="bizNo1" maxlength="3" />
+                  <span class="hyphen">-</span>
+                  <input type="text" name="bizNo2" maxlength="2" />
+                  <span class="hyphen">-</span>
+                  <input type="text" name="bizNo3" maxlength="5" />
+                </div>
+              </dd>
+            </dl>
+          </div>
+
+          <h5 class="h_type3">col</h5>
+          <div class="form_col_box">
+            <dl>
+              <dt><span class="required"></span>이름</dt>
+              <dd>
+                <div class="inputset">
+                  <input type="text" name="name" maxlength="10" value="홍길동" readonly="readonly" />
+                </div>
+              </dd>
+            </dl>
+            <dl>
+              <dt><span class="required"></span>생년월일</dt>
+              <dd>
+                <div class="inputset">
+                  <input type="text" name="birth" maxlength="8" value="19800101" readonly="readonly" />
+                </div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>항목</dt>
+              <dd>
+                <div class="inputset">
+                  <input type="text" name="birth" maxlength="8" value="19800101" />
+                </div>
+              </dd>
+            </dl>
+          </div>
+        </div><!--//section-->
       </div>
     </div><!-- //container -->
 

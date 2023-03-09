@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "광동제약 온라인몰 퍼블리싱 가이드 - 상품모듈"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/guide/guide.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+  <div id="skip_to_content" class="blind">
+      <ul>
+        <li><a href="#container">본문내용 바로가기</a></li>
+      </ul>
+  </div>
+	<div id="guide_wrap" class="wrap">
+    @@include('@@webRoot/guide/_include/header.html',{
+      "title": "상품모듈"
+    })
+    @@include('@@webRoot/guide/_include/aside.html',{
+      "aside-2": "active"
+    })
+    @@include('@@webRoot/guide/_include/gnb2.html',{
+      "gnb-02": "active"
+    })
+
+    <div id="container">
+      <div class="guide_container">
+        <h3 class="h_type1">List</h3>
+        <div class="section">
+          <h4 class="h_type2">상품리스트</h4>
+          <div class="common_product">
+            <div class="list">
+              <!--item-->
+              <div class="item">
+                <div class="thumb_box">
+                  <div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt=""></div>
+                </div>
+                <div class="info_box">
+                  <div class="info">
+                    <div class="name">광동 원방 우황청심원</div>
+                    <div class="summary">
+                      <span class="box">광동제약</span>
+                      <span class="box">50ml</span>
+                      <span class="box">10병</span>
+                    </div>
+                  </div>
+                  <div class="price">
+                    <dl>
+                      <dt>정상가</dt>
+                      <dd><strong class="number">548,000</strong>원</dd>
+                    </dl>
+                    <dl class="sale">
+                      <dt>최대할인가</dt>
+                      <dd><strong class="number">540,500</strong>원</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div><!--//item-->
+              <!--item-->
+              <div class="item">
+                <div class="thumb_box">
+                  <div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt=""></div>
+                </div>
+                <div class="info_box">
+                  <div class="iconlabel_box etc">
+                    <a href="#" class="label sale">특가</a>
+                    <a href="#" class="label time">타임세일</a>
+                  </div>
+                  <div class="info">
+                    <div class="name">광동 원방 우황청심원 현탄액 영묘향 함유</div>
+                    <div class="summary">
+                      <span class="box">광동제약</span>
+                      <span class="box">50ml</span>
+                      <span class="box">10병</span>
+                    </div>
+                  </div>
+                  <div class="price">
+                    <dl>
+                      <dt>정상가</dt>
+                      <dd><strong class="number">150</strong>원</dd>
+                    </dl>
+                    <dl class="sale">
+                      <dt>최대할인가</dt>
+                      <dd><strong class="number">115</strong>원</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div><!--//item-->
+              <!--item-->
+              <div class="item soldout">
+                <div class="thumb_box">
+                  <div class="thumb">
+                    <img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt="">
+                    <div class="dim_soldout"></div>
+                  </div>
+                </div>
+                <div class="info_box">
+                  <div class="info">
+                    <div class="name">광동 원방 우황청심원 현탄액 영묘향 함유 우황청심원 현탄액 영묘향 함유 우황청심원 현탄액 영묘향 함유</div>
+                    <div class="summary">
+                      <span class="box">광동제약</span>
+                      <span class="box">50ml</span>
+                      <span class="box">10병</span>
+                    </div>
+                  </div>
+                  <div class="price">
+                    <dl>
+                      <dt>정상가</dt>
+                      <dd><strong class="number">34,560</strong>원</dd>
+                    </dl>
+                    <dl class="sale">
+                      <dt>최대할인가</dt>
+                      <dd><strong class="number">33,780</strong>원</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div><!--//item-->
+            </div><!--//list-->
+          </div><!--//common_product-->
+        </div><!-- //section -->
+
+        <div class="section">
+          <h4 class="h_type2">특가/타임세일</h4>
+          <div class="common_product">
+            <div class="list">
+              <!--item-->
+              <div class="item start">
+                <div class="thumb_box">
+                  <div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt=""></div>
+                  <div class="btn_box">
+                    <button type="button" class="btn_cartin">장바구니 담기</button>
+                  </div>
+                </div>
+                <div class="info_box">
+                  <div class="info">
+                    <div class="name">광동 원방 우황청심원</div>
+                    <div class="summary">
+                      <span class="box">광동제약</span>
+                      <span class="box">50ml</span>
+                      <span class="box">10병</span>
+                    </div>
+                  </div>
+                  <div class="price other">
+                    <span class="sale">
+                      <strong class="number">35,000</strong>원
+                    </span>
+                    <span class="market">
+                      <strong class="number">40,000</strong>원
+                    </span>
+                  </div>
+                </div>
+                <div class="check">
+                  <span class="check_box">
+                    <input type="checkbox" name="cbList" id="cbList1" value="1" onClick="selectCheckBox(this);">
+                    <label for="cbList1" class="blind">해당상품선택</label>
+                  </span>
+                  <div class="ea_box_wrap special_container">
+                    <label for="cea" class="blind">수량</label>
+                    <div class="ea_box">
+                      <button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+                      <input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this);">
+                      <button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" onClick="addWish(this);return false;" class="buttons btn_wish"><i class="ico"></i>관심상품 등록</a>
+                </div>
+              </div><!--//item-->
+              <!--item-->
+              <div class="item start">
+                <div class="thumb_box">
+                  <div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt=""></div>
+                  <div class="btn_box">
+                    <button type="button" class="btn_cartin">장바구니 담기</button>
+                  </div>
+                </div>
+                <div class="info_box">
+                  <div class="info">
+                    <div class="name">광동 원방 우황청심원 현탄액 영묘향 함유 우황청심원 현탄액 영묘향 함유 우황청심원 현탄액 영묘향 함유</div>
+                    <div class="summary">
+                      <span class="box">광동제약</span>
+                      <span class="box">50ml</span>
+                      <span class="box">10병</span>
+                    </div>
+                  </div>
+                  <div class="price other">
+                    <span class="sale">
+                      <strong class="number">35,000</strong>원
+                    </span>
+                    <span class="market">
+                      <strong class="number">40,000</strong>원
+                    </span>
+                  </div>
+                </div>
+                <div class="check">
+                  <span class="check_box">
+                    <input type="checkbox" name="cbList" id="cbList1" value="1" onClick="selectCheckBox(this);">
+                    <label for="cbList1" class="blind">해당상품선택</label>
+                  </span>
+                  <div class="ea_box_wrap special_container">
+                    <label for="cea" class="blind">수량</label>
+                    <div class="ea_box">
+                      <button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+                      <input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this);">
+                      <button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" onClick="addWish(this);return false;" class="buttons btn_wish active"><i class="ico"></i>관심상품 <span class="hide">등록</span>해제</a>
+                </div>
+              </div><!--//item-->
+              <!--item-->
+              <div class="item start soldout">
+                <div class="thumb_box">
+                  <div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt=""></div>
+                  <div class="btn_box">
+                    <button type="button" class="btn_cartin">장바구니 담기</button>
+                  </div>
+                  <div class="dim_soldout"></div>
+                </div>
+                <div class="info_box">
+                  <div class="info">
+                    <div class="name">광동 원방 우황청심원</div>
+                    <div class="summary">
+                      <span class="box">광동제약</span>
+                      <span class="box">50ml</span>
+                      <span class="box">10병</span>
+                    </div>
+                  </div>
+                  <div class="price other">
+                    <span class="sale">
+                      <strong class="number">35,000</strong>원
+                    </span>
+                    <span class="market">
+                      <strong class="number">40,000</strong>원
+                    </span>
+                  </div>
+                </div>
+                <div class="check">
+                  <span class="check_box">
+                    <input type="checkbox" name="cbList" id="cbList1" value="1" onClick="selectCheckBox(this);" disabled>
+                    <label for="cbList1" class="blind">해당상품선택</label>
+                  </span>
+                  <div class="ea_box_wrap special_container">
+                    <label for="cea" class="blind">수량</label>
+                    <div class="ea_box">
+                      <button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-" disabled>상품 수량 1 감소</button>
+                      <input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this);" disabled>
+                      <button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+" disabled>상품 수량 1 증가</button>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" onClick="addWish(this);return false;" class="buttons btn_wish"><i class="ico"></i>관심상품 등록</a>
+                </div>
+              </div><!--//item-->
+            </div><!--//list-->
+          </div><!--//common_product-->
+        </div><!-- //section -->
+
+        <div class="section">
+          <h4 class="h_type2">묶음상품</h4>
+          <div class="common_product">
+            <div class="list">
+              <div class="item start">
+                <div class="thumb_box">
+                  <div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt=""></div>
+                </div>
+                <div class="info_box">
+                  <div class="info type1">
+                    <div class="name">광동 원방 우황청심원</div>
+                    <div class="summary">
+                      <span class="box">광동제약</span>
+                      <span class="box">50ml</span>
+                      <span class="box">10병</span> 
+                    </div>
+                  </div>
+                  <div class="price">
+                    <dl>
+                      <dt>기본가격</dt>
+                      <dd><strong class="number">4,548,000</strong>원</dd>
+                    </dl>
+                    <dl class="sale">
+                      <dt>할인금액</dt>
+                      <dd><strong class="number">4,548,000</strong>원</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="check">
+                  <span class="check_box">
+                    <input type="checkbox" name="cbList" id="cbList${list.GOODSNO}_${list.DEALERNO_DL}" value="${list.GOODSNO}" onClick="selectCheckBox(this);">
+                    <label for="cbList${list.GOODSNO}_${list.DEALERNO_DL}" class="blind">해당상품선택</label>
+                  </span>
+                  <div class="ea_box_wrap special_container">
+                    <label for="cea" class="blind">수량</label>
+                    <div class="ea_box">
+                      <button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+                      <input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this);">
+                      <button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+                    </div>
+                  </div>
+                  <div class="price">
+                    <p class="current">주문금액</p>
+                    <span><strong class="number fw500">1,860</strong>원</span>
+                  </div>
+                </div>
+                <div class="sale_section_list">
+                  <dl>
+                    <dt>할인구간</dt>
+                    <dd>
+                      <ul>
+                        <li class="attain">합산 200개 이상 (10% 할인)</li>
+                        <li class="attain stay">합산 400개 이상 (20% 할인)</li>
+                        <li class="">합산 600개 이상 (30% 할인)</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="item start">
+                <div class="thumb_box">
+                  <div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt=""></div>
+                </div>
+                <div class="info_box">
+                  <div class="info type1">
+                    <div class="name">광동 원방 우황청심원</div>
+                    <div class="summary">
+                      <span class="box">광동제약</span>
+                      <span class="box">50ml</span>
+                      <span class="box">10병</span>
+                    </div>
+                  </div>
+                  <div class="price">
+                    <dl>
+                      <dt>기본가격</dt>
+                      <dd><strong class="number">4,548,000</strong>원</dd>
+                    </dl>
+                    <dl class="sale">
+                      <dt>할인금액</dt>
+                      <dd><strong class="number">4,548,000</strong>원</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="check">
+                  <span class="check_box">
+                    <input type="checkbox" name="cbList" id="cbList${list.GOODSNO}_${list.DEALERNO_DL}" value="${list.GOODSNO}" onClick="selectCheckBox(this);">
+                    <label for="cbList${list.GOODSNO}_${list.DEALERNO_DL}" class="blind">해당상품선택</label>
+                  </span>
+                  <div class="ea_box_wrap special_container">
+                    <label for="cea" class="blind">수량</label>
+                    <div class="ea_box">
+                      <button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+                      <input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this);">
+                      <button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+                    </div>
+                  </div>
+                  <div class="price">
+                    <p class="current">주문금액</p>
+                    <span><strong class="number fw500">1,860</strong>원</span>
+                  </div>
+                </div>
+                <div class="sale_section_list">
+                  <dl>
+                    <dt>할인구간</dt>
+                    <dd>
+                      <ul>
+                        <li class="">합산 600개 이상 (30% 할인)</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="item start soldout">
+                <div class="thumb_box">
+                  <div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt=""></div>
+                  <div class="btn_box">
+                    <button type="button" class="btn_cartin">장바구니 담기</button>
+                  </div>
+                  <div class="dim_soldout"></div>
+                </div>
+                <div class="info_box">
+                  <div class="info type1">
+                    <div class="name">광동 원방 우황청심원</div>
+                    <div class="summary">
+                      <span class="box">광동제약</span>
+                      <span class="box">50ml</span>
+                      <span class="box">10병</span>
+                    </div>
+                  </div>
+                  <div class="price">
+                    <dl>
+                      <dt>기본가격</dt>
+                      <dd><strong class="number">4,548,000</strong>원</dd>
+                    </dl>
+                    <dl class="sale">
+                      <dt>할인금액</dt>
+                      <dd><strong class="number">4,548,000</strong>원</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="check">
+                  <span class="check_box">
+                    <input type="checkbox" name="cbList" id="cbList${list.GOODSNO}_${list.DEALERNO_DL}" value="${list.GOODSNO}" onClick="selectCheckBox(this);" disabled>
+                    <label for="cbList${list.GOODSNO}_${list.DEALERNO_DL}" class="blind">해당상품선택</label>
+                  </span>
+                  <div class="ea_box_wrap special_container">
+                    <label for="cea" class="blind">수량</label>
+                    <div class="ea_box">
+                      <button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-" disabled>상품 수량 1 감소</button>
+                      <input type="number" id="cea" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this);" disabled>
+                      <button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+" disabled>상품 수량 1 증가</button>
+                    </div>
+                  </div>
+                  <div class="price">
+                    <p class="current">주문금액</p>
+                    <span><strong class="number fw500">1,860</strong>원</span>
+                  </div>
+                </div>
+                <div class="sale_section_list">
+                  <dl>
+                    <dt>할인구간</dt>
+                    <dd>
+                      <ul>
+                        <li class="attain">합산 400개 이상 (20% 할인)</li>
+                        <li class="attain stay">합산 600개 이상 (30% 할인)</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div><!-- //list -->
+          </div><!--//common_product-->
+        </div><!-- //section -->
+
+        <div class="section">
+          <h4 class="h_type2">정기배송</h4>
+          <div class="common_product">
+            <div class="list">
+              <div class="item start">
+                <div class="thumb_box" onclick="regularDetail()">
+                  <div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt=""></div>
+                </div>
+                <div class="info_box h100"> 
+                  <div class="info" onclick="regularDetail()">
+                    <div class="name">광동 원방 우황청심원</div>
+                    <div class="summary">
+                      <span class="box">광동제약</span>
+                      <span class="box">50ml</span>
+                      <span class="box">10병</span>
+                    </div>
+                  </div>
+                  <div class="price other" data-price="${list.PRICE}" data-special-price="${list.SPECIALPRICE}" data-discount-price="${list.DISCOUNTPRICE}">
+                    <span class="">
+                      <strong class="number">35,000</strong>원
+                    </span>
+                  </div>
+                  <div class="item_buttons type1">
+                    <a href="javascript:void(0)" onClick="addWish(this);return false;" class="buttons btn_wish"><i class="ico"></i>관심상품 등록</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item start">
+                <div class="thumb_box" onclick="regularDetail()">
+                  <div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt=""></div>
+                </div>
+                <div class="info_box h100"> 
+                  <div class="info" onclick="regularDetail()">
+                    <div class="name">광동 원방 우황청심원 현탄액 영묘향 함유 광동 원방 우황청심원 현탄액 영묘향 함유</div>
+                    <div class="summary">
+                      <span class="box">광동제약</span>
+                      <span class="box">50ml</span>
+                      <span class="box">10병</span>
+                    </div>
+                  </div>
+                  <div class="price other" data-price="${list.PRICE}" data-special-price="${list.SPECIALPRICE}" data-discount-price="${list.DISCOUNTPRICE}">
+                    <span class="">
+                      <strong class="number">35,000</strong>원
+                    </span>
+                  </div>
+                  <div class="item_buttons type1">
+                    <a href="javascript:void(0)" onClick="addWish(this);return false;" class="buttons btn_wish active"><i class="ico"></i>관심상품 등록해제</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item start soldout">
+                <div class="thumb_box" onclick="regularDetail()">
+                  <div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt=""></div>
+                  <div class="dim_soldout"></div>
+                </div>
+                <div class="info_box h100"> 
+                  <div class="info" onclick="regularDetail()">
+                    <div class="name">광동 원방 우황청심원 현탄액 영묘향 함유 광동 원방 우황청심원 현탄액 영묘향 함유</div>
+                    <div class="summary">
+                      <span class="box">광동제약</span>
+                      <span class="box">50ml</span>
+                      <span class="box">10병</span>
+                    </div>
+                  </div>
+                  <div class="price other" data-price="${list.PRICE}" data-special-price="${list.SPECIALPRICE}" data-discount-price="${list.DISCOUNTPRICE}">
+                    <span class="">
+                      <strong class="number">35,000</strong>원
+                    </span>
+                  </div>
+                  <div class="item_buttons type1">
+                    <a href="javascript:void(0)" onClick="addWish(this);return false;" class="buttons btn_wish active"><i class="ico"></i>관심상품 등록해제</a>
+                  </div>
+                </div>
+              </div>
+            </div><!-- //list -->
+          </div><!--//common_product-->
+        </div><!-- //section -->
+      </div>
+    </div><!-- //container -->
+
+    @@include('@@webRoot/guide/_include/footer.html')
+  </div>
+</body>
+</html>

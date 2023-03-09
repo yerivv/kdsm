@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "광동제약 온라인몰 퍼블리싱 가이드 - 상품모듈"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/guide/guide.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+  <div id="skip_to_content" class="blind">
+      <ul>
+        <li><a href="#container">본문내용 바로가기</a></li>
+      </ul>
+  </div>
+	<div id="guide_wrap" class="wrap">
+    @@include('@@webRoot/guide/_include/header.html',{
+      "title": "상품모듈"
+    })
+    @@include('@@webRoot/guide/_include/aside.html',{
+      "aside-2": "active"
+    })
+    @@include('@@webRoot/guide/_include/gnb2.html',{
+      "gnb-03": "active"
+    })
+
+    <div id="container">
+      <div class="guide_container">
+        <h3 class="h_type1">Etc</h3>
+        <div class="section">
+          <h4 class="h_type2">모달 내부 또는 상세화면</h4>
+          <h5 class="h_type3">유형1</h5>
+          <div class="common_product">
+            <div class="list alone">
+              <div class="item">
+                <div class="thumb_box">
+                  <div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt=""></div>
+                </div>
+                <div class="info_box">
+                  <div class="info">
+                    <div class="name">광동 원방 우황청심원</div>
+                    <div class="summary">
+                      <span class="box">광동제약</span>
+                      <span class="box">50ml</span>
+                      <span class="box">10병</span>
+                    </div>
+                  </div>
+                  <div class="price alone">
+                    <dl>
+                      <dt>가격</dt>
+                      <dd><strong class="number">1,230,900</strong>원</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div><!-- list -->
+          </div><!--//common_product-->
+
+          <h5 class="h_type3">유형2</h5>
+          <div class="common_product">
+            <div class="list alone vTop">
+              <div class="item">
+                <div class="thumb_box">
+                  <div class="thumb"><img src="" onerror="this.src='@@webRoot/imgs/global/no.gif'" alt=""></div>
+                </div>
+                <div class="info_box">
+                  <div class="info">
+                    <div class="name">광동 원방 우황청심원</div>
+                    <div class="summary">
+                      <span class="box">광동제약</span>
+                      <span class="box">50ml</span>
+                      <span class="box">10병</span>
+                    </div>
+                  </div>
+                  <div class="price alone">
+                    <dl>
+                      <dt>가격</dt>
+                      <dd><strong class="number">1,230,900</strong>원</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div><!-- list -->
+          </div><!--//common_product-->
+        </div><!-- //section -->
+      </div>
+    </div><!-- //container -->
+
+    @@include('@@webRoot/guide/_include/footer.html')
+  </div>
+</body>
+</html>

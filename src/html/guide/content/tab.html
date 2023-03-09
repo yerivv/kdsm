@@ -23,7 +23,7 @@
       "aside-1": "active"
     })
     @@include('@@webRoot/guide/_include/gnb1.html',{
-      "gnb-4": "active"
+      "gnb-04": "active"
     })
 
     <div id="container">
@@ -33,11 +33,11 @@
           <h4 class="h_type2">카테고리 탭<small>(3개 이상일 때 열기/닫기 버튼 노출)</small></h4>
           <div class="category_menu init">
             <ul class="list">
-              <li><a href="#" class="btn">탕류/쌍화탕류</a></li>
+              <li class="active"><a href="#" class="btn">탕류/쌍화탕류</a></li>
               <li><a href="#" class="btn">청심원</a></li>
               <li><a href="#" class="btn">비타500/드링크류</a></li>
               <li><a href="#" class="btn">자양강장제말줄임테스트</a></li>
-              <li class="active"><a href="#" class="btn">비타민/철분제</a></li>
+              <li><a href="#" class="btn">비타민/철분제</a></li>
               <li><a href="#" class="btn">감기해열진통</a></li>
               <li><a href="#" class="btn">소화제/변비약</a></li>
               <li><a href="#" class="btn">피부질환</a></li>
@@ -49,7 +49,8 @@
             </ul>
             <div class="control" onclick="controlCate()">카테고리 <span class="text">열기</span></div>
           </div>
-        </div>
+        </div><!-- //section -->
+
         <div class="section">
           <h4 class="h_type2">메뉴 탭</h4>
           <div id="tabbox2">
@@ -61,13 +62,14 @@
               </ul>
             </div>
             <div class="contents contents_tab">
-              <div id="tab1" class="content active">탭컨텐츠1</div>
-              <div id="tab2" class="content">탭컨텐츠2</div>
+              <div id="tab1" class="content active">
+                <div style="height:100px;text-align:center;line-height:100px">탭컨텐츠1</div>
+              </div>
+              <div id="tab2" class="content">
+                <div style="height:100px;text-align:center;line-height:100px">탭컨텐츠2</div>
+              </div>
             </div>
           </div>
-          <script>
-            tabInit('#tabbox2');
-          </script>
           <div id="tabbox3">
             <h5 class="h_type3">3개</h5>
             <div class="menu_tab cols3">
@@ -78,14 +80,17 @@
               </ul>
             </div>
             <div class="contents contents_tab">
-              <div id="tab1" class="content active">탭컨텐츠1</div>
-              <div id="tab2" class="content">탭컨텐츠2</div>
-              <div id="tab3" class="content">탭컨텐츠3</div>
+              <div id="tab1" class="content active">
+                <div style="height:100px;text-align:center;line-height:100px">탭컨텐츠1</div>
+              </div>
+              <div id="tab2" class="content">
+                <div style="height:100px;text-align:center;line-height:100px">탭컨텐츠2</div>
+              </div>
+              <div id="tab3" class="content">
+                <div style="height:100px;text-align:center;line-height:100px">탭컨텐츠3</div>
+              </div>
             </div>
           </div>
-          <script>
-            tabInit('#tabbox3');
-          </script>
           <div id="tabbox4">
             <h5 class="h_type3">4개</h5>
             <div class="menu_tab cols4">
@@ -97,18 +102,30 @@
               </ul>
             </div>
             <div class="contents contents_tab">
-              <div id="tab1" class="content active">탭컨텐츠1</div>
-              <div id="tab2" class="content">탭컨텐츠2</div>
-              <div id="tab3" class="content">탭컨텐츠3</div>
-              <div id="tab4" class="content">탭컨텐츠4</div>
+              <div id="tab1" class="content active">
+                <div style="height:100px;text-align:center;line-height:100px">탭컨텐츠1</div>
+              </div>
+              <div id="tab2" class="content">
+                <div style="height:100px;text-align:center;line-height:100px">탭컨텐츠2</div>
+              </div>
+              <div id="tab3" class="content">
+                <div style="height:100px;text-align:center;line-height:100px">탭컨텐츠3</div>
+              </div>
+              <div id="tab4" class="content">
+                <div style="height:100px;text-align:center;line-height:100px">탭컨텐츠4</div>
+              </div>
             </div>
           </div>
-          <script>
-            tabInit('#tabbox4');
-          </script>
-        </div>
+        </div><!-- //section -->
       </div>
     </div><!-- //container -->
+
+    <script>
+      tabInit('#tabbox2');
+      tabInit('#tabbox3');
+      tabInit('#tabbox4');
+      cateReady();
+    </script>
 
     @@include('@@webRoot/guide/_include/footer.html')
   </div>

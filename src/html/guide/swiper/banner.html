@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "광동제약 온라인몰 퍼블리싱 가이드 - 슬라이드"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/guide/guide.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+  <div id="skip_to_content" class="blind">
+      <ul>
+        <li><a href="#container">본문내용 바로가기</a></li>
+      </ul>
+  </div>
+	<div id="guide_wrap" class="wrap">
+    @@include('@@webRoot/guide/_include/header.html',{
+      "title": "슬라이드"
+    })
+    @@include('@@webRoot/guide/_include/aside.html',{
+      "aside-3": "active"
+    })
+    @@include('@@webRoot/guide/_include/gnb3.html',{
+      "gnb-01": "active"
+    })
+
+    <div id="container">
+      <div class="guide_container">
+        <h3 class="h_type1">Banner</h3>
+        <div class="section">
+          <h4 class="h_type2">Type1</h4>
+          <h5 class="h_type3">bullets</h5>
+          <div class="section_visual">
+            <div class="swiper-container">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide"><a href="#"><img src="@@webRoot/imgs/main_visual1.png" alt="" /></a></li>
+                <li class="swiper-slide"><a href="#"><img src="@@webRoot/imgs/main_visual2.png" alt="" /></a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <h5 class="h_type3">fraction</h5>
+          <div class="section_banner1">
+            <div class="swiper-container">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide"><a href="#"><img src="@@webRoot/imgs/main_banner1.png" alt="" /></a></li>
+                <li class="swiper-slide"><a href="#"><img src="@@webRoot/imgs/main_banner2.png" alt="" /></a></li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- //section -->
+
+        <div class="section">
+          <h4 class="h_type2">Type2</h4>
+          <div class="wideslide swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a href="#"><img src="https://kdshop.co.kr/data/base/banner/3b80cca51ac641c3b7767cb2ddd997b7.jpg" alt="" /></a></div>
+							<div class="swiper-slide"><a href="#"><img src="https://kdshop.co.kr/data/base/banner/e3bae723c46946dbba86cbfdd3b98e75.jpg" alt="" /></a></div>
+						</div>
+					</div>
+        </div><!-- //section -->
+      </div>
+    </div><!-- //container -->
+
+    <script>
+      slideBannerSlide('section_visual','bullets');
+      slideBannerSlide('section_banner1','fraction');
+      wideBannerSlide('wideslide');
+    </script>
+
+    @@include('@@webRoot/guide/_include/footer.html')
+  </div>
+</body>
+</html>

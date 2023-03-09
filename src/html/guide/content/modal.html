@@ -27,6 +27,58 @@
     })
 
     <div id="container">
+      <div class="guide_container">
+        <h3 class="h_type1">Modal</h3>
+        <div class="section">
+          <h4 class="h_type2">내부에 컨텐츠가 있을 경우</h4>
+          <h5 class="h_type3">full</h5>
+          <div>
+            <button type="button" onclick="modalOpen('modal_ex_full')" class="buttons small">modal full 열기</button>
+          </div>
+          <h5 class="h_type3">center</h5>
+          <div>
+            <button type="button" onclick="modalOpen('modal_ex_center')" class="buttons small">modal center 열기</button>
+          </div>
+        </div><!--//section-->
+
+        <div class="section">
+          <h4 class="h_type2">외부 페이지를 불러올 경우</h4>
+          <h5 class="h_type3">full</h5>
+          <div>
+            <button type="button" onclick="modalUrlOpen('@@webRoot/guide/modal/ex_full.html', 'full')" class="buttons small">modal full 열기</button>
+          </div>
+          <h5 class="h_type3">center</h5>
+          <div>
+            <button type="button" onclick="modalUrlOpen('@@webRoot/guide/modal/ex_center.html')" class="buttons small">modal center 열기</button>
+          </div>
+        </div><!--//section-->
+      </div>
+
+      <!-- full -->
+      <div id="modal" class="modalFull modal_ex_full">
+        <div class="wrap">
+          <div class="head">
+            <h2>타이틀</h2>
+            <div class="close" onclick="modalClose('modal_ex_full');">닫기</div>
+          </div>
+          <div class="contents">
+            컨텐츠 내용
+          </div>
+        </div>
+      </div><!--//modalFull-->
+
+      <!-- center -->
+      <div id="modal" class="modalCenter modal_ex_center">
+        <div class="wrap">
+          <div class="head">
+            <h2>타이틀</h2>
+            <div class="close" onclick="modalClose('modal_ex_center');">닫기</div>
+          </div>
+          <div class="contents">
+            컨텐츠 내용
+          </div>
+        </div>
+      </div><!--//modalFull-->
     </div><!-- //container -->
 
     @@include('@@webRoot/guide/_include/footer.html')

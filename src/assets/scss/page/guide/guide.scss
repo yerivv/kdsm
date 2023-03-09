@@ -16,6 +16,18 @@
 
 #guide_wrap #container {padding:50px 0;}
 
+.guide_container .section_visual,
+.guide_container .section_banner1 {margin:0 -16px;}
+.guide_container .swiper-slide a,
+.guide_container .swiper-slide img {display:block;}
+.guide_container .swiper-slide img {width:100%;}
+
+.guide_container .wideslide {padding-right:27px;margin:16px -16px 0;}
+.guide_container .wideslide a,
+.guide_container .wideslide img {display:block;}
+.guide_container .wideslide img {width:100%;}
+.guide_container .wideslide.none-swiper {padding-right:0;}
+
 .guide_container .h_type1 {padding:16px;font-size:2.4rem;font-weight:300;}
 .guide_container .h_type2 {font-weight:700;margin:0 0 8px;}
 .guide_container .h_type3 {display:inline-flex;padding:2px 8px;margin:16px 0 8px;border-radius:4px;background-color:#242424;color:#fff;}

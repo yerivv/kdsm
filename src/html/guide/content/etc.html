@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('@@webRoot/_include/head.html',{
+		"title": "광동제약 온라인몰 퍼블리싱 가이드 - 컨텐츠"
+	})
+	<link rel="stylesheet" href="@@webRoot/css/page/guide/guide.css">
+	@@include('@@webRoot/_include/library.html')
+	<script src="@@webRoot/js/ui.js"></script>
+	<script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+  <div id="skip_to_content" class="blind">
+      <ul>
+        <li><a href="#container">본문내용 바로가기</a></li>
+      </ul>
+  </div>
+	<div id="guide_wrap" class="wrap">
+    @@include('@@webRoot/guide/_include/header.html',{
+      "title": "컨텐츠"
+    })
+    @@include('@@webRoot/guide/_include/aside.html',{
+      "aside-1": "active"
+    })
+    @@include('@@webRoot/guide/_include/gnb1.html',{
+      "gnb-11": "active"
+    })
+
+    <div id="container">
+      <div class="guide_container">
+        <h3 class="h_type1">Etc</h3>
+        <div class="section">
+          <h4 class="h_type2">영역구분</h4>
+          <h5 class="h_type3">space</h5>
+          <div class="blank_space"></div>
+          <h5 class="h_type3">line</h5>
+          <div class="blank_line"></div>
+        </div><!-- //section -->
+
+        <div class="section">
+          <h4 class="h_type2">Title</h4>
+          <h5 class="h_type3">유형1</h5>
+          <div class="page_title">
+            타이틀
+          </div>
+          <h5 class="h_type3">유형2</h5>
+          <div class="title_box">
+            <div class="title">타이틀</div>
+            <div class="mlauto">오른쪽 영역</div>
+          </div>
+
+          <h5 class="h_type3">유형3</h5>
+          <div class="title_box type1">
+            <div class="title">타이틀</div>
+            <p class="subtext">설명글이 나옵니다</p>
+          </div>
+
+          <h5 class="h_type3">유형4</h5>
+          <div class="title_box type2">
+            <div class="title">타이틀</div>
+          </div>
+        </div><!-- //section -->
+
+        <div class="section">
+          <h4 class="h_type2">정보 라인 박스</h4>
+          <div class="box_line">
+            <span class="box">정보1</span>
+            <span class="box">정보2</span>
+            <span class="box">정보3</span>
+          </div>
+        </div><!-- //section -->
+      </div>
+    </div><!-- //container -->
+
+    @@include('@@webRoot/guide/_include/footer.html')
+  </div>
+</body>
+</html>
