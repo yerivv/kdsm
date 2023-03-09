@@ -357,7 +357,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .label_count {display:inline-block;min-width:22px;height:15px;padding:1px 4px 0;border-radius:7px;background-color:#E8340C;color:#fff;font-family:'Roboto';font-size:1.2rem;line-height:1;font-weight:400;text-indent:0;text-align:center;vertical-align:top;}
 .label_count.etc {background-color:#242424;}
 .label_count.new {min-width:17px;font-style:normal;}
-.label_stock {display:inline-flex;align-items:center;justify-content:center;gap:2px;height:22px;padding:4px 8px;border:1px solid #e3e3e3;border-radius:10px;background:rgba(255, 255, 255, 0.7);font-size:1.1rem;line-height:1.2rem;}
+.label_stock {display:inline-flex;align-items:center;justify-content:center;gap:2px;height:22px;padding:4px 8px;border:1px solid #e3e3e3;border-radius:10px;background:rgba(255, 255, 255, 0.8);font-size:1.1rem;line-height:1.2rem;}
 .label_stock dt {position:relative;padding-left:14px;color:#8f8f8f;}
 .label_stock dt::before {content:'';position:absolute;left:0;top:0;width:12px;height:12px;background:url(../imgs/global/icon_stock.png) center center no-repeat;background-size:contain;}
 .label_stock dd strong {font-weight:500;}
@@ -418,7 +418,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .buttons .icoAdd {background-image:url(../imgs/global/icon_plus3.png);}
 .buttons .icoCharge {background-image:url(../imgs/global/icon_plus4.png);}
 .btn_direct {display:inline-flex;justify-content:center;width:72px;padding:5px 8px 3px;border-radius:12px;background-color:#ff7556;color:#fff;font-size:12px;font-weight:500;line-height:1;text-align:center;}
-.btn_direct.type2 {background-color:rgba(36, 36, 36, 0.2);}
+.btn_direct.type2 {background-color:rgba(36, 36, 36, 0.5);}
 .btn_direct.type3 {background-color:rgba(165, 30, 0, 0.5);}
 .btn_direct .ico {display:inline-block;width:12px;height:12px;margin-top:-1px;margin-right:2px;background:url(../imgs/global/icon_discount.png) center center no-repeat;background-size:contain;vertical-align:top;}
 .btn_i {display:inline-flex;justify-content:center;width:16px;height:16px;font-size:0;text-indent:-999em;}
