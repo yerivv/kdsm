@@ -70,6 +70,31 @@ function floatingMore(a){
 	}
 }
 
+function floatingAct(){
+	document.addEventListener('scroll', floatingScroll, false);
+}
+
+let beforePosition = document.documentElement.scrollTop
+function floatingScroll(){
+	const target = document.querySelector('body');
+	let afterPosition = document.documentElement.scrollTop;
+	let idScrollEnd = window.innerHeight + window.scrollY > document.querySelector('#container').clientHeight + document.querySelector('#header').clientHeight;
+	if (afterPosition > 0) {
+		if(beforePosition < afterPosition ){
+			if(idScrollEnd){
+				target.classList.remove('floatingAct');
+			} else {
+				target.classList.add('floatingAct');
+			}
+		} else {
+			target.classList.remove('floatingAct');
+		}
+	} else {
+			target.classList.remove('floatingAct');
+	}
+	beforePosition = afterPosition;
+}
+
 //accordion 
 function accordions(a){
 	const wrap = a.closest('.accordions_wrap');
