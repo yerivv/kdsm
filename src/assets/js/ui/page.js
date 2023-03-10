@@ -77,22 +77,32 @@ function floatingAct(){
 let beforePosition = document.documentElement.scrollTop
 function floatingScroll(){
 	const target = document.querySelector('body');
+	let scheduledAnimationFrame = false;
 	let afterPosition = document.documentElement.scrollTop;
 	let idScrollEnd = window.innerHeight + window.scrollY > document.querySelector('#container').clientHeight + document.querySelector('#header').clientHeight;
-	if (afterPosition > 0) {
-		if(beforePosition < afterPosition ){
-			if(idScrollEnd){
-				target.classList.remove('floatingAct');
+	
+	if(scheduledAnimationFrame){ //https://lazywon.tistory.com/53 참고
+		return;
+	}
+	
+	scheduledAnimationFrame = true;
+	requestAnimationFrame(function(){
+		if (afterPosition > 0) {
+			if(beforePosition < afterPosition ){
+				if(idScrollEnd){
+					target.classList.remove('floatingAct');
+				} else {
+					target.classList.add('floatingAct');
+				}
 			} else {
-				target.classList.add('floatingAct');
+				target.classList.remove('floatingAct');
 			}
 		} else {
-			target.classList.remove('floatingAct');
+				target.classList.remove('floatingAct');
 		}
-	} else {
-			target.classList.remove('floatingAct');
-	}
-	beforePosition = afterPosition;
+		beforePosition = afterPosition;
+		scheduledAnimationFrame = false;
+	})
 }
 
 //accordion 
