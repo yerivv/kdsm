@@ -44,6 +44,66 @@
 .guide_container .data_list_row dd {display:table-cell;width:calc(100% - 100px);padding:8px;}
 .guide_container .guide_flex_box {display:flex;}
 
+#guide_wrap.guide_wrap {padding:20px 16px;}
+#container_guide {margin-top:20px;}
+#container_guide .comment {background-color:#f4f7f9;padding:15px;margin-top:10px;font-size:1.2rem;}
+#container_guide .comment a {text-decoration:underline;}
+#container_guide .legend {color:#000;margin:20px 16px;display:flex;}
+#container_guide .legend > span {margin-right:20px;}
+#container_guide .legend > span em + em {font-weight:500;font-family:'roboto';font-size:16px;}
+#container_guide .legend .total {color:#999}
+#container_guide .legend .complete {color:#005aff}
+
+
+.codinglist {border-bottom:solid 1px #ccc}
+.codinglist table {border-top:solid 1px #dee0e4;}
+.codinglist table th,
+.codinglist table td {border:solid 1px #dee0e4;font-size:1.3rem;text-align:center;padding:8px 0}
+.codinglist table thead th {font-size:1.2rem;font-weight:500;background-color:#f4f7f9;border-bottom:solid 1px #dee0e4;color:#666;}
+.codinglist table tbody td {padding:12px 0;}
+
+.codinglist table{counter-reset:group;}
+.codinglist tbody{counter-increment:group;counter-reset:row;}
+.codinglist tbody tr{counter-increment:row;}
+.codinglist tbody td.col-num:before{content:counter(row);}
+.codinglist table tbody tr.row-group td {border-top-color:#ccc;border-top-width:2px;}
+.codinglist table .col-section {width:80px;}
+.codinglist table .col-num {width:55px;}
+.codinglist table .col-navi {width:400px;}
+.codinglist table .col-1depth {width:auto;}
+.codinglist table .col-2depth {width:auto;}
+.codinglist table .col-3depth {width:auto;}
+.codinglist table .col-4depth {width:auto;}
+.codinglist table .col-url {width:320px;}
+.codinglist table .col-type {width:65px;}
+.codinglist table .col-complete {width:65px;}
+.codinglist table .col-etc {width:auto;}
+
+.codinglist table td.col-section {background-color:#f4f7f9;font-size:1.2rem;font-weight:500;}
+.codinglist table td.col-num,
+.codinglist table td.col-type {font-family:'roboto';font-size:1.1rem;}
+.codinglist table td.col-url,
+.codinglist table td.col-etc {text-align:left;padding-left:10px;}
+.codinglist table td.col-url {color:#8f8f8f;}
+.codinglist table td.col-url a {text-decoration:underline;}
+
+.codinglist td.col-complete[data-complete=wait] {color:#e52c1e;}
+.codinglist td.col-complete[data-complete=done] {color:#005aff;}
+.codinglist td.col-complete[data-complete]:after {content:attr(data-complete)}
+.codinglist td.col-complete[data-complete=wait]:after {content:''}
+.codinglist td.col-complete[data-complete=done]:after {content:'완료'}
+.codinglist td.col-complete[data-complete=del]:after {content:'삭제'}
+.codinglist td.col-complete[data-complete=except]:after {content:'제외'}
+
+.codinglist td.col-type[data-type=modal] {color:#8f8f8f;}
+.codinglist td.col-type[data-type=urlmodal] {color:#8f8f8f;}
+.codinglist td.col-type[data-type=include] {color:#8f8f8f;}
+.codinglist td.col-type[data-type]:after {content:attr(data-type)}
+.codinglist td.col-type[data-type=page]:after {content:'page'}
+.codinglist td.col-type[data-type=modal]:after {content:'modal'}
+.codinglist td.col-type[data-type=urlmodal]:after {content:'url-modal'}
+.codinglist td.col-type[data-type=include]:after {content:'include'}
+
 .site__map_box {margin:20px 16px;}
 .site__map_box dt {font-size:16px;font-weight:500;margin-bottom:10px}
 .site__map {display:block;padding:15px;margin:8px 0;border:1px solid #ddd;border-radius:4px;background-color:#f4f7f9;}

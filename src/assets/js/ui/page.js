@@ -74,8 +74,38 @@ function floatingAct(){
 	document.addEventListener('scroll', floatingScroll, false);
 }
 
+//아래 노출, 위 미노출
 let beforePosition = document.documentElement.scrollTop
 function floatingScroll(){
+	const target = document.querySelector('body');
+	let scheduledAnimationFrame = false;
+	let afterPosition = document.documentElement.scrollTop;
+	let idScrollEnd = window.innerHeight + window.scrollY > document.querySelector('#container').clientHeight + document.querySelector('#header').clientHeight;
+
+	if(scheduledAnimationFrame){ //https://lazywon.tistory.com/53 참고
+		return;
+	}
+	
+	scheduledAnimationFrame = true;
+	requestAnimationFrame(function(){
+		if (afterPosition > 0) {
+			if(beforePosition < afterPosition ){
+				target.classList.remove('floatingAct');
+			} else {
+				target.classList.add('floatingAct');
+				if(idScrollEnd){
+					target.classList.remove('floatingAct');
+				}
+			}
+		} else {
+				target.classList.remove('floatingAct');
+		}
+		beforePosition = afterPosition;
+		scheduledAnimationFrame = false;
+	})
+}
+//위 노출, 아래 미노출...
+function floatingScroll2(){
 	const target = document.querySelector('body');
 	let scheduledAnimationFrame = false;
 	let afterPosition = document.documentElement.scrollTop;
@@ -452,7 +482,7 @@ function tabInit(a){
 
 	tabs.forEach((tab) => {
 		tab.addEventListener('click', () => {
-			const target = tabWrap.querySelector('#'+tab.dataset.tabTarget);
+			const target = tabWrap.querySelector('#'+tab.dataset.tabTarget); //data-tab-target
 			tabContents.forEach((tabContent) => {
 				tabContent.classList.remove('active');
 			});

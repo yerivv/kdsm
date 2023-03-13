@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi" />
+  <meta name="format-detection" content="telephone=no">
+  <title>리스트</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="@@webRoot/css/page/guide/common.css">
+  <link rel="stylesheet" href="@@webRoot/css/page/guide/guide.css">
+</head>
+<body>
+  <div id="guide_wrap" class="guide_wrap">
+    <header id="header_guide">
+      <div class="header">
+        <h1>광동제약 온라인몰 퍼블리싱 산출물 (MO)</h1>
+      </div>
+    </header>
+
+    <div id="container_guide">
+
+      <div class="comment">
+        - 화면 확인시 <span class="fc-red">크롬브라우저(모바일 mode)</span>에서 확인해주시기 바랍니다.
+      </div>
+
+      <div class="legend">
+        <span class="item total"><em>총 페이지 : </em><em class="legend-total"></em></span>
+        <span class="item complete"><em>완료 : </em><em class="legend-complete"></em></span>
+        <span class="item process"><em>진척률 : </em><em class="legend-process">0%</em></span>
+      </div>
+      
+      <div class="codinglist">
+        <table>
+          <caption>퍼블리싱 산출물 리스트</caption>
+          <colgroup>
+            <col width="" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2" class="col-section">영역</th>
+              <th scope="col" rowspan="2" class="col-num">no.</th>
+              <th scope="col" colspan="4" class="col-navi">Navi</th>
+              <th scope="col" rowspan="2" class="col-url">filename/link/modalName</th>
+              <th scope="col" rowspan="2" class="col-type">type</th>
+              <th scope="col" rowspan="2" class="col-complete">work</th>
+              <th scope="col" rowspan="2" class="col-etc">etc.</th>
+            </tr>
+            <tr>
+              <th scope="col" class="col-1depth">1depth</th>
+              <th scope="col" class="col-2depth">2depth</th>
+              <th scope="col" class="col-3depth">3depth</th>
+              <th scope="col" class="col-4depth">4depth</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-section">레이아웃</td>
+              <td class="col-num"></td>
+              <td class="col-1depth">공통</td>
+              <td class="col-2depth">공통</td>
+              <td class="col-3depth">공통</td>
+              <td class="col-4depth">공통</td>
+              <td class="col-url">공통</td>
+              <td class="col-type" data-type="include"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">공통</td>
+            </tr>
+
+            <!-- 회원 -->
+            <tr class="row-group">
+              <td class="col-section" rowspan="18">회원</td>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="3">로그인</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/member/index.do">/mw/member/index.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth" rowspan="2">이용상태</td>
+              <td class="col-3depth">승인대기</td>
+              <td class="col-4depth"></td>
+              <td class="col-url">state_join</td>
+              <td class="col-type" data-type="modal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">로그인 버튼 클릭시 이용상태별 모달 노출</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-3depth">휴면회원</td>
+              <td class="col-4depth"></td>
+              <td class="col-url">state_sleep</td>
+              <td class="col-type" data-type="modal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">로그인 버튼 클릭시 이용상태별 모달 노출</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="3">휴면해지신청</td>
+              <td class="col-2depth">본인인증</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/member/sleep_certify.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">휴면회원의 이용상태 모달화면에서 신청 가능</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">비밀번호변경</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/member/sleep_change_pw.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">해지신청완료</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/member/sleep_proc_result.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="3">아이디 찾기</td>
+              <td class="col-2depth">입력-휴대폰</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/member/find_id.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">로그인 화면에서 '아이디 찾기'</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">입력-이메일</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/member/find_id.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">로그인 화면에서 '아이디 찾기'</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">결과</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/member/find_id.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">정보 입력 후 '확인' 클릭시</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="3">비밀번호 찾기</td>
+              <td class="col-2depth">입력-휴대폰</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/member/find_pw.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">로그인 화면에서 '아이디 찾기'</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">입력-이메일</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/member/find_pw.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">로그인 화면에서 '아이디 찾기'</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">새로운 비밀번호</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/member/find_pw.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">정보 입력 후 '확인' 클릭시</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="6">회원가입</td>
+              <td class="col-2depth">회원조회</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/member/join_inquiry.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">로그인 화면에서 '회원가입'</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">본인인증</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/member/join_certify.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth" rowspan="3">약관/정보입력</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/member/join_form.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-3depth">아이디 중복확인</td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/member/overlap_id_pop.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-3depth">약관보기</td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/etc/terms_of_use_pop.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">신청완료</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/member/join_finish.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <!-- //회원 -->
+
+            <!-- 메인 -->
+            <tr class="row-group">
+              <td class="col-section" rowspan="5">메인</td>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="5">메인</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/main/index.do">/mw/main/index.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">메인팝업</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">main_popup</td>
+              <td class="col-type" data-type="modal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">메인 진입시 등록된 팝업이 있을 경우</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth" rowspan="3">이용상태</td>
+              <td class="col-3depth">탈퇴신청중</td>
+              <td class="col-4depth"></td>
+              <td class="col-url">state_secession</td>
+              <td class="col-type" data-type="modal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">메인 진입시 이용상태별 모달 노출</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-3depth">정보수정중</td>
+              <td class="col-4depth"></td>
+              <td class="col-url">state_modify</td>
+              <td class="col-type" data-type="modal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">메인 진입시 이용상태별 모달 노출</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-3depth">이용제한</td>
+              <td class="col-4depth"></td>
+              <td class="col-url">state_limit</td>
+              <td class="col-type" data-type="modal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">메인 진입시 이용상태별 모달 노출</td>
+            </tr>
+            <!-- 메인 -->
+            
+            <!-- 상품 -->
+            <tr class="row-group">
+              <td class="col-section" rowspan="6">상품</td>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="2">목록</td>
+              <td class="col-2depth">리스트형</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/list.do">/mw/goods/list.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">앨범형</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/list.do">/mw/goods/list.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="4">상품상세</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/goods/detail_pop.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">상세정보</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/goods/detail_info.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">구매이력</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/goods/history_goods_pop.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">예약신청</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/goods/preorder_pop.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <!-- 상품 -->
+
+            <!-- 기획전, 브랜드관 -->
+            <tr class="row-group">
+              <td class="col-section" rowspan="13">기획전 등</td>
+              <td class="col-num"></td>
+              <td class="col-1depth">지역별 베스트</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/area_best.do">/mw/goods/area_best.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth">광동전용관</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/kdspace.do">/mw/goods/kdspace.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="5">브랜드관</td>
+              <td class="col-2depth" rowspan="3">브랜드관</td>
+              <td class="col-3depth">목록</td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/brand.do">/mw/goods/brand.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-3depth" rowspan="2">상세</td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/brand_goods.do">/mw/goods/brand_goods.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-4depth">동영상 전체보기</td>
+              <td class="col-url">youtubelayer</td>
+              <td class="col-type" data-type="modal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth" rowspan="2">독점상품관</td>
+              <td class="col-3depth">목록</td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/brand_exclusive.do">/mw/goods/brand_exclusive.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-3depth">상세</td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/brand_goods_detail.do">/mw/goods/brand_goods_detail.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="2">공동구매</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/groupbuying.do">/mw/goods/groupbuying.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">신청하기</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"></td>
+              <td class="col-type" data-type="modal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="2">정기배송</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/regular.do">/mw/goods/regular.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">신청하기</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/goods/regular_detail.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth">특가세일</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/special.do">/mw/goods/special.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth">타임세일</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/timesale.do">/mw/goods/timesale.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <!-- //기획전, 브랜드관 -->
+
+            <!-- 이벤트 -->
+            <tr class="row-group">
+              <td class="col-section" rowspan="4">이벤트</td>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="2">이벤트</td>
+              <td class="col-2depth">목록</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/event_list.do">/mw/goods/event_list.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">상세</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/event_detail.do">/mw/goods/event_detail.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="2">당첨자 발표</td>
+              <td class="col-2depth">목록</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/event_winners_list.do">/mw/goods/event_winners_list.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">상세</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/event_winners_detail.do">/mw/goods/event_winners_detail.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <!-- //이벤트 -->
+
+            <!-- 주문결제 -->
+            <tr class="row-group">
+              <td class="col-section" rowspan="6">주문결제</td>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="2">장바구니</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/order/cart.do">/mw/order/cart.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">업체변경</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/order/change_seller_pop.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="3">주문/결제</td>
+              <td class="col-2depth">목록</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/order/order.do">/mw/order/order.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">쿠폰조회 및 적용</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/order/order_coupon_pop.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">약관보기</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/etc/terms_of_use_pop.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth">주문완료</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/order/order_finish.do">/mw/order/order_finish.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <!-- //주문결제 -->
+
+            <!-- 온라인쇼룸 -->
+            <tr class="row-group">
+              <td class="col-section" rowspan="2">온라인 쇼룸</td>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="2">온라인 쇼룸</td>
+              <td class="col-2depth">목록</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/board/showroom.do">/mw/board/showroom.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">상세</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/board/showroom_detail.do">/mw/board/showroom_detail.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <!-- 온라인쇼룸 -->
+
+            <!-- 고객센터 -->
+            <tr class="row-group">
+              <td class="col-section" rowspan="9">고객센터</td>
+              <td class="col-num"></td>
+              <td class="col-1depth">메인</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/cscenter/index.do">/mw/cscenter/index.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth">FAQ</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/cscenter/faq.do">/mw/cscenter/faq.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="2">공지사항</td>
+              <td class="col-2depth">목록</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/board/list.do">/mw/board/list.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">상세</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/board/content.do">/mw/board/content.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="2">1:1문의</td>
+              <td class="col-2depth">작성</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/mypage/inquiry_write.do">/mw/mypage/inquiry_write.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">내역</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/mypage/inquiry.do">/mw/mypage/inquiry.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth">문자보내기</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/cscenter/sms.do">/mw/cscenter/sms.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth">입점업체안내</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/cscenter/dealerinfo.do">/mw/cscenter/dealerinfo.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth">배송안내</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/cscenter/deliveryinfo.do">/mw/cscenter/deliveryinfo.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <!-- 고객센터 -->
+
+            <!-- 기타 -->
+            <tr class="row-group">
+              <td class="col-section" rowspan="2">기타</td>
+              <td class="col-num"></td>
+              <td class="col-1depth">오류</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/error/404.html">/error/404.html</a><br /><a href="/error/500.html">/error/500.html</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth">점검중</td>
+              <td class="col-2depth"></td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/error/check.html">/error/check.html</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <!-- //기타 -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer id="footer_guide" class="blind">
+      <p class="copy">ⓒ KWANGDONG PHARMACEUTICAL CO,. LTD. ALL RIGHT RESERVED</p>
+    </footer>
+  </div>
+
+  <script>
+    let totalPage = document.querySelectorAll('.codinglist tbody tr');
+    let endList = document.querySelectorAll('.codinglist .col-complete');
+    endList.forEach((end) => {
+      if(end.dataset.complete == 'done') {
+        end.classList.add('state_done');
+      }
+    });
+    let endPage = document.querySelectorAll('.codinglist .state_done');
+
+    document.querySelector('.legend-total').innerText = totalPage.length + 'p';
+    document.querySelector('.legend-complete').innerText = endPage.length + 'p';
+    document.querySelector('.legend-process').innerText = (100/totalPage.length)*endPage.length + '%';
+
+  </script>
+</body>
+</html>
