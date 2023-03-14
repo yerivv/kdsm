@@ -56,37 +56,37 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="choice">
+							<tr onclick="return choice(this);" class="choice">
 								<td>
-									<div class="select"><input type="radio" name="price" id="price1" onclick="return choice(this);" checked /><label for="price1">광동제약<br /><small>재고 : <span class="number">15,580</span></small></label></div>
+									<div class="select"><input type="radio" name="price" id="price1" checked /><label for="price1">광동제약<br /><small>재고 : <span class="number">15,580</span></small></label></div>
 								</td>
 								<td><label for="price1"><strong class="number">2,420</strong>원</label></td>
 								<td><label for="price1"><strong class="number">2,420</strong>원</label></td>
 							</tr>
-							<tr>
+							<tr onclick="return choice(this);">
 								<td>
-									<div class="select"><input type="radio" name="price" id="price2" onclick="return choice(this);" /><label for="price2">인천약품<br /><small>재고 : <span class="number">15,580</span></small></label></div>
+									<div class="select"><input type="radio" name="price" id="price2" /><label for="price2">인천약품<br /><small>재고 : <span class="number">15,580</span></small></label></div>
 								</td>
 								<td><label for="price2"><strong class="number">52,420</strong>원</label></td>
 								<td><label for="price2"><strong class="number">42,420</strong>원</label></td>
 							</tr>
-							<tr>
+							<tr onclick="return choice(this);">
 								<td>
-									<div class="select"><input type="radio" name="price" id="price3" onclick="return choice(this);" /><label for="price3">티제이팜<br /><small>재고 : <span class="number">150</span></small></label></div>
+									<div class="select"><input type="radio" name="price" id="price3" /><label for="price3">티제이팜<br /><small>재고 : <span class="number">150</span></small></label></div>
 								</td>
 								<td><label for="price3"><strong class="number">2,420</strong>원</label></td>
 								<td><label for="price3"><strong class="number">2,420</strong>원</label></td>
 							</tr>
-							<tr>
+							<tr onclick="return choice(this);">
 								<td>
-									<div class="select"><input type="radio" name="price" id="price4" onclick="return choice(this);" /><label for="price4">태전약품<br /><small>재고 : <span class="number">15,580</span></small></label></div>
+									<div class="select"><input type="radio" name="price" id="price4" /><label for="price4">태전약품<br /><small>재고 : <span class="number">15,580</span></small></label></div>
 								</td>
 								<td><label for="price4"><strong class="number">420</strong>원</label></td>
 								<td><label for="price4"><strong class="number">380</strong>원</label></td>
 							</tr>
-							<tr>
+							<tr onclick="return choice(this);">
 								<td>
-									<div class="select"><input type="radio" name="price" id="price5" onclick="return choice(this);" /><label for="price5">입점업체명<br /><small>재고 : <span class="number">1</span></small></label></div>
+									<div class="select"><input type="radio" name="price" id="price5" /><label for="price5">입점업체명<br /><small>재고 : <span class="number">1</span></small></label></div>
 								</td>
 								<td><label for="price5"><strong class="number">2,420</strong>원</label></td>
 								<td><label for="price5"><strong class="number">2,420</strong>원</label></td>
@@ -213,11 +213,13 @@
 		}
 		function choice(a){
 			let rows = document.querySelector('.list_box tbody').querySelectorAll('tr');
-			let radio = a.closest('tr');
+			let radio = a;
 			rows.forEach(row => {
 				row.classList.remove('choice');
+				row.querySelector('input[name=price]').checked = false;
 			});
 			radio.classList.add('choice');
+			radio.querySelector('input[name=price]').checked = true;
 		}
 	</script>
 </div>

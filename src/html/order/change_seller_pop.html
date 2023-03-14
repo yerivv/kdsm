@@ -17,21 +17,21 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="choice">
+							<tr onclick="return choice(this);" class="choice">
 								<td>
 									<div class="select">
-										<input type="radio" name="price" id="price1" onclick="return choice(this);" class="media" checked />
+										<input type="radio" name="price" id="price1" class="media" checked />
 										<label for="price1">광동제약<br /><small>재고 : <span class="number">15,580</span></small></label>
 									</div>
 								</td>
 								<td><label for="price1"><strong class="number">2,420</strong>원</label></td>
 								<td><label for="price1"><strong class="number">2,420</strong>원</label></td>
 							</tr>
-							<tr>
+							<tr onclick="return choice(this);">
 								<td>
 									<div class="select">
-										<input type="radio" name="price" id="price1" onclick="return choice(this);" class="media" />
-										<label for="price1">광동제약<br /><small>재고 : <span class="number">15,580</span></small></label>
+										<input type="radio" name="price" id="price2" class="media" />
+										<label for="price2">광동제약<br /><small>재고 : <span class="number">15,580</span></small></label>
 									</div>
 								</td>
 								<td><label for="price2"><strong class="number">52,420</strong>원</label></td>
@@ -48,6 +48,15 @@
 		</div>
 	</div>
 </div>
-
 <script>
+	function choice(a){
+		let rows = document.querySelector('.list_box tbody').querySelectorAll('tr');
+		let radio = a;
+		rows.forEach(row => {
+			row.classList.remove('choice');
+			row.querySelector('input[name=price]').checked = false;
+		});
+		radio.classList.add('choice');
+		radio.querySelector('input[name=price]').checked = true;
+	}
 </script>
