@@ -181,8 +181,9 @@
 .page_sale .info_box .timebox .box::after {content:':';}
 .page_sale .info_box .timebox .box.second::after {content:''}
 .page_sale .search_form_wrap {display:flex;align-items:center;margin-top:24px;}
-.page_sale .search_form_wrap .select_dealer {width:106px;margin-right:8px;}
-.page_sale .search_form_wrap .search_form {width:calc(100% - 114px);}
+.page_sale .search_form_wrap .select_dealer {width:120px;margin-right:8px;}
+.page_sale .search_form_wrap .select_dealer select {padding-left:8px;}
+.page_sale .search_form_wrap .search_form {width:calc(100% - 128px);}
 .page_sale .result_count {margin-top:8px;}
 .page_sale .common_product .list .item:first-child {padding-top:0;}
 

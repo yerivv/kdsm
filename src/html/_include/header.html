@@ -1,27 +1,39 @@
 
-@@if (header === 'type1') {
+@@if (header === 'type1') { <!-- 메인, 기획전 등 -->
 <header id="header" class="default">
-	<h1><a href="../main/main.html"><img src="@@webRoot/imgs/global/logo.png" alt="광동제약"></a></h1>
-	<div class="search_form" id="go_search" onclick="location.href='../goods/search.html';">
-		<input type="search" class="input_search" name="" readonly="readonly" placeholder="검색어를 입력하세요." />
-		<button type="button" class="btn_search">검색</button>
-	</div>
-	<div class="top_btn">
-		<a href="../order/cart.html" class="btn btn_cart">장바구니<span class="label_count">240</span></a>
-		<a href="javascript:void(0);" onclick="modalUrlOpen('../goods/category.html', 'full')" class="btn btn_category">카테고리보기</a>
+	<div class="logo_box">
+		<h1><a href="../main/main.html"><img src="@@webRoot/imgs/global/logo.png" alt="광동제약"></a></h1>
+		<div class="search_form" id="go_search" onclick="location.href='../goods/search.html';">
+			<input type="search" class="input_search" name="" readonly="readonly" placeholder="검색어를 입력하세요." />
+			<button type="button" class="btn_search">검색</button>
+		</div>
+		<div class="top_btn">
+			<a href="../order/cart.html" class="btn btn_cart">장바구니<span class="label_count">240</span></a>
+			<a href="javascript:void(0);" onclick="modalUrlOpen('../goods/category.html', 'full')" class="btn btn_category">카테고리보기</a>
+		</div>
 	</div>
 </header>
 }
-@@if (header === 'type2') {
+@@if (header === 'type2') { <!-- 이전 버튼이 있는 상단 -->
 <header id="header" class="type1">
-	<h1 class="blind">광동제약</h1>
+	<div class="logo_box">
+		<h1><a href="../main/main.html"><img src="@@webRoot/imgs/global/logo.png" alt="광동제약"></a></h1>
+		<div class="search_form" id="go_search" onclick="location.href='../goods/search.html';">
+			<input type="search" class="input_search" name="" readonly="readonly" placeholder="검색어를 입력하세요." />
+			<button type="button" class="btn_search">검색</button>
+		</div>
+		<div class="top_btn">
+			<a href="../order/cart.html" class="btn btn_cart">장바구니<span class="label_count">240</span></a>
+			<a href="javascript:void(0);" onclick="modalUrlOpen('../goods/category.html', 'full')" class="btn btn_category">카테고리보기</a>
+		</div>
+	</div>
 	<div class="page_name_box">
 		<h2>@@title</h2>
 		<a href="javascript:history.back()" class="btn_history">이전 페이지 이동</a>
 	</div>
 </header>
 }
-@@if (header === 'type3') {
+@@if (header === 'type3') { <!-- 고객센터 메인, 마이페이지 메인 -->
 <header id="header" class="type3">
 	<h1 class="blind">광동제약</h1>
 	<div class="page_name_box">
@@ -30,7 +42,7 @@
 	</div>
 </header>
 }
-@@if (header === 'type4') {
+@@if (header === 'type4') { <!-- 검색페이지 -->
 <header id="header" class="type2">
 	<div class="search_form_box">
 		<h1 class="blind">광동제약</h1>
@@ -42,22 +54,24 @@
 	</div>
 </header>
 }
-@@if (header === 'type5') {
+@@if (header === 'type5') { <!-- 장바구니(삭제) -->
 	<header id="header" class="type4">
-		<h1><a href="../main/main.html"><img src="@@webRoot/imgs/global/logo.png" alt="광동제약"></a></h1>
-		<div class="search_form" id="go_search" onclick="location.href='../goods/search.html';">
-			<input type="search" class="input_search" name="" readonly="readonly" placeholder="검색어를 입력하세요." />
-			<button type="button" class="btn_search">검색</button>
+		<div class="logo_box">
+			<h1><a href="../main/main.html"><img src="@@webRoot/imgs/global/logo.png" alt="광동제약"></a></h1>
+			<div class="search_form" id="go_search" onclick="location.href='../goods/search.html';">
+				<input type="search" class="input_search" name="" readonly="readonly" placeholder="검색어를 입력하세요." />
+				<button type="button" class="btn_search">검색</button>
+			</div>
+			<div class="top_btn">
+				<a href="../order/cart.html" class="btn btn_cart">장바구니<span class="label_count">240</span></a>
+				<a href="javascript:void(0);" onclick="modalUrlOpen('../goods/category.html', 'full')" class="btn btn_category">카테고리보기</a>
+			</div>
 		</div>
-		<div class="top_btn">
-			<a href="../order/cart.html" class="btn btn_cart">장바구니<span class="label_count">240</span></a>
-			<a href="javascript:void(0);" onclick="modalUrlOpen('../goods/category.html', 'full')" class="btn btn_category">카테고리보기</a>
+		<div class="page_name_box">
+			<h2>@@title</h2>
+			<a href="javascript:history.back()" class="btn_history">이전 페이지 이동</a>
 		</div>
 	</header>
-	<div id="pageName" class="page_name_box">
-		<h2>@@title</h2>
-		<a href="javascript:history.back()" class="btn_history">이전 페이지 이동</a>
-	</div>
 }
 
 @@if (gnb !== 'hidden') {

@@ -644,3 +644,15 @@ function fileSelect(a){
 	//console.log(a);
 	box.querySelector('input[type=text]').value = fileName;
 }
+
+//로딩 관련
+function loadingShow(){
+	const loadingBox = document.createElement('div');
+	loadingBox.id = 'loading';
+	loadingBox.innerHTML ='<span></span><span></span><span></span>';
+	
+	document.querySelector('#container').append(loadingBox);
+}
+function loadingHide(){
+	document.querySelector('#loading').remove();
+}

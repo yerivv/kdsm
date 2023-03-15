@@ -1,31 +1,25 @@
-#header {position:sticky;left:0;top:0;z-index:5;width:100%;height:56px;padding:8px 16px;border-bottom:1px solid #EDF0F2;background:#fff;}
-#header h1 {overflow:hidden;position:absolute;left:16px;top:50%;width:48px;height:16px;transform:translateY(-50%);}
-#header h1 a {display:block;}
-#header h1 img {display:block;width:100%;}
-#header .search_form {width:calc(100% - 134px);margin:0 80px 0 56px;}
-#header .top_btn {display:inline-flex;position:absolute;right:16px;top:50%;width:72px;height:24px;transform:translateY(-50%);}
-#header .top_btn .btn {position:relative;width:24px;height:24px;background-position:center center;background-repeat:no-repeat;background-size:contain;text-indent:-999em;}
-#header .top_btn .btn_cart {background-image:url(../imgs/global/icon_cart.png);}
-#header .top_btn .btn_category {margin-left:auto;background-image:url(../imgs/global/icon_menu.png);}
-#header .top_btn .btn .label_count {position:absolute;left:16px;top:0;}
-#header .page_name_box {display:flex;align-items:center;position:relative;height:40px;}
+#header {padding-top:56px;}
+#header .logo_box,
+#header .search_form_box {position:fixed;left:0;top:0;z-index:5;width:100%;height:56px;padding:8px 16px;background:#fff;}
+#header .page_name_box {position:relative;height:56px;padding:8px 16px;}
+#header .page_name_box,
+#header .search_form_box {display:flex;align-items:center;background:linear-gradient(91.24deg, #E8340C 0%, #FF7556 100%);}
+#header .btn_history {position:absolute;left:16px;top:50%;width:24px;height:24px;background:url(../imgs/global/icon_history2.png) center center no-repeat;background-size:contain;text-indent:-999em;transform:translateY(-50%);}
+#header .btn_history.close {left:auto;right:16px;background-image:url(../imgs/global/icon_x2.png);}
+#header .logo_box h1 {overflow:hidden;position:absolute;left:16px;top:50%;width:48px;height:16px;transform:translateY(-50%);}
+#header .logo_box h1 a {display:block;}
+#header .logo_box h1 img {display:block;width:100%;}
+#header .logo_box .search_form {width:calc(100% - 134px);margin:0 80px 0 56px;}
+#header .logo_box .top_btn {display:inline-flex;position:absolute;right:16px;top:50%;width:72px;height:24px;transform:translateY(-50%);}
+#header .logo_box .top_btn .btn {position:relative;width:24px;height:24px;background-position:center center;background-repeat:no-repeat;background-size:contain;text-indent:-999em;}
+#header .logo_box .top_btn .btn_cart {background-image:url(../imgs/global/icon_cart.png);}
+#header .logo_box .top_btn .btn_category {margin-left:auto;background-image:url(../imgs/global/icon_menu.png);}
+#header .logo_box .top_btn .btn .label_count {position:absolute;left:16px;top:0;}
 #header .page_name_box h2 {padding-left:32px;color:#fff;font-size:1.6rem;font-weight:500;}
-#header .search_form_box {display:flex;align-items:center;position:relative;height:40px;}
 #header .search_form_box .search_form {width:calc(100% - 32px);margin:0 0 0 32px;}
-#header .btn_history {position:absolute;left:0;top:50%;width:24px;height:24px;background:url(../imgs/global/icon_history2.png) center center no-repeat;background-size:contain;text-indent:-999em;transform:translateY(-50%);}
-#header .btn_history.close {left:auto;right:0;background-image:url(../imgs/global/icon_x2.png);}
-#header.default {height:64px;padding:12px 16px;border-width:0;background:#fff;}
-#header.default.scroll {border-bottom:1px solid #e8340c;}
-#header.type2 {background:linear-gradient(91.24deg, #E8340C 0%, #FF7556 100%);}
+#header.type3 .page_name_box {position:fixed;left:0;top:0;z-index:5;width:100%;}
 #header.type3 .page_name_box h2 {padding-left:0;}
-#header.type4 {overflow:hidden;}
-#header.type4 .logo_box {display:none;}
-#header.type4.scroll {border-bottom:1px solid #e8340c;background:#fff;}
-#header.type4.scroll .logo_box {display:block;}
-
-#pageName {display:flex;align-items:center;position:relative;height:56px;padding:8px 16px;background:linear-gradient(91.24deg, #E8340C 0%, #FF7556 100%);}
-#pageName h2 {padding-left:32px;color:#fff;font-size:1.6rem;font-weight:500;}
-#pageName .btn_history {position:absolute;left:16px;top:50%;width:24px;height:24px;background:url(../imgs/global/icon_history2.png) center center no-repeat;background-size:contain;text-indent:-999em;transform:translateY(-50%);}
+#header.scroll .logo_box {border-bottom:1px solid #e8340c;}
 
 #gnb {overflow:hidden;position:relative;width:100%;height:48px;background-color:#fff;}
 #gnb::after {content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background-color:#e8340c;}

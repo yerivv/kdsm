@@ -61,117 +61,129 @@
 
 			<div class="result_state_box">
 				<!-- 없을 시-->
-				<div class="no_result_box bold" style="display:none">
+				<div class="no_result_box bold">
 					<i class="ico"></i>
 					<div class="text">조회된 내역이 없습니다.</div>
 				</div><!-- //no_result_box -->
-				<div class="common_orderList request">
-					<div class="group">
-						<div class="product type2">
-							<ul class="product_list have_check">
-								<li class="item">
-									<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
-									<div class="info_box">
-										<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
-										<div class="summary">
-											<span class="box">제조사</span>
-											<span class="box">100box</span>
-										</div>
-									</div>
-								</li>
-								<li class="item">
-									<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
-									<div class="info_box">
-										<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원</div>
-										<div class="summary">
-											<span class="box">제조사</span>
-											<span class="box">100box</span>
-										</div>
-									</div>
-								</li>
-								<li class="item">
-									<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
-									<div class="info_box">
-										<div class="name">광동제약 비타500</div>
-										<div class="summary">
-											<span class="box">제조사</span>
-											<span class="box">100box</span>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div><!-- //group -->
-					<div class="group">
-						<dl>
-							<dt><input type="checkbox" name="groupCheckAll" id="group1" /><label for="group1">주문번호 <strong class="number fw500">A2231156316316</strong></label></dt>
-							<dd class="product type2">
-								<ul class="product_list">
+				<div id="onlineList" style="display:none">
+					<div class="common_orderList request">
+						<div class="group">
+							<dl>
+								<dt><input type="checkbox" name="groupCheckAll" id="group1" /><label for="group1">주문번호 <strong class="number fw500">A2231156316316</strong></label></dt>
+								<dd class="product type2">
+									<ul class="product_list">
+										<li class="item">
+											<div class="summary type1">
+												<span class="box">주문일자 : <span class="number">2022-11-23</span></span>
+											</div>
+											<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원 현탄액</div>
+											<div class="summary">
+												<span class="box">제조사</span>
+												<span class="box">50ml</span>
+											</div>
+											<div class="summary ea">
+												<span class="box">주문수량 : <span class="fw500 fcdefault">5</span></span>
+												<span class="box">반품가능수량 : <span class="fw500 fcdefault">5</span></span>
+											</div>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</div><!-- //group -->
+						<div class="group">
+							<dl>
+								<dt><input type="checkbox" name="groupCheckAll" id="group1" /><label for="group1">주문번호 <strong class="number fw500">A2231156316316</strong></label></dt>
+								<dd class="product type2">
+									<ul class="product_list">
+										<li class="item">
+											<div class="summary type1">
+												<span class="box">주문일자 : <span class="number">2022-11-23</span></span>
+											</div>
+											<div class="name">광동제약 비타500</div>
+											<div class="summary">
+												<span class="box">제조사</span>
+												<span class="box">50ml</span>
+											</div>
+											<div class="summary ea">
+												<span class="box">주문수량 : <span class="fw500 fcdefault">5</span></span>
+												<span class="box">반품가능수량 : <span class="fw500 fcdefault">5</span></span>
+											</div>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</div><!-- //group -->
+						<div class="group">
+							<dl class="disabled"><!-- 반품 진행중 -->
+								<dt><input type="checkbox" name="groupCheckAll" id="group1" disabled="disabled" /><label for="group1">주문번호 <strong class="number fw500">A2231156316316</strong></label></dt>
+								<dd class="product type2">
+									<ul class="product_list">
+										<li class="item">
+											<div class="summary type1">
+												<span class="box">주문일자 : <span class="number">2022-11-23</span></span>
+											</div>
+											<div class="name">광동제약 비타500</div>
+											<div class="summary">
+												<span class="box">제조사</span>
+												<span class="box">50ml</span>
+											</div>
+											<div class="summary ea">
+												<span class="box">주문수량 : <span class="fw500 fcdefault">5</span></span>
+												<span class="box">반품가능수량 : <span class="fw500 fcdefault">5</span></span>
+											</div>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</div><!-- //group -->
+					</div><!-- //common_orderList -->
+					<div class="product_loading">
+						<span class="text">잠시만 기다려주세요</span>
+					</div>
+				</div>
+				<div id="offlineList" style="display:none">
+					<div class="common_orderList request">
+						<div class="group">
+							<div class="product type2">
+								<ul class="product_list have_check">
 									<li class="item">
-										<div class="summary type1">
-											<span class="box">주문일자 : <span class="number">2022-11-23</span></span>
+										<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
+										<div class="info_box">
+											<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유)</div>
+											<div class="summary">
+												<span class="box">제조사</span>
+												<span class="box">100box</span>
+											</div>
 										</div>
-										<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원 현탄액</div>
-										<div class="summary">
-											<span class="box">제조사</span>
-											<span class="box">50ml</span>
+									</li>
+									<li class="item">
+										<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
+										<div class="info_box">
+											<div class="name">광동제약 원방 우황청심원 현탄액 (영묘향 함유) 우황청심원</div>
+											<div class="summary">
+												<span class="box">제조사</span>
+												<span class="box">100box</span>
+											</div>
 										</div>
-										<div class="summary ea">
-											<span class="box">주문수량 : <span class="fw500 fcdefault">5</span></span>
-											<span class="box">반품가능수량 : <span class="fw500 fcdefault">5</span></span>
+									</li>
+									<li class="item">
+										<div class="checks"><input type="checkbox" name="" /><label for="" class="blind">선택</label></div>
+										<div class="info_box">
+											<div class="name">광동제약 비타500</div>
+											<div class="summary">
+												<span class="box">제조사</span>
+												<span class="box">100box</span>
+											</div>
 										</div>
 									</li>
 								</ul>
-							</dd>
-						</dl>
-					</div><!-- //group -->
-					<div class="group">
-						<dl>
-							<dt><input type="checkbox" name="groupCheckAll" id="group1" /><label for="group1">주문번호 <strong class="number fw500">A2231156316316</strong></label></dt>
-							<dd class="product type2">
-								<ul class="product_list">
-									<li class="item">
-										<div class="summary type1">
-											<span class="box">주문일자 : <span class="number">2022-11-23</span></span>
-										</div>
-										<div class="name">광동제약 비타500</div>
-										<div class="summary">
-											<span class="box">제조사</span>
-											<span class="box">50ml</span>
-										</div>
-										<div class="summary ea">
-											<span class="box">주문수량 : <span class="fw500 fcdefault">5</span></span>
-											<span class="box">반품가능수량 : <span class="fw500 fcdefault">5</span></span>
-										</div>
-									</li>
-								</ul>
-							</dd>
-						</dl>
-					</div><!-- //group -->
-					<div class="group">
-						<dl class="disabled"><!-- 반품 진행중 -->
-							<dt><input type="checkbox" name="groupCheckAll" id="group1" disabled="disabled" /><label for="group1">주문번호 <strong class="number fw500">A2231156316316</strong></label></dt>
-							<dd class="product type2">
-								<ul class="product_list">
-									<li class="item">
-										<div class="summary type1">
-											<span class="box">주문일자 : <span class="number">2022-11-23</span></span>
-										</div>
-										<div class="name">광동제약 비타500</div>
-										<div class="summary">
-											<span class="box">제조사</span>
-											<span class="box">50ml</span>
-										</div>
-										<div class="summary ea">
-											<span class="box">주문수량 : <span class="fw500 fcdefault">5</span></span>
-											<span class="box">반품가능수량 : <span class="fw500 fcdefault">5</span></span>
-										</div>
-									</li>
-								</ul>
-							</dd>
-						</dl>
-					</div><!-- //group -->
-				</div><!-- //common_orderList -->
+							</div>
+						</div><!-- //group -->
+					</div><!-- //common_orderList -->
+					<div class="product_loading">
+						<span class="text">잠시만 기다려주세요</span>
+					</div>
+				</div>
 			</div><!-- //result state box -->
 			<div class="button_box">
 				<a href="../mypage/order_return_request.html" class="buttons fcdefault">취소</a>
@@ -197,8 +209,12 @@ function typeCheck(a){
 	const name = a.value;
 	if(name=='online'){
 		document.querySelector('#online').style.display = 'block';
+		document.querySelector('#onlineList').style.display = 'block';
+		document.querySelector('#offlineList').style.display = 'none';
 	} else {
 		document.querySelector('#online').style.display = 'none';
+		document.querySelector('#onlineList').style.display = 'none';
+		document.querySelector('#offlineList').style.display = 'block';
 	}
 }
 </script>
