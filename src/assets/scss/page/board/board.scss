@@ -31,7 +31,7 @@
 .board_list_wrap .search_form_wrap {display:flex;align-items:center;margin:16px 0;}
 .board_list_wrap .search_form_wrap .total {width:70px;}
 .board_list_wrap .search_form_wrap .select_sort {width:85px;margin-right:8px;}
-.board_list_wrap .search_form_wrap .search_form {width:auto;}
+.board_list_wrap .search_form_wrap .search_form {width:calc(100% - 93px);}
 
 .board_list_wrap .board_list {margin:0 -16px;}
 .board_list_wrap .board_list li {position:relative;border-bottom:1px solid #edf0f2;}

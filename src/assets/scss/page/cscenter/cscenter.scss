@@ -125,6 +125,9 @@
 .delivery_group .button_box .buttons {border-top-left-radius:0;border-top-right-radius:0;}
 .delivery_group + .delivery_group {margin-top:32px;}
 .delivery_info_box .noticebox {margin-top:16px;}
+.delivery_info_box .accordions_wrap .button_box .buttons .state {display:inline-block;margin-left:4px;}
+.delivery_info_box .accordions_wrap .button_box .buttons .state::after {content:'열기';}
+.delivery_info_box .accordions_wrap.on .button_box .buttons .state::after {content:'닫기';}
 @media (max-width:320px) {
 	.tbl_info .tbl_col thead th {padding-left:5px;padding-right:5px;}
 	.tbl_info .tbl_col td {padding-top:3px;padding-bottom:3px;}
