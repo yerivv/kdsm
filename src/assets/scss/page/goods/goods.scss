@@ -51,6 +51,7 @@
 .common_product.other_type .item:nth-child(-n+2) .thumb_box .thumb {padding-top:calc(100% - 2px);}
 .common_product.other_type .item:nth-child(-n+2) .info_box {width:100%;padding:8px;}
 .common_product.other_type .item:nth-child(-n+2) .info_box .info {min-height:55px;}
+.common_product.other_type .item:nth-child(-n+2) .info_box .name {-webkit-line-clamp:3;}
 @media (max-width: 320px) {
 	.common_product.other_type .info_box {padding-top:8px;}
 	.common_product.other_type .info_box .info {min-height:auto;}

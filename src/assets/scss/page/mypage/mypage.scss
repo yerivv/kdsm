@@ -212,9 +212,9 @@
 .modal_return .person_info .text {padding-right:80px;font-size:1.3rem;line-height:1.7rem;}
 .modal_return .person_info .btns {position:absolute;right:16px;top:50%;transform:translateY(-50%);}
 .modal_return .result_box {margin-bottom:16px;}
-.modal_return .result_state_box {min-height:240px;}
 .modal_return .common_orderList.request .product .item {padding-bottom:12px;}
 .modal_return .button_box {margin-top:24px;}
+.modal_return .return_search {height: calc(var(--vh, 1vh) * 100 - 148px);}
 
 /* 거래원장 */
 .page_mypage .result_trading {margin:24px -16px 0;}
