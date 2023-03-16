@@ -646,11 +646,11 @@ function fileSelect(a){
 }
 
 //로딩 관련
-function loadingShow(){
+function loadingShow(type){
 	const loadingBox = document.createElement('div');
 	loadingBox.id = 'loading';
 	loadingBox.innerHTML ='<span></span><span></span><span></span>';
-	
+
 	document.querySelector('#container').append(loadingBox);
 }
 function loadingHide(){

@@ -439,7 +439,8 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .common_product .thumb_box .btn_box {position:absolute;right:8px;bottom:8px;}
 .common_product .info_box {padding:8px;}
 .common_product .info_box .info {min-height:55px}
-.common_product .info_box .name {display:block;overflow:hidden;color:#242424;font-size:1.4rem;line-height:1.8rem;text-overflow:ellipsis;word-wrap:break-word;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.common_product .info_box .name {display:block;overflow:hidden;color:#242424;font-size:1.4rem;line-height:1.8rem;text-overflow:ellipsis;word-wrap:break-word;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;}
+.common_product .info_box .name.row3 {-webkit-line-clamp:3;}
 .common_product .info_box .summary {display:flex;flex-wrap:wrap;overflow:hidden;margin-top:2px;color:#888;font-size:1.2rem;line-height:1.6rem;text-overflow:ellipsis;white-space:nowrap;}
 .common_product .info_box .summary .box {position:relative;padding:0 4px;margin-left:1px;}
 .common_product .info_box .summary .box::before {content:'';position:absolute;left:-1px;top:50%;width:1px;height:8px;background-color:#e3e3e3;transform:translateY(-50%);}
@@ -487,6 +488,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .common_product .list .thumb_box .thumb {border-color:#DEE0E4;}
 .common_product .list .info_box {width:calc(100% - 120px);padding:0 12px;}
 .common_product .list .info_box .info {min-height:auto;}
+.common_product .list .info_box .name {-webkit-line-clamp:2;}
 .common_product .list .info_box .price {margin-top:6px;}
 .common_product .list .info_box .iconlabel_box {margin-bottom:4px;}
 .common_product .list .check {display:flex;align-items:center;width:100%;padding:0 8px;margin-top:12px;}
@@ -818,6 +820,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 
 /* 상품상세 */
 .modal_detail .common_product {margin-bottom:16px;}
+.modal_detail .common_product .info_box .name {-webkit-line-clamp:3;}
 .modal_detail .choice_info_box {padding-bottom:200px;margin-top:33px;background-color:#EDF0F2;}
 .modal_detail .info_inner {padding:12px;border-radius:4px;background-color:#fff;font-size:1.3rem;line-height:2.2rem;}
 .modal_detail .info_inner dl {display:flex;flex-wrap:wrap;align-items:flex-start;margin-top:2px;}
@@ -993,6 +996,9 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 /* 예치금충전 */
 .modal_deposit_charge .contents {padding-top:0;}
 .modal_deposit_charge .charge .textType {margin-top:8px;}
+
+/* 약관보기 */
+.modal_terms .editorcontent {width:100%;overflow:hidden;overflow-x:auto;}
 
 /* 로딩 */
 #loading {display:flex;justify-content:center;align-items:center;gap:0 8px;margin:20px 0;}

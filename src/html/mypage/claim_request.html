@@ -158,11 +158,11 @@
 				</div>
 			</div>
 			<!-- //결제 내역 -->
-			<div class="button_box">
-				<a href="javascript:void(0)" onclick="" class="buttons fill">환불예정금액 확인하기</a>
+			<div class="button_box" id="refund_info">
+				<a href="javascript:void(0)" onclick="refundInfo()" class="buttons fill">환불예정금액 확인하기</a>
 			</div>
 
-			<div class="refund_detail">
+			<div class="refund_detail" id="refund_forecast" style="display:none;">
 				<div class="blank_space"></div>
 				<!-- 쿠폰할인내역 -->
 				<div class="title_box">
@@ -227,3 +227,11 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	function refundInfo(){
+		document.querySelector('#refund_info').style.display = 'none';
+		document.querySelector('#refund_forecast').style.display = 'block';
+		document.querySelector('#refund_forecast').scrollIntoView(true);
+	}
+</script>
