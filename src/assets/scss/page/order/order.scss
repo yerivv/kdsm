@@ -110,7 +110,7 @@
 .discount_select dt .have .box + .box {position:relative;margin-left:9px;}
 .discount_select dt .have .box + .box::before {content:'';position:absolute;left:-5px;top:1px;width:1px;height:14px;background-color:#e3e3e3;}
 .discount_select dd .box + .box {margin-top:8px;}
-.discount_select dd .box {display:flex;flex-wrap:nowrap;align-items:center;gap:8px;}
+.discount_select dd .box {display:flex;flex-wrap:nowrap;align-items:center;gap:8px;width:100%;}
 .discount_select dd .box .type {width:88px;color:#666;line-height:16px;}
 .discount_select dd .box .input {width:calc(100% - 169px);}
 .discount_select dd .box .buttons {width:65px;padding-left:0;padding-right:0;}

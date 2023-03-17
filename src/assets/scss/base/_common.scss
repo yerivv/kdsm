@@ -555,6 +555,9 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 
 /* swiper */
 .slider-wrap {padding-bottom:32px;}
+.slider-wrap .swiper-wrapper {flex-wrap:wrap;gap:8px;}
+.slider-wrap .swiper-wrapper > .item {width:calc(50% - 4px);}
+.slider-wrap .swiper-init .swiper-wrapper {flex-wrap:nowrap;gap:0;}
 .swiper-progress-bar {display:none;}
 .swiper-init .swiper-progress-bar {display:block;position:relative;margin-top:20px;width:100%;height:8px;}
 .swiper-progress-bar::before {content:'';position:absolute;left:0;top:50%;width:100%;height:4px;margin-top:-2px;background:#edf0f2;}

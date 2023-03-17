@@ -241,3 +241,9 @@
 /* 정기배송 */
 .page_regular .category_menu {margin-top:32px;}
 .page_regular .result_count {padding-bottom:0;}
+
+/* 묶음상품 */
+.page_bundle .common_product .list .item.start .info.type1 {height:auto;min-height:70px;}
+.page_bundle .common_product .info_box .price .sale dd strong {font-size:1.5rem;}
+.page_bundle .common_product .list .check .price {font-size:1.4rem;}
+.page_bundle .common_product .list .check .price strong {font-size:1.8rem;}

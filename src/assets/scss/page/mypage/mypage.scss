@@ -15,8 +15,8 @@
 .common_orderList .group dt .state {margin-left:auto;font-size:1.4rem;}
 .common_orderList .group > dl > dd {border-top:1px solid #dee0e4;}
 .common_orderList .group .accordions_wrap {margin-top:0;border-color:#edf0f2;}
-.common_orderList .group .accordions_wrap .accordion {position:relative;padding:12px 15px;color:#797d8d;font-size:1.3rem;}
-.common_orderList .group .accordions_wrap .accordion::after {content:'';position:absolute;right:15px;top:50%;width:12px;height:12px;margin-top:-6px;background:url(../../../imgs/global/arrow_category.png) center center no-repeat;background-size:contain;transition:0.2s;}
+.common_orderList .group .accordions_wrap .accordion {position:relative;padding:12px 15px;font-size:1.3rem;line-height:16px;font-weight:500;text-align:center;}
+.common_orderList .group .accordions_wrap .accordion::after {content:'';display:inline-block;vertical-align:top;width:16px;height:16px;margin:0 0 0 4px;background:url(../../../imgs/global/icon_arrow_down.png) center center no-repeat;background-size:contain;transition:0.2s;}
 .common_orderList .group .accordions_wrap.on .accordion::after {transform:rotate(180deg);}
 .common_orderList .group .accordions_wrap .toggle {border-top:1px solid #dee0e4;background-color:#f4f7f9;}
 .common_orderList .info {position:relative;padding:10px 15px 8px;color:#8f8f8f;font-size:1.2rem;line-height:20px;}
@@ -135,8 +135,8 @@
 .period_check {margin:24px -16px 0;}
 .period_check .period {display:flex;flex-wrap:wrap;align-items:center;height:36px;padding:0 16px 8px;border-bottom:1px solid #edf0f2;}
 .period_check .period .box {line-height:1;}
-.period_check .period .box:not(:first-child) {position:relative;padding-left:17px;}
-.period_check .period .box:not(:first-child)::before {content:'';position:absolute;left:8px;top:0;width:1px;height:14px;background-color:#b0b0b0;}
+.period_check .period .box:not(:first-child) {position:relative;padding-left:11px;}
+.period_check .period .box:not(:first-child)::before {content:'';position:absolute;left:6px;top:1px;width:1px;height:14px;background-color:#b0b0b0;}
 .period_check .period .date {padding-top:1px;}
 .period_check .period .buttons {margin-left:auto;flex-direction:inherit;background-color:#f4f7f9;}
 .period_check .period .buttons .arrow {margin-right:0;}
