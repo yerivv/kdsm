@@ -10,7 +10,10 @@
 				<h3>충전하실 금액을 선택 또는 입력해주세요.</h3>
 			</div>
 			<div class="charge">
-				<div><input type="number" name="price_input" class="number" pattern="\d*" placeholder="1원 이상~1억원까지 결제 가능합니다." /></div>
+				<div class="input">
+					<input type="number" name="price_input" class="number" pattern="\d*" placeholder="1원 이상~1억원까지 결제 가능합니다." />
+					<button type="button" class="btn_delete_money" onclick="fnInputReset(this)"><span class="blind">삭제</span></button>
+				</div>
 				<ul class="textType gap4">
 					<li><input type="radio" name="price" id="price_1" value="100000"><label for="price_1">10만원</label></li>
 					<li><input type="radio" name="price" id="price_2" value="500000"><label for="price_2">50만원</label></li>
@@ -91,6 +94,11 @@
 		$('[name=payway]:first').prop('checked', true);
 		checkPayway();
 	})
+
+	function fnInputReset(a){
+		$(a).siblings(".number").val('0');
+	}
+	
 function checkPayway(a){
 	var f = document.Frm;
 	var payway = $(a).val();

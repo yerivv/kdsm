@@ -112,7 +112,7 @@
 .discount_select dd .box + .box {margin-top:8px;}
 .discount_select dd .box {display:flex;flex-wrap:nowrap;align-items:center;gap:8px;width:100%;}
 .discount_select dd .box .type {width:88px;color:#666;line-height:16px;}
-.discount_select dd .box .input {width:calc(100% - 169px);}
+.discount_select dd .box .input {position:relative;width:calc(100% - 169px);}
 .discount_select dd .box .buttons {width:65px;padding-left:0;padding-right:0;}
 .discount_select .coupon .box .type {width:58px;color:#666;}
 .discount_select .coupon .box .input {width:calc(100% - 154px);}

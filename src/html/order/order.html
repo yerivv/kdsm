@@ -284,7 +284,10 @@
 								<dd>
 									<div class="box">
 										<label for="use_kdcash" class="type">마이너스 잔고</label>
-										<input type="text" name="useBmoney" readonly="readonly" id="use_kdcash" class="number input"/>
+										<span class="input">
+											<input type="text" name="useBmoney" id="use_kdcash" class="number use_money" />
+											<button type="button" class="btn_delete_money" onclick="fnInputReset(this)"><span class="blind">삭제</span></button>
+										</span>
 										<button type="button" class="buttons medium white">전액 사용</button>
 									</div>
 								</dd>
@@ -306,7 +309,10 @@
 								<dd>
 									<div class="box">
 										<label for="use_deposit" class="type">예치금</label>
-										<input type="text" name="useDmoney" readonly="readonly" id="use_deposit" class="number input"/>
+										<span class="input">
+											<input type="text" name="useDmoney" id="use_deposit" class="number use_money"/>
+											<button type="button" class="btn_delete_money" onclick="fnInputReset(this)"><span class="blind">삭제</span></button>
+										</span>
 										<button type="button" class="buttons medium white">전액 사용</button>
 									</div>
 								</dd>
@@ -328,7 +334,10 @@
 								<dd>
 									<div class="box">
 										<label for="use_cmoney" class="type">마일리지</label>
-										<input type="text" name="useCmoney" readonly="readonly" id="use_cmoney" class="number input"/>
+										<span class="input">
+											<input type="text" name="useCmoney" id="use_cmoney" class="number use_money"/>
+											<button type="button" class="btn_delete_money" onclick="fnInputReset(this)"><span class="blind">삭제</span></button>
+										</span>
 										<button type="button" class="buttons medium white">전액 사용</button>
 									</div>
 								</dd>
@@ -457,6 +466,10 @@
 	</div>
 	
 	<script>
+		function fnInputReset(a){
+			$(a).siblings(".use_money").val('0');
+		}
+
 		function termsView(){
 			modalUrlOpen('../etc/terms_of_use_pop.html');
 		}
