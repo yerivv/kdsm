@@ -645,14 +645,65 @@ function fileSelect(a){
 	box.querySelector('input[type=text]').value = fileName;
 }
 
+//검색어 삭제
+function searchWord(a){
+	const searchForm = a;
+	let wordInput = searchForm.querySelector('.input_search');
+	const resetButton = searchForm.querySelector('.btn_delete_word')
+	if(!wordInput.value){
+		resetButton.style.display = 'none';
+	}else {
+		resetButton.style.display = 'block';
+	}
+}
+
+function clearInput(a){
+	a.parentNode.querySelector('input').value = '';
+	a.style.display = 'none';
+}
+
 //로딩 관련
 function loadingShow(type){
 	const loadingBox = document.createElement('div');
 	loadingBox.id = 'loading';
 	loadingBox.innerHTML ='<span></span><span></span><span></span>';
-
 	document.querySelector('#container').append(loadingBox);
 }
 function loadingHide(){
 	document.querySelector('#loading').remove();
 }
+
+//중복호출
+//hyeonguj.github.io/2020/02/27/double-click-problem-javascript/
+//flag
+// 경합상황에서는 (특히 네트워크가 안좋은상황에서) 중복으로 doSomthing();이 실행되는 현상이 발생
+var isDisabled = false;
+$('#button').click(function () {
+    if (isDisabled) {  //<-( 1 ) 수행가능여부 검사
+      alert("이미 작업이 수행중입니다.");
+      return false;
+    } else {
+      isDisabled = true; //<-( 2 ) 실행 불가능하도록 flag 변경
+      doSomthing();
+      isDisable = false;    //(3)수행가능하도록 열어준다. settimeout을통해 X초 뒤에 풀어주는것도 방법이다.
+    }
+});
+
+//Semaphore(세마포어)
+//영체제에서도 사용하는 방법이다.
+// 동시에 접근하더라도 작업 수행여부를 판별하기전에 횟수를 제한한다.
+// 1로 설정을 하면 2회이상 동시에 접근이 되는것을 막을 수 있다.
+// flag와 다른점은 횟수를 다르게 설정할수 있다는 점이다.
+
+// 작업이 끝난 후 다시 접근이 가능하게 하려면 count를 증가시켜준다.
+// 위에서 언급하였드시 카운트를 복구하지 않으면 총 사용횟수만 제어할 수 있고, 일정시간 후에 회복 시키는것도 가능하다.
+var acceessableCount = 1; //동시접근제한수, 리소스에따라 변경가능
+$('#button').click(function () {
+    acceessableCount  = acceessableCount -1; //count부터 뺀다
+    if (acceessableCount <= 0 ) {
+      alert("이미 작업이 수행중입니다.");
+    } else {
+      doSomthing();
+    }
+    acceessableCount = acceessableCount +1;     //작업이 끝난 후 다시 작업할수 있게하려면 +1을 한다. 회복시키지 않으면 코드제거.
+});

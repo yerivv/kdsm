@@ -72,6 +72,7 @@ input[type=checkbox] {width:24px;height:24px;padding:0;background-color:#fff;bac
 input[type=checkbox] + label {padding-top:2px;margin-left:8px;line-height:22px;}
 input[type=checkbox] + label + input[type=checkbox] {margin-left:12px;}
 input[type=checkbox]:checked {background-color:#E8340C;background-image:url(../imgs/global/input_checkbox.png);background-position:center bottom;border-color:#E8340C}
+input[type=checkbox]:checked:disabled {border-color:#b0b0b0;}
 
 /* radio */
 input[type=radio] {position:relative;width:20px;height:20px;padding:0;border-radius:50%;background-color:#fff !important;}
@@ -429,11 +430,17 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 .btn_circle .ico.tel {background-image:url(../imgs/global/icon_call2.png);}
 .btn_cartin {display:block;position:relative;width:32px;height:32px;border-radius:4px;background:rgba(0, 0, 0, 0.4);text-indent:-999em;}
 .btn_cartin::after {content:'';position:absolute;left:4px;top:4px;width:24px;height:24px;background:url(../imgs/global/icon_cart2.png) center center no-repeat;background-size:contain;}
-.btn_delete_money {position:absolute;right:8px;top:50%;width:21px;height:21px;margin-top:-10.5px;border-radius:50%;border:1px solid #b0b0b0;background-color:#b0b0b0;}
+.btn_delete_money,
+.btn_delete_word {position:absolute;right:8px;top:50%;width:21px;height:21px;margin-top:-10.5px;border-radius:50%;border:1px solid #b0b0b0;background-color:#fff;}
 .btn_delete_money::before,
-.btn_delete_money::after {content:'';position:absolute;left:50%;top:50%;background-color:#fff;transform:rotate(-45deg)}
-.btn_delete_money::before {width:9px;height:1px;margin-left:-4.5px;margin-top:-0.5px;}
-.btn_delete_money::after {width:1px;height:9px;margin-left:-0.5px;margin-top:-4.5px;}
+.btn_delete_money::after,
+.btn_delete_word::before,
+.btn_delete_word::after {content:'';position:absolute;left:50%;top:50%;background-color:#b0b0b0;transform:rotate(-45deg)}
+.btn_delete_money::before,
+.btn_delete_word::before {width:9px;height:1px;margin-left:-4.5px;margin-top:-0.5px;}
+.btn_delete_money::after,
+.btn_delete_word::after {width:1px;height:9px;margin-left:-0.5px;margin-top:-4.5px;}
+.btn_delete_word {right:40px;}
 
 /* 상품 */
 .common_product .thumb_box {position:relative;overflow:hidden;border-radius:4px;}
