@@ -646,17 +646,33 @@ function fileSelect(a){
 }
 
 //검색어 삭제
-function searchWord(a){
-	const searchForm = a;
-	let wordInput = searchForm.querySelector('.input_search');
-	const resetButton = searchForm.querySelector('.btn_delete_word')
-	if(!wordInput.value){
-		resetButton.style.display = 'none';
-	}else {
-		resetButton.style.display = 'block';
-	}
-}
+function searchWord(){
+	let searchForm = document.querySelectorAll('.search_form');
 
+	console.log(searchForm)
+	searchForm.forEach((item, index) => {
+		let wordInput = document.querySelectorAll('.input_search');
+		wordInput.forEach((input) => {
+			let resetButton = document.querySelectorAll('.btn_delete_word');
+			resetButton.forEach((button) => {
+				if(!input.value){
+					button.style.display = 'none';
+				} else{
+					button.style.display = 'block';
+				}
+			});
+		});
+	});
+
+	// let wordInput = item[index].querySelector('.input_search');
+	// const resetButton = item[index].querySelector('.btn_delete_word');
+	// if(!wordInput.value){
+	// 	resetButton.style.display = 'none';
+	// } else{
+	// 	resetButton.style.display = 'block';
+	// }
+}
+document.addEventListener('DOMContentLoaded', searchWord);
 function clearInput(a){
 	a.parentNode.querySelector('input').value = '';
 	a.style.display = 'none';

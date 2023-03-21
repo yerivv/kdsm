@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="@@webRoot/css/page/guide/guide.css">
 </head>
 <body>
-  <div id="guide_wrap" class="guide_wrap">
+  <div id="guide_wrap" class="guide_wrap" style="min-width:1280px;">
     <header id="header_guide">
       <div class="header">
         <h1>광동제약 온라인몰 퍼블리싱 산출물 (MO)</h1>
@@ -23,7 +23,7 @@
 
       <div class="comment">
         - 모바일 화면 확인시 <span class="fc-red">크롬브라우저(모바일 mode)</span>에서 확인해주시기 바랍니다.<br />
-        - '공통 레이아웃, 마이페이지 > 반품'은 작업중으로 이후 업데이트 될 예정입니다.
+        <span class="fcpoint">- '마이페이지 > 반품'의 경우 개발 완료와 상관없이 퍼블리싱 올려둔 파일 url로 올려두었습니다. (개발 후 페이지 변경 있을 수 있습니다.)</span>
       </div>
 
       <div class="legend">
@@ -57,16 +57,129 @@
           </thead>
           <tbody>
             <tr>
-              <td class="col-section">레이아웃</td>
+              <td class="col-section" rowspan="13">레이아웃</td>
               <td class="col-num"></td>
-              <td class="col-1depth">공통</td>
-              <td class="col-2depth">공통</td>
-              <td class="col-3depth">공통</td>
-              <td class="col-4depth">공통</td>
-              <td class="col-url">공통</td>
+              <td class="col-1depth" rowspan="6">공통</td>
+              <td class="col-2depth">header</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/_include_m/header.jsp</td>
               <td class="col-type" data-type="include"></td>
               <td class="col-complete" data-complete="done"></td>
-              <td class="col-etc">공통</td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">topper</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url" rowspan="3">/mw/_include_m/topper.jsp</td>
+              <td class="col-type" rowspan="3" data-type="include"></td>
+              <td class="col-complete"data-complete="done"></td>
+              <td class="col-etc">상단유형별 topperType으로 선언</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">gnb</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-complete"data-complete="done"></td>
+              <td class="col-etc">topperType이 empty 노출</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">toolbar</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-complete"data-complete="done"></td>
+              <td class="col-etc">topperType이 empty 노출 / toolbarType이 '01'이 아닐 때</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">footer</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/_include_m/footer.jsp</td>
+              <td class="col-type" data-type="include"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">하단유형별 topperType으로 선언 / 고정 하단 플로팅 영역도 포함</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">closer</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/_include_m/closer.jsp</td>
+              <td class="col-type" data-type="include"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="2">topper</td>
+              <td class="col-2depth">카테고리</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/goods/category.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">검색</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/goods/search.do">/mw/goods/search.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="3">toolbar</td>
+              <td class="col-2depth">간편장부</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url" rowspan="3">/mw/_include_m/toolbars.jsp</td>
+              <td class="col-type" rowspan="3" data-type="include"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc" rowspan="3">topper안에 include</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">마이페이지</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-complete" data-complete="done"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">전체메뉴</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-complete" data-complete="done"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-1depth" rowspan="2">기타</td>
+              <td class="col-2depth">topper2</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/_include_m/topper2.jsp</td>
+              <td class="col-type" data-type="include"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">로그인 상단</td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth">footer2</td>
+              <td class="col-3depth"></td>
+              <td class="col-4depth"></td>
+              <td class="col-url">/mw/_include_m/footer2.jsp</td>
+              <td class="col-type" data-type="include"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc">로그인 하단</td>
             </tr>
 
             <!-- 회원 -->
@@ -778,9 +891,9 @@
 
             <!-- 마이페이지 -->
             <tr class="row-group">
-              <td class="col-section" rowspan="36">마이페이지</td>
+              <td class="col-section" rowspan="46">마이페이지</td>
               <td class="col-num"></td>
-              <td class="col-1depth" rowspan="9">MY 쇼핑</td>
+              <td class="col-1depth" rowspan="19">MY 쇼핑</td>
               <td class="col-2depth" rowspan="4">주문/배송 조회</td>
               <td class="col-3depth">목록</td>
               <td class="col-4depth"></td>
@@ -839,6 +952,92 @@
               <td class="col-3depth"></td>
               <td class="col-4depth"></td>
               <td class="col-url"><a href="/mw/mypage/order_delivery.do">/mw/mypage/order_delivery.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth" rowspan="5">광동제약반품</td>
+              <td class="col-3depth" rowspan="3">반품신청</td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/mypage/order_return_request.do">/mw/mypage/order_return_request.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-4depth">상품조회</td>
+              <td class="col-url">/mw/mypage/order_return_request_search.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-4depth">신청서</td>
+              <td class="col-url"><a href="/mw/mypage/order_return_request_form.do">/mw/mypage/order_return_request_form.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-3depth" rowspan="2">반품내역</td>
+              <td class="col-4depth">목록</td>
+              <td class="col-url"><a href="/mw/mypage/order_return.do">/mw/mypage/order_return.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-4depth">상세</td>
+              <td class="col-url"><a href="/mw/mypage/order_return_detail.do">/mw/mypage/order_return_detail.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-2depth" rowspan="5">입점업체반품</td>
+              <td class="col-3depth" rowspan="3">반품신청</td>
+              <td class="col-4depth"></td>
+              <td class="col-url"><a href="/mw/mypage/order_return_request_dealer.do">/mw/mypage/order_return_request_dealer.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-4depth">상품조회</td>
+              <td class="col-url">/mw/mypage/order_return_request_search_dealer.do</td>
+              <td class="col-type" data-type="urlmodal"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-4depth">신청서</td>
+              <td class="col-url"><a href="/mw/mypage/order_return_request_form_dealer.do">/mw/mypage/order_return_request_form_dealer.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-3depth" rowspan="2">반품내역</td>
+              <td class="col-4depth">목록</td>
+              <td class="col-url"><a href="/mw/mypage/order_return_dealer.do">/mw/mypage/order_return_dealer.do</a></td>
+              <td class="col-type" data-type="page"></td>
+              <td class="col-complete" data-complete="done"></td>
+              <td class="col-etc"></td>
+            </tr>
+            <tr>
+              <td class="col-num"></td>
+              <td class="col-4depth">상세</td>
+              <td class="col-url"><a href="/mw/mypage/order_return_detail_dealer.do">/mw/mypage/order_return_detail_dealer.do</a></td>
               <td class="col-type" data-type="page"></td>
               <td class="col-complete" data-complete="done"></td>
               <td class="col-etc"></td>

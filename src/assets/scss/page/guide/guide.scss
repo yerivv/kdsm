@@ -68,24 +68,25 @@
 .codinglist tbody td.col-num:before{content:counter(row);}
 .codinglist table tbody tr.row-group td {border-top-color:#ccc;border-top-width:2px;}
 .codinglist table .col-section {width:80px;}
-.codinglist table .col-num {width:55px;}
+.codinglist table .col-num {width:50px;}
 .codinglist table .col-navi {width:400px;}
 .codinglist table .col-1depth {width:auto;}
 .codinglist table .col-2depth {width:auto;}
 .codinglist table .col-3depth {width:auto;}
 .codinglist table .col-4depth {width:auto;}
-.codinglist table .col-url {width:320px;}
+.codinglist table .col-url {width:350px;}
 .codinglist table .col-type {width:65px;}
-.codinglist table .col-complete {width:65px;}
+.codinglist table .col-complete {width:60px;}
 .codinglist table .col-etc {width:auto;}
 
 .codinglist table td.col-section {background-color:#f4f7f9;font-size:1.2rem;font-weight:500;}
 .codinglist table td.col-num,
 .codinglist table td.col-type {font-family:'roboto';font-size:1.1rem;}
 .codinglist table td.col-url,
-.codinglist table td.col-etc {text-align:left;padding-left:10px;}
+.codinglist table td.col-etc {text-align:left;padding-left:10px;font-size:1.2rem;}
 .codinglist table td.col-url {color:#8f8f8f;}
 .codinglist table td.col-url a {text-decoration:underline;}
+.codinglist table td.col-complete {font-size:1.1rem;}
 
 .codinglist td.col-complete[data-complete=wait] {color:#e52c1e;}
 .codinglist td.col-complete[data-complete=done] {color:#005aff;}
