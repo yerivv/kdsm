@@ -316,10 +316,12 @@ function cateReady(){
 		let arrValue = new Array();
 		let max = 0;
 		for(let i=0;i<3;i++){
-			let h = menus[i].clientHeight;
+			let h = menus[i].querySelector('.btn').clientHeight;
+			console.log(h)
 			arrValue.push(h);
 		}
 		max = Math.max.apply(null, arrValue);
+		console.log(arrValue)
 		cate.style.cssText = 'height:'+max+'px';
 	}
 	init();
@@ -648,42 +650,38 @@ function fileSelect(a){
 //검색어 삭제
 function searchWord(){
 	let searchForm = document.querySelectorAll('.search_form');
-
-	console.log(searchForm)
-	searchForm.forEach((item, index) => {
-		let wordInput = document.querySelectorAll('.input_search');
-		wordInput.forEach((input) => {
-			let resetButton = document.querySelectorAll('.btn_delete_word');
-			resetButton.forEach((button) => {
-				if(!input.value){
-					button.style.display = 'none';
-				} else{
-					button.style.display = 'block';
-				}
-			});
-		});
-	});
-
-	// let wordInput = item[index].querySelector('.input_search');
-	// const resetButton = item[index].querySelector('.btn_delete_word');
-	// if(!wordInput.value){
-	// 	resetButton.style.display = 'none';
-	// } else{
-	// 	resetButton.style.display = 'block';
-	// }
+	if(searchForm.length){
+		searchForm.forEach((search) => {
+			let wordInput = search.querySelector('.input_search');
+			const resetButton = search.querySelector('.btn_delete_word');
+			if(!wordInput.value){
+				resetButton.style.display = 'none';
+				wordInput.addEventListener('keyup', function(e){
+					resetButton.style.display = 'block';
+				})
+			} else{
+				resetButton.style.display = 'block';
+				resetButton.addEventListener('click', function(e){
+					wordInput.value = '';
+					resetButton.style.display = 'none';
+				})
+			}
+		})
+	}
 }
 document.addEventListener('DOMContentLoaded', searchWord);
-function clearInput(a){
-	a.parentNode.querySelector('input').value = '';
-	a.style.display = 'none';
-}
 
 //로딩 관련
 function loadingShow(type){
 	const loadingBox = document.createElement('div');
 	loadingBox.id = 'loading';
 	loadingBox.innerHTML ='<span></span><span></span><span></span>';
-	document.querySelector('#container').append(loadingBox);
+
+	if(type=='modal'){
+		document.querySelector('#modal.open .contents').append(loadingBox);
+	} else {
+		document.querySelector('#container').append(loadingBox);
+	}
 }
 function loadingHide(){
 	document.querySelector('#loading').remove();

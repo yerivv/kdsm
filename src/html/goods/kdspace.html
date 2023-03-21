@@ -550,8 +550,8 @@
 						<div class="control" onclick="controlCate()">카테고리 <span class="text">열기</span></div>
 					</div>
 					<div id="search_form" class="search_form">
-						<input type="search" class="input_search" name="swordcate" onkeyup="searchWord()" value="상품명" placeholder="검색어를 입력하세요." />
-						<button type="button" class="btn_delete_word" onclick="clearInput(this)"><span class="blind">삭제</span></button>
+						<input type="search" class="input_search" name="swordcate" value="상품명" placeholder="검색어를 입력하세요." />
+						<button type="button" class="btn_delete_word"><span class="blind">삭제</span></button>
 						<button type="button" class="btn_search">검색</button>
 					</div>
 					<div class="common_product">
@@ -738,6 +738,7 @@
 	</div>
 	
 	<script>
+		searchWord();
 		slideAct();
 		cateReady();
 	</script>

@@ -4,80 +4,146 @@
 	@@include('@@webRoot/_include/head.html',{
 		"title": "초기화면"
 	})
-	<link rel="stylesheet" href="@@webRoot/css/page/guide/guide.css">
+	<link rel="stylesheet" href="@@webRoot/css/page/guide/map.css">
 	@@include('@@webRoot/_include/library.html')
 	<script src="@@webRoot/js/ui.js"></script>
 	<script src="@@webRoot/js/develop.js"></script>
 </head>
 <body>
 	<div id="app">
-		<dl class="site__map_box">
-			<dt>가이드(etc)</dt>
-			<dd><a href="@@webRoot/guide/guide.html" class="site__map">GUIDE</a></dd>
-			<dd><a href="@@webRoot/guide/product.html" class="site__map">PRODUCT</a></dd>
-		</dl>
-
-		<dl class="site__map_box">
-			<dt>메인(main)</dt>
-			<dd><a href="@@webRoot/main/main.html" class="site__map">메인</a></dd>
-		</dl>
-
-		<dl class="site__map_box">
-			<dt>상품(goods)</dt>
-			<dd><a href="@@webRoot/goods/area_best.html" class="site__map">지역별 베스트 상품</a></dd>
-			<dd><a href="@@webRoot/goods/kdspace.html" class="site__map">광동전용관</a></dd>
-			<dd><a href="@@webRoot/goods/brand.html" class="site__map">브랜드관</a></dd>
-			<dd><a href="@@webRoot/goods/brand_exclusive.html" class="site__map_sub">- 독점상품관</a></dd>
-			<dd><a href="@@webRoot/goods/brand_goods.html" class="site__map_sub">- 브랜드상세</a></dd>
-			<dd><a href="@@webRoot/goods/brand_goods_detail.html" class="site__map_sub">- 독점상품상세</a></dd>
-			<dd><a href="@@webRoot/goods/special.html" class="site__map">특가세일</a></dd>
-			<dd><a href="@@webRoot/goods/timesale.html" class="site__map">타임세일</a></dd>
-			<dd><a href="@@webRoot/goods/groupbuying.html" class="site__map">공동구매</a></dd>
-			<dd><a href="@@webRoot/goods/regular.html" class="site__map">정기배송</a></dd>
-			<dd><a href="@@webRoot/goods/bundle.html" class="site__map">묶음상품</a></dd>
-			<dd><a href="@@webRoot/goods/event_list.html" class="site__map">이벤트</a></dd>
-			<dd><a href="@@webRoot/goods/event_detail.html" class="site__map_sub">- 이벤트 상세</a></dd>
-			<dd><a href="@@webRoot/goods/event_winners_list.html" class="site__map_sub">- 당첨자리스트</a></dd>
-			<dd><a href="@@webRoot/goods/event_winners_detail.html" class="site__map_sub">- 당첨자상세</a></dd>
-		</dl>
-
-		<dl class="site__map_box">
-			<dt>마이페이지(mypage)</dt>
-			<dd><a href="@@webRoot/mypage/order_delivery.html" class="site__map">주문/배송 조회</a></dd>
-			<dd><a href="@@webRoot/mypage/order_detail.html" class="site__map">주문/배송 조회_주문 상세내역</a></dd>
-			<dd><a href="@@webRoot/mypage/order_detail.html" class="site__map">주문/배송 조회_주문 상세내역</a></dd>
-			<dd><a href="javascript:void(0)" onclick="modalUrlOpen('@@webRoot/mypage/claim_request.html', 'full')" class="site__map">주문취소</a></dd>
-			<dd><a href="javascript:void(0)" onclick="modalUrlOpen('@@webRoot/mypage/claim_result.html', 'full')" class="site__map">주문완료</a></dd>
-			<dd><a href="javascript:void(0)" onclick="modalUrlOpen('@@webRoot/mypage/trading_view.html', 'full')" class="site__map">거래명세표 조회</a></dd>
-			<dd><a href="@@webRoot/mypage/order_claim.html" class="site__map">주문취소 내역</a></dd>
-			<dd><a href="@@webRoot/mypage/order_detail_claim.html" class="site__map">주문취소 내역_ 상세내역</a></dd>
-			<dd><a href="@@webRoot/mypage/trading_original.html" class="site__map">온라인거래원장</a></dd>
-			<dd><a href="@@webRoot/mypage/trading_original_pass.html" class="site__map">구 거래원장</a></dd>
-		</dl>
-
-		<dl class="site__map_box">
-			<dt>온라인쇼룸(board)</dt>
-			<dd><a href="@@webRoot/board/showroom.html" class="site__map">리스트</a></dd>
-			<dd><a href="@@webRoot/board/showroom_detail.html" class="site__map">상세</a></dd>
-		</dl>
-
-		<dl class="site__map_box">
-			<dt>기타(error)</dt>
-			<dd><a href="@@webRoot/error/404.html" class="site__map">404</a></dd>
-			<dd><a href="@@webRoot/error/500.html" class="site__map">500</a></dd>
-			<dd><a href="@@webRoot/error/check.html" class="site__map">점검중</a></dd>
-		</dl>
-
-		<dl class="site__map_box">
-			<dt>고객센터(cscenter, board)</dt>
-			<dd><a href="@@webRoot/cscenter/index.html" class="site__map">메인</a></dd>
-		</dl>
+		<header class="map_header">
+			<h1>KDSM</h1>
+			<h2>Site Map</h2>
+		</header>
+		<div class="map_container">
+			<div class="list">
+				<!-- member -->
+				<dl>
+					<dt>회원(member)</dt>
+					<dd>
+						<ul>
+							<li>
+								<a href="@@webRoot/member/login.html">
+									<span class="pageName">로그인</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/member/login.html">
+									<span class="pageName">아이디 찾기</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="urlmodal"></span></span>
+									<span class="pageSub">정보입력(휴대폰/이메일), 변경</span>
+									<span class="summary">로그인 '아이디찾기' 클릭 후 진행</span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/member/login.html">
+									<span class="pageName">비밀번호 찾기</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="urlmodal"></span></span>
+									<span class="pageSub">정보입력(휴대폰/이메일), 변경</span>
+									<span class="summary">로그인 '비밀번호찾기' 클릭 후 진행</span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/member/login.html">
+									<span class="pageName">회원가입</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="urlmodal"></span></span>
+									<span class="pageSub">조회, 본인인증, 약관/정보(중복확인, 약관), 완료</span>
+									<span class="summary">로그인 '회원가입' 클릭 후 진행</span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/member/login.html">
+									<span class="pageName">이용상태 - 승인대기</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="modal"></span></span>
+									<span class="summary">로그인 하단 버튼 클릭(state_join)</span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/member/login.html">
+									<span class="pageName">이용상태 - 휴면회원</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="modal"></span></span>
+									<span class="summary">로그인 하단 버튼 클릭(state_sleep)</span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/member/login.html">
+									<span class="pageName">휴면해지신청</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="urlmodal"></span></span>
+									<span class="pageSub">본인인증, 비밀번호 변경, 신청 완료</span>
+									<span class="summary">이용상태 휴면회원 팝업 안 버튼에서 진행</span>
+								</a>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<!--// member -->
+				<!-- main -->
+				<dl>
+					<dt>메인(main)</dt>
+					<dd>
+						<ul>
+							<li>
+								<a href="@@webRoot/main/main.html">
+									<span class="pageName">메인</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/main/main.html">
+									<span class="pageName">팝업</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="modal"></span></span>
+									<span class="pageSub">swiper / 닫기,오늘하루안보기</span>
+									<span class="summary">메인 진입 후 팝업 있을 시 노출(main_popup)</span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/main/main.html">
+									<span class="pageName">이용상태 - 탈퇴신청중</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="modal"></span></span>
+									<span class="summary">메인 진입 시 상태 노출(state_secession)</span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/main/main.html">
+									<span class="pageName">이용상태 - 정보수정중</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="modal"></span></span>
+									<span class="summary">메인 진입 시 상태 노출(state_modify)</span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/main/main.html">
+									<span class="pageName">이용상태 - 이용제한</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="modal"></span></span>
+									<span class="summary">메인 진입 시 상태 노출(state_limit)</span>
+								</a>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<!--// main -->
+			</div>
+		</div>
+		<footer class="map_footer blind">
+			2023-04-03 open / yeri
+		</footer>
 
 		<div id="modalFullwrap"></div>
 		<div id="modalwrap"></div>
 	</div>
 	
 	<script>
+		const questions = document.querySelectorAll('.list dl');
+		questions.forEach(function(question){
+			question.querySelector('dt').addEventListener('click', function(){
+				questions.forEach(function(item){
+					if(item !== question){
+						item.classList.remove('active');
+					}
+				})
+				question.classList.toggle('active');
+			})
+		})
 	</script>
 </body>
 </html>
