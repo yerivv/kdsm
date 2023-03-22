@@ -78,15 +78,18 @@
 .common_orderList.request .item {padding-bottom:0}
 .common_orderList.request .form {display:flex;width:calc(100% + 30px);padding:12px 0 16px;margin:12px -15px 0;border-top:1px solid #dee0e4;background-color:#f4f7f9;}
 .common_orderList.request .form .box {display:flex;flex-direction:column;gap:8px;padding:0 15px;}
-.common_orderList.request .form .box.ea {width:158px;border-right:1px solid #dee0e4;}
-.common_orderList.request .form .box.input {width:calc(100% - 158px);}
+.common_orderList.request .form .box.ea {width:168px;border-right:1px solid #dee0e4;}
+.common_orderList.request .form .box.input {width:calc(100% - 158px);padding-right:0;}
 .common_orderList.request .form .box dl {display:flex;align-items:center;gap:8px;height:36px;}
-.common_orderList.request .form .box dt {width:72px;color:#666;font-size:1.3rem;}
-.common_orderList.request .form .box dd {width:calc(100% - 80px);}
+.common_orderList.request .form .box dt {width:82px;color:#666;font-size:1.3rem;}
+.common_orderList.request .form .box dd {width:calc(100% - 90px);}
 .common_orderList.request .form .box.input dt {width:32px}
 .common_orderList.request .form .box.input dd {width:calc(100% - 40px);}
 .common_orderList.request .form .box.input dd input {width:72px;}
 .common_orderList.request .form .box.input dd::after {content:'개';display:inline-block;margin-left:8px;line-height:36px;}
+.common_orderList.request .form.offline .box.input {width:100%;}
+.common_orderList.request .form.offline .box.input dt {width:120px;}
+.common_orderList.request .form.offline .box.input dd {width:calc(100% - 128px);}
 .common_orderList.request .form_dealer {display:flex;flex-direction:column;gap:8px;width:calc(100% + 30px);padding:12px 0 16px;margin:12px -15px 0;border-top:1px solid #dee0e4;background-color:#f4f7f9;}
 .common_orderList.request .form_dealer dl {display:flex;align-items:center;gap:8px;padding:0 15px;}
 .common_orderList.request .form_dealer dt {width:80px;color:#666;font-size:1.3rem;}
@@ -158,7 +161,7 @@
 	.period_check .period .box:not(:first-child)::before {left:5px;}
 	.period_check .period .buttons {padding-left:2px;padding-right:0;}
 	.period_check .period .buttons .arrow {margin-left:2px;margin-right:0;}
-	.period_check .detail .button_box {padding:0;}
+	.period_check .detail .button_box {padding:0 16px;}
 }
 
 .result_box {display:flex;flex-wrap:wrap;align-items:center;margin:24px 0 8px;}
@@ -180,7 +183,7 @@
 /* 반품 */
 .check_select {display:flex;align-items:center;gap:8px;margin:12px 0}
 .check_select .mlauto {margin-left:auto;}
-.mypage_return .request_intro {min-height:70vh;margin-top:16px;}
+.mypage_return .request_intro {min-height:calc((var(--vh, 1vh) * 100) - 280px);margin-top:16px;}
 .mypage_return .title_box .mlauto {font-size:1.5rem;}
 .mypage_return .noticebox {margin-bottom:12px;}
 .mypage_return .coupon_list dl {overflow:hidden;border:1px solid #dee0e4;border-radius:4px;}

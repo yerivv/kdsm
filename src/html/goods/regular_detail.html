@@ -1,0 +1,141 @@
+<div id="modal" class="modalFull modal_regular">
+	<div class="wrap">
+		<div class="head">
+			<h2>정기배송 신청하기</h2>
+			<div class="close" onclick="modalUrlCloseFull();">닫기</div>
+		</div>
+		<div class="contents">
+			<div class="common_product">
+				<div class="list alone">
+					<div class="item start">
+						<div class="thumb_box" onclick="regularDetail()">
+							<div class="thumb"><img src="" onerror="this.src='../imgs/global/no.gif'" alt=""></div>
+						</div>
+						<div class="info_box h100"> 
+							<div class="info" onclick="regularDetail()">
+								<h2 class="name">광동 원방 우황청심원</h2>
+								<div class="summary">
+									<span class="box">광동제약</span>
+									<span class="box">50ml</span>
+									<span class="box">10병</span>
+								</div>
+							</div>
+							<div class="price other">
+								<span>
+									<strong class="number">35,000</strong>원
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="button_box">
+					<a href="#" class="buttons other">상세정보<i class="arrow"></i></a>
+				</div>
+			</div><!-- //common_product -->
+			<div class="regular_signUp">
+				<div class="select_info_box">
+					<dl>
+						<dt class="title">정기배송기간</dt>
+						<dd>
+							<select name="month">
+								<option value="1">1개월</option>
+							</select>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="title">정기배송주기</dt>
+						<dd>
+							<ul class="textType">
+								<li><input type="radio" name="cycle" id="cycle1" checked /><label for="cycle1">1주</label></li>
+								<li><input type="radio" name="cycle" id="cycle2" /><label for="cycle2">2주</label></li>
+								<li><input type="radio" name="cycle" id="cycle3" /><label for="cycle3">3주</label></li>
+								<li><input type="radio" name="cycle" id="cycle4" /><label for="cycle4">4주</label></li>
+							</ul>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="title">정기배송요일</dt>
+						<dd>
+							<ul class="textType">
+								<li><input type="radio" name="day" id="day1" checked /><label for="day1">월</label></li>
+								<li><input type="radio" name="day" id="day2" /><label for="day2">화</label></li>
+								<li><input type="radio" name="day" id="day3" /><label for="day3">수</label></li>
+								<li><input type="radio" name="day" id="day4" /><label for="day4">목</label></li>
+								<li><input type="radio" name="day" id="day5" /><label for="day5">금</label></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<div class="choice_info_box detail_info_box">
+					<h3 class="title" id="discountTitle">구매수량별 할인 안내</h3>
+					<div class="info_inner discount_info_box">
+						<dl>
+							<dt class="blind">구매 수량별 할인(개당)</dt>
+							<dd>
+								<ul>
+									<li>
+										100개 이상 구매 시 <span class="fcpoint">440원(44원 할인)</span>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="info_inner delivery_info_box">
+						<dl>
+							<dt>정기배송 이용안내</dt>
+							<dd class="fcpoint"><span class="number">2022-11-14~2022-12-05</span></dd>
+						</dl>
+						<dl>
+							<dt>정기배송 예정일</dt>
+							<dd><span class="number fcpoint">2022년 11월 14일(월)</span></dd>
+						</dl>
+						<p class="note">최초 정기배송은 서비스 신청 후 3일(영업일 기준) 이후부터 가능합니다.</p>
+					</div>
+				</div><!-- //choice_info_box -->
+				<div class="select_card_box">
+					<dl>
+						<dt class="title">간편결제 카드선택</dt>
+						<dd>
+							<!-- <div class="button_box">
+								<a href="javascript:checkCert(document.Frm)" class="buttons medium"><i class="icoCard"></i>간편결제 카드를 등록해주세요.</a>
+							</div> -->
+							<div class="pay_select">
+								<select name="pay">
+									<option>비씨카드 1234-****-****-5678</option>
+								</select>
+							</div>
+						</dd>
+					</dl>
+					<div class="noticebox type2">
+						<dl>
+							<dt>정기배송 안내</dt>
+							<dd>
+								<ul>
+									<li>취소 시 동일한가격으로 재구매가 달라질 수 있습니다.</li>
+									<li>정기배송 취소는 마이페이지 > 정기배송관리에서 변경 가능합니다.</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="floating_btn">
+			<div class="info_text">
+				<div>정기배송 총 수량 : 400개</div>
+			</div>
+			<div class="total_price">
+				<div class="ea_box">
+					<button type="button" class="eaminus" onclick="adjustOrderEa(this); return false;" adjust="-">상품 수량 1 감소</button>
+					<input type="number" name="cea" class="txt ea number" pattern="\d*" value="1" maxlength="4" onfocus="this.select()" onkeypress="blockNotNumber(event)" onkeyup="onlyInt(this)" onblur="changeOrderEa(this)">
+					<button type="button" class="eaplus" onclick="adjustOrderEa(this); return false;" adjust="+">상품 수량 1 증가</button>
+				</div>
+				<div class="price fcpoint"><strong class="number">4,544,000</strong>원</div>
+			</div>
+			<div class="button_box">
+				<a href="#" class="buttons">관심상품 등록</a>
+				<a href="#" class="buttons fill">정기배송 신청하기</a>
+			</div>
+		</div>
+	</div>
+</div>
