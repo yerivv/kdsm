@@ -36,7 +36,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="common_product">
+				<div class="common_product category">
 					<div class="list" id="moreList">
 						<div class="item">
 							<div class="thumb_box" onclick="detailSelect(9741);">
@@ -59,11 +59,11 @@
 								<div class="price">
 									<dl>
 										<dt>정상가</dt>
-										<dd><strong class="number">4,548,000</strong>원</dd>
+										<dd><strong class="number">548,000</strong>원</dd>
 									</dl>
 									<dl class="sale">
 										<dt>최대할인가</dt>
-										<dd><strong class="number">4,548,000</strong>원</dd>
+										<dd><strong class="number">548,000</strong>원</dd>
 									</dl>
 								</div>
 							</div>
@@ -84,11 +84,11 @@
 								<div class="price">
 									<dl>
 										<dt>정상가</dt>
-										<dd><strong class="number">4,548,000</strong>원</dd>
+										<dd><strong class="number">548,000</strong>원</dd>
 									</dl>
 									<dl class="sale">
 										<dt>최대할인가</dt>
-										<dd><strong class="number">4,548,000</strong>원</dd>
+										<dd><strong class="number">548,000</strong>원</dd>
 									</dl>
 								</div>
 							</div>
@@ -173,11 +173,7 @@
 								<div class="price">
 									<dl>
 										<dt>정상가</dt>
-										<dd><strong class="number">4,548,000</strong>원</dd>
-									</dl>
-									<dl class="sale">
-										<dt>최대할인가</dt>
-										<dd><strong class="number">4,548,000</strong>원</dd>
+										<dd><strong class="number">548,000</strong>원</dd>
 									</dl>
 								</div>
 							</div>
@@ -198,11 +194,7 @@
 								<div class="price">
 									<dl>
 										<dt>정상가</dt>
-										<dd><strong class="number">4,548,000</strong>원</dd>
-									</dl>
-									<dl class="sale">
-										<dt>최대할인가</dt>
-										<dd><strong class="number">4,548,000</strong>원</dd>
+										<dd><strong class="number">548,000</strong>원</dd>
 									</dl>
 								</div>
 							</div>
@@ -282,11 +274,11 @@
 								<div class="price">
 									<dl>
 										<dt>정상가</dt>
-										<dd><strong class="number">4,548,000</strong>원</dd>
+										<dd><strong class="number">548,000</strong>원</dd>
 									</dl>
 									<dl class="sale">
 										<dt>최대할인가</dt>
-										<dd><strong class="number">4,548,000</strong>원</dd>
+										<dd><strong class="number">548,000</strong>원</dd>
 									</dl>
 								</div>
 							</div>
@@ -455,18 +447,17 @@
 								<div class="price">
 									<dl>
 										<dt>정상가</dt>
-										<dd><strong class="number">4,548,000</strong>원</dd>
+										<dd><strong class="number">548,000</strong>원</dd>
 									</dl>
 									<dl class="sale">
 										<dt>최대할인가</dt>
-										<dd><strong class="number">4,548,000</strong>원</dd>
+										<dd><strong class="number">548,000</strong>원</dd>
 									</dl>
 								</div>
 							</div>
 						</div><!--//item-->
 					</div><!-- //list -->
 				</div><!-- //common_product -->
-				<button type="button" onclick="loadingHide()">버튼</button>
 			</div>
 		</main>
 
@@ -478,7 +469,8 @@
 	</div>
 	
 	<script>
-		//loadingShow();
+		loadingShow();
+		setTimeout(function(){loadingHide();}, 500)
 		function detailSelect(gno){
 			modalUrlOpen('../goods/detail_pop.html', 'full');
 		}

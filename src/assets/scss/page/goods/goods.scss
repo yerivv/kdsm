@@ -20,6 +20,8 @@
 .common_product .item .related.max {max-height:320px;overflow:hidden;overflow-y:auto;}
 .common_product .grid .item .related {position:relative;width:calc(100vw - 32px);margin-bottom:8px;}
 .common_product .grid .item:nth-child(2n) .related {left:calc(-50vw + 12px);}
+.common_product .grid .item .related .name,
+.common_product .grid .item .related .summary {height:auto;}
 @media (max-width: 320px) {
 	.common_product .item .item_buttons {padding:0 8px;margin-top:8px;}
 	.common_product .item .related {margin-top:12px;}

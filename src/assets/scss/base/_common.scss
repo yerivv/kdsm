@@ -1022,7 +1022,7 @@ select:focus {background-image:url(../imgs/global/icon_arrow_up.png);}
 
 /* 로딩 */
 #loading {display:flex;justify-content:center;align-items:center;gap:0 8px;margin:20px 0;}
-#loading > span {width:10px;height:10px;border-radius:50%;background-color:#FF7556;animation: loading 1s 0s linear infinite;}
+#loading > span {width:10px;height:10px;border-radius:50%;background-color:#e8340c;animation: loading 1s 0s linear infinite;}
 #loading > span:nth-child(1) {animation-delay: 0s;}
 #loading > span:nth-child(2) {animation-delay: 0.2s;}
 #loading > span:nth-child(3) {animation-delay: 0.4s;}

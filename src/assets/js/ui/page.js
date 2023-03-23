@@ -687,6 +687,19 @@ function loadingHide(){
 	document.querySelector('#loading').remove();
 }
 
+//리스트 로딩
+function moreListShow(){
+	const moreBox = document.createElement('div');
+	moreBox.id = 'moreLoad';
+	moreBox.innerHTML = '<span></span><span></span><span></span>';
+	document.querySelector('#container').append(moreBox);
+}
+function moreListHide(){
+	setTimeout(function(){
+		document.querySelector('#moreLoad').remove();
+	}, 200);
+}
+
 //중복호출
 //hyeonguj.github.io/2020/02/27/double-click-problem-javascript/
 //flag
