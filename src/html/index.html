@@ -340,47 +340,123 @@
 				<dl>
 					<dt>마이페이지 - MY 쇼핑(mypage)</dt>
 					<dd>
-						<!-- <ul>
+						<ul>
 							<li>
-								<a href="@@webRoot/order/cart.html">
-									<span class="pageName">장바구니</span>
+								<a href="@@webRoot/mypage/order_delivery.html">
+									<span class="pageName">주문/배송 조회 - 목록</span>
 									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
 								</a>
 							</li>
 							<li>
-								<a href="javascript:void(0)" onclick="modalUrlOpen('@@webRoot/order/change_seller_pop.html')">
-									<span class="pageName">업체변경</span>
-									<span class="iconlabel_box etc"><span class="label" data-type="urlmodal"></span></span>
-									<span class="summary">장바구니 상품영역 '업체변경' 클릭</span>
-								</a>
-							</li>
-							<li>
-								<a href="@@webRoot/order/order.html">
-									<span class="pageName">주문결제</span>
+								<a href="@@webRoot/mypage/order_detail.html">
+									<span class="pageName">주문/배송 조회 - 상세</span>
 									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
 								</a>
 							</li>
 							<li>
-								<a href="javascript:void(0)" onclick="modalUrlOpen('@@webRoot/order/order_coupon_pop.html')">
-									<span class="pageName">쿠폰조회 및 적용</span>
+								<a href="javascript:void(0);" onclick="modalUrlOpen('@@webRoot/mypage/claim_request.html', 'full')">
+									<span class="pageName">주문/배송 조회 - 상세 - 취소신청</span>
 									<span class="iconlabel_box etc"><span class="label" data-type="urlmodal"></span></span>
-									<span class="summary">할인수단 영역 쿠폰의 '조회 및 적용'</span>
 								</a>
 							</li>
 							<li>
-								<a href="javascript:void(0)" onclick="modalUrlOpen('@@webRoot/etc/terms_of_use_pop.html')">
-									<span class="pageName">약관보기</span>
+								<a href="javascript:void(0);" onclick="modalUrlOpen('@@webRoot/mypage/claim_result.html', 'full')">
+									<span class="pageName">주문/배송 조회 - 상세 - 취소완료</span>
 									<span class="iconlabel_box etc"><span class="label" data-type="urlmodal"></span></span>
-									<span class="summary">정보 동의 옆 '보기'</span>
 								</a>
 							</li>
 							<li>
-								<a href="@@webRoot/order/order_finish.html">
-									<span class="pageName">주문완료</span>
+								<a href="@@webRoot/mypage/order_cancel.html">
+									<span class="pageName">주문취소내역 - 목록</span>
 									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
 								</a>
 							</li>
-						</ul> -->
+							<li>
+								<a href="@@webRoot/mypage/order_detail_claim.html">
+									<span class="pageName">주문취소내역 - 상세</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/repurchase.html">
+									<span class="pageName">주문상품 재구매</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/order_return_request.html">
+									<span class="pageName">광동제약반품 - 신청</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/order_return_request_search.html">
+									<span class="pageName">광동제약반품 - 신청 - 상품조회</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="urlmodal"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/order_return_request.html">
+									<span class="pageName">광동제약반품 - 신청 - 신청서</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/order_return.html">
+									<span class="pageName">광동제약반품 - 내역</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/order_return_detail.html">
+									<span class="pageName">광동제약반품 - 내역 - 상세</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/order_return_request_dealer.html">
+									<span class="pageName">입점업체반품 - 신청</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/order_return_request_search_dealer.html">
+									<span class="pageName">입점업체반품 - 신청 - 상품조회</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="urlmodal"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/order_return_request_dealer.html">
+									<span class="pageName">입점업체반품 - 신청 - 신청서</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/order_return_dealer.html">
+									<span class="pageName">입점업체반품 - 내역</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/order_return_detail_dealer.html">
+									<span class="pageName">입점업체반품 - 내역 - 상세</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							
+							<li>
+								<a href="@@webRoot/mypage/trading_original.html">
+									<span class="pageName">거래원장 - 온라인 거래원장</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/trading_original_pass.html">
+									<span class="pageName">거래원장 - 구 거래원장</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+						</ul>
 					</dd>
 				</dl>
 				<dl>
@@ -399,10 +475,289 @@
 									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
 								</a>
 							</li>
+							<li>
+								<a href="@@webRoot/mypage/deposit.html">
+									<span class="pageName">예치금 내역 및 충전</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="modalUrlOpen('@@webRoot/mypage/deposit_charge_pop.html', 'full')">
+									<span class="pageName">예치금 충전</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="urlmodal"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/kdcash.html">
+									<span class="pageName">마이너스잔고 내역</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/drugprice.html">
+									<span class="pageName">약가인하</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>마이페이지 - MY 상품(mypage)</dt>
+					<dd>
+						<ul>
+							<li>
+								<a href="@@webRoot/mypage/regular.html">
+									<span class="pageName">정기배송관리 - 목록</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/regular_detail.html">
+									<span class="pageName">정기배송관리 - 상세</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="modalUrlOpen('@@webRoot/mypage/regular_claim.html', 'full')">
+									<span class="pageName">정기배송관리 - 주문취소</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="urlmodal"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="modalUrlOpen('@@webRoot/mypage/regular_claim_result.html', 'full')">
+									<span class="pageName">정기배송관리 - 주문취소 - 취소완료</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="urlmodal"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/groupbuying.html">
+									<span class="pageName">공동구매관리 - 진행중</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="modalUrlOpen('@@webRoot/mypage/groupbuying_claim_result.html', 'full')">
+									<span class="pageName">공동구매관리 - 진행중 - 취소완료</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="urlmodal"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/groupbuying_pass.html">
+									<span class="pageName">공동구매관리 - 지난</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/restock.html">
+									<span class="pageName">재입고 알림 신청내역</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/wish.html">
+									<span class="pageName">관심상품</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/recommend.html">
+									<span class="pageName">추천상품</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/preorder.html">
+									<span class="pageName">예약주문관리 - 목록</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/preorder_detail.html">
+									<span class="pageName">예약주문관리 - 상세</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="modalUrlOpen('@@webRoot/mypage/preorder_claim_result.html', 'full')">
+									<span class="pageName">예약주문관리 - 상세 - 취소완료</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="urlmodal"></span></span>
+								</a>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>마이페이지 - MY 간편결제(mypage)</dt>
+					<dd>
+						<ul>
+							<li>
+								<a href="@@webRoot/mypage/payment.html">
+									<span class="pageName">간편결제관리</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/payment.html">
+									<span class="pageName">간편결제관리 - 별칭수정</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="modal"></span></span>
+									<span class="summary">내역의 '별칭수정' 클릭 (modal_payment_modify)</span>
+								</a>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>마이페이지 - MY 정보(mypage)</dt>
+					<dd>
+						<ul>
+							<li>
+								<a href="@@webRoot/mypage/grade.html">
+									<span class="pageName">회원등급안내</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/check_modify.html">
+									<span class="pageName">회원정보확인/수정 - 본인확인</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/modify.html">
+									<span class="pageName">회원정보확인/수정 - 수정</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/check_secession.html">
+									<span class="pageName">회원탈퇴 - 본인확인</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/secession.html">
+									<span class="pageName">회원탈퇴 - 신청</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/secession_finish.html">
+									<span class="pageName">회원탈퇴 - 신청완료</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
 						</ul>
 					</dd>
 				</dl>
 				<!--// mypage -->
+				<!-- board -->
+				<dl>
+					<dt>온라인 쇼룸(board)</dt>
+					<dd>
+						<ul>
+							<li>
+								<a href="@@webRoot/board/showroom.html">
+									<span class="pageName">목록</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+									<span class="pageSub">swiper, 앨범형</span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/board/showroom_detail.html">
+									<span class="pageName">상세</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+									<span class="pageSub">POSM신청, 장바구니담기</span>
+								</a>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<!--// board -->
+				<!-- cscenter -->
+				<dl>
+					<dt>고객센터(cscenter, board, mypage)</dt>
+					<dd>
+						<ul>
+							<li>
+								<a href="@@webRoot/cscenter/index.html">
+									<span class="pageName">메인</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/cscenter/faq.html">
+									<span class="pageName">FAQ</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/board/list.html">
+									<span class="pageName">공지사항 - 목록</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/board/content.html">
+									<span class="pageName">공지사항 - 상세</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/inquiry_write.html">
+									<span class="pageName">1:1문의 - 작성</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/mypage/inquiry.html">
+									<span class="pageName">1:1문의 - 내역</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/cscenter/sms.html">
+									<span class="pageName">문자보내기</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/cscenter/dealerinfo.html">
+									<span class="pageName">입점업체안내</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/cscenter/deliveryinfo.html">
+									<span class="pageName">배송안내</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<!--// cscenter -->
+				<!-- error -->
+				<dl>
+					<dt>기타(error)</dt>
+					<dd>
+						<ul>
+							<li>
+								<a href="@@webRoot/error/404.html">
+									<span class="pageName">오류</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+							<li>
+								<a href="@@webRoot/error/check.html">
+									<span class="pageName">점검중</span>
+									<span class="iconlabel_box etc"><span class="label" data-type="page"></span></span>
+								</a>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<!--// error -->
 			</div>
 		</div>
 		<footer class="map_footer blind">
